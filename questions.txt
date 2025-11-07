@@ -1,0 +1,14 @@
+# Benchmark Questions
+# Lines starting with # are comments and will be ignored
+# Add one question per line
+
+What is 15 + 27?
+Explain photosynthesis in simple terms.
+What are the three laws of motion?
+How do computers store information?
+What is the capital of France?
+Describe the water cycle.
+What is machine learning?
+How does gravity work?
+What is DNA?
+Explain what a variable is in programming.
