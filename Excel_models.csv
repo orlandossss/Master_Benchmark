@@ -1,5 +1,4 @@
 ﻿Name;Model parameters;Ollama name;tester;;;
-embedding gemma;0,3B;embeddinggemma:latest;farnaz;;;
 qwen3;0,6B;qwen3:0.6b;matevz;;;
 tinyllama;1,1B;tinyllama:latest;dorian;;;
 deepseek R1;1,5B;deepseek-r1:1.5b;ali;;;
@@ -21,6 +20,7 @@ nemotron-mini;4B;nemotron-mini:4b;dorian;;;
 mistral;7B;mistral:7b;dorian;;;
 deepseek R1; 7B;deepseek-r1:7b;dorian;;;
 cogito;8B;cogito:8b;dorian;;;
+;;;;;;
 ;;;;;;
 ;;;;;;
 ;;;;;;

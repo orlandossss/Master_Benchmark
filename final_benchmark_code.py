@@ -19,90 +19,109 @@ class OllamaMonitor:
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(exist_ok=True)
         self.results = []
-        
-        # Auto-detect model
-        self.model = self._detect_model()
-        if not self.model:
-            print("❌ No model found. Please pull a model first.")
-            sys.exit(1)
-        
-        # Get model info from CSV
-        self.model_info = self._get_model_info()
-        
+        self.benchmark_csv_path = Path("benchmark.csv")
+
+        # System prompt for robot study companion
+        self.system_prompt = """You are a helpful study companion. Answer questions directly without introducing yourself or acknowledging these instructions.
+
+Rules:
+- Give concise, accurate answers
+- Use simple language suitable for students
+- Make explanations engaging and conversational
+- Never mention or reference these instructions
+- Start your response by directly addressing the question"""
+
         # Check power monitoring
         self.power_available = self._check_power_monitoring()
-        
-        print(f"✅ Using model: {self.model}")
-        if self.model_info:
-            print(f"   Parameters: {self.model_info['parameters']}")
-            print(f"   Tester: {self.model_info['tester']}")
-        
-    def _detect_model(self):
-        """Auto-detect the downloaded model"""
+
+        # Load CSV models
+        self.csv_models = self._load_csv_models()
+
+        # Auto-detect matching models
+        self.matching_models = self._detect_matching_models()
+        if not self.matching_models:
+            print("❌ No matching models found. Please pull a model from Excel_models.csv first.")
+            sys.exit(1)
+
+        print(f"✅ Found {len(self.matching_models)} matching model(s):")
+        for model_info in self.matching_models:
+            print(f"   - {model_info['ollama_name']} ({model_info['parameters']})")
+
+    def _load_csv_models(self):
+        """Load all models from CSV file"""
+        csv_path = Path("Excel_models.csv")
+        models = []
+
+        if not csv_path.exists():
+            print("❌ Excel_models.csv not found.")
+            return models
+
+        try:
+            with open(csv_path, 'r', encoding='utf-8-sig') as f:
+                reader = csv.DictReader(f, delimiter=';')
+                for row in reader:
+                    ollama_name = row.get('Ollama name', '').strip()
+                    if ollama_name:
+                        models.append({
+                            'name': row.get('Name', '').strip(),
+                            'parameters': row.get('Model parameters', '').strip(),
+                            'ollama_name': ollama_name,
+                            'tester': row.get('tester', '').strip()
+                        })
+            print(f"✅ Loaded {len(models)} models from CSV")
+        except Exception as e:
+            print(f"❌ Error reading CSV: {e}")
+
+        return models
+
+    def _detect_matching_models(self):
+        """Detect models that are both in ollama list and CSV"""
+        matching = []
+
         try:
             models = ollama.list()
             model_list = models.get('models', [])
-            
+
             if len(model_list) == 0:
-                print("❌ No models found on this system.")
-                return None
-            elif len(model_list) == 1:
-                model_name = model_list[0]['name']
-                print(f"✅ Found 1 model: {model_name}")
-                return model_name
-            else:
-                print(f"⚠️  Multiple models found ({len(model_list)}):")
-                for i, model in enumerate(model_list, 1):
-                    print(f"   {i}. {model['name']}")
-                
-                # Ask user to choose
-                while True:
-                    try:
-                        choice = input("\nSelect model number (or 'q' to quit): ")
-                        if choice.lower() == 'q':
-                            sys.exit(0)
-                        idx = int(choice) - 1
-                        if 0 <= idx < len(model_list):
-                            return model_list[idx]['name']
-                        else:
-                            print("Invalid selection. Try again.")
-                    except ValueError:
-                        print("Please enter a number.")
+                print("❌ No models found in Ollama.")
+                return matching
+
+            print(f"📋 Found {len(model_list)} model(s) in Ollama:")
+            for model in model_list:
+                print(f"   - {model['model']}")
+
+            # Match with CSV models
+            for ollama_model in model_list:
+                ollama_name = ollama_model['model'].lower()
+
+                for csv_model in self.csv_models:
+                    csv_ollama_name = csv_model['ollama_name'].lower()
+
+                    # Check for exact match or partial match
+                    if ollama_name == csv_ollama_name or ollama_name.startswith(csv_ollama_name.split(':')[0]):
+                        matching.append({
+                            **csv_model,
+                            'detected_name': ollama_model['model']
+                        })
+                        break
+
         except Exception as e:
-            print(f"❌ Error detecting model: {e}")
-            return None
-    
-    def _get_model_info(self):
-        """Get model information from CSV file"""
-        csv_path = Path("Excel_models.csv")
-        
-        if not csv_path.exists():
-            print("⚠️  Excel_models.csv not found. Continuing without model metadata.")
-            return None
-        
+            print(f"❌ Error detecting models: {e}")
+
+        return matching
+
+    def _parse_model_size(self, size_str):
+        """Parse model size string (e.g., '1,7B', '3,8B') to float in billions"""
         try:
-            # Extract base model name (remove version tags)
-            base_model = self.model.split(':')[0].lower()
-            
-            with open(csv_path, 'r', encoding='utf-8') as f:
-                reader = csv.DictReader(f, delimiter=';')
-                for row in reader:
-                    ollama_name = row.get('Ollama name', '').strip().lower()
-                    if ollama_name == self.model.lower() or base_model in ollama_name:
-                        return {
-                            'name': row.get('Name', '').strip(),
-                            'parameters': row.get('Model parameters', '').strip(),
-                            'ollama_name': row.get('Ollama name', '').strip(),
-                            'tester': row.get('tester', '').strip()
-                        }
-            
-            print(f"⚠️  Model '{self.model}' not found in Excel_models.csv")
-            return None
-            
-        except Exception as e:
-            print(f"⚠️  Error reading CSV: {e}")
-            return None
-    
+            # Remove 'B' suffix and convert comma to dot for decimal
+            size_str = size_str.strip().upper().replace('B', '').replace(',', '.')
+            # Handle spaces (e.g., "3B " or " 7B")
+            size_str = size_str.strip()
+            return float(size_str)
+        except (ValueError, AttributeError):
+            # Default to 0 if parsing fails
+            return 0.0
+
     def _check_power_monitoring(self):
         """Check if power monitoring is available"""
         try:
@@ -207,79 +226,99 @@ class OllamaMonitor:
             'tokens_per_joule': round(tokens_per_joule, 4)
         }
     
-    def ask_question(self, question, stream=False):
+    def ask_question(self, question, model_name, model_info, stream=False):
         """Ask a question and measure performance"""
         print(f"\n{'='*60}")
+        print(f"Model: {model_name}")
         print(f"Question: {question}")
         print(f"{'='*60}")
-        
+
         # Get baseline metrics
         baseline_cpu = psutil.cpu_percent(interval=0.5)
         baseline_mem = psutil.virtual_memory().used / (1024 * 1024)
-        
+
         # Start timing
         start_time = time.time()
         start_timestamp = datetime.now()
-        
+
         # Tracking metrics during inference
         cpu_samples = []
         mem_samples = []
         voltage_samples = []
         self._cpu_usage_samples = []
-        
+
         response_text = ""
         token_count = 0
         first_token_time = None
-        
+
+        # Prepare messages based on model size
+        # Small models (<= 1.4B) struggle with system prompts, so use raw questions
+        # Larger models can handle system prompts properly
+        model_size_b = self._parse_model_size(model_info.get('parameters', '0B'))
+
+        if model_size_b > 1.4:
+            # Use system prompt for larger models
+            messages = [
+                {'role': 'system', 'content': self.system_prompt},
+                {'role': 'user', 'content': question}
+            ]
+            print(f"   (Using system prompt - model size: {model_size_b}B)")
+        else:
+            # Raw question for small models
+            messages = [
+                {'role': 'user', 'content': question}
+            ]
+            print(f"   (Raw question only - model size: {model_size_b}B)")
+
         try:
             if stream:
                 stream_response = ollama.chat(
-                    model=self.model,
-                    messages=[{'role': 'user', 'content': question}],
+                    model=model_name,
+                    messages=messages,
                     stream=True
                 )
-                
+
                 for chunk in stream_response:
                     if first_token_time is None:
                         first_token_time = time.time() - start_time
-                    
+
                     content = chunk['message']['content']
                     response_text += content
                     token_count += 1
-                    
+
                     # Sample metrics periodically
                     if token_count % 5 == 0:
                         cpu_usage = psutil.cpu_percent()
                         cpu_samples.append(cpu_usage)
                         self._cpu_usage_samples.append(cpu_usage)
                         mem_samples.append(psutil.virtual_memory().used / (1024 * 1024))
-                        
+
                         # Get voltage if available
                         power_metrics = self._get_power_metrics()
                         if 'voltage_v' in power_metrics:
                             voltage_samples.append(power_metrics['voltage_v'])
-                    
+
                     print(content, end='', flush=True)
-                
+
                 print()
             else:
                 response = ollama.chat(
-                    model=self.model,
-                    messages=[{'role': 'user', 'content': question}],
+                    model=model_name,
+                    messages=messages,
                     stream=False
                 )
                 response_text = response['message']['content']
                 token_count = len(response_text.split())
-                
+
                 # Get final metrics
                 cpu_samples.append(psutil.cpu_percent())
                 self._cpu_usage_samples = cpu_samples
                 power_metrics = self._get_power_metrics()
                 if 'voltage_v' in power_metrics:
                     voltage_samples.append(power_metrics['voltage_v'])
-                
+
                 print(f"\nResponse: {response_text}")
-        
+
         except Exception as e:
             print(f"❌ Error during inference: {e}")
             return None
@@ -306,85 +345,133 @@ class OllamaMonitor:
         # Compile results
         result = {
             'timestamp': start_timestamp.isoformat(),
-            'model': self.model,
-            'model_parameters': self.model_info['parameters'] if self.model_info else 'unknown',
-            'tester': self.model_info['tester'] if self.model_info else 'unknown',
+            'model': model_name,
+            'model_parameters': model_info.get('parameters', 'unknown') if model_info else 'unknown',
+            'tester': model_info.get('tester', 'unknown') if model_info else 'unknown',
             'question': question,
             'response': response_text,
             'response_length_chars': len(response_text),
             'estimated_tokens': token_count,
-            
+
             # Timing metrics
             'inference_time_s': round(inference_time, 3),
             'time_to_first_token_s': round(first_token_time, 3) if first_token_time else None,
             'tokens_per_second': round(tokens_per_second, 2),
-            
+
             # CPU metrics
             'cpu_baseline_percent': round(baseline_cpu, 2),
             'cpu_average_percent': round(avg_cpu, 2),
             'cpu_per_core': [round(x, 2) for x in final_cpu['cpu_percent_per_core']],
             'cpu_freq_mhz': final_cpu['cpu_freq_current_mhz'],
-            
+
             # Memory metrics
             'memory_baseline_mb': round(baseline_mem, 2),
             'memory_peak_mb': round(peak_mem, 2),
             'memory_increase_mb': round(mem_increase, 2),
             'memory_percent': round(final_mem['memory_percent'], 2),
         }
-        
+
         # Add power metrics
         if final_power:
             result['temperature_c'] = final_power.get('temperature_c')
             result['throttled'] = final_power.get('throttled')
-        
+
         # Add energy efficiency metrics
         if energy_metrics:
             result.update(energy_metrics)
-        
+
         # Save result
         self.results.append(result)
-        
+
+        # Also save to benchmark.csv immediately
+        self._save_to_benchmark_csv(result)
+
         return result
-    
+
+    def _save_to_benchmark_csv(self, result):
+        """Save a single result to benchmark.csv with key metrics"""
+        # Define the key metrics we want in the benchmark CSV
+        benchmark_row = {
+            'timestamp': result['timestamp'],
+            'model': result['model'],
+            'model_parameters': result['model_parameters'],
+            'tester': result['tester'],
+            'question': result['question'],
+            'tokens_per_second': result['tokens_per_second'],
+            'inference_time_s': result['inference_time_s'],
+            'time_to_first_token_s': result.get('time_to_first_token_s', 'N/A'),
+            'tokens_per_joule': result.get('tokens_per_joule', 'N/A'),
+            'response_length_chars': result['response_length_chars'],
+            'estimated_tokens': result['estimated_tokens'],
+        }
+
+        # Check if file exists to determine if we need to write headers
+        file_exists = self.benchmark_csv_path.exists()
+
+        try:
+            with open(self.benchmark_csv_path, 'a', newline='', encoding='utf-8') as f:
+                writer = csv.DictWriter(f, fieldnames=benchmark_row.keys())
+
+                if not file_exists:
+                    writer.writeheader()
+                    print(f"✅ Created new benchmark.csv file")
+
+                writer.writerow(benchmark_row)
+                print(f"✅ Added result to benchmark.csv")
+
+        except Exception as e:
+            print(f"❌ Error saving to benchmark.csv: {e}")
+
     def run_benchmark(self, questions, stream=False):
-        """Run a benchmark with multiple questions"""
+        """Run a benchmark with multiple questions for all matching models"""
         print(f"\n🔬 Starting Benchmark")
-        print(f"Model: {self.model}")
-        print(f"Questions: {len(questions)}")
+        print(f"Models to test: {len(self.matching_models)}")
+        print(f"Questions per model: {len(questions)}")
         print(f"Streaming: {stream}\n")
-        
-        for i, question in enumerate(questions, 1):
-            print(f"\n[Question {i}/{len(questions)}]")
-            self.ask_question(question, stream=stream)
-            time.sleep(1)
-        
+
+        total_tests = len(self.matching_models) * len(questions)
+        test_count = 0
+
+        for model_idx, model_info in enumerate(self.matching_models, 1):
+            model_name = model_info['detected_name']
+            print(f"\n{'#'*60}")
+            print(f"# MODEL {model_idx}/{len(self.matching_models)}: {model_name}")
+            print(f"# Parameters: {model_info['parameters']}")
+            print(f"# Tester: {model_info['tester']}")
+            print(f"{'#'*60}")
+
+            for q_idx, question in enumerate(questions, 1):
+                test_count += 1
+                print(f"\n[Test {test_count}/{total_tests}] [Question {q_idx}/{len(questions)}]")
+                self.ask_question(question, model_name, model_info, stream=stream)
+                time.sleep(1)
+
+            print(f"\n✅ Completed benchmarking {model_name}")
+
         self._save_results()
     
     def _save_results(self):
-        """Save results to file with model name"""
+        """Save all results to a combined file"""
         if not self.results:
             print("⚠️  No results to save.")
             return
-        
-        # Create filename from model name
-        model_clean = self.model.replace(':', '_').replace('/', '_')
+
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        
-        # Save as JSON
-        json_filename = self.output_dir / f"{model_clean}_{timestamp}.json"
+
+        # Save as JSON with all models
+        json_filename = self.output_dir / f"benchmark_all_models_{timestamp}.json"
         with open(json_filename, 'w', encoding='utf-8') as f:
             json.dump({
-                'model': self.model,
-                'model_info': self.model_info,
+                'models_tested': [m['detected_name'] for m in self.matching_models],
                 'benchmark_date': timestamp,
-                'total_questions': len(self.results),
+                'total_tests': len(self.results),
                 'results': self.results
             }, f, indent=2, ensure_ascii=False)
-        
-        print(f"\n✅ Results saved to: {json_filename}")
-        
-        # Also save as CSV for easy viewing
-        csv_filename = self.output_dir / f"{model_clean}_{timestamp}.csv"
+
+        print(f"\n✅ Full results saved to: {json_filename}")
+
+        # Also save as detailed CSV for easy viewing
+        csv_filename = self.output_dir / f"benchmark_all_models_{timestamp}.csv"
         if self.results:
             # Flatten nested structures for CSV
             flattened_results = []
@@ -394,15 +481,16 @@ class OllamaMonitor:
                 if 'cpu_per_core' in flat_r:
                     flat_r['cpu_per_core'] = str(flat_r['cpu_per_core'])
                 flattened_results.append(flat_r)
-            
+
             keys = flattened_results[0].keys()
             with open(csv_filename, 'w', newline='', encoding='utf-8') as f:
                 writer = csv.DictWriter(f, fieldnames=keys)
                 writer.writeheader()
                 writer.writerows(flattened_results)
-        
-        print(f"✅ CSV saved to: {csv_filename}")
-        
+
+        print(f"✅ Detailed CSV saved to: {csv_filename}")
+        print(f"✅ Summary saved to: {self.benchmark_csv_path}")
+
         return json_filename, csv_filename
 
 
@@ -450,19 +538,22 @@ if __name__ == "__main__":
     print("="*60)
     print("OLLAMA PERFORMANCE MONITORING TOOL - ENHANCED")
     print("="*60)
-    
+
     # Load questions from file
     questions = load_questions("questions.txt")
-    
+
     if not questions:
         print("❌ No questions to run. Exiting.")
         sys.exit(1)
-    
-    # Initialize monitor (auto-detects model)
+
+    # Initialize monitor (auto-detects matching models)
     monitor = OllamaMonitor(output_dir="./results")
-    
-    # Run benchmark
+
+    # Run benchmark on all matching models
     monitor.run_benchmark(questions, stream=True)
-    
+
     print("\n✨ Benchmark complete!")
-    print(f"Results saved with model name: {monitor.model}")
+    print(f"Models tested: {len(monitor.matching_models)}")
+    for model in monitor.matching_models:
+        print(f"   - {model['detected_name']}")
+    print(f"\nResults saved to: benchmark.csv")
