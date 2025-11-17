@@ -19,3 +19,13 @@ timestamp,model,model_parameters,tester,question,tokens_per_second,inference_tim
 2025-11-17T12:46:33.546386,tinyllama:latest,"1,1B",dorian,what are the steps to write a master thesis ?,4.9,75.979,1.795,1.7983,1642,372
 2025-11-17T12:47:51.133132,tinyllama:latest,"1,1B",dorian,What are the pros and cons of nuclear energy ?,5.01,88.407,1.659,1.8336,1830,443
 2025-11-17T12:49:21.148868,tinyllama:latest,"1,1B",dorian,I am strugulling with C++ where should i start ?,4.41,57.414,1.991,1.657,1085,253
+2025-11-17T13:10:43.470013,deepseek-r1:1.5b,"1,5B",ali,Describe gravity in simple terms for someone that doesn’t know anything about it,3.24,121.122,13.091,1.1798,599,393
+2025-11-17T13:12:46.201276,deepseek-r1:1.5b,"1,5B",ali,Describe gravity for someone that knows about it and wants to know more about it,3.48,137.627,2.608,1.2681,625,479
+2025-11-17T13:15:05.437122,deepseek-r1:1.5b,"1,5B",ali,Find a good analogy to describe gravity to someone.,3.45,165.493,2.217,1.2512,396,571
+2025-11-17T13:17:52.538114,deepseek-r1:1.5b,"1,5B",ali,give a small quiz (3 questions) about gravity,3.33,105.14,2.256,1.2165,373,350
+2025-11-17T13:19:39.286574,deepseek-r1:1.5b,"1,5B",ali,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,3.27,125.239,3.184,1.1951,303,409
+2025-11-17T13:21:46.134372,deepseek-r1:1.5b,"1,5B",ali,Give a common myth about gravity and explain why it is false,3.2,212.061,2.507,1.182,546,679
+2025-11-17T13:25:19.803876,deepseek-r1:1.5b,"1,5B",ali,Explain why a plane can fly even with gravity in simple bullet points,3.17,89.908,2.773,1.18,604,285
+2025-11-17T13:26:51.320419,deepseek-r1:1.5b,"1,5B",ali,what are the steps to write a master thesis ?,3.15,325.123,2.317,1.1706,1695,1024
+2025-11-17T13:32:18.052732,deepseek-r1:1.5b,"1,5B",ali,What are the pros and cons of nuclear energy ?,3.19,116.788,2.338,1.1867,839,372
+2025-11-17T13:34:16.448237,deepseek-r1:1.5b,"1,5B",ali,I am strugulling with C++ where should i start ?,3.1,351.182,2.689,1.1553,1619,1090
