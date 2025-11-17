@@ -39,3 +39,13 @@ timestamp,model,model_parameters,tester,question,tokens_per_second,inference_tim
 2025-11-17T15:32:47.026906,qwen3:1.7b,"1,7B",gio,what are the steps to write a master thesis ?,2.13,288.629,3.983,0.8147,1066,614
 2025-11-17T15:37:37.274730,qwen3:1.7b,"1,7B",gio,What are the pros and cons of nuclear energy ?,1.98,321.485,4.479,0.7597,1219,635
 2025-11-17T15:43:00.387815,qwen3:1.7b,"1,7B",gio,I am strugulling with C++ where should i start ?,1.8,415.875,5.529,0.6973,1380,750
+2025-11-17T16:08:12.187948,gemma3:1b,1B,raiko,Describe gravity in simple terms for someone that doesn’t know anything about it,3.97,94.805,5.842,1.4531,1459,376
+2025-11-17T16:09:48.604165,gemma3:1b,1B,raiko,Describe gravity for someone that knows about it and wants to know more about it,3.94,227.599,2.33,1.4456,3872,896
+2025-11-17T16:13:37.826019,gemma3:1b,1B,raiko,Find a good analogy to describe gravity to someone.,3.6,178.74,2.426,1.3656,2806,643
+2025-11-17T16:16:38.186641,gemma3:1b,1B,raiko,give a small quiz (3 questions) about gravity,3.4,81.107,2.726,1.3182,1018,276
+2025-11-17T16:18:00.906604,gemma3:1b,1B,raiko,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,3.35,91.827,3.102,1.3025,1169,308
+2025-11-17T16:19:34.359113,gemma3:1b,1B,raiko,Give a common myth about gravity and explain why it is false,3.19,190.201,2.578,1.2335,2505,606
+2025-11-17T16:22:46.194228,gemma3:1b,1B,raiko,Explain why a plane can fly even with gravity in simple bullet points,3.06,100.631,3.409,1.19,1332,308
+2025-11-17T16:24:28.456034,gemma3:1b,1B,raiko,what are the steps to write a master thesis ?,3.17,348.082,2.58,1.228,5043,1102
+2025-11-17T16:30:18.166787,gemma3:1b,1B,raiko,What are the pros and cons of nuclear energy ?,3.36,243.821,2.811,1.2954,4026,820
+2025-11-17T16:34:23.612935,gemma3:1b,1B,raiko,I am strugulling with C++ where should i start ?,3.35,435.816,2.971,1.2885,5614,1460
