@@ -1,0 +1,95 @@
+timestamp,model,model_parameters,tester,question,response,response_length_chars,estimated_tokens,inference_time_s,time_to_first_token_s,tokens_per_second,cpu_baseline_percent,cpu_average_percent,cpu_per_core,cpu_freq_mhz,memory_baseline_mb,memory_peak_mb,memory_increase_mb,memory_percent,temperature_c,throttled,avg_voltage_v,estimated_current_a,avg_power_watts,total_energy_joules,tokens_per_joule
+2025-11-17T15:09:56.464690,qwen3:1.7b,"1,7B",gio,Describe gravity in simple terms for someone that doesn’t know anything about it,"Gravity is like an invisible force that pulls everything toward the Earth. It’s why you feel your weight when you stand on the ground, and why objects like apples fall down when you drop them. Imagine it as a gentle pull that keeps everything on Earth, even when you’re floating in space! 🌍✨",291,642,296.948,45.249,2.16,0.0,98.44,"[100.0, 100.0, 100.0, 100.0]",1800.0,424.46,2298.53,1874.06,29.2,77.4,throttled=0x0,0.926,2.963,2.743,814.657,0.7881
+2025-11-17T15:14:55.035507,qwen3:1.7b,"1,7B",gio,Describe gravity for someone that knows about it and wants to know more about it,"Gravity is the force that pulls objects toward each other, like how apples fall from trees or why you feel pulled to the ground when you're sitting on a chair. It’s the reason why planets orbit the sun and why your phone stays on the table even when you move. Think of it as a ""pull"" that’s everywhere, but we can’t see it directly.  
+
+Here’s the key: **every object with mass pulls on every other object**. The stronger the pull, the more massive the objects are. That’s why heavy things like rocks fall faster than light things like balloons—because they’re more massive.  
+
+Gravity also explains why the Moon stays in orbit around Earth and why stars don’t just float away. It’s one of the four fundamental forces in the universe, and it’s what keeps everything in place, even in space.  
+
+Want to know more about how it’s measured or how it affects things like space travel? I can expand on that! 🌍✨",903,528,223.1,3.685,2.37,0.0,99.0,"[100.0, 100.0, 100.0, 100.0]",1800.0,2279.89,2311.87,31.98,29.5,83.7,throttled=0x80008,0.917,2.976,2.73,609.062,0.8669
+2025-11-17T15:18:39.767043,qwen3:1.7b,"1,7B",gio,Find a good analogy to describe gravity to someone.,"Gravity is like an invisible **hand** that pulls everything toward the center of the Earth. Just like how your hand gently pulls a ball back to you when you let go, gravity pulls objects toward the ground, keeping you from floating away! 🌍✨",240,416,182.721,3.513,2.28,0.5,98.81,"[100.0, 100.0, 100.0, 100.0]",1800.0,2308.6,2315.09,6.49,29.5,83.2,throttled=0xe0008,0.886,2.971,2.633,481.042,0.8648
+2025-11-17T15:21:44.106286,qwen3:1.7b,"1,7B",gio,give a small quiz (3 questions) about gravity,"Sure! Here's a quick quiz about gravity:  
+
+**1. What is gravity?**  
+A. A force that pulls objects toward each other  
+B. A type of light  
+C. A color  
+**Answer: A**  
+
+**2. Which is stronger: gravity on Earth or on the moon?**  
+A. Earth  
+B. Moon  
+C. Same  
+**Answer: A**  
+
+**3. How does gravity affect objects on the moon versus Earth?**  
+A. Objects fall faster on the moon  
+B. Objects fall slower on the moon  
+C. Objects fall at the same speed  
+**Answer: B**  
+
+Let me know if you want explanations! 🌍",513,287,132.154,3.835,2.17,0.0,98.74,"[100.0, 100.0, 100.0, 70.0]",1800.0,2308.73,2313.66,4.93,29.5,84.2,throttled=0xe0006,0.879,2.97,2.61,344.874,0.8322
+2025-11-17T15:23:57.885324,qwen3:1.7b,"1,7B",gio,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,"Yes, a jacket is usually a good idea when it's 10°C (50°F), especially if you're going outside for extended periods or doing activities like walking, running, or outdoor work. A light jacket can keep you warm without being too bulky. However, if you're in a very cold environment, wind, or if you’re doing something more physical, a thicker jacket might be better. Check the weather forecast for any additional factors like wind or rain!",437,310,149.771,5.843,2.07,0.5,99.0,"[100.0, 100.0, 100.0, 100.0]",1800.0,2310.7,2313.11,2.41,29.5,85.2,throttled=0xe0008,0.873,2.976,2.599,389.208,0.7965
+2025-11-17T15:26:29.270203,qwen3:1.7b,"1,7B",gio,Give a common myth about gravity and explain why it is false,"**Myth:** ""Gravity only acts between large objects like planets or stars.""  
+
+**Why it's false:**  
+Gravity is a **universal force** that affects **everything** in the universe, no matter how small! Even a tiny apple on Earth attracts the Earth back to it, and two small objects like apples or books also pull toward each other. It’s not just for big things—it’s everywhere! 🌍✨  
+
+**Simple fact:** Gravity works between **any two masses**, regardless of size. So, the moon pulls the Earth, the Earth pulls the moon, and even your phone pulls you toward the floor—all because of gravity! 🌟",588,330,168.291,4.995,1.96,1.0,98.72,"[100.0, 100.0, 100.0, 100.0]",1800.0,2304.99,2315.12,10.13,29.5,86.6,throttled=0xe0008,0.869,2.969,2.582,434.478,0.7595
+2025-11-17T15:29:19.175585,qwen3:1.7b,"1,7B",gio,Explain why a plane can fly even with gravity in simple bullet points,"- **Wings create lift**: Air moves faster over the top of the wing, reducing pressure there, while the bottom of the wing has higher pressure. This pressure difference pushes the plane upward.  
+- **Thrust overcomes drag**: Engines provide forward thrust to counteract drag (the force opposing motion), allowing the plane to move through the air.  
+- **Lift balances gravity**: The upward lift force equals the plane's weight, keeping it from falling.  
+- **Speed and angle matter**: Faster speeds and a steeper angle of attack (like when taking off) increase lift, helping the plane stay airborne.",598,396,206.226,5.815,1.92,0.5,98.96,"[100.0, 100.0, 100.0, 100.0]",1800.0,2308.78,2315.59,6.82,29.5,84.2,throttled=0xe0008,0.872,2.975,2.595,535.162,0.74
+2025-11-17T15:32:47.026906,qwen3:1.7b,"1,7B",gio,what are the steps to write a master thesis ?,"Writing a master's thesis is a big project, but here's a step-by-step guide to help you:
+
+1. **Choose Your Topic**: Discuss with your advisor to find a research question you're passionate about.  
+2. **Review Existing Work**: Look for gaps in research to build your own argument.  
+3. **Plan Your Study**: Decide how you'll collect and analyze data (e.g., surveys, experiments, interviews).  
+4. **Collect Data**: Gather information according to your plan. Make sure it's reliable and relevant.  
+5. **Analyze Data**: Use tools like statistics or qualitative methods to interpret your findings.  
+6. **Write Your Thesis**: Organize your work into chapters (introduction, literature review, methodology, results, discussion, conclusion).  
+7. **Get Feedback**: Share your draft with your advisor or peers for suggestions.  
+8. **Revise**: Improve your work based on feedback.  
+9. **Format and Defend**: Follow university guidelines and present your findings in a defense.  
+
+Remember, it’s a journey—stay organized, keep notes, and don’t hesitate to ask for help! 📚✨",1066,614,288.629,3.983,2.13,1.5,99.02,"[100.0, 100.0, 100.0, 100.0]",1800.0,2304.22,2313.54,9.32,29.4,84.7,throttled=0xe0008,0.877,2.976,2.611,753.675,0.8147
+2025-11-17T15:37:37.274730,qwen3:1.7b,"1,7B",gio,What are the pros and cons of nuclear energy ?,"**Pros of Nuclear Energy:**  
+1. **High Efficiency**: Produces a lot of energy from a small amount of fuel (like uranium).  
+2. **Reliable Power**: Provides a steady, base-load supply of electricity, even during peak demand.  
+3. **Low Greenhouse Gas Emissions**: Doesn’t release carbon dioxide or other harmful gases during operation.  
+4. **Cost-Effective for Some**: Can be cheaper than renewable sources like solar or wind, especially with advanced technology.  
+
+**Cons of Nuclear Energy:**  
+1. **Risk of Accidents**: High-stakes disasters (e.g., Chernobyl, Fukushima) can cause massive environmental and health damage.  
+2. **Radioactive Waste**: Byproducts are radioactive and require safe, long-term storage, which is still a challenge.  
+3. **High Costs**: Building plants is expensive, and maintenance is costly.  
+4. **Limited Renewable Potential**: It’s not a renewable resource (uranium is finite) and depends on uranium mining, which can harm ecosystems.  
+
+**Balancing It Out**:  
+While nuclear energy is clean and reliable, it carries risks like accidents and waste. Renewable sources like solar or wind are safer but less efficient. The debate is about weighing these factors for a sustainable future.",1219,635,321.485,4.479,1.98,0.5,99.03,"[100.0, 100.0, 100.0, 88.9]",1800.0,2298.37,2328.79,30.42,29.3,84.7,throttled=0xe0006,0.873,2.977,2.6,835.856,0.7597
+2025-11-17T15:43:00.387815,qwen3:1.7b,"1,7B",gio,I am strugulling with C++ where should i start ?,"Starting with C++ can feel a bit intimidating, but here's a simple plan to get started:  
+
+1. **Learn the Basics**:  
+   - Start with **variables**, **data types**, and **simple statements**.  
+   - Practice writing small programs, like a ""Hello, World!"" or a calculator.  
+
+2. **Use a Beginner-Friendly Resource**:  
+   - **Books**:  
+     - *""C++ for Dummies""* (easy to understand).  
+     - *""C++ All in One""* (covers basics and advanced topics).  
+   - **Online Tutorials**:  
+     - [GeeksforGeeks](https://www.geeksforgeeks.org/c-programming/) (step-by-step explanations).  
+     - [YouTube Channels](https://www.youtube.com/results?search_query=C%2B%2B) (videos for visual learners).  
+
+3. **Practice with Code**:  
+   - Use platforms like [LeetCode](https://leetcode.com/) or [HackerRank](https://www.hackerrank.com/) to solve small problems.  
+   - Start with simple projects, like a to-do list or a basic game.  
+
+4. **Focus on Key Concepts**:  
+   - Learn **variables**, **loops**, **functions**, and **pointers** first.  
+   - Understand how **memory works** and **syntax rules**.  
+
+5. **Seek Help**:  
+   - Join communities like [Stack Overflow](https://stackoverflow.com/) or [Reddit’s r/learnprogramming] for guidance.  
+
+**Tip**: Start with a small project (e.g., a calculator) and gradually add complexity. Patience and practice will help you build confidence! 🚀",1380,750,415.875,5.529,1.8,0.5,99.0,"[100.0, 100.0, 100.0, 100.0]",1800.0,2294.4,2318.4,24.0,29.3,85.7,throttled=0xe0006,0.869,2.976,2.586,1075.573,0.6973

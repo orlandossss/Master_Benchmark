@@ -29,3 +29,13 @@ timestamp,model,model_parameters,tester,question,tokens_per_second,inference_tim
 2025-11-17T13:26:51.320419,deepseek-r1:1.5b,"1,5B",ali,what are the steps to write a master thesis ?,3.15,325.123,2.317,1.1706,1695,1024
 2025-11-17T13:32:18.052732,deepseek-r1:1.5b,"1,5B",ali,What are the pros and cons of nuclear energy ?,3.19,116.788,2.338,1.1867,839,372
 2025-11-17T13:34:16.448237,deepseek-r1:1.5b,"1,5B",ali,I am strugulling with C++ where should i start ?,3.1,351.182,2.689,1.1553,1619,1090
+2025-11-17T15:09:56.464690,qwen3:1.7b,"1,7B",gio,Describe gravity in simple terms for someone that doesn’t know anything about it,2.16,296.948,45.249,0.7881,291,642
+2025-11-17T15:14:55.035507,qwen3:1.7b,"1,7B",gio,Describe gravity for someone that knows about it and wants to know more about it,2.37,223.1,3.685,0.8669,903,528
+2025-11-17T15:18:39.767043,qwen3:1.7b,"1,7B",gio,Find a good analogy to describe gravity to someone.,2.28,182.721,3.513,0.8648,240,416
+2025-11-17T15:21:44.106286,qwen3:1.7b,"1,7B",gio,give a small quiz (3 questions) about gravity,2.17,132.154,3.835,0.8322,513,287
+2025-11-17T15:23:57.885324,qwen3:1.7b,"1,7B",gio,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,2.07,149.771,5.843,0.7965,437,310
+2025-11-17T15:26:29.270203,qwen3:1.7b,"1,7B",gio,Give a common myth about gravity and explain why it is false,1.96,168.291,4.995,0.7595,588,330
+2025-11-17T15:29:19.175585,qwen3:1.7b,"1,7B",gio,Explain why a plane can fly even with gravity in simple bullet points,1.92,206.226,5.815,0.74,598,396
+2025-11-17T15:32:47.026906,qwen3:1.7b,"1,7B",gio,what are the steps to write a master thesis ?,2.13,288.629,3.983,0.8147,1066,614
+2025-11-17T15:37:37.274730,qwen3:1.7b,"1,7B",gio,What are the pros and cons of nuclear energy ?,1.98,321.485,4.479,0.7597,1219,635
+2025-11-17T15:43:00.387815,qwen3:1.7b,"1,7B",gio,I am strugulling with C++ where should i start ?,1.8,415.875,5.529,0.6973,1380,750
