@@ -90,20 +90,31 @@ Rules:
             for model in model_list:
                 print(f"   - {model['model']}")
 
-            # Match with CSV models
+            # Match with CSV models - prioritize exact matches
             for ollama_model in model_list:
                 ollama_name = ollama_model['model'].lower()
+                matched_csv_model = None
 
+                # First pass: look for exact match
                 for csv_model in self.csv_models:
                     csv_ollama_name = csv_model['ollama_name'].lower()
-
-                    # Check for exact match or partial match
-                    if ollama_name == csv_ollama_name or ollama_name.startswith(csv_ollama_name.split(':')[0]):
-                        matching.append({
-                            **csv_model,
-                            'detected_name': ollama_model['model']
-                        })
+                    if ollama_name == csv_ollama_name:
+                        matched_csv_model = csv_model
                         break
+
+                # Second pass: if no exact match, try partial match (model family only)
+                if not matched_csv_model:
+                    for csv_model in self.csv_models:
+                        csv_ollama_name = csv_model['ollama_name'].lower()
+                        if ollama_name.startswith(csv_ollama_name.split(':')[0] + ':'):
+                            matched_csv_model = csv_model
+                            break
+
+                if matched_csv_model:
+                    matching.append({
+                        **matched_csv_model,
+                        'detected_name': ollama_model['model']
+                    })
 
         except Exception as e:
             print(f"❌ Error detecting models: {e}")
