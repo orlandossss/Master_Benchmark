@@ -1,0 +1,111 @@
+timestamp,model,model_parameters,tester,question,response,response_length_chars,estimated_tokens,inference_time_s,time_to_first_token_s,tokens_per_second,cpu_baseline_percent,cpu_average_percent,cpu_per_core,cpu_freq_mhz,memory_baseline_mb,memory_peak_mb,memory_increase_mb,memory_percent,temperature_c,throttled,avg_voltage_v,estimated_current_a,avg_power_watts,total_energy_joules,tokens_per_joule
+2025-11-17T12:02:59.870208,qwen3:0.6b,"0,6B",matevz,Describe gravity in simple terms for someone that doesn’t know anything about it,"Gravity is like a big hand that keeps things in the air. Imagine holding a ball in the air — it’s attracted to Earth, so it falls. If you drop the ball, it keeps going down, just like how you fall to the ground. Gravity is a force that pulls objects toward each other, like a strong hand that holds things together. Even in space, gravity still acts on you, making you stay grounded. It’s a natural, invisible force that makes everything work on Earth. 🌍✨",455,462,77.883,3.796,5.93,0.0,96.52,"[100.0, 100.0, 100.0, 100.0]",1800.0,452.12,1499.64,1047.52,18.6,59.9,throttled=0x0,0.926,2.916,2.701,210.336,2.1965
+2025-11-17T12:04:19.369615,qwen3:0.6b,"0,6B",matevz,Describe gravity for someone that knows about it and wants to know more about it,"Gravity is a force that pulls objects toward each other, like how your feet are pulled down by the Earth's gravity. Imagine the Earth like a giant, soft, and strong hand that always pulls you down. It's not just about the Earth, but also other celestial bodies like the Moon, planets, and stars. Gravity makes things fall, keeps the planets in orbit, and keeps the stars from breaking up. It's a natural force that's everywhere, even in the air. And if you want to learn more, you can ask me questions or share your thoughts! 🌍✨",528,335,51.764,1.524,6.47,0.0,96.84,"[100.0, 100.0, 100.0, 100.0]",1800.0,1456.09,1486.69,30.61,18.9,64.2,throttled=0x0,0.926,2.924,2.708,140.167,2.39
+2025-11-17T12:05:12.746312,qwen3:0.6b,"0,6B",matevz,Find a good analogy to describe gravity to someone.,"Gravity can be likened to a river that flows endlessly and cannot be stopped, just as a force that always exists but has no direction or end. Imagine the river as a persistent, unyielding current pushing everything forward, while you can't reverse its course. This analogy highlights gravity's strength and its role as an unstoppable force.",340,302,45.651,1.375,6.62,0.0,96.79,"[100.0, 100.0, 100.0, 100.0]",1800.0,1478.9,1481.28,2.38,18.9,68.1,throttled=0x0,0.926,2.923,2.707,123.563,2.4441
+2025-11-17T12:06:00.011305,qwen3:0.6b,"0,6B",matevz,give a small quiz (3 questions) about gravity,"Here's a small quiz about gravity:
+
+**1. What is gravity?**  
+A. It pulls objects toward Earth.  
+B. It makes things fall.  
+C. It keeps the moon in orbit.  
+**Correct Answer:** A
+
+**2. How does gravity affect objects?**  
+A. It makes them move faster.  
+B. It keeps them in place.  
+C. It causes them to fall.  
+**Correct Answer:** B
+
+**3. What is a fun fact about gravity?**  
+A. It keeps the moon in orbit.  
+B. It makes stars collapse.  
+C. It causes water to boil.  
+**Correct Answer:** A
+
+Let me know if you'd like more questions! 😊",538,323,48.831,1.338,6.61,0.5,96.97,"[100.0, 100.0, 100.0, 70.0]",1800.0,1480.51,1480.72,0.21,18.9,70.1,throttled=0x0,0.926,2.927,2.711,132.369,2.4401
+2025-11-17T12:06:50.456248,qwen3:0.6b,"0,6B",matevz,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,"If the temperature is 10 degrees Celsius, a light jacket is sufficient to stay warm and comfortable. It's not extremely cold, so a light jacket would be appropriate. However, if you're planning to go outside or need extra protection, a light jacket is still a good choice. Let me know if you have any other questions!",317,327,50.266,1.641,6.51,0.0,96.94,"[100.0, 100.0, 100.0, 100.0]",1800.0,1478.04,1481.49,3.46,18.9,71.5,throttled=0x0,0.926,2.927,2.71,136.223,2.4005
+2025-11-17T12:07:42.337881,qwen3:0.6b,"0,6B",matevz,Give a common myth about gravity and explain why it is false,"A common myth about gravity is the story of how a feather falls slower than a stone, which was once believed to be due to ""gravity pulling down,"" but this is actually a **story from Newton's scientific perspective**, not a myth. Here's why:
+
+1. **Newton's Laws**: The correct explanation is based on **Newton's laws of motion** and **universal gravitation**. According to these laws, all objects with mass attract each other with a force proportional to their masses and inversely proportional to the square of the distance between them. This means that, in a vacuum, a feather would still fall at the same rate as a stone due to air resistance, not because gravity is ""pulling it down.""
+
+2. **The Myth's Flaw**: The myth of the ""falling apple"" (which actually refers to Newton's experiment in 1687) is a **story**, not a scientific explanation. It highlights the **human misconception** that gravity is a force acting on objects, not just a physical property. However, this is a **historical misconception**, not a false myth.
+
+In summary, the myth is a **story**, while the true explanation lies in **Newtonian physics**.",1123,583,96.075,1.428,6.07,0.0,97.52,"[100.0, 100.0, 100.0, 100.0]",1800.0,1480.49,1483.98,3.48,18.9,74.5,throttled=0x0,0.926,2.941,2.723,261.605,2.2286
+2025-11-17T12:09:20.022944,qwen3:0.6b,"0,6B",matevz,Explain why a plane can fly even with gravity in simple bullet points,"- The plane's wings generate lift, which is the force that counteracts gravity.  
+- The shape of the wings creates a pressure difference between the upper and lower surfaces, generating lift.  
+- Thrust from the engines propels the plane forward, providing the force to overcome gravity.  
+- The plane's airspeed and angle of attack are critical for maximizing lift and thrust.  
+- Gravity acts on the plane, but the combination of lift and thrust keeps it airborne.",466,410,65.088,1.53,6.3,0.0,97.25,"[100.0, 100.0, 100.0, 100.0]",1800.0,1480.43,1497.01,16.58,19.1,75.4,throttled=0x0,0.926,2.934,2.717,176.836,2.3185
+2025-11-17T12:10:26.726476,qwen3:0.6b,"0,6B",matevz,what are the steps to write a master thesis ?,"Writing a master thesis involves a structured process that requires careful planning, research, and organization. Here's a step-by-step breakdown:
+
+1. **Define the Research Question**:  
+   - Identify a clear, specific research problem or topic.  
+   - Ensure the question is relevant, focused, and has a clear objective.
+
+2. **Structure the Thesis**:  
+   - **Outline**: Plan the thesis into sections like Introduction, Literature Review, Methodology, Results, Discussion, Conclusion, and References.  
+   - **Thesis Title**: Keep it concise and professional.
+
+3. **Conduct Research**:  
+   - **Literature Review**: Summarize existing research to establish the context and identify gaps.  
+   - **Methodology**: Outline the approach (qualitative, quantitative, mixed methods) and design the research.  
+   - **Data Collection**: Define how and when data will be gathered (surveys, interviews, experiments, etc.).  
+
+4. **Analyze Data**:  
+   - Ensure data is collected properly and analyzed using appropriate tools (e.g., statistical software, coding tools).  
+
+5. **Write the Thesis**:  
+   - Use formal language, avoid markdown, and ensure clarity.  
+   - Revise as needed and proofread for errors.  
+
+6. **Formatting and Submission**:  
+   - Format the thesis correctly (APA, MLA, etc.).  
+   - Prepare for submission by checking deadlines and submitting early.  
+
+7. **Finalize and Review**:  
+   - Proofread for grammar, clarity, and coherence.  
+   - Revise final drafts for clarity and flow.  
+
+**Tips**:  
+- Stay organized with a planner.  
+- Seek feedback to refine your work.  
+- Allocate time for each section.  
+
+By following these steps, you can ensure a well-structured and impactful master thesis.",1713,687,119.522,1.356,5.75,0.0,97.92,"[100.0, 100.0, 100.0, 100.0]",1800.0,1491.71,1504.52,12.81,19.2,78.4,throttled=0x0,0.926,2.95,2.732,326.5,2.1041
+2025-11-17T12:12:27.863867,qwen3:0.6b,"0,6B",matevz,What are the pros and cons of nuclear energy ?,"**Pros of Nuclear Energy:**
+
+1. **High Energy Output**: Nuclear plants can produce vast amounts of energy per unit of fuel (uranium) compared to fossil fuel plants.
+2. **Clean Energy**: Nuclear power does not produce greenhouse gases, making it a cleaner alternative to fossil fuels.
+3. **Low Carbon Footprint**: Nuclear energy emits little CO₂, reducing reliance on fossil fuels.
+4. **Limited Resource**: Uranium is a finite and non-renewable resource, which makes nuclear energy a sustainable option for the long term.
+5. **Low Accident Risk**: Nuclear plants are designed with safety measures to minimize risks of accidents, though they are not completely safe.
+
+**Cons of Nuclear Energy:**
+
+1. **Radioactive Waste Management**: Nuclear plants generate radioactive waste that requires extensive and costly disposal.
+2. **Accident Risk**: Nuclear plants are vulnerable to accidents (e.g., Chernoba or Fukushima) due to human error or design flaws.
+3. **Environmental Impact**: Nuclear power can release radioactive isotopes, which may contaminate the environment and pose health risks.
+4. **Short-Term Fuel Supply**: Uranium is a finite resource, which creates a dependency on it, limiting long-term sustainability.
+
+In summary, nuclear energy offers significant advantages in terms of energy efficiency and environmental benefits, but its challenges include managing radioactive waste, safety risks, and the finite nature of uranium.",1436,668,115.833,1.376,5.77,0.0,97.63,"[100.0, 100.0, 55.6, 100.0]",1800.0,1500.88,1490.46,-10.43,19.0,79.8,throttled=0x0,0.926,2.943,2.725,315.692,2.116
+2025-11-17T12:14:25.321590,qwen3:0.6b,"0,6B",matevz,I am strugulling with C++ where should i start ?,"Starting with C++ is a great choice for anyone looking to learn a powerful programming language. Here's a structured approach to help you begin:
+
+1. **Begin with the Basics**:  
+   - **Variables and Data Types**: Learn to declare and use variables, integers, strings, and other data types.  
+   - **Basic Syntax**: Study simple programs like arithmetic expressions or conditional logic (if-else).  
+
+2. **Start with a Project**:  
+   - **Simple Projects**: Create a basic program (e.g., a calculator, a simple text editor, or a small script). This will give you immediate results.  
+
+3. **Explore Advanced Topics**:  
+   - **Data Structures**: Learn arrays, linked lists, stacks, and queues.  
+   - **Object-Oriented Programming (OOP)**: Understand classes, objects, and inheritance.  
+   - **Advanced Features**: Study templates, polymorphism, and more.  
+
+4. **Experiment and Learn**:  
+   - Try coding in real-time to see how C++ works. Use online resources (e.g., tutorials on LeetCode, official documentation, or forums like Stack Overflow).  
+
+5. **Stay Persistent**:  
+   - C++ is challenging, so don’t be discouraged. Practice regularly and gradually build your skills.  
+
+By starting with a simple program and gradually exploring more complex topics, you’ll be able to master C++. Let me know if you'd like help with a specific project! 😊",1347,605,104.62,1.515,5.78,0.0,97.54,"[100.0, 100.0, 100.0, 100.0]",1800.0,1486.17,1491.98,5.8,19.1,81.3,throttled=0x80000,0.926,2.941,2.723,284.859,2.1239

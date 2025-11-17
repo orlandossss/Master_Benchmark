@@ -1,0 +1,11 @@
+timestamp,model,model_parameters,tester,question,tokens_per_second,inference_time_s,time_to_first_token_s,tokens_per_joule,response_length_chars,estimated_tokens
+2025-11-17T12:02:59.870208,qwen3:0.6b,"0,6B",matevz,Describe gravity in simple terms for someone that doesn’t know anything about it,5.93,77.883,3.796,2.1965,455,462
+2025-11-17T12:04:19.369615,qwen3:0.6b,"0,6B",matevz,Describe gravity for someone that knows about it and wants to know more about it,6.47,51.764,1.524,2.39,528,335
+2025-11-17T12:05:12.746312,qwen3:0.6b,"0,6B",matevz,Find a good analogy to describe gravity to someone.,6.62,45.651,1.375,2.4441,340,302
+2025-11-17T12:06:00.011305,qwen3:0.6b,"0,6B",matevz,give a small quiz (3 questions) about gravity,6.61,48.831,1.338,2.4401,538,323
+2025-11-17T12:06:50.456248,qwen3:0.6b,"0,6B",matevz,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,6.51,50.266,1.641,2.4005,317,327
+2025-11-17T12:07:42.337881,qwen3:0.6b,"0,6B",matevz,Give a common myth about gravity and explain why it is false,6.07,96.075,1.428,2.2286,1123,583
+2025-11-17T12:09:20.022944,qwen3:0.6b,"0,6B",matevz,Explain why a plane can fly even with gravity in simple bullet points,6.3,65.088,1.53,2.3185,466,410
+2025-11-17T12:10:26.726476,qwen3:0.6b,"0,6B",matevz,what are the steps to write a master thesis ?,5.75,119.522,1.356,2.1041,1713,687
+2025-11-17T12:12:27.863867,qwen3:0.6b,"0,6B",matevz,What are the pros and cons of nuclear energy ?,5.77,115.833,1.376,2.116,1436,668
+2025-11-17T12:14:25.321590,qwen3:0.6b,"0,6B",matevz,I am strugulling with C++ where should i start ?,5.78,104.62,1.515,2.1239,1347,605
