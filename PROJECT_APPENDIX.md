@@ -184,3 +184,50 @@ Created `analyze_results.py` - a comprehensive results analyzer that loads bench
 5. Performance leaderboard ranking models by TPS
 
 Note: The user later modified this file significantly to add matplotlib visualizations, pandas support, and OpenAI API integration for rating teaching effectiveness.
+
+---
+
+## Entry #7
+**Date:** 2025-11-23
+**Model Used:** Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
+
+**Prompt:**
+> i want to add a a few new metric to the @benchmarking_pi4.py code file :
+>
+> read_count, write_count → total I/O operations
+> read_bytes, write_bytes → total bytes
+>
+> From these you can compute:
+> IOPS = (read_count + write_count) / duration
+> Throughput = bytes / duration (MB/s)
+> Average latency-ish = read_time / read_count, etc. (crude but useful)
+>
+> During each benchmark run, log for the device that holds:
+> read_count, write_count → total I/O operations
+> read_bytes, write_bytes → total bytes
+> (Optionally) read_time, write_time → time spent doing I/O
+
+**Response Summary:**
+Added comprehensive disk I/O monitoring to the benchmarking tool. Created two new methods: `_get_disk_io_metrics()` to capture raw I/O counters from psutil, and `_calculate_io_stats()` to compute derived metrics. The tool now tracks:
+- Raw metrics: read_count, write_count, read_bytes, write_bytes, read_time, write_time (in milliseconds)
+- Derived metrics: IOPS (I/O operations per second), throughput (MB/s), average read/write latency (ms)
+- All I/O metrics are captured at baseline and end of each inference run
+- Key I/O metrics (IOPS, throughput, read/write counts and bytes) are added to benchmark.csv
+- Full I/O statistics are included in the detailed JSON and CSV outputs
+
+---
+
+## Entry #8
+**Date:** 2025-11-23
+**Model Used:** Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
+
+**Prompt:**
+> now i want my code to run through all the models that are in the excel file and also downloaded in ollama. It will run the benchmarking only if the temperature is respected, once the first model benchmarking is done, the script will wait than the pi cool down to the temperature and when it is cool enough benchmark the next one and repeat
+
+**Response Summary:**
+Modified the `run_benchmark()` method to add temperature checks between each model benchmark run. The script now:
+- Checks temperature before starting the entire benchmark session (existing behavior)
+- After completing all questions for one model, waits for the Raspberry Pi to cool down below 60°C before starting the next model
+- Only waits for cooldown if there are more models to test (skips wait after the last model)
+- This ensures consistent thermal conditions for each model's benchmark, preventing thermal throttling from affecting results across different models
+- The auto-detection system (from Entry #5) already ensures only models present in both Excel_models.csv and Ollama are benchmarked

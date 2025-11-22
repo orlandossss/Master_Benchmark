@@ -15,7 +15,7 @@ import sys
 import subprocess
 
 class OllamaMonitor:
-    def __init__(self, output_dir="./results"):
+    def __init__(self, output_dir="./results_pi5"):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(exist_ok=True)
         self.results = []
@@ -201,7 +201,63 @@ Rules:
             'memory_percent': mem.percent,
             'memory_available_mb': mem.available / (1024 * 1024),
         }
-    
+
+    def _get_disk_io_metrics(self):
+        """Get disk I/O metrics"""
+        try:
+            io_counters = psutil.disk_io_counters()
+            if io_counters:
+                return {
+                    'read_count': io_counters.read_count,
+                    'write_count': io_counters.write_count,
+                    'read_bytes': io_counters.read_bytes,
+                    'write_bytes': io_counters.write_bytes,
+                    'read_time': io_counters.read_time,  # milliseconds
+                    'write_time': io_counters.write_time,  # milliseconds
+                }
+        except Exception as e:
+            print(f"⚠️  Error getting disk I/O metrics: {e}")
+        return None
+
+    def _calculate_io_stats(self, baseline_io, final_io, duration_s):
+        """Calculate I/O statistics from baseline and final measurements"""
+        if not baseline_io or not final_io or duration_s == 0:
+            return {}
+
+        # Calculate differences
+        read_count = final_io['read_count'] - baseline_io['read_count']
+        write_count = final_io['write_count'] - baseline_io['write_count']
+        read_bytes = final_io['read_bytes'] - baseline_io['read_bytes']
+        write_bytes = final_io['write_bytes'] - baseline_io['write_bytes']
+        read_time_ms = final_io['read_time'] - baseline_io['read_time']
+        write_time_ms = final_io['write_time'] - baseline_io['write_time']
+
+        # Calculate derived metrics
+        total_io_ops = read_count + write_count
+        total_bytes = read_bytes + write_bytes
+
+        iops = total_io_ops / duration_s if duration_s > 0 else 0
+        throughput_mb_s = (total_bytes / (1024 * 1024)) / duration_s if duration_s > 0 else 0
+
+        # Average latencies (crude approximation)
+        avg_read_latency_ms = read_time_ms / read_count if read_count > 0 else 0
+        avg_write_latency_ms = write_time_ms / write_count if write_count > 0 else 0
+
+        return {
+            'io_read_count': read_count,
+            'io_write_count': write_count,
+            'io_read_bytes': read_bytes,
+            'io_write_bytes': write_bytes,
+            'io_read_time_ms': read_time_ms,
+            'io_write_time_ms': write_time_ms,
+            'io_total_ops': total_io_ops,
+            'io_total_bytes': total_bytes,
+            'io_iops': round(iops, 2),
+            'io_throughput_mb_s': round(throughput_mb_s, 3),
+            'io_avg_read_latency_ms': round(avg_read_latency_ms, 2),
+            'io_avg_write_latency_ms': round(avg_write_latency_ms, 2),
+        }
+
     def _calculate_energy_efficiency(self, voltage_samples, inference_time, tokens):
         """
         Calculate tokens per joule
@@ -247,6 +303,7 @@ Rules:
         # Get baseline metrics
         baseline_cpu = psutil.cpu_percent(interval=0.5)
         baseline_mem = psutil.virtual_memory().used / (1024 * 1024)
+        baseline_io = self._get_disk_io_metrics()
 
         # Start timing
         start_time = time.time()
@@ -337,11 +394,12 @@ Rules:
         # End timing
         end_time = time.time()
         inference_time = end_time - start_time
-        
+
         # Get final metrics
         final_cpu = self._get_cpu_metrics()
         final_mem = self._get_memory_metrics()
         final_power = self._get_power_metrics()
+        final_io = self._get_disk_io_metrics()
         
         # Calculate statistics
         avg_cpu = sum(cpu_samples) / len(cpu_samples) if cpu_samples else final_cpu['cpu_percent_avg']
@@ -349,9 +407,12 @@ Rules:
         mem_increase = peak_mem - baseline_mem
         
         tokens_per_second = token_count / inference_time if inference_time > 0 else 0
-        
+
         # Calculate energy efficiency
         energy_metrics = self._calculate_energy_efficiency(voltage_samples, inference_time, token_count)
+
+        # Calculate I/O statistics
+        io_stats = self._calculate_io_stats(baseline_io, final_io, inference_time)
         
         # Compile results
         result = {
@@ -391,6 +452,10 @@ Rules:
         if energy_metrics:
             result.update(energy_metrics)
 
+        # Add I/O statistics
+        if io_stats:
+            result.update(io_stats)
+
         # Save result
         self.results.append(result)
 
@@ -414,6 +479,12 @@ Rules:
             'tokens_per_joule': result.get('tokens_per_joule', 'N/A'),
             'response_length_chars': result['response_length_chars'],
             'estimated_tokens': result['estimated_tokens'],
+            'io_iops': result.get('io_iops', 'N/A'),
+            'io_throughput_mb_s': result.get('io_throughput_mb_s', 'N/A'),
+            'io_read_count': result.get('io_read_count', 'N/A'),
+            'io_write_count': result.get('io_write_count', 'N/A'),
+            'io_read_bytes': result.get('io_read_bytes', 'N/A'),
+            'io_write_bytes': result.get('io_write_bytes', 'N/A'),
         }
 
         # Check if file exists to determine if we need to write headers
@@ -482,6 +553,11 @@ Rules:
                 time.sleep(1)
 
             print(f"\n✅ Completed benchmarking {model_name}")
+
+            # Wait for temperature to cool down before next model (if not the last model)
+            if model_idx < len(self.matching_models):
+                print(f"\n⏳ Waiting for system to cool down before next model...")
+                self._wait_for_temperature_threshold(max_temp_c=60)
 
         self._save_results()
     
@@ -582,7 +658,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     # Initialize monitor (auto-detects matching models)
-    monitor = OllamaMonitor(output_dir="./results")
+    monitor = OllamaMonitor(output_dir="./results_pi5")
 
     # Run benchmark on all matching models
     monitor.run_benchmark(questions, stream=True)
