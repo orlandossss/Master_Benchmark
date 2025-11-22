@@ -576,7 +576,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     # Initialize monitor (auto-detects matching models)
-    monitor = OllamaMonitor(output_dir="./results")
+    monitor = OllamaMonitor(output_dir="./results_computer")
 
     # Run benchmark on all matching models
     monitor.run_benchmark(questions, stream=True)

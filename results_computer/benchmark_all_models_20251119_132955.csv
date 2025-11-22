@@ -1,0 +1,108 @@
+timestamp,model,model_parameters,tester,question,response,response_length_chars,estimated_tokens,inference_time_s,time_to_first_token_s,tokens_per_second,inference_time_perf_s,time_to_first_token_perf_s,tokens_per_second_perf,timing_diff_ms,cpu_baseline_percent,cpu_average_percent,cpu_per_core,cpu_freq_mhz,memory_baseline_mb,memory_peak_mb,memory_increase_mb,memory_percent
+2025-11-19T13:28:48.572765,deepseek-r1:1.5b,"1,5B",ali,Describe gravity in simple terms for someone that doesn’t know anything about it,"Gravity is the force that pulls objects toward each other because matter in the universe creates a gravitational well. This force causes things like falling from an apple tree or making apples fall down as you drop them to the ground. Gravity acts between any two masses, holding planets around the sun and keeping us on Earth's surface.",337,384,9.121,6.575,42.1,9.12,6.575,42.1,-0.612,3.1,14.42,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,12572.56,12983.64,411.08,82.8
+2025-11-19T13:28:59.311310,deepseek-r1:1.5b,"1,5B",ali,Describe gravity for someone that knows about it and wants to know more about it,"Gravity is the force that pulls all objects toward Earth, keeping them grounded and causing objects to move in their respective directions. Without gravity, everything would float freely, but Earth's surface remains intact because of its mass. Gravity varies across locations—stronger at Earth's core and weaker at higher altitudes. Newton's law of universal gravitation explains this force between masses and distance. Gravity is essential for natural phenomena like tides, where it creates high spots on the ocean due to differential pull from the moon and sun.",563,719,5.059,0.193,142.13,5.059,0.194,142.13,0.055,12.4,19.08,"[0.0, 0.0, 20.0, 16.7, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 16.7, 0.0, 28.6, 20.0, 0.0, 0.0]",2560.0,12968.88,13007.93,39.05,82.5
+2025-11-19T13:29:05.978091,deepseek-r1:1.5b,"1,5B",ali,Find a good analogy to describe gravity to someone.,"Gravity is like the invisible force that pulls us and everything around us down to the ground every second of our lives. Imagine holding onto an apple in a basket; as you jump up, the apple stays with you because gravity pulls it towards the earth. It's just your experience on Earth—how we feel pulled down when we jump up and come back down.",343,574,4.014,0.184,143.01,4.014,0.184,143.01,-0.137,8.2,13.47,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 14.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",3201.0,12928.16,12928.25,0.09,82.4
+2025-11-19T13:29:11.597598,deepseek-r1:1.5b,"1,5B",ali,give a small quiz (3 questions) about gravity,"1. **Gravity's Impact**: Gravity is the force that attracts two masses, causing objects to fall towards a planet's surface regardless of their motion.
+
+2. **Effect on Us**: Without gravity, we wouldn't experience air or need food or water. It explains our feeling of weight through mass and gravity.
+
+3. **Weight vs. Mass**: Weight is a force due to gravity, while mass is the amount of matter in an object. So even if you weigh 100 pounds, your mass remains constant.",468,342,2.539,0.169,134.68,2.538,0.168,134.73,-0.814,17.0,29.26,"[42.9, 16.7, 16.7, 0.0, 16.7, 16.7, 33.3, 16.7, 0.0, 0.0, 33.3, 33.3, 50.0, 50.0, 16.7, 0.0]",2560.0,12969.48,13166.6,197.12,83.0
+2025-11-19T13:29:15.746269,deepseek-r1:1.5b,"1,5B",ali,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,"When it's 10 degrees Celsius outside, adding a jacket doesn't necessarily make you feel warmer because the moisture inside your body will keep you warm through the day. You'll stay as comfortable as possible without feeling like you're wearing more layers than needed.",268,325,2.442,0.199,133.06,2.442,0.199,133.07,-0.133,21.6,18.66,"[37.5, 14.3, 14.3, 0.0, 14.3, 0.0, 14.3, 14.3, 14.3, 14.3, 28.6, 14.3, 14.3, 14.3, 0.0, 0.0]",2560.0,13015.39,13024.71,9.33,83.0
+2025-11-19T13:29:19.798529,deepseek-r1:1.5b,"1,5B",ali,Give a common myth about gravity and explain why it is false,"**Explanation of Why Gravity Isn't a Myth**
+
+The common belief that gravity doesn’t exist is a myth because it’s actually a fundamental force in nature. Here's why:
+
+1. **Gravity as a Force**: Gravity is the mutual attraction between any two bodies due to their masses. It isn’t a force acting on all objects automatically like some other myths suggest.
+
+2. **Inertia and Inertial Mass**: Every object resists changes in its state of motion, known as inertia. This keeps things moving or at rest unless acted upon by another force. For example, an apple falls to the ground because it has inertia, not because someone is pulling it with gravity automatically.
+
+3. **Fictitious Force in Inertial Frames**: If we're inside a car that stops suddenly, we feel pushed back forward. This is because our body (inertia) resists moving from what was previously at rest relative to the car. Similarly, objects on a chair experience inertia and remain stationary while weight (normal force) acts downward.
+
+4. **Newton’s Third Law**: Gravity follows Newton's third law, which states that every action has an equal and opposite reaction. Without gravity, space would be empty, and movement wouldn't occur as we do on Earth or in orbit around a planet.
+
+In summary, gravity isn’t just about pulling objects down; it explains why inertia keeps things moving or at rest. This principle is foundational to understanding how planets move and interact with each other in the universe.",1466,676,4.889,0.181,138.26,4.889,0.181,138.26,0.073,15.1,21.36,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 20.0, 0.0, 0.0, 16.7, 16.7, 71.4, 33.3, 16.7]",3201.0,13031.49,13031.91,0.43,82.3
+2025-11-19T13:29:26.294672,deepseek-r1:1.5b,"1,5B",ali,Explain why a plane can fly even with gravity in simple bullet points,"1. Planes are powered by engines that create lift to move forward.  
+2. This lift is generated through thrust from engine backward push against air.  
+3. Gravity pulls down, balancing weight (thrust overcoming weight) for flight.  
+4. Lift and weight support the plane's motion in all directions.  
+5. Engines produce thrust when engines move backward, creating lift.  
+6. Gravity supports weight, allowing the plane to move despite being pulled down by gravity.",462,420,3.246,0.225,129.4,3.245,0.225,129.41,-0.293,11.2,19.12,"[16.7, 14.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 33.3, 66.7, 0.0, 0.0]",2560.0,12880.16,12884.21,4.05,82.1
+2025-11-19T13:29:31.151265,deepseek-r1:1.5b,"1,5B",ali,what are the steps to write a master thesis ?,"To successfully write a master thesis, follow this structured approach:
+
+1. **Choose a Research Topic**: Select an interesting and specific topic in your field of study.
+
+2. **Formulate Research Question**: Develop a clear question that asks how something works or what happens, using data to support the answer.
+
+3. **Literature Review**: Study existing research to identify gaps and areas needing exploration.
+
+4. **Thesis Statement**: Clearly state your research focus at the end, based on the literature review.
+
+5. **Abstract**: Summarize key points in a concise manner, highlighting main findings and implications.
+
+6. **Data Collection and Methodology**: Decide on data collection methods (primary or secondary) and plan how to collect them.
+
+7. **Analysis and Results**: Apply chosen methods to gather data and analyze it for meaningful results.
+
+8. **Literature Review Revisit**: Discuss previous studies, highlighting similarities and differences with your research.
+
+9. **Abstract Update**: Provide a more comprehensive summary of findings in the abstract.
+
+10. **Revise and Finalize**: Ensure clarity, flow, accuracy, and error-free language.
+
+11. **Finalize Thesis Statement**: Confirm exactly what will be written about at the end.
+
+12. **Compile Document**: Organize all sections into a coherent thesis document.
+
+13. **Review and Submit**: Check for logical flow, errors, plagiarism, formatting, and ensure references are correct before submission.
+
+This structured approach ensures a comprehensive and organized research process leading to a well-written master thesis.",1586,989,7.052,0.171,140.24,7.052,0.171,140.24,-0.132,2.6,17.72,"[25.0, 0.0, 0.0, 0.0, 0.0, 16.7, 16.7, 14.3, 0.0, 0.0, 42.9, 33.3, 0.0, 0.0, 0.0, 0.0]",2560.0,12850.94,12859.04,8.1,81.8
+2025-11-19T13:29:39.811019,deepseek-r1:1.5b,"1,5B",ali,What are the pros and cons of nuclear energy ?,"Nuclear energy offers several positive and negative aspects:
+
+**Pros:**
+
+1. **Clean Energy:** Nuclear power generates clean energy with no greenhouse gas emissions when used for non-renewable fuels like coal.
+
+2. **Conservation of Resources:** It promotes the use of finite resources, reducing waste compared to fossil fuels.
+
+3. **Environmental Benefits:** Nuclear decommissionment generates fewer waste materials than traditional fission plants.
+
+4. **Safety and Reliability:** The decommissioning process minimizes radioactive fallout, which is a concern for safety in some regions.
+
+5. **Social and Community Health:**
+
+   - It fosters a culture of sustainability and community engagement among stakeholders.
+   
+   - Nuclear energy can reduce reliance on fossil fuels, contributing to a greener society.
+
+**Cons:**
+
+1. **Climate Change Concerns:** Proponents argue that nuclear power could exacerbate climate change if not managed effectively.
+
+2. **Fuel Waste and Waste Creation:** The process of decommissioning can lead to significant fuel waste and potential for resource depletion.
+
+3. **Health Risks from Radioactivity:** Long-term exposure to radiation from nuclear reactions has been linked to health issues, such as cancer and radiation-associated illnesses.
+
+4. **Cost Considerations:** While potentially cost-effective in the long run, the upfront costs of building and maintaining a nuclear power plant can be significant.
+
+Overall, nuclear energy presents both opportunities for sustainability and challenges related to environmental impact and resource management.",1583,682,4.856,0.166,140.44,4.856,0.165,140.46,-0.501,8.5,17.2,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,12815.39,12818.89,3.5,81.7
+2025-11-19T13:29:46.276747,deepseek-r1:1.5b,"1,5B",ali,I am strugulling with C++ where should i start ?,"To start learning C++, consider following this organized approach:
+
+1. **Review Fundamentals**: Begin with basic programming concepts such as variables, operators, and loops. This will provide a solid foundation.
+
+2. **Explore Object-Oriented Programming (OOP)**: Learn about classes, objects, and the encapsulation principle. This is especially useful for web development.
+
+3. **Data Structures**: Study data types, booleans, integers, floats, strings, and control structures like ifs, while loops, and do-while loops. Practice with simple projects to apply these concepts.
+
+4. **Functions and Lambda Functions**: Understand how functions and lambdas can structure code. Use them for tasks like printing messages or sorting numbers.
+
+5. **Introduction to C++11 and Beyond**: Start learning about features introduced in later versions of the language, such as objects, exception handling, and templates.
+
+6. **Programming Challenges**: Engage with problems on platforms like GeeksforGeeks or Codecademy to apply your knowledge practically.
+
+7. **Self-Study Resources**: Utilize online tutorials or books like ""C++ in a Nutshell"" for structured learning.
+
+8. **Start with Simple Projects**: Begin with projects involving numbers, shapes, and games to practice coding skills incrementally.
+
+9. **Stay Motivated and Celebrate**: Set weekly goals, use Stack Overflow for support, and track achievements to stay motivated.
+
+By following this plan, you'll build a strong foundation in C++ that can open doors to both web and desktop applications in the future.",1554,1111,8.172,0.202,135.95,8.172,0.202,135.95,-0.092,11.9,19.91,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 16.7, 0.0, 33.3, 16.7, 0.0, 0.0]",2560.0,12801.27,12843.49,42.22,81.3

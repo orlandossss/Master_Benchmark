@@ -1,0 +1,86 @@
+timestamp,model,model_parameters,tester,question,response,response_length_chars,estimated_tokens,inference_time_s,time_to_first_token_s,tokens_per_second,inference_time_perf_s,time_to_first_token_perf_s,tokens_per_second_perf,timing_diff_ms,cpu_baseline_percent,cpu_average_percent,cpu_per_core,cpu_freq_mhz,memory_baseline_mb,memory_peak_mb,memory_increase_mb,memory_percent
+2025-11-19T16:05:49.717154,granite4:3b,3B,matevz,Describe gravity in simple terms for someone that doesn’t know anything about it,"Gravity is like a gentle hug from everything around us. It's what keeps our feet on the ground, makes things fall when we drop them, and pulls the moon towards the Earth. Imagine if you throw a ball up; gravity is why it comes back down instead of flying away. It also holds together stars and planets, keeping everything in its place in space. So, gravity is basically nature's way of making sure things don't float off into space!",432,93,5.8,4.648,16.04,5.8,4.648,16.04,-0.045,25.0,25.46,"[0.0, 16.7, 16.7, 16.7, 0.0, 33.3, 0.0, 0.0, 16.7, 0.0, 37.5, 28.6, 0.0, 0.0, 16.7, 0.0]",2560.0,12315.4,13098.99,783.59,82.5
+2025-11-19T16:05:57.125889,granite4:3b,3B,matevz,Describe gravity for someone that knows about it and wants to know more about it,"Gravity is a force that pulls objects toward each other. It's what keeps us on Earth, makes things fall when dropped, and holds planets in orbit around stars like our Sun. Imagine if you drop a ball—it falls down because of gravity.
+
+This force also affects everything in space. Planets, moons, and even astronauts all feel it. The bigger an object is, the stronger its pull of gravity. That's why Earth feels more ""heavy"" than the Moon or Mars.
+
+Scientists study gravity to understand how things move around us and beyond. They use math to predict where objects will go based on their mass and speed. Gravity also plays a big role in creating tides in our oceans, influenced by the Moon's pull as well.
+
+In short, gravity is like an invisible magnet that helps keep everything from falling apart or drifting away into space. It's one of the most fundamental parts of how our universe works!",891,186,2.491,0.125,74.67,2.491,0.125,74.68,-0.065,10.7,23.21,"[0.0, 0.0, 14.3, 14.3, 0.0, 0.0, 0.0, 42.9, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,12943.19,12945.15,1.96,82.5
+2025-11-19T16:06:01.224717,granite4:3b,3B,matevz,Find a good analogy to describe gravity to someone.,"Imagine you're holding an apple in your hand. When you let go, it falls down because of something called gravity. Gravity is like that invisible force pulling things towards each other - just like when you drop the apple and it falls straight down to the ground. It's what keeps our feet on the floor and the moon orbiting around the Earth.",340,71,0.988,0.137,71.89,0.987,0.137,71.92,-0.409,1.0,23.05,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 16.7, 33.3, 0.0, 0.0, 0.0, 0.0]",2560.0,12930.23,12937.57,7.34,82.4
+2025-11-19T16:06:03.820435,granite4:3b,3B,matevz,give a small quiz (3 questions) about gravity,"1. What is gravity?
+2. Who first described gravity as a universal force acting between all objects with mass?
+3. Why do we feel weightless in space despite gravity still being present?",184,40,0.601,0.128,66.57,0.601,0.128,66.57,0.005,1.4,16.01,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,12925.05,12926.18,1.12,82.5
+2025-11-19T16:06:06.029613,granite4:3b,3B,matevz,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,"Yes, it's wise to have a big jacket. At 10 degrees Celsius, which is about 50 degrees Fahrenheit, the air can feel quite chilly, especially when there's wind or rain. A warm jacket will help keep you comfortable and cozy outdoors.",230,53,0.782,0.153,67.77,0.782,0.153,67.8,-0.36,3.1,17.98,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,12931.61,12943.29,11.68,82.5
+2025-11-19T16:06:08.420358,granite4:3b,3B,matevz,Give a common myth about gravity and explain why it is false,"A common myth about gravity is that it's just an invisible force pulling everything towards the center of the Earth. While this gives some idea, it's not entirely accurate.
+
+The truth is, gravity isn't just a pull but also a push. It helps objects move apart from each other too. Also, while we often think gravity only affects us on Earth, it actually works everywhere in the universe, not just here. So, even when you're looking up at the stars or floating around in space, gravity is still there!",499,107,1.411,0.12,75.83,1.411,0.12,75.83,0.04,1.4,18.79,"[25.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 14.3, 28.6, 0.0, 0.0, 0.0, 0.0]",2560.0,12939.44,12942.04,2.6,82.5
+2025-11-19T16:06:11.439231,granite4:3b,3B,matevz,Explain why a plane can fly even with gravity in simple bullet points,"- Airplane wings are shaped like airfoils.
+  - This shape helps lift the airplane up when it moves fast through the air.
+
+- When an airplane's engines push air down, it creates an upward force called lift.
+  
+- Gravity pulls everything towards the ground.
+  
+- Lift pushes the plane upwards against gravity.
+  
+- The faster the wings move through the air, the more lift they create.
+
+- In a steady climb or descent, pilots adjust how steeply they fly to balance lift and gravity.
+
+- Engines work hard to keep pushing air down, helping the plane stay aloft even when fighting gravity.",583,125,1.663,0.126,75.18,1.663,0.126,75.19,-0.071,3.7,22.8,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,12937.66,12935.45,-2.21,82.4
+2025-11-19T16:06:14.711484,granite4:3b,3B,matevz,what are the steps to write a master thesis ?,"Writing a master's thesis can seem like a big task, but if you break it down into steps, it becomes much easier. Here are the main steps:
+
+1. **Pick Your Topic**: Choose something that interests you and fits what your department requires.
+
+2. **Research**: Look for books, articles, and online resources related to your topic. This will help you understand different viewpoints and gather information.
+
+3. **Form a Thesis Statement**: Write a short sentence summarizing the main idea of your thesis. It should be clear and focused.
+
+4. **Create an Outline**: Organize your thoughts into sections like introduction, body, conclusion, etc. This helps keep everything structured.
+
+5. **Write Your Paper**: Start with the introduction, then write each section according to your outline. Don’t forget to include a bibliography for all sources you use.
+
+6. **Revise and Edit**: Check your paper for grammar mistakes, unclear sentences, or parts that need more information. It's good to have someone else read it too!
+
+7. **Prepare Your Presentation**: Some programs require you to present your findings in front of an audience. Practice talking about your research clearly and confidently.
+
+8. **Submit Your Thesis**: Follow the guidelines provided by your department on how to submit your final document.
+
+9. **Attend the Defense Meeting**: This is where a committee reviews your thesis and asks questions. Prepare for this by reviewing all parts of your paper.",1456,291,3.864,0.125,75.31,3.864,0.124,75.31,-0.006,3.3,19.98,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0]",2560.0,12924.64,12931.23,6.59,82.4
+2025-11-19T16:06:20.184100,granite4:3b,3B,matevz,What are the pros and cons of nuclear energy ?,"Nuclear energy has both advantages and disadvantages. 
+
+Pros:
+1. Low Emissions: Nuclear power plants produce very little air pollution compared to fossil fuel-based plants.
+2. Reliable Energy: They can provide a steady supply of electricity, making them crucial for grid stability.
+3. High Energy Density: Nuclear fuels release a lot of energy per unit of mass, which means they are efficient.
+
+Cons:
+1. Radioactive Waste: The waste products from nuclear reactions can remain dangerous for thousands of years and require careful handling.
+2. Safety Concerns: Although rare, accidents at nuclear plants like Chernobyl or Fukushima can have catastrophic impacts on the environment and health.
+3. High Costs: Building a nuclear power plant is very expensive and takes a long time.
+
+So, while nuclear energy offers reliable and low-polluting power options, it also comes with challenges related to waste disposal and safety risks.",926,181,2.384,0.124,75.92,2.384,0.124,75.92,-0.107,3.1,18.15,"[16.7, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0]",2560.0,12897.91,12899.6,1.69,82.2
+2025-11-19T16:06:24.177084,granite4:3b,3B,matevz,I am strugulling with C++ where should i start ?,"To start learning C++, you can follow these steps:
+
+1. **Understand the Basics**: Learn about variables, data types (like int, float, char), and operators in C++. Understand how to write a simple program that prints ""Hello World"" to the console.
+
+2. **Learn About Functions**: Functions are blocks of code that perform specific tasks. Start by learning how to declare functions, call them, and understand their purpose.
+
+3. **Explore Control Structures**: Get familiar with if-else statements, loops (for, while), and switch-case structures. These will help you control the flow of your program based on conditions or repeated actions.
+
+4. **Learn About Arrays and Strings**: Understand how to use arrays for storing multiple values of the same type. Also, learn about strings, which are arrays of characters.
+
+5. **Study Structs and Classes**: In C++, a struct is similar to classes in other languages. Learn how to define and use them to group related data together or create objects with properties and methods.
+
+6. **Dive into Input/Output Operations**: Practice reading from and writing to the console. This will help you interact with users by accepting input and displaying output.
+
+7. **Understand Memory Management**: Learn about pointers, which are used to store memory addresses of variables. Understand how dynamic memory allocation works using new and delete operators.
+
+8. **Explore Standard Template Library (STL)**: STL is a powerful collection of classes that helps in managing data efficiently. Start with containers like vectors, lists, or maps.
+
+9. **Practice Regularly**: Write small programs to solidify your understanding. Try solving problems on platforms like LeetCode or HackerRank.
+
+10. **Read Documentation and Tutorials**: Make use of online resources, books, and tutorials dedicated to C++. Websites like cppreference.com are great for detailed guides and explanations.
+
+Remember, learning a programming language is a journey. Be patient with yourself, practice consistently, and seek help when you need it. Good luck on your coding adventure!",2073,411,5.534,0.122,74.27,5.533,0.122,74.28,-0.665,3.9,18.75,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,12911.74,12916.06,4.32,82.2

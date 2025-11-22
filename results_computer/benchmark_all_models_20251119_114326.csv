@@ -1,0 +1,284 @@
+timestamp,model,model_parameters,tester,question,response,response_length_chars,estimated_tokens,inference_time_s,time_to_first_token_s,tokens_per_second,inference_time_perf_s,time_to_first_token_perf_s,tokens_per_second_perf,timing_diff_ms,cpu_baseline_percent,cpu_average_percent,cpu_per_core,cpu_freq_mhz,memory_baseline_mb,memory_peak_mb,memory_increase_mb,memory_percent
+2025-11-19T11:42:48.285950,gemma3:270m,1B,raiko,Describe gravity in simple terms for someone that doesn’t know anything about it,"Okay, imagine everything has a tiny, invisible ""pull"" or ""gravity"". That pull is like a magnet, but instead of holding things in place, it pulls them towards the center of the Earth.
+
+This pull is what keeps us on the ground, and it's what keeps the planets orbiting the sun. It's a really strong force that's all around us!
+",325,80,4.14,3.844,19.33,4.139,3.844,19.33,-0.215,1.4,23.56,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 16.7, 0.0, 0.0, 16.7, 16.7, 0.0, 0.0]",2560.0,13657.1,14185.37,528.27,90.5
+2025-11-19T11:42:54.032171,gemma3:270m,1B,raiko,Describe gravity for someone that knows about it and wants to know more about it,"Okay, let's dive into gravity! It's a fascinating and ubiquitous force that's shaping our world. 
+
+Think of it like this:
+
+*   **Everything we experience is affected by gravity.** You can't stand on the ground, you can't fly, you can't feel the pull of the Earth.
+*   **Gravity is the force that pulls objects towards each other.** It's a fundamental force, and it's the reason why everything falls towards the ground.
+*   **It's a constant, invisible force.** We don't experience it directly, but it's a constant presence that's always there.
+*   **Gravity affects the speed of objects.** The faster an object moves, the more gravity it exerts. This is why we stand up and walk when we're walking.
+
+So, to answer your question, gravity is the invisible force that pulls everything together and keeps our bodies grounded. It's a powerful and essential force shaping our world!
+
+What are your thoughts on gravity? Do you have any questions about it? I'd be happy to answer them!",977,237,0.991,0.186,239.09,0.991,0.186,239.13,-0.18,6.7,28.41,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0]",2560.0,14191.75,14195.88,4.13,87.9
+2025-11-19T11:42:56.630529,gemma3:270m,1B,raiko,Find a good analogy to describe gravity to someone.,"Here's a good analogy to describe gravity:
+
+Imagine you're trying to lift a heavy box.
+
+*   **The object (the box) is like a tiny, tiny, tiny piece of matter.**
+
+*   **The force (gravity) is like the weight you feel pulling on it.**
+
+*   **The box is like a very strong, very strong, very powerful force.**
+
+*   **You're trying to lift the box, but the box is a tiny, tiny piece of matter.**
+
+*   **The gravity is the force that keeps the box from falling down.**
+
+So, gravity is the force that pulls everything towards each other, keeping things in place and preventing them from floating away.",595,150,0.695,0.185,215.69,0.695,0.185,215.73,-0.133,4.9,27.51,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,13798.88,13786.9,-11.98,88.0
+2025-11-19T11:42:58.932129,gemma3:270m,1B,raiko,give a small quiz (3 questions) about gravity,"Okay, here's a 3-question quiz about gravity:
+
+1.  What is the primary force that pulls objects towards each other in the universe?
+2.  What is the name of the force that's responsible for the upward pull of gravity?
+3.  What is the name of the force that's responsible for the downward pull of gravity?",303,78,0.399,0.116,195.26,0.399,0.116,195.43,-0.354,10.5,37.22,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 33.3, 0.0, 0.0, 16.7, 0.0, 50.0, 33.3, 0.0, 0.0]",2560.0,13797.04,13821.85,24.81,88.1
+2025-11-19T11:43:00.938598,gemma3:270m,1B,raiko,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,"Yes, you definitely need a big jacket if the weather is 10 degrees Celsius.
+",76,20,0.246,0.181,81.29,0.246,0.181,81.35,-0.186,4.3,13.4,"[16.7, 0.0, 16.7, 0.0, 16.7, 0.0, 0.0, 0.0, 28.6, 16.7, 0.0, 16.7, 16.7, 16.7, 16.7, 0.0]",2560.0,13807.1,13803.54,-3.55,88.0
+2025-11-19T11:43:02.790736,gemma3:270m,1B,raiko,Give a common myth about gravity and explain why it is false,"The most common myth about gravity is that **gravity is a force of nature that pulls everything towards the center of the Earth.**
+",131,27,0.35,0.185,77.2,0.349,0.184,77.35,-0.648,2.5,17.36,"[0.0, 0.0, 0.0, 0.0, 28.6, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,13795.74,13794.27,-1.47,87.9
+2025-11-19T11:43:04.748008,gemma3:270m,1B,raiko,Explain why a plane can fly even with gravity in simple bullet points,"Here's a simple explanation of why a plane can fly:
+*   **Lift:** The plane's wings generate lift, which is like a giant elevator. This lift helps the plane stay in the air.
+*   **Gravity:** Gravity pulls everything towards the center of the Earth. The plane's weight is balanced by the pull of gravity.
+*   **Air Resistance:** Air resistance is a force that opposes the plane's motion. It slows it down and makes it harder to control.
+*   **Shape and Stability:** The shape of the plane, the way it's folded, and its stability make it more likely to fly.
+",556,137,0.78,0.197,175.64,0.78,0.197,175.59,0.218,3.9,23.41,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 20.0, 0.0, 0.0, 0.0, 0.0, 20.0, 0.0, 0.0, 0.0, 0.0]",2560.0,13787.39,13792.62,5.23,88.0
+2025-11-19T11:43:07.134971,gemma3:270m,1B,raiko,what are the steps to write a master thesis ?,"Writing a master thesis can be a challenging but rewarding process. Here's a comprehensive guide to help you navigate the steps:
+
+**I. Preparation & Planning:**
+
+1.  **Define Your Research Question/Thesis Statement:**
+    *   **What question are you trying to answer?** Be specific and clear.  A good thesis statement is the most crucial element of your master thesis. It should directly address the research question.
+    *   **What are the key outcomes you hope to achieve?**  What specific results or insights do you want to present?
+    *   **Consider the scope of your research.**  Is it a general overview, a specific topic, or a more in-depth investigation?
+    *   **Choose a topic that you are passionate about and have a good understanding of.**  This will make the process more enjoyable and engaging.
+
+2.  **Develop a Research Plan:**
+    *   **Identify the key methods you will use.**  This will help you stay organized and track your progress. Common methods include:
+        *   **Literature Review:**  A comprehensive review of existing research on your topic.
+        *   **Data Collection:**  Gathering data through interviews, surveys, observations, experiments, or other methods.
+        *   **Data Analysis:**  Analyzing the collected data to identify patterns, trends, and relationships.
+        *   **Hypothesis Testing:**  Testing hypotheses and drawing conclusions based on the data.
+        *   **Method Development:**  Developing specific procedures and protocols for data collection and analysis.
+        *   **Presentation:**  Presenting your findings in a clear and concise manner.
+    *   **Outline your research plan clearly.**  This will help you stay focused and ensure that your research is logical and well-organized.
+    *   **Create a timeline.**  Break down the research process into manageable tasks.
+
+3.  **Select Your Research Methods:**
+    *   **Consider your skills, resources, and time availability.**  Choose methods that are appropriate for your level of expertise and the scope of your research.
+    *   **Consider the potential impact of your research.**  What will your findings reveal?  How will they contribute to the existing body of knowledge?
+    *   **Think about your audience.**  Who will be reading your research?  What are their interests and expectations?
+    *   **Ensure your methods are appropriate for your research question.**  Avoid using methods that are too specific or that are not relevant to your research question.
+    *   **Make sure your methods are aligned with the scope of your research.**  This means that your methods will be relevant and contribute to the overall understanding of your topic.
+
+4.  **Gather Your Data:**
+    *   **Collect relevant data.**  This could include surveys, interviews, observations, experiments, or other methods.
+    *   **Ensure your data is accurate and complete.**  Data quality is crucial for the validity and reliability of your findings.
+    *   **Use appropriate data collection methods.**  Choose methods that are appropriate for the type of data you will be collecting.
+
+5.  **Plan Your Methodology:**
+    *   **Define the research question or thesis statement.**
+    *   **Identify the research methods you will use.**
+    *   **Develop a detailed outline of your research plan.**
+    *   **Create a plan for data collection and analysis.**
+    *   **Develop a plan for data management and storage.**
+
+6.  **Develop a Hypothesis:**
+    *   **State your hypothesis clearly and concisely.**  It should be a testable prediction about the relationship between variables.
+    *   **Consider the potential implications of your hypothesis.**  What does your research suggest about the phenomenon you are investigating?
+    *   **Formulate a testable hypothesis.**
+
+**II. Data Collection:**
+
+1.  **Design Your Study:**
+    *   **Choose a suitable research design.**  This will depend on the nature of your research question and the type of data you will be collecting.  Common designs include:
+        *   **Quantitative:**  Collect data using statistical analysis.
+        *   **Qualitative:**  Collect data through interviews, focus groups, or other methods.
+        *   **Mixed Methods:**  Combine quantitative and qualitative approaches.
+    *   **Define the variables you will be measuring.**  Clearly identify the variables you will be examining.
+    *   **Collect the data.**  This may involve:
+        *   **Surveys:**  Gathering information from a large sample of participants.
+        *   **Interviews:**  Talking to a large number of individuals to gain a deeper understanding of their perspectives.
+        *   **Observations:**  Observing behavior and data collection processes.
+        *   **Experiments:**  Manipulating variables to see if they influence the outcome.
+        *   **Document Analysis:**  Analyzing documents, such as reports, memos, or other written materials.
+    *   **Ensure the data collection methods are appropriate for the type of data you will be collecting.**  Proper data collection methods are essential for obtaining valid and reliable data.
+
+2.  **Pilot Test Your Study:**
+    *   **Conduct a pilot study to test your research design and procedures.**  This is a valuable exercise to identify potential problems and refine your approach.
+    *   **Gather feedback from participants.**  Ask them to provide feedback on your study design, procedures, and data collection methods.
+
+3.  **Data Collection:**
+    *   **Collect data according to your research plan.**  This may involve conducting surveys, interviews, observations, or other methods.
+    *   **Ensure data accuracy and completeness.**  Use appropriate data collection methods to ensure that your data is accurate and complete.
+    *   **Document your data collection process.**  Keep a record of your data collection activities, including the instruments used, the procedures followed, and any challenges you encountered.
+
+4.  **Data Analysis:**
+    *   **Use appropriate statistical techniques to analyze your data.**  This may involve using statistical software or conducting your own analysis.
+    *   **Report your findings in a clear and concise manner.**  Use tables, graphs, and other visual aids to present your data and findings.
+    *   **Interpret your findings and draw conclusions.**  Consider the implications of your research and its potential contributions to the field of study.
+
+**III. Writing the Master Thesis:**
+
+1.  **Structure Your Thesis:**
+    *   **Organize your research questions and hypotheses into a clear and logical structure.**  This structure will guide your writing and ensure that your thesis is well-organized.
+    *   **Create a clear and concise introduction.**  This introduction should introduce the topic of your thesis and provide a brief overview of your research.
+    *   **Develop a body of your research.**  This body of your research should be a comprehensive and well-organized exploration of your topic.
+    *   **Provide supporting evidence.**  This section should support your research questions and hypotheses with evidence from your data collection and analysis.
+    *   **Write a strong conclusion.**  This conclusion should summarize your research, restate your thesis, and provide a final thought about the significance of your research.
+
+2.  **Write Your Research Paper:**
+    *   **Write a well-written and clear research paper.**  This paper should be well-organized, precise, and free of grammatical errors.
+    *   **Use a clear and concise writing style.**  Write in a formal and academic tone.
+    *   **Use appropriate citations and references.**  Use a consistent citation style (e.g., APA, MLA, Chicago).
+    *   **Address the research question or thesis statement clearly and directly.**  Avoid rambling or introducing new information.
+    *   **Maintain a consistent tone and voice.**  Use appropriate language and avoid using jargon.
+
+3.  **Proofread and Edit Your Thesis:**
+    *   **Proofread your thesis carefully.**  Check for grammar, spelling, and punctuation errors.
+    *   **Edit your thesis to ensure that it is clear, concise, and accurate.**  Cut out unnecessary words and phrases.
+    *   **Seek feedback from other researchers.**  Ask others to read your thesis and provide feedback on its clarity and accuracy.
+
+**IV. Revision and Editing:**
+
+1.  **Revise and Edit Your Thesis:**
+    *   **Revise your thesis for clarity, conciseness, and accuracy.**
+    *   **Ensure that your research questions and hypotheses are well-defined.**
+    *   **Improve the structure and organization of your research paper.**
+    *   **Ensure that your thesis is well-organized and logically structured.**
+    *   **Address any gaps or inconsistencies in your research.**
+
+2.  **Get Feedback:**
+    *   **Ask your advisor, professors, or other experts to review your thesis.**  They can provide valuable feedback on your writing and help you identify areas for improvement.
+
+3.  **Final Polish:**
+    *   **Check for clarity and conciseness.**
+    *   **Ensure that your research paper is well-organized and easy to understand.**
+    *   **Address any remaining issues or gaps.**
+
+**V. Submission and Publication:**
+
+1.  **Submit Your Thesis:**
+    *   **Follow the submission guidelines for your specific research design.**
+    *   **Submit your thesis in a timely manner.**
+    *   **Ensure that your submission is properly formatted and submitted.**
+
+2.  **Peer Review:**
+    *   **Submit your thesis to a peer-reviewed journal or conference.**  This allows other researchers to review your work and provide feedback.
+    *   **Be prepared to answer questions from the reviewers.**
+
+3.  **Publication:**
+    *   **Publish your research in a peer-reviewed journal or conference.**
+    *   **Prepare a manuscript that is suitable for publication.**  This may include a chapter, a full-length paper, or a bibliography.
+
+**Tips for Success:**
+
+*   **Stay organized and organized!**  A well-organized thesis and research paper will make your work more effective and easier to find.
+*   **Be proactive and persistent.**  Don't wait until the last minute to start working on your thesis.
+*   **Seek out opportunities to learn and improve.**  Read academic journals, attend conferences, and engage in research projects.
+*   **Be open to feedback and criticism.**  Don't be afraid to ask for help from your advisor, professors, or other researchers.
+*   **Be patient and persistent.**  Writing a master thesis is a long and challenging process.
+
+By following these steps and dedicating yourself to the research process, you can increase your chances of writing a well-researched and impactful master thesis. Good luck!
+",10695,2288,7.928,0.184,288.62,7.926,0.183,288.66,-1.259,0.6,29.06,"[0.0, 0.0, 0.0, 0.0, 0.0, 25.0, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0]",2560.0,13781.96,13793.05,11.09,87.8
+2025-11-19T11:43:16.668999,gemma3:270m,1B,raiko,What are the pros and cons of nuclear energy ?,"Nuclear energy is a complex topic with both advantages and disadvantages. Here's a breakdown of the pros and cons:
+
+**Pros:**
+
+*   **Reliable and Secure:** Nuclear power plants are inherently reliable and secure, providing a stable and consistent source of electricity. This is a significant advantage in areas with frequent and severe power outages.
+*   **Low Greenhouse Gas Emissions:** Nuclear power plants produce little to no greenhouse gas emissions during operation. This is a major advantage in mitigating climate change.
+*   **Clean Energy Source:** Nuclear energy utilizes readily available and abundant resources, including uranium, making it a clean and sustainable energy source.
+*   **Reduced Reliance on Fossil Fuels:** Nuclear energy significantly reduces reliance on fossil fuels, which are finite resources and contribute to climate change.
+*   **Nuclear Power Plants:** Nuclear power plants are large and complex, requiring significant infrastructure, equipment, and workforce. They can be a cost-effective option for large-scale power generation.
+*   **Stable and Consistent Power:** Nuclear power plants provide a stable and consistent power supply, reducing fluctuations in electricity demand.
+*   **Cost-Effective:** Nuclear power plants are typically less expensive than coal-fired power plants, making them a more competitive option for large-scale energy production.
+
+**Cons:**
+
+*   **Nuclear Waste Disposal:** The disposal of radioactive waste remains a major challenge. Nuclear waste is extremely heavy and poses a significant risk of environmental contamination and long-term health problems.
+*   **High Initial Costs:** Building nuclear power plants is expensive, requiring significant upfront investment. This can be a barrier for some countries and regions.
+*   **Nuclear Proliferation Risk:** The potential for nuclear materials to be diverted for weapons purposes remains a concern. This raises ethical and security concerns.
+*   **Public Acceptance:** Public acceptance of nuclear power is mixed. Some people are hesitant due to concerns about safety, environmental impact, and the potential for misuse.
+*   **Safety Concerns:** Nuclear accidents, such as Chernobyl and Fukushima, have caused widespread damage and have raised serious safety concerns. These events can have devastating consequences for human health and the environment.
+*   **Limited Environmental Impact:** While nuclear power plants have a relatively small environmental footprint compared to coal-fired plants, they still have a significant impact on air and water quality.
+*   **Regulation and Oversight:** Nuclear power plants are subject to stringent regulations and oversight by governments and international organizations.
+
+**In summary:**
+
+Nuclear energy offers significant benefits in terms of reliability, security, and environmental sustainability. However, it also faces significant challenges related to waste disposal, safety, proliferation risks, and public acceptance. The best choice for a particular energy source depends on a variety of factors, including the country's energy needs, economic conditions, and environmental concerns.",3154,572,2.271,0.195,251.91,2.27,0.194,252.0,-0.813,7.4,28.06,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 42.9, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 16.7, 0.0, 0.0]",2560.0,13772.43,13799.02,26.59,88.0
+2025-11-19T11:43:20.546112,gemma3:270m,1B,raiko,I am strugulling with C++ where should i start ?,"Strugling with C++ can be frustrating! Here's a breakdown of the best starting points, covering different areas and levels of complexity:
+
+**1. Understanding the Problem:**
+
+*   **What is the problem?**  Be specific.  Is it a bug? Is it a complex calculation? Is it a visual representation of the problem?
+*   **What is the expected behavior?**  What does the code *actually* do?  If it's a bug, it's likely a bug.  If it's a complex calculation, it might be a complex problem.
+*   **What are the constraints?**  Are there any specific constraints (e.g., memory limits, input types, expected output)?
+*   **What are the potential causes?**  Are there any potential issues that might be causing the problem?  (e.g., incorrect data types, memory leaks, incorrect calculations, complex algorithms)
+
+**2.  Basic Concepts:**
+
+*   **Variables:**  What are variables?  What are their types?  How do you declare them?
+*   **Data Types:**  What data types are typically used?  (e.g., integers, floats, char, bool, range, object, etc.)
+*   **Operators:**  What operators are used?  (e.g., +, -, *, /, ==, !=, >, <, etc.)
+*   **Control Flow:**  How are loops executed?  (e.g., `for`, `while`, `if`, `else`)
+*   **Functions:**  What are functions?  How do you define them?  What arguments do they accept?  What return values do they produce?
+*   **Memory Management:**  How do you allocate and deallocate memory?  How do you free memory?
+
+**3.  Basic C++ Concepts:**
+
+*   **Structures:**  What are structs?  How do you create them?  What are their fields?
+*   **Arrays:**  What are arrays?  How do you create them?  What are their fields?  How do you access elements?
+*   **Classes:**  What are classes?  How do you create them?  What are their fields?  How do you access elements?
+*   **Object-Oriented Programming (OOP):**  What are objects?  What are their properties?  How do you create and manage objects?  What are inheritance, polymorphism, and encapsulation?
+*   **Inheritance:**  How do you create new classes by inheriting properties and methods from existing classes?
+*   **Polymorphism:**  How do you make objects of the same type behave in different ways (polymorphism)?
+
+**4.  Common C++ Libraries and Frameworks:**
+
+*   **STL (Standard Template Library):**  This is a vast library of pre-built data structures and algorithms.  It's a good starting point for learning.  You can use it for almost everything.
+*   **std::vector:**  A powerful data structure for storing collections of elements.
+*   **std::list:**  A data structure for storing collections of elements.
+*   **std::array:**  A data structure for storing collections of elements.
+*   **std::string:**  A data structure for storing collections of characters.
+*   **std::map:**  A data structure for storing collections of key-value pairs.
+*   **std::unordered_map:**  A data structure for storing collections of key-value pairs.
+*   **std::regex:**  A data structure for storing collections of regular expressions.
+
+**5.  Practice and Problem Solving:**
+
+*   **Solve coding problems:**  Practice coding problems on platforms like LeetCode, HackerRank, or other coding challenges.  Focus on understanding the problem, the solution, and the constraints.
+*   **Write code:**  Try to write code that solves the problem you're facing.  Don't just copy and paste; think about how the code works.
+*   **Use a debugger:**  A debugger allows you to step through your code line by line, inspect variables, and understand the flow of execution.
+*   **Learn from other people:**  Look at the code of other programmers and try to understand their approach.
+
+**6.  Key Considerations:**
+
+*   **Readability:**  Write code that is easy to understand and follow.  Use meaningful names, clear comments, and well-structured code.
+*   **Efficiency:**  Consider the time and space complexity of your code.  Write efficient algorithms and avoid unnecessary computations.
+*   **Maintainability:**  Design your code so that it is easy to modify and extend.  Use modular programming and well-defined functions.
+*   **Testability:**  Write code that is easy to test.  Use unit tests to ensure that your code works as expected.
+*   **Robustness:**  Design your code to be robust to errors.  Consider using error handling, logging, and other techniques to help you catch and fix problems.
+
+**7.  Tips for Success:**
+
+*   **Start small:**  Don't try to write a complex program right away.  Start with a simple task and gradually increase the complexity.
+*   **Focus on understanding the problem:**  Don't get bogged down in details.  Understand the problem and the constraints.
+*   **Practice regularly:**  Coding is a skill that improves with practice.  Commit to working on coding problems regularly.
+*   **Don't be afraid to ask for help:**  If you're stuck, don't hesitate to ask for help from other programmers.
+*   **Stay up-to-date:**  The field of C++ is rapidly evolving.  Stay up-to-date with the latest trends and best practices.
+*   **Be patient:**  Learning C++ takes time and effort.  Don't get discouraged if you don't understand everything right away.
+
+**Example:**
+
+Let's say you're stuck with a C++ function that calculates the average of a list of numbers.  Here's a possible approach:
+
+1.  **Understand the problem:** The function should return the average of the numbers in the list.
+2.  **Find the data type:**  It should be a `double` because the numbers are integers.
+3.  **Find the operators:**  It should be a `+` operator (addition) and a `*` operator (multiplication).
+4.  **Find the control flow:**  It should be a `for` loop that iterates through the list and calculates the average.
+5.  **Write the code:**  The code should use the `double` data type to store the numbers and the `+` operator to add them together.  The loop should be structured to be clear and easy to follow.
+
+By following these steps, you can effectively learn C++ and start solving problems in your spare time.  Good luck!
+",5959,1486,5.193,0.183,286.15,5.192,0.183,286.21,-1.067,3.9,26.74,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,13794.0,13795.25,1.25,88.0

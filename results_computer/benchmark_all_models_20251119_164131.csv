@@ -1,0 +1,69 @@
+timestamp,model,model_parameters,tester,question,response,response_length_chars,estimated_tokens,inference_time_s,time_to_first_token_s,tokens_per_second,inference_time_perf_s,time_to_first_token_perf_s,tokens_per_second_perf,timing_diff_ms,cpu_baseline_percent,cpu_average_percent,cpu_per_core,cpu_freq_mhz,memory_baseline_mb,memory_peak_mb,memory_increase_mb,memory_percent
+2025-11-19T16:39:31.906447,qwen3:4b,4B,raiko,Describe gravity in simple terms for someone that doesn’t know anything about it,"Gravity is what makes things fall down toward the Earth. Like when you drop a pencil—it doesn’t float away; it falls to the ground because of gravity. It’s like the Earth has a gentle, invisible pull that holds everything close to it, so you stay on the ground and things don’t float off into space.",299,662,24.38,5.342,27.15,24.38,5.342,27.15,0.296,6.9,20.99,"[14.3, 0.0, 0.0, 0.0, 0.0, 0.0, 28.6, 0.0, 0.0, 0.0, 28.6, 0.0, 0.0, 0.0, 0.0, 0.0]",3201.0,12688.84,13459.59,770.75,85.7
+2025-11-19T16:39:57.907497,qwen3:4b,4B,raiko,Describe gravity for someone that knows about it and wants to know more about it,"If you already know gravity, here’s what’s *truly* interesting:  
+
+Gravity isn’t a force pulling things together—it’s the **curvature of spacetime** itself. Imagine spacetime as a stretchy fabric. Massive objects (like stars or planets) create dents in this fabric. Other objects move along the curves of that fabric, which *looks* like attraction.  
+
+Why does this matter? Because **gravity and acceleration are equivalent** (the equivalence principle). If you’re in a closed room accelerating upward at 9.8 m/s², you’d feel identical to standing on Earth. This shows gravity isn’t a ""force"" but the geometry of the universe.  
+
+The coolest part? We don’t yet know how gravity fits with quantum mechanics. At tiny scales (like inside black holes), gravity’s behavior breaks down. That’s why physicists are still hunting for a **theory of quantum gravity**—it could rewrite everything we think about the universe.  
+
+So, if you want to go deeper:  
+- Study how spacetime curvature *actually* works (Einstein’s field equations)  
+- Explore why gravity is the *weakest* force (it’s 10³⁶ times weaker than electromagnetism!)  
+- Read about black holes as extreme tests of spacetime curvature  
+
+Gravity’s real magic is that it *shapes the cosmos*—from how planets orbit to why the universe expands. What aspect interests you most? I can give a focused example.",1357,749,13.116,0.232,57.11,13.115,0.232,57.11,-0.644,7.2,19.32,"[16.7, 0.0, 0.0, 0.0, 33.3, 16.7, 16.7, 0.0, 16.7, 16.7, 28.6, 33.3, 0.0, 0.0, 0.0, 0.0]",2560.0,13431.38,13500.57,69.18,86.0
+2025-11-19T16:40:12.630815,qwen3:4b,4B,raiko,Find a good analogy to describe gravity to someone.,"Imagine stretching a water balloon on a table. Now drop a heavy stone inside it. The stone creates a dip in the balloon. Anything nearby—like a small ball or even a marble—will roll *toward* that dip. That’s gravity: Earth (the heavy stone) creates a ""dip"" in space, pulling things like you toward it. Simple, visual, and no math needed!",337,459,6.873,0.25,66.78,6.873,0.25,66.79,-0.53,21.1,17.37,"[0.0, 50.0, 16.7, 0.0, 0.0, 0.0, 16.7, 0.0, 16.7, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,13522.92,13570.37,47.45,86.1
+2025-11-19T16:40:21.111941,qwen3:4b,4B,raiko,give a small quiz (3 questions) about gravity,"Here's a quick gravity quiz for you:
+
+1. What pulls objects toward each other?  
+   *Answer: Gravity*
+
+2. If you jump, what happens to the Earth?  
+   *Answer: The Earth moves slightly toward you (but so little it's almost invisible)*
+
+3. Why don’t you fall through the floor?  
+   *Answer: Gravity pulls you down, but the floor pushes up with equal force*",356,361,5.229,0.129,69.04,5.228,0.128,69.05,-0.863,8.8,18.31,"[0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 14.3, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0]",2560.0,13504.52,13513.99,9.46,86.0
+2025-11-19T16:40:27.948020,qwen3:4b,4B,raiko,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,"At 10°C (50°F), you definitely need a jacket—it's chilly enough to feel cold without one. A ""big"" jacket isn't really the issue here though. What matters most is **warmth and fit**. A standard light jacket (like a fleece or thin windbreaker) will work perfectly. If you wear it too big, it might not keep you warm well, so aim for something that fits snugly but isn't tight. Just remember: if it's windy or rainy, add extra layers for extra comfort! 😊",451,529,7.728,0.166,68.45,7.727,0.165,68.46,-0.896,10.8,16.12,"[14.3, 16.7, 16.7, 0.0, 16.7, 16.7, 14.3, 0.0, 0.0, 0.0, 14.3, 14.3, 0.0, 0.0, 0.0, 0.0]",2560.0,13539.21,13574.46,35.24,86.0
+2025-11-19T16:40:37.285957,qwen3:4b,4B,raiko,Give a common myth about gravity and explain why it is false,"Here's a common myth: ""Gravity only works on Earth."" This is false because gravity acts between *any* two masses in the universe, not just on Earth. For example, the Moon orbits Earth due to gravity, and planets orbit the sun because of gravity. Gravity works everywhere—on Earth, in space, and even between tiny objects like apples falling from trees!",352,573,8.351,0.155,68.62,8.351,0.155,68.62,-0.344,6.5,15.98,"[0.0, 28.6, 0.0, 0.0, 0.0, 0.0, 16.7, 16.7, 0.0, 0.0, 16.7, 50.0, 0.0, 0.0, 0.0, 0.0]",2560.0,13501.56,13504.02,2.46,85.9
+2025-11-19T16:40:47.246286,qwen3:4b,4B,raiko,Explain why a plane can fly even with gravity in simple bullet points,"- Gravity pulls planes down, but wings create upward lift to counter it.  
+- Air moves faster over the curved top of the wing, creating lower pressure there than below the wing.  
+- This pressure difference pushes the wing upward, balancing gravity so the plane stays in the air.",279,511,7.398,0.11,69.07,7.398,0.11,69.08,-0.453,10.5,15.26,"[0.0, 0.0, 14.3, 14.3, 37.5, 14.3, 0.0, 42.9, 0.0, 0.0, 42.9, 14.3, 28.6, 28.6, 14.3, 0.0]",3201.0,13505.48,13569.21,63.73,86.6
+2025-11-19T16:40:56.253510,qwen3:4b,4B,raiko,what are the steps to write a master thesis ?,"Here’s how to write your master’s thesis step by step:
+
+1. **Pick a topic you care about** – Choose something you’re genuinely interested in and that’s feasible for your time and resources. Talk to your advisor early to avoid dead ends.
+
+2. **Do a deep literature review** – Read 20–30 key papers in your field. This shows you understand what’s already known and gaps you can fill. Your advisor will help you spot relevant studies.
+
+3. **Design your research plan** – Decide *how* you’ll answer your question (e.g., surveys, experiments, data analysis). Create a clear timeline with milestones (e.g., ""Weeks 1–4: Collect data"").
+
+4. **Write your draft** – Start with the introduction, then move to methods, results, and discussion. Don’t worry about perfection—focus on getting ideas down. Use your advisor’s feedback to improve quickly.
+
+5. **Revise relentlessly** – Write, then rewrite. Ask: *“Does this answer my research question?”* Cut fluff, clarify arguments, and fix logic. This takes 50% of your time—don’t skip it!
+
+6. **Prepare for defense** – Practice explaining your thesis in 10 minutes. Anticipate questions (e.g., *“Why did you choose this method?”*). Your advisor will help you rehearse.
+
+**Pro tip**: Start small—write just 500 words per day. You’ll avoid burnout and build momentum. Your advisor is your biggest ally—ask for help *early*, not when you’re stuck.  
+
+Done right, this process turns your passion into something meaningful. Good luck!",1465,906,13.315,0.118,68.04,13.315,0.118,68.04,-0.138,4.9,19.54,"[14.3, 25.0, 0.0, 0.0, 0.0, 0.0, 14.3, 14.3, 0.0, 0.0, 14.3, 0.0, 14.3, 0.0, 0.0, 0.0]",2560.0,13564.91,13597.25,32.33,86.7
+2025-11-19T16:41:11.177893,qwen3:4b,4B,raiko,What are the pros and cons of nuclear energy ?,"Nuclear energy has some key advantages and challenges:
+
+**Pros:**  
+- Very low carbon emissions during operation (helps fight climate change).  
+- Highly efficient: A small amount of fuel creates massive energy (like a single uranium pellet = 1 ton of coal).  
+- Reliable 24/7 power supply (not affected by weather like solar/wind).  
+
+**Cons:**  
+- Radioactive waste stays dangerous for thousands of years (safe storage is tough).  
+- High costs and long construction times for plants.  
+- Risk of serious accidents (though rare, they can have huge consequences).  
+- Nuclear weapons proliferation concerns (though modern safeguards help).  
+
+Simple takeaway: Nuclear power is powerful and clean but comes with waste, cost, and safety risks that need careful management.",771,520,7.622,0.107,68.22,7.622,0.107,68.22,-0.013,10.1,19.62,"[25.0, 37.5, 0.0, 0.0, 0.0, 28.6, 0.0, 0.0, 0.0, 0.0, 0.0, 57.1, 0.0, 14.3, 0.0, 0.0]",2560.0,13606.8,13690.92,84.12,87.2
+2025-11-19T16:41:20.408504,qwen3:4b,4B,raiko,I am strugulling with C++ where should i start ?,"It's totally normal to feel stuck at first—many beginners do! Start with the absolute basics: write a simple ""Hello World"" program. Here’s exactly what to do today:  
+1️⃣ Install a free compiler (like VS Code or GCC)  
+2️⃣ Open a new file, type `#include <iostream>` followed by `int main() { std::cout << ""Hello, C++!""; return 0; }`  
+3️⃣ Run it—your first program works!  
+
+This builds confidence without overwhelming you. Focus on small, achievable steps first—C++ gets easier once you see progress. You’ve got this!",519,671,10.129,0.191,66.25,10.128,0.191,66.25,-0.447,9.9,18.96,"[25.0, 25.0, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0]",2560.0,13679.55,13700.61,21.07,85.6

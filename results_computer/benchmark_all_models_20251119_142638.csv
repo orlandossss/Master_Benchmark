@@ -1,0 +1,57 @@
+timestamp,model,model_parameters,tester,question,response,response_length_chars,estimated_tokens,inference_time_s,time_to_first_token_s,tokens_per_second,inference_time_perf_s,time_to_first_token_perf_s,tokens_per_second_perf,timing_diff_ms,cpu_baseline_percent,cpu_average_percent,cpu_per_core,cpu_freq_mhz,memory_baseline_mb,memory_peak_mb,memory_increase_mb,memory_percent
+2025-11-19T14:25:42.772327,qwen3:1.7b,"1,7B",gio,Describe gravity in simple terms for someone that doesn’t know anything about it,"Gravity is like the invisible ""hand"" that pulls everything toward Earth. Imagine you're on a playground, and when you drop a ball, it falls down instead of floating away. That’s because gravity is the force that makes objects fall toward the ground. It’s what keeps you from flying off into space when you’re in a plane, and it’s why your clothes stick to you when you wear them. Gravity is everywhere, and it’s what makes the Moon orbit Earth and why your feet feel the ground beneath you. It’s like a giant, invisible magnet that pulls things toward the center of the universe! 🌍✨",582,628,11.842,6.179,53.03,11.842,6.179,53.03,0.312,11.6,15.1,"[25.0, 0.0, 14.3, 37.5, 28.6, 14.3, 0.0, 14.3, 0.0, 0.0, 14.3, 0.0, 71.4, 42.9, 0.0, 14.3]",2560.0,12090.77,12756.02,665.25,80.9
+2025-11-19T14:25:56.222223,qwen3:1.7b,"1,7B",gio,Describe gravity for someone that knows about it and wants to know more about it,"Gravity is the force that pulls everything toward each other, like how a magnet attracts iron. On Earth, it keeps you grounded and makes apples fall from trees. It's what gives weight to objects and why you feel pulled toward the ground when you stand or jump. Scientists think of it as a ""pull"" between masses, with bigger objects (like planets) having stronger gravity. It's also why things float in space—there's no strong enough gravity to keep them grounded. Gravity is super important for life on Earth, because it's what keeps the planet in space and keeps you from flying off into space! 🌍✨",598,326,2.57,0.177,126.85,2.57,0.176,126.83,0.435,8.9,16.14,"[0.0, 0.0, 0.0, 14.3, 16.7, 0.0, 0.0, 0.0, 16.7, 0.0, 16.7, 16.7, 0.0, 0.0, 0.0, 0.0]",3201.0,12640.2,12686.1,45.91,80.9
+2025-11-19T14:26:00.401949,qwen3:1.7b,"1,7B",gio,Find a good analogy to describe gravity to someone.,"Gravity is like a giant, invisible ""pull"" that keeps everything on Earth from floating away. Imagine the Earth as a massive sponge—when you drop a ball, it falls because the sponge is attracted to the ball. Even a tiny apple is pulled down by the sponge (Earth's gravity). It's like a invisible force that pulls things toward the center of the Earth, whether you're on the ground or in space! 🌍✨",395,325,2.548,0.166,127.54,2.548,0.166,127.54,0.104,2.4,24.87,"[0.0, 16.7, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0, 83.3, 100.0, 0.0, 0.0]",2560.0,12685.52,12707.55,22.03,81.0
+2025-11-19T14:26:04.557956,qwen3:1.7b,"1,7B",gio,give a small quiz (3 questions) about gravity,"Sure! Here's a quick quiz about gravity:  
+
+**1. What is gravity?**  
+Answer: Gravity is the force that pulls objects toward each other, like how Earth pulls you to the ground.  
+
+**2. Why does an apple fall from a tree?**  
+Answer: Because gravity pulls objects toward Earth, even small things like apples fall when they’re released.  
+
+**3. What happens to a ball when you drop it?**  
+Answer: It falls faster than a feather because gravity acts equally on both, but in reality, it falls at the same rate in a vacuum.  
+
+Let me know if you want the answers explained further! 🌍✨",580,290,2.305,0.168,125.83,2.305,0.168,125.84,-0.277,8.7,18.97,"[0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0, 14.3, 16.7, 14.3, 16.7, 0.0]",2560.0,12708.1,12715.23,7.13,81.0
+2025-11-19T14:26:08.470448,qwen3:1.7b,"1,7B",gio,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,"Yes, a jacket is a good idea when it's 10°C (50°F), but it depends on your activity and how you plan to use it. If you're going outside for light activities like walking or jogging, a light jacket with a hood might be enough. But if you're doing something more strenuous, like hiking or sports, a thicker jacket is better. 10°C is not extremely cold, so a light jacket could work, but a jacket is still a good idea to stay comfortable and protect against wind or rain. Always check the weather and your specific needs!",518,369,2.85,0.164,129.48,2.85,0.164,129.47,0.132,2.7,16.49,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0, 20.0, 0.0, 0.0, 0.0, 0.0]",2560.0,12704.52,12706.82,2.3,80.9
+2025-11-19T14:26:12.928751,qwen3:1.7b,"1,7B",gio,Give a common myth about gravity and explain why it is false,"**Myth:** ""Gravity is the only force that acts between objects.""  
+
+**Why it's false:** While gravity is the weakest of the four fundamental forces, it's the **only force that acts over long distances** (like between planets or stars). Other forces, like **electromagnetism**, **strong nuclear force**, and **weak nuclear force**, also exist but are either much stronger, act over shorter distances, or only affect certain particles. For example, electromagnetism keeps electrons in atoms, but it's stronger than gravity and acts only between charged particles.  
+
+**Simple example:** Imagine gravity as a ""slow, gentle pull"" that keeps planets in orbit, but electromagnetism is like a ""strong, quick push"" that holds electrons in atoms. Both exist, but gravity is the only one that acts over vast distances. 🌌✨",811,440,3.516,0.192,125.15,3.516,0.192,125.13,0.489,5.3,20.51,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 100.0, 0.0, 0.0]",2560.0,12685.76,12725.66,39.91,81.2
+2025-11-19T14:26:18.052626,qwen3:1.7b,"1,7B",gio,Explain why a plane can fly even with gravity in simple bullet points,"- **Wings create lift**: Air flows over the wings, and faster-moving air (higher pressure) pushes the plane up.  
+- **Thrust overcomes drag**: Engines push air backward, creating forward motion to counteract drag.  
+- **Speed and angle matter**: Faster speed increases lift, and adjusting the wing angle (attack angle) helps maintain flight.  
+- **Gravity is balanced**: Planes generate more lift than gravity, allowing them to stay airborne.",442,397,3.087,0.177,128.61,3.087,0.177,128.6,0.236,4.8,17.39,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,12726.81,12724.54,-2.28,81.0
+2025-11-19T14:26:22.747443,qwen3:1.7b,"1,7B",gio,what are the steps to write a master thesis ?,"Writing a master’s thesis is a structured process. Here’s a concise guide:  
+
+1. **Plan & Research**: Choose a topic, review existing literature, and set goals.  
+2. **Collect Data**: Gather information through experiments, surveys, or analysis.  
+3. **Write & Organize**: Draft chapters (introduction, methodology, results, discussion), keeping your structure clear.  
+4. **Revise**: Polish your work, seek feedback from advisors, and refine your arguments.  
+5. **Format**: Follow your institution’s guidelines for citations, fonts, and layout.  
+6. **Submit**: Finalize your thesis, ensuring all requirements (word count, references) are met.  
+
+Key tips: Stay organized, manage time, and prioritize quality over speed. Let your advisor help shape your work! 📚✨",764,412,3.274,0.191,125.83,3.274,0.191,125.86,-0.717,2.8,16.14,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,12709.57,12723.52,13.95,81.0
+2025-11-19T14:26:27.629837,qwen3:1.7b,"1,7B",gio,What are the pros and cons of nuclear energy ?,"**Pros of Nuclear Energy:**  
+- **High Efficiency:** Power plants generate a lot of energy from a small amount of fuel (like uranium).  
+- **Clean Energy:** It doesn’t emit greenhouse gases or air pollution, helping fight climate change.  
+- **Reliable Supply:** Nuclear plants run 24/7, so energy is consistently available.  
+
+**Cons of Nuclear Energy:**  
+- **Radioactive Waste:** The byproducts are dangerous and need special storage for thousands of years.  
+- **Risk of Accidents:** Events like Chernobyl or Fukushima show the dangers of mishandling nuclear materials.  
+- **High Costs:** Building reactors is expensive, and the process takes years to plan and construct.  
+- **Proliferation Risk:** Nuclear materials can be used for weapons, adding security concerns.  
+
+**Balance:** While nuclear energy is clean and efficient, the risks around waste and safety are significant. It’s a powerful tool but requires careful management.",939,536,4.18,0.175,128.23,4.18,0.175,128.24,-0.393,2.7,25.07,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,12692.65,12686.38,-6.27,80.9
+2025-11-19T14:26:33.417399,qwen3:1.7b,"1,7B",gio,I am strugulling with C++ where should i start ?,"Start by learning the basics of C++! Here’s a step-by-step plan:  
+1. **Learn the fundamentals**: Focus on variables, data types, loops, and conditions. Use simple examples like printing ""Hello, World!"" to build confidence.  
+2. **Choose a resource**:  
+   - **Free**: [GeeksforGeeks](https://www.geeksforgeeks.org/c-plus-plus/) has clear tutorials.  
+   - **Paid**: Platforms like [Coursera](https://www.coursera.org/) or [YouTube](https://www.youtube.com/c/cplusplus) offer beginner-friendly lessons.  
+3. **Start small**: Build simple projects, like a calculator or a to-do list. Practice writing code and test it.  
+4. **Debug and learn**: Use a debugger or online tools to fix errors. Join communities (like Stack Overflow) for help.  
+
+**Tip**: Take short, consistent practice sessions (e.g., 15 minutes daily) to avoid feeling overwhelmed. Start with basic syntax and gradually move to more complex concepts!",915,543,4.179,0.16,129.94,4.179,0.16,129.94,-0.159,4.7,19.22,"[0.0, 0.0, 28.6, 0.0, 16.7, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0]",2560.0,12682.61,12684.88,2.27,80.7

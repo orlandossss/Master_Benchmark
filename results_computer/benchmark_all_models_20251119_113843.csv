@@ -1,0 +1,138 @@
+timestamp,model,model_parameters,tester,question,response,response_length_chars,estimated_tokens,inference_time_s,time_to_first_token_s,tokens_per_second,inference_time_perf_s,time_to_first_token_perf_s,tokens_per_second_perf,timing_diff_ms,cpu_baseline_percent,cpu_average_percent,cpu_per_core,cpu_freq_mhz,memory_baseline_mb,memory_peak_mb,memory_increase_mb,memory_percent
+2025-11-19T11:37:58.504433,qwen3:0.6b,"0,6B",matevz,Describe gravity in simple terms for someone that doesn’t know anything about it,"Gravity is like a big, invisible force that pulls things toward Earth. Imagine if you were holding a ball in your hand, and gravity makes it fall down to the ground. It’s not just about the ball, but also about why things stay on the Earth. Gravity keeps things in place, like why you don’t float up when you fall. If you’re on a spaceship, gravity keeps you from going off into space. It’s a single force, not multiple forces. So, in simple terms, gravity is the reason things stay grounded and why we fall down.",513,399,5.638,4.003,70.77,5.637,4.002,70.78,-0.701,3.9,19.79,"[28.6, 0.0, 0.0, 0.0, 0.0, 0.0, 33.3, 16.7, 0.0, 0.0, 16.7, 16.7, 16.7, 16.7, 0.0, 0.0]",2560.0,13035.16,13661.78,626.62,86.8
+2025-11-19T11:38:05.750115,qwen3:0.6b,"0,6B",matevz,Describe gravity for someone that knows about it and wants to know more about it,"Gravity is a fundamental force in the universe, and it’s something you can’t ignore when you’re trying to understand the world around you. Here’s how it works in a way that’s simple and relatable:
+
+1. **What is gravity?**  
+Gravity is like the invisible force that pulls everything down to the Earth. It’s what keeps us grounded, makes objects fall, and keeps planets in orbit. Imagine holding a book and letting it fall—gravity makes it go down, and the Earth’s gravity pulls it back.
+
+2. **Why does it work?**  
+Gravity is described by **Newton’s Law of Universal Gravitation**. The force of gravity depends on two main factors:  
+- **Mass**: The more massive an object, the stronger the pull.  
+- **Distance from the Earth**: The farther an object is from the Earth, the weaker the gravitational pull.  
+
+3. **Real-life examples**  
+- The Earth’s gravity keeps the Moon in orbit.  
+- When you drop an object, gravity makes it fall to the ground.  
+- If you throw a ball, gravity slows it down until it hits the ground.  
+
+4. **Why do we fall?**  
+Gravity is the reason we fall. If you were in a spaceship and didn’t have gravity, you’d just float.  
+
+5. **Fun facts**  
+- The Earth’s gravity is so strong that it’s like a **force field** that’s everywhere.  
+- The Moon’s orbit is due to gravity, so it doesn’t fall into Earth.  
+- The force of gravity is so strong that even the lightest objects (like paper) fall at the same rate as the Earth.  
+
+If you ever want to learn more, think about how gravity affects everyday things—like why you’re on the ground, why trees grow, or why astronauts float! 🌍✨",1606,558,2.512,0.166,222.12,2.512,0.166,222.15,-0.379,9.9,25.07,"[0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 16.7, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0]",2560.0,13593.98,13620.83,26.85,86.8
+2025-11-19T11:38:09.867807,qwen3:0.6b,"0,6B",matevz,Find a good analogy to describe gravity to someone.,"Gravity can be likened to the **pull of a magnetic field**—just like how magnetic fields attract and repel, gravity is the force that pulls objects toward each other. Imagine the Earth as a massive magnet, with gravity acting like the magnetic force pulling all the objects (like planets, people, or even your body) toward its center. This analogy works well because both are forces that act at a distance and have a central, unifying force.",441,475,2.138,0.156,222.15,2.138,0.156,222.17,-0.237,3.9,21.3,"[16.7, 14.3, 0.0, 0.0, 0.0, 16.7, 16.7, 16.7, 0.0, 0.0, 0.0, 33.3, 0.0, 0.0, 0.0, 0.0]",2560.0,13611.22,13614.43,3.21,86.7
+2025-11-19T11:38:13.613027,qwen3:0.6b,"0,6B",matevz,give a small quiz (3 questions) about gravity,"**Gravity Quiz (3 Questions):**  
+
+1. **What force causes objects to fall to the ground?**  
+   A) Gravity  
+   B) Physics  
+   C) Chemistry  
+
+2. **What does gravity act on an object?**  
+   A) It makes it float  
+   B) It keeps it in place  
+   C) It makes it move  
+
+3. **What is the force that keeps the Earth in space?**  
+   A) Gravity  
+   B) Moon's gravity  
+   C) Space station gravity  
+
+**Correct Answers:**  
+1. A  
+2. B  
+3. A  
+
+Let me know if you'd like more questions! 😊",486,251,1.249,0.156,200.94,1.249,0.155,201.03,-0.552,4.8,22.11,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,13609.74,13612.17,2.43,86.8
+2025-11-19T11:38:16.468450,qwen3:0.6b,"0,6B",matevz,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,"If the temperature is 10°C, a light jacket is generally sufficient, as it's not extremely cold. However, depending on your location and regional climate, you might need a **big jacket** if the temperature is expected to be higher (e.g., in a place with a lot of heat). Always check the local weather forecast for the most accurate information.",343,386,1.869,0.175,206.49,1.869,0.175,206.55,-0.546,3.3,20.27,"[25.0, 0.0, 0.0, 0.0, 0.0, 14.3, 14.3, 0.0, 14.3, 0.0, 0.0, 14.3, 28.6, 37.5, 0.0, 0.0]",2560.0,13614.25,13642.04,27.79,87.0
+2025-11-19T11:38:19.943659,qwen3:0.6b,"0,6B",matevz,Give a common myth about gravity and explain why it is false,"A common myth about gravity is that it is the force that makes objects fall, such as the Earth pulling objects downward. However, this is actually false. The correct explanation is that gravity is the force that causes objects to fall, not the other way around. The myth oversimplifies gravity by assuming it is the cause of falling objects, which is accurate. In reality, gravity is the force that causes objects to accelerate toward the Earth's center, not the other way. Thus, the myth is incorrect because it misrepresents the nature of gravity.",549,1088,4.888,0.164,222.57,4.887,0.163,222.61,-0.959,2.8,17.91,"[0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0]",2560.0,13638.63,13643.41,4.78,86.7
+2025-11-19T11:38:26.439873,qwen3:0.6b,"0,6B",matevz,Explain why a plane can fly even with gravity in simple bullet points,"- **Thrust** from the engines propels the plane forward, counteracting gravity.  
+- **Lift** from the wings generates upward force, balancing the weight of the plane.  
+- **Airspeed** allows the plane to maintain lift and overcome gravity, enabling flight.",256,278,1.447,0.187,192.07,1.448,0.187,191.94,1.019,7.7,19.19,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,13599.21,13617.08,17.87,86.8
+2025-11-19T11:38:29.494669,qwen3:0.6b,"0,6B",matevz,what are the steps to write a master thesis ?,"Writing a master thesis requires a structured and organized process. Here's a step-by-step guide to help you get started:
+
+### **1. Planning and Research**
+- **Choose a Topic**: Find a clear, specific, and original research question. Ensure your topic is feasible, within your field of study, and has potential for academic publication.
+- **Define Objectives**: Clearly outline what you want to achieve (e.g., identify a phenomenon, evaluate a theory, or analyze a case).
+- **Outline Structure**: Plan the structure of your thesis. Typically: 
+  - **Introduction**: Present the problem, objectives, and significance.
+  - **Literature Review**: Summarize existing research and identify gaps.
+  - **Methodology**: Describe your research methods.
+  - **Results**: Present findings.
+  - **Discussion**: Interpret results and compare with existing literature.
+  - **Conclusion**: Summarize your findings and their implications.
+
+### **2. Research and Writing**
+- **Collect and Organize Data**: Gather relevant information, ensure data is properly documented, and organize your thoughts.
+- **Write the Thesis**: Structure your writing, ensuring clarity, coherence, and logical flow. Use headings, subheadings, and clear paragraphs.
+- **Revise and Edit**: Check for clarity, grammar, and flow. Use peer review or a supervisor to help identify areas for improvement.
+
+### **3. Formatting and Submission**
+- **Choose a Format**: Use standard thesis formats (e.g., APA, MLA, or Chicago).
+- **Format Guidelines**: Follow the specific formatting rules (e.g., margins, fonts, citation style).
+- **Submit to Review**: Ensure all sections are completed, and your work is ready for submission.
+
+### **4. Revisions and Revisions**
+- **Revise Early**: Focus on clarity, coherence, and logical flow.
+- **Peer Review**: Share your draft with a supervisor or mentor for feedback.
+- **Final Check**: Ensure all sections are complete, and the thesis is ready for publication.
+
+### **Common Tips**
+- **Time Management**: Allocate time for each phase, especially ensuring you have enough time to complete all steps.
+- **Stay Organized**: Keep track of your work, use a planner, or digital tools like Notepad to organize sections.
+- **Stay Persistent**: Mastering a thesis is a long process, so keep revising and revising until you feel confident.
+
+By following these steps and staying consistent, you can successfully complete a master thesis. If you need specific help with formatting or writing, feel free to ask!",2490,814,3.63,0.157,224.27,3.629,0.157,224.3,-0.476,1.8,21.29,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,13599.38,13611.48,12.11,86.8
+2025-11-19T11:38:34.730734,qwen3:0.6b,"0,6B",matevz,What are the pros and cons of nuclear energy ?,"**Pros of Nuclear Energy:**
+
+1. **Clean Power**: Nuclear plants generate electricity without emitting CO₂ or other greenhouse gases, making them a clean and environmentally friendly source of power.  
+2. **Reliable and Sustainable**: Nuclear energy is a continuous, abundant source of electricity, making it a stable and reliable energy option.  
+3. **Low Operating Costs**: While the initial construction costs are high, nuclear plants are long-term investments with high return on investment.  
+
+**Cons of Nuclear Energy:**
+
+1. **Radioactive Waste**: Nuclear fuel, when used, ends up in the environment, generating radioactive waste that is hazardous and requires long-term management.  
+2. **Safety Risks**: Nuclear plants face risks of meltdowns, accidents, or radiation leaks, which can lead to catastrophic losses.  
+3. **Short-Term Environmental Impact**: While nuclear energy is clean, its long-term environmental effects, including the potential for waste, pose challenges.  
+
+In summary, nuclear energy has significant advantages in terms of environmental and economic sustainability but faces notable drawbacks related to waste and safety concerns.",1159,631,2.814,0.158,224.26,2.813,0.157,224.3,-0.461,1.0,20.67,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,13612.28,13609.54,-2.74,86.4
+2025-11-19T11:38:39.152036,qwen3:0.6b,"0,6B",matevz,I am strugulling with C++ where should i start ?,"Starting with C++ can be a great way to learn a powerful programming language. Here's a structured approach to help you get started:
+
+### 1. **Learn the Basics**
+   - **Variables and Data Types**: Understand variables, types (int, char, string, etc.), and basic arithmetic operations.
+   - **Data Types**: Learn how to declare and use different data types like `int`, `float`, `char`, and `string`.
+   - **Operators**: Learn basic arithmetic, comparison, and logical operators.
+
+### 2. **Build Up with Data Structures**
+   - **Arrays and Stacks**: Learn how to create arrays and use stacks (LIFO) to manage collections.
+   - **Loops**: Understand loops like `for`, `while`, and `if-else`.
+
+### 3. **Move to Objects and Classes**
+   - **Objects and Classes**: Understand classes, objects, inheritance, and polymorphism.
+   - **Functions**: Learn to create and use functions with parameters and return types.
+
+### 4. **Integrate Programming Concepts**
+   - **Functions**: Learn how to define and call functions.
+   - **Loops**: Practice using `for`, `while`, and `do-while`.
+   - **Input/Output**: Learn how to read and write data using streams or standard input/output.
+
+### 5. **Practice and Learn from Examples**
+   - **Code Snippets**: Write simple programs and test them to apply what you've learned.
+   - **Exercise Problems**: Solve practice exercises to reinforce concepts.
+   - **Build Projects**: Start with small projects like a calculator or a basic program.
+
+### 6. **Explore the Standard Library**
+   - **Input/Output**: Use the standard library to read from and write to files.
+   - **Data Structures**: Explore `std::vector`, `std::map`, and others.
+   - **Standard Algorithms**: Learn how to use algorithms like `sort`, `find`, and `erase`.
+
+### 7. **Resources**
+   - **Tutorials**: Use online platforms like [C++ Learn](https://www.cplusplus.com/doc/tutorial/) or [GeeksforGeeks](https://www.geeksforgeeks.org/).
+   - **Books**: Consider reading ""C++ Primer"" or ""C++ in a Day"" for a structured approach.
+   - **Code Snippets**: Practice writing small programs in your own code.
+
+By starting with the fundamentals and gradually building up, you'll be able to explore C++ and develop skills that will be useful in programming. Keep practicing, and you'll see progress!",2282,736,3.298,0.158,223.14,3.298,0.158,223.19,-0.735,1.9,21.74,"[0.0, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,13544.82,13556.52,11.7,86.3
