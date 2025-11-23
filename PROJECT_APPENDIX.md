@@ -231,3 +231,36 @@ Modified the `run_benchmark()` method to add temperature checks between each mod
 - Only waits for cooldown if there are more models to test (skips wait after the last model)
 - This ensures consistent thermal conditions for each model's benchmark, preventing thermal throttling from affecting results across different models
 - The auto-detection system (from Entry #5) already ensures only models present in both Excel_models.csv and Ollama are benchmarked
+
+---
+
+## Entry #9
+**Date:** 2025-11-23
+**Model Used:** Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
+
+**Prompt:**
+> can you create a new analyze_results_pi4 that is a copy of @analyze_results.py , by adding the news metrics that is in @benchmarking_pi4.py
+>
+> add this query to the @PROJECT_APPENDIX.md file with a summary of the answer
+
+**Response Summary:**
+Created `analyze_results_pi4.py` as an enhanced version of `analyze_results.py` with full support for the I/O metrics from `benchmarking_pi4.py`. Changes include:
+
+**New I/O Metrics Added:**
+- `avg_io_iops`: Average I/O operations per second
+- `avg_io_throughput_mb_s`: Average I/O throughput in MB/s
+- `total_io_read_count` / `total_io_write_count`: Total read/write operation counts
+- `total_io_read_mb` / `total_io_write_mb`: Total data read/written in MB
+- `avg_io_read_latency_ms` / `avg_io_write_latency_ms`: Average I/O latencies
+
+**Enhancements:**
+- Updated `get_summary_statistics()` to extract and aggregate I/O metrics
+- Enhanced `print_summary()` to display comprehensive I/O performance section
+- Added new `_plot_io_metrics()` visualization method with 4 charts:
+  - IOPS comparison bar chart
+  - Throughput comparison bar chart
+  - Read vs Write operations grouped bar chart
+  - Read vs Write latency grouped bar chart
+- Updated radar chart to include I/O Performance (7 dimensions total)
+- Changed default directories: `./results_pi4`, `./analysis_graphs_pi4`, output files with `_pi4` suffix
+- All visualizations and CSV exports now include I/O metrics for comprehensive Pi4 benchmark analysis

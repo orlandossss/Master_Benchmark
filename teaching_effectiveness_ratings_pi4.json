@@ -1,0 +1,1387 @@
+{
+  "generated_at": "2025-11-23T15:46:14.762235",
+  "total_responses_rated": 230,
+  "model_summary": {},
+  "detailed_ratings": [
+    {
+      "model": "qwen3:0.6b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:0.6b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:0.6b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:0.6b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:0.6b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:0.6b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:0.6b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:0.6b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:0.6b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:0.6b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:270m",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:270m",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:270m",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:270m",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:270m",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:270m",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:270m",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:270m",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:270m",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:270m",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "tinyllama:latest",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "tinyllama:latest",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "tinyllama:latest",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "tinyllama:latest",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "tinyllama:latest",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "tinyllama:latest",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "tinyllama:latest",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "tinyllama:latest",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "tinyllama:latest",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "tinyllama:latest",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:1b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:1b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:1b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:1b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:1b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:1b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:1b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:1b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:1b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:1b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:1b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:1b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:1b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:1b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:1b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:1b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:1b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:1b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:1b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:1b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:1b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:1b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:1b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:1b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:1b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:1b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:1b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:1b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:1b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:1b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:1b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:1b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:1b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:1b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:1b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:1b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:1b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:1b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:1b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:1b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:1.5b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:1.5b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:1.5b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:1.5b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:1.5b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:1.5b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:1.5b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:1.5b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:1.5b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:1.5b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "exaone-deep:2.4b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "exaone-deep:2.4b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "exaone-deep:2.4b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "exaone-deep:2.4b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "exaone-deep:2.4b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "exaone-deep:2.4b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "exaone-deep:2.4b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "exaone-deep:2.4b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "exaone-deep:2.4b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "exaone-deep:2.4b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:3b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:3b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:3b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:3b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:3b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:3b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:3b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:3b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:3b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "llama3.2:3b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:3b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:3b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:3b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:3b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:3b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:3b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:3b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:3b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:3b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "granite4:3b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:3b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:3b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:3b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:3b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:3b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:3b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:3b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:3b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:3b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:3b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:3b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:3b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:3b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:3b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:3b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:3b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:3b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:3b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:3b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "falcon3:3b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi3:3.8b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi3:3.8b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi3:3.8b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi3:3.8b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi3:3.8b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi3:3.8b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi3:3.8b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi3:3.8b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi3:3.8b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi3:3.8b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi4-mini-reasoning:3.8b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi4-mini-reasoning:3.8b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi4-mini-reasoning:3.8b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi4-mini-reasoning:3.8b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi4-mini-reasoning:3.8b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi4-mini-reasoning:3.8b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi4-mini-reasoning:3.8b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi4-mini-reasoning:3.8b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi4-mini-reasoning:3.8b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "phi4-mini-reasoning:3.8b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:4b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:4b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:4b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:4b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:4b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:4b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:4b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:4b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:4b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "gemma3:4b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:4b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:4b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:4b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:4b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:4b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:4b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:4b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:4b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:4b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "qwen3:4b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "nemotron-mini:4b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "nemotron-mini:4b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "nemotron-mini:4b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "nemotron-mini:4b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "nemotron-mini:4b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "nemotron-mini:4b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "nemotron-mini:4b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "nemotron-mini:4b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "nemotron-mini:4b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "nemotron-mini:4b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "mistral:7b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "mistral:7b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "mistral:7b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "mistral:7b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "mistral:7b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "mistral:7b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "mistral:7b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "mistral:7b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "mistral:7b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "mistral:7b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:7b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:7b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:7b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:7b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:7b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:7b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:7b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:7b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:7b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "deepseek-r1:7b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:8b",
+      "question": "Describe gravity in simple terms for someone that doesn’t know anything about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:8b",
+      "question": "Describe gravity for someone that knows about it and wants to know more about it",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:8b",
+      "question": "Find a good analogy to describe gravity to someone.",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:8b",
+      "question": "give a small quiz (3 questions) about gravity",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:8b",
+      "question": "Do you think I need a big jacket if the weather is 10 degrees Celsius ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:8b",
+      "question": "Give a common myth about gravity and explain why it is false",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:8b",
+      "question": "Explain why a plane can fly even with gravity in simple bullet points",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:8b",
+      "question": "what are the steps to write a master thesis ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:8b",
+      "question": "What are the pros and cons of nuclear energy ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    },
+    {
+      "model": "cogito:8b",
+      "question": "I am strugulling with C++ where should i start ?",
+      "score": 0,
+      "error": "Invalid response object from API: '{\\n  \"error\": {\\n    \"message\": \"Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OKIA. You can find your API key at https://platform.openai.com/account/api-keys.\",\\n    \"type\": \"invalid_request_error\",\\n    \"code\": \"invalid_api_key\",\\n    \"param\": null\\n  }\\n}' (HTTP response code was 401)"
+    }
+  ]
+}
