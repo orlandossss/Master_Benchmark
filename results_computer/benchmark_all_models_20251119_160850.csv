@@ -1,0 +1,106 @@
+timestamp,model,model_parameters,tester,question,response,response_length_chars,estimated_tokens,inference_time_s,time_to_first_token_s,tokens_per_second,inference_time_perf_s,time_to_first_token_perf_s,tokens_per_second_perf,timing_diff_ms,cpu_baseline_percent,cpu_average_percent,cpu_per_core,cpu_freq_mhz,memory_baseline_mb,memory_peak_mb,memory_increase_mb,memory_percent
+2025-11-19T16:08:13.834400,cogito:3b,3B,dorian,Describe gravity in simple terms for someone that doesn’t know anything about it,"Gravity is like a invisible force that pulls everything towards each other. Imagine you're sitting on a trampoline and someone jumps on beside you, they make the whole trampoline bounce. Gravity works the same way - everything has weight and wants to stay on the ground, even though we can't feel it.
+
+It's what makes things fall down when you drop them, and why astronauts float in space (they're not really floating, but because there's no gravity pulling on them).",467,97,6.312,5.242,15.37,6.312,5.243,15.37,0.022,7.2,17.65,"[25.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0]",2560.0,12319.97,13224.93,904.96,84.2
+2025-11-19T16:08:21.755892,cogito:3b,3B,dorian,Describe gravity for someone that knows about it and wants to know more about it,"Gravity is a fundamental force of nature that pulls objects with mass toward each other. It's what keeps us on the ground instead of floating away into space, and what causes planets to orbit stars.
+
+In everyday life, we mostly experience gravity as an invisible, constant downward pull. But in space and for very large masses like black holes or neutron stars, it gets much stronger or even creates massive distortions in spacetime itself.
+
+Scientists are still working on a complete theory of gravity that would explain all these behaviors and how they connect to each other. Einstein's General Relativity is the most successful framework we have so far, but there might be more to discover yet.
+",698,134,1.676,0.195,79.98,1.675,0.195,80.0,-0.615,8.6,16.61,"[0.0, 0.0, 20.0, 20.0, 20.0, 20.0, 0.0, 0.0, 20.0, 40.0, 16.7, 0.0, 40.0, 20.0, 0.0, 0.0]",2560.0,13220.31,13225.62,5.31,84.4
+2025-11-19T16:08:25.039238,cogito:3b,3B,dorian,Find a good analogy to describe gravity to someone.,"You can think of gravity like a giant invisible net that stretches around Earth, pulling everything toward its center equally. The further away you are from Earth's center, the weaker the pull becomes until it's almost nonexistent at the edge of space where Earth ends.
+
+Or another way to visualize gravity is to imagine being on a massive bowling ball floating in space, surrounded by smaller balls (like planets). Even though each planet has its own motion and doesn't ""fall"" toward any other planet, they're all pulled equally toward the bowling ball's center. That's basically what happens with gravity between objects.
+
+Think of it this way: if you drop a ball from your hand, you can't see how it curves through space. But that curve is like Earth's invisible pull, drawing everything down.",796,159,2.002,0.229,79.41,2.002,0.229,79.43,-0.499,8.6,19.54,"[0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,13250.87,13266.56,15.69,84.5
+2025-11-19T16:08:28.651237,cogito:3b,3B,dorian,give a small quiz (3 questions) about gravity,"1. What causes objects to fall toward Earth?
+2. Why does light bend around massive objects like stars?
+3. How can you experience weightlessness, even though gravity is still acting on you?
+
+Answer 1: Objects are pulled toward Earth's center by gravitational force.
+
+Answer 2: Light bends because it follows a curved path in the presence of strong gravitational fields (gravitational lensing).
+
+Answer 3: You float in space stations and orbit the Earth, but your feet and head don't touch any surface. Gravity still holds you down, so you feel weightless from the lack of friction holding you to surfaces.
+
+Feel free to check answers with me!",641,135,1.779,0.203,75.88,1.779,0.203,75.88,-0.096,3.9,19.53,"[28.6, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0]",2560.0,13253.31,13257.98,4.67,84.5
+2025-11-19T16:08:32.039417,cogito:3b,3B,dorian,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,"Yes, a big jacket would be helpful. At 10°C (around 50°F), it's still quite cold for most people, and wearing something warm will help keep you comfortable and prevent feeling too chilly.",187,44,0.774,0.215,56.83,0.774,0.215,56.86,-0.384,8.0,17.75,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 14.3, 25.0, 0.0, 0.0]",2560.0,13235.14,13241.08,5.95,84.3
+2025-11-19T16:08:34.422103,cogito:3b,3B,dorian,Give a common myth about gravity and explain why it is false,"The common myth that you need to be thrown upwards in a falling elevator to break free from Earth's gravity is false. If an elevator is moving downward (as in our example), then when it stops, it will continue moving forward as it loses contact with the ground because there's no friction against the ground. Earth's gravity would still act on the elevator if it were on the ground.",382,79,1.175,0.22,67.25,1.174,0.22,67.27,-0.273,0.8,19.87,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 50.0, 14.3, 0.0, 0.0, 0.0, 0.0]",2560.0,13212.88,13226.94,14.06,84.3
+2025-11-19T16:08:37.204582,cogito:3b,3B,dorian,Explain why a plane can fly even with gravity in simple bullet points,"Here's how a plane can fly despite gravity:
+
+• Lift is generated when air flows over curved surfaces, like wings.
+
+• This movement of air creates pressure differences that push the plane upward.
+
+• Gravity pulls everything downward, but the plane's upward force (lift) counters this pull.
+
+• The faster and smoother the airflow moves over the wings, the more lift is created.
+
+• More lift means less gravity pulling down, allowing the plane to stay airborne.
+
+• Thrust from jet engines helps keep the plane moving forward so it can generate more lift.",551,111,1.49,0.189,74.49,1.49,0.189,74.49,-0.025,8.5,19.15,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",3201.0,13217.57,13225.44,7.87,84.3
+2025-11-19T16:08:40.303710,cogito:3b,3B,dorian,what are the steps to write a master thesis ?,"Steps to Write a Master Thesis:
+
+1. Choose your topic:
+   - Review current research in your field
+   - Identify gaps that need filling
+   - Narrow down your focus area
+
+2. Plan your research structure:
+   - Define clear research questions
+   - Outline methodology and data collection methods
+   - Create a timeline for your project
+
+3. Write a detailed literature review:
+   - Gather relevant sources on your topic
+   - Analyze existing research
+   - Identify patterns and connections between studies
+
+4. Conduct your research:
+   - Follow your planned methodology
+   - Collect and analyze data
+   - Document your process thoroughly
+
+5. Draft your thesis outline:
+   - Write an abstract summarizing your work
+   - Create a table of contents listing chapters
+   - Develop an introduction that explains your study
+
+6. Write each chapter systematically:
+   - Start with background information
+   - Present your research methodology
+   - Detail your findings and results
+   - Conclude with implications and recommendations
+
+7. Revise and edit thoroughly:
+   - Check for grammar, spelling, and punctuation errors
+   - Ensure clarity and logical flow of ideas
+   - Have peers or professors review your work
+
+8. Finalize the thesis:
+   - Format according to your institution's guidelines
+   - Add any required appendices or references
+   - Make sure all citations are properly formatted",1379,282,3.413,0.19,82.63,3.412,0.19,82.64,-0.596,4.1,19.37,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0]",2560.0,13186.17,13215.76,29.59,84.2
+2025-11-19T16:08:45.325357,cogito:3b,3B,dorian,What are the pros and cons of nuclear energy ?,"Pros of Nuclear Energy:
+
+1. Low Carbon Emissions: Produces minimal greenhouse gases during operation.
+2. Reliable Power Source: Provides consistent baseload power generation.
+3. High Energy Density: Uses limited fuel to produce large amounts of electricity.
+4. Long-term Fuel Supply: Uranium can be extracted and reused for decades.
+
+Cons of Nuclear Energy:
+
+1. Safety Concerns: Risk of accidents (like Chernobyl or Fukushima) if proper safety measures fail.
+2. High Initial Costs: Requires significant investment in construction, infrastructure, and regulations.
+3. Radioactive Waste: Generates hazardous radioactive waste that requires long-term storage solutions.
+4. Public Resistance: Often faces strong public opposition due to fears of nuclear disasters.
+
+These factors can influence the feasibility and acceptance of nuclear energy as a clean power source.",863,163,1.999,0.18,81.54,1.999,0.18,81.53,0.103,1.2,20.43,"[0.0, 42.9, 0.0, 0.0, 0.0, 0.0, 16.7, 16.7, 0.0, 0.0, 0.0, 33.3, 0.0, 16.7, 0.0, 0.0]",3201.0,13197.39,13227.33,29.94,84.4
+2025-11-19T16:08:48.933680,cogito:3b,3B,dorian,I am strugulling with C++ where should i start ?,"Start with basic syntax:
+1. Variables and data types (int, float, char)
+2. Simple declarations like int x = 5;
+3. Basic operations (+,-,*,/)
+
+Focus on programming concepts first before diving into specific projects or libraries.
+
+Want to know more about any of these basics?",274,63,0.873,0.194,72.18,0.873,0.194,72.18,-0.085,4.2,16.82,"[0.0, 28.6, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,13223.17,13222.45,-0.72,84.3

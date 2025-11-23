@@ -433,12 +433,36 @@ Rules:
         except Exception as e:
             print(f"❌ Error saving to benchmark.csv: {e}")
 
+    def _wait_for_temperature_threshold(self, max_temp_c=60):
+        """Wait until system temperature is below the specified threshold"""
+        print(f"\n🌡️  Checking system temperature...")
+
+        while True:
+            power_metrics = self._get_power_metrics()
+
+            if not power_metrics or 'temperature_c' not in power_metrics:
+                print("⚠️  Temperature monitoring not available, proceeding with benchmark")
+                return
+
+            current_temp = power_metrics['temperature_c']
+            print(f"   Current temperature: {current_temp}°C", end='')
+
+            if current_temp < max_temp_c:
+                print(f" ✅ (below {max_temp_c}°C threshold)")
+                return
+            else:
+                print(f" ⏳ (waiting for temperature to drop below {max_temp_c}°C)")
+                time.sleep(5)  # Wait 5 seconds before checking again
+
     def run_benchmark(self, questions, stream=False):
         """Run a benchmark with multiple questions for all matching models"""
         print(f"\n🔬 Starting Benchmark")
         print(f"Models to test: {len(self.matching_models)}")
         print(f"Questions per model: {len(questions)}")
         print(f"Streaming: {stream}\n")
+
+        # Wait for temperature to drop below threshold before starting
+        self._wait_for_temperature_threshold(max_temp_c=60)
 
         total_tests = len(self.matching_models) * len(questions)
         test_count = 0

@@ -667,4 +667,8 @@ if __name__ == "__main__":
     print(f"Models tested: {len(monitor.matching_models)}")
     for model in monitor.matching_models:
         print(f"   - {model['detected_name']}")
+<<<<<<< HEAD
     print(f"\nResults saved to: benchmark.csv")
+=======
+    print(f"\nResults saved to: benchmark.csv")
+>>>>>>> 76988081bcf78ac34acd4ef474a3abbc83a67b0f

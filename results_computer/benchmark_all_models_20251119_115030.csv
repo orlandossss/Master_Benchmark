@@ -1,0 +1,91 @@
+timestamp,model,model_parameters,tester,question,response,response_length_chars,estimated_tokens,inference_time_s,time_to_first_token_s,tokens_per_second,inference_time_perf_s,time_to_first_token_perf_s,tokens_per_second_perf,timing_diff_ms,cpu_baseline_percent,cpu_average_percent,cpu_per_core,cpu_freq_mhz,memory_baseline_mb,memory_peak_mb,memory_increase_mb,memory_percent
+2025-11-19T11:49:57.418004,tinyllama:latest,"1,1B",dorian,Describe gravity in simple terms for someone that doesn’t know anything about it,"Gravity is the force between two objects, which pulls or attracts them towards each other based on their mass and distance from each other. The force of gravity is also affected by other factors such as temperature, pressure, and wind speed.
+
+In simple terms, gravity is a force that pulls all objects to the center of Earth. This is because Earth has a strong gravitational field due to its massive mass. Objects with high masses, like planets or satellites, experience significant gravitational forces, while objects with lower masses, such as small particles in space or asteroids, experience only minor gravity.
+
+In contrast to other physical phenomena like friction and electricity, gravity is a predictable and constant force that occurs across all distances and times. It is the fundamental constant that governs everything in our universe.
+
+To understand gravity better, one can consider it as an example of a universal law that applies to all objects regardless of their composition or size. Gravity is a manifestation of the gravitational field, which was first discovered by Galileo Galilei in 1638.",1110,234,6.349,5.384,36.86,6.348,5.384,36.86,-0.545,3.7,19.31,"[14.3, 0.0, 0.0, 0.0, 0.0, 0.0, 28.6, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0]",3201.0,13666.09,14255.77,589.68,90.9
+2025-11-19T11:50:05.372800,tinyllama:latest,"1,1B",dorian,Describe gravity for someone that knows about it and wants to know more about it,"Gravity is the force that attracts objects to each other, regardless of their mass or size. It is the strongest force in the universe, and its pull can be felt on Earth through the force of gravity acting on objects. In simple terms, the more massive an object is, the stronger its gravitational pull will be, and the more objects are drawn towards it. Gravity acts between objects due to their mutual attraction caused by the force of attraction, which is a product of their masses multiplied by the acceleration due to gravity.
+
+Gravity is a force that affects everything in the universe, from the smallest particles to massive planets and even other stars. It is an essential element of the laws of physics, as it dictates what objects can and cannot be placed in certain locations on Earth. Gravity also plays a crucial role in shaping the earth's surface, such as when mountains are formed due to the accumulation of weight from tectonic plates moving over time.
+
+In addition to attracting mass, gravity also causes objects to move through space at speeds dependent on their mass and distance apart. Objects that are closer together have a higher gravitational pull than those farther apart, leading to a circular motion. Gravity can also cause objects to spiral inward due to their orbits around the Sun or other stars, such as the elliptical orbit of Mars.
+
+Gravity is one of the fundamental forces in our universe, and it serves as an essential component of understanding how everything works.",1501,323,1.38,0.065,234.1,1.379,0.064,234.25,-0.884,9.4,18.88,"[28.6, 14.3, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 33.3, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,14266.22,14282.15,15.93,91.1
+2025-11-19T11:50:08.359605,tinyllama:latest,"1,1B",dorian,Find a good analogy to describe gravity to someone.,"Sure, here's an analog for you:
+
+Gravity is a strong force that holds objects in place. It's often used as a metaphor to describe the power of something that has a substantial influence or impact on someone or something else. An analogy might be ""gravity pulls us towards one another, forming connections and relationships that hold us together.""
+
+Hopefully, this helps! Let me know if you have any other questions.",415,98,0.449,0.062,218.39,0.449,0.062,218.46,-0.148,3.9,19.52,"[33.3, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 16.7, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0]",2560.0,14278.93,14284.22,5.29,91.1
+2025-11-19T11:50:10.415001,tinyllama:latest,"1,1B",dorian,give a small quiz (3 questions) about gravity,"Quiz: How Well Do You Know Gravity?
+
+1. Can you paraphrase the question ""How well do you know gravity?"" into another phrase?: ""Based on your knowledge of gravity, can you explain the following fact to a complete stranger?""
+2. Can you summarize the first question in one sentence?: ""What is the first question in this quiz about how well you know gravity?""
+3. Based on what you have learned so far about gravity, could you explain why the Moon's orbit is inclined as it is?
+4. How accurate are scientists when predicting lunar orbits based on the weight of the Earth and Moon, as mentioned in question three?
+5. According to the passage above, how well do you know gravity?: ""Based on your knowledge of gravity, could you explain why the Moon's orbit is inclined as it is?""",772,189,0.806,0.063,234.43,0.806,0.064,234.43,-0.006,6.8,18.51,"[28.6, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,14279.03,14281.29,2.26,91.0
+2025-11-19T11:50:12.828792,tinyllama:latest,"1,1B",dorian,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,"As per current data, the temperature on this date in the city you mentioned is 10 degrees Celsius. Therefore, a lightweight jacket such as a sweater or pullover would be appropriate for your outfit that day. A heavier jacket may become too warm and uncomfortable to wear for extended periods, especially if the weather is forecast to remain cold. However, it's always good to check the official weather report or consult an expert before making a final decision on what to wear in a specific climate.",500,113,0.51,0.066,221.56,0.509,0.065,221.8,-0.549,2.0,19.89,"[16.7, 0.0, 0.0, 0.0, 0.0, 28.6, 0.0, 0.0, 16.7, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0]",2560.0,14275.25,14282.02,6.78,91.1
+2025-11-19T11:50:14.945186,tinyllama:latest,"1,1B",dorian,Give a common myth about gravity and explain why it is false,"One commonly held belief about gravity in science fiction, movies, or games is that gravity is a constant and independent force in the universe. While this may be true on some level, it is actually only one part of the theory of general relativity, which describes the way in which mass influences the behavior of objects in the universe.
+
+The core idea behind general relativity is that the gravitational forces between masses are not only dependent on their masses but also depend on the curvature of spacetime caused by those masses. This means that even small changes in distance or location can cause significant changes in the force of gravity, which can manifest themselves as an effect known as ""gravity waves"" in some theoretical contexts.
+
+In practice, this means that even a tiny change in the position of two objects at opposite ends of a lengthy string or rope can produce a gravitational wave, which could eventually lead to the disintegration of the star or formation of a black hole (depending on how strong the gravity is). However, such phenomena are extremely rare, and as a rule, the gravitational force between two objects is proportional to their distance and independent of any changes in their position.
+
+This fundamental difference between gravity and its fictional counterpart has important implications for science fiction stories that use this concept. In particular, the idea of ""gravitational lensing"" can be a powerful tool for creating visual effects, but it does not actually exist as a physical phenomenon.",1540,308,1.355,0.074,227.25,1.355,0.073,227.26,-0.057,9.5,30.05,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 16.7, 33.3, 0.0, 16.7]",2560.0,14233.46,14231.05,-2.41,89.9
+2025-11-19T11:50:17.906978,tinyllama:latest,"1,1B",dorian,Explain why a plane can fly even with gravity in simple bullet points,"A plane can fly even with gravity because it uses aerodynamics to gain lift, which is the effect of air resistance caused by objects in flight. The wing-tip or fuselage shape of the aircraft has an effective surface area that helps to generate lift. This lift comes from the interaction between a plane's wings and air as it moves through the atmosphere at a certain speed.
+
+Aerodynamics work by converting potential energy (expressed in terms of potential pressure) into kinetic energy (expressed in terms of speed). The thrust produced by an engine is the change in kinetic energy of a plane's wings or fuselage, which creates lift and propels the aircraft forward.
+
+Another way aerodynamics work to gain lift is through drag reduction. This occurs when air molecules move towards the trailing edge of the plane's wing or fuselage, causing it to become more curved and less aerodynamic than a smooth, un-moving surface. By reducing drag, aircraft can improve their speed while maintaining optimal lift production.
+
+In summary, aerodynamics work by converting potential energy into kinetic energy, which is then used to produce lift and propel an aircraft forward. This concept is essential for understanding the functioning of aircraft in flight.",1248,272,1.163,0.061,233.93,1.162,0.061,234.03,-0.457,7.6,16.84,"[33.3, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 33.3, 0.0, 16.7]",2560.0,13880.13,13884.16,4.03,88.5
+2025-11-19T11:50:20.675553,tinyllama:latest,"1,1B",dorian,what are the steps to write a master thesis ?,"Here are the steps to write a Master TheSiS:
+
+1. Define your brand and purpose: Before you begin writing, define your brand identity and what it stands for. Your purpose should be clear and guiding.
+
+2. Understand your target audience: Identify the demographic, psychographics, and behavior patterns of your target audience to create content that resonates with them.
+
+3. Brainstorm ideas: Develop a list of relevant topics and ideas that align with your brand and purpose. You can brainstorm using the ""Topic Finder"" tool or a similar method.
+
+4. Write the first draft: Take the topic you've brainstormed and write the first draft. This should include all the ideas you've come up with so far, along with your thoughts and reflections on the subject.
+
+5. Refine the idea: Revise the first draft based on feedback from others and revised ideas based on your audience's feedback. You can also get feedback from industry experts or professional writers in your niche.
+
+6. Get feedback from your audience: Reach out to some of your existing followers on social media, email lists, or any other channels you use for communication to gather their feedback on the content. This will help you fine-tune and improve it.
+
+7. Revise again: Go through the draft a second time to ensure that the content flows well and is engaging. You can make changes to incorporate feedback.
+
+8. Edit and publish: Once you're satisfied with the final product, edit and publish your Master TheSiS. Ensure that it aligns with your brand and purpose, while also being informative, entertaining, and helpful. 
+
+9. Monitor its performance: Follow up on the success of the content by tracking metrics like engagement, traffic, social media shares, and any other relevant indicators. You can use tools like Google Analytics or Hootsuite to monitor your results.
+
+By following these steps, you'll be able to write a Master TheSiS that resonates with your audience, improves your brand, and establishes your expertise in the industry.",1999,465,2.081,0.065,223.42,2.081,0.064,223.48,-0.539,19.7,23.57,"[0.0, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 40.0, 0.0, 0.0, 0.0, 0.0]",2560.0,13934.94,14072.39,137.45,89.1
+2025-11-19T11:50:24.362707,tinyllama:latest,"1,1B",dorian,What are the pros and cons of nuclear energy ?,"Pros of Nuclear Energy:
+1. Renewable energy source: Nuclear power plants use nuclear fuel for electricity generation, which is a renewable and sustainable source of energy.
+2. No greenhouse gas emissions: Nuclear power generates no greenhouse gas emissions during operation or after disposal.
+3. Safety: Nuclear power stations have proven to be safe and reliable in the past few decades, which is due to a series of technological advancements that have made them safer than other fossil fuel-based power plants.
+4. Cost-effective: Nuclear power can be more cost-effective compared to gas or coal power plant since nuclear energy is a low-cost source of electricity.
+5. Jobs creation: Nuclear power can create new jobs in the construction, operation, and maintenance sectors.
+
+Cons of Nuclear Energy:
+1. Radioactive waste: The long-term storage and disposal of radioactive waste are major concerns associated with nuclear energy.
+2. Proliferation risks: The use of nuclear weapons can lead to proliferation risks, which are a significant concern for countries that do not support the use of nuclear power.
+3. Limited availability: Nuclear power plants can only generate electricity when they have enough fuel available, making them dependent on fossil fuels.
+4. Safety risks: Nuclear power plants can be subject to natural disasters or terrorism attacks, putting their safety and security at risk.
+5. Costly repairs: Nuclear power stations require periodic maintenance and repairs to ensure they are running efficiently. This expense can lead to higher costs for utilities.
+
+Overall, nuclear energy presents both pros and cons that depend on the specifics of each country's political and economic circumstances. While it may not be an ideal solution for all countries, it is still a valid option for those looking to reduce greenhouse gas emissions or transition to renewable energy sources.",1890,437,1.911,0.063,228.68,1.911,0.062,228.71,-0.29,3.5,23.67,"[28.6, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 33.3, 0.0, 0.0, 33.3, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,13963.8,13970.17,6.36,88.9
+2025-11-19T11:50:27.880973,tinyllama:latest,"1,1B",dorian,I am strugulling with C++ where should i start ?,"Starting with C++ can be overwhelming for beginners, especially if you're just starting to learn the language. However, it's a relatively easy and powerful language to get started with, and there are plenty of resources available to help you get up to speed. 
+
+Here are a few places to start:
+
+1. Coding Dojo - This is an online tutorial that covers the basics of C++, including variables, basic functions, loops, and data structures. It's an excellent introduction to the language.
+
+2. Udacity's Introduction to C++ course - This 6-week course on Udacity covers a wide range of topics in C++, including basic algorithms, pointers, and data structures. It's a great way to get a better understanding of what you can do with C++.
+
+3. Practical Programming in C++ by James Newman - This is a comprehensive book that covers everything from basic computer fundamentals to advanced programming concepts. It's a great resource for learning the language step-by-step, and it includes plenty of exercises and examples to help you apply what you learn.
+
+4. Codecademy C++ Course - This free online course on Codecademy covers everything from basic variables to loops and data structures. It's an excellent way to get started with the language without investing too much time in the beginning.
+
+Remember, learning a new language takes time and effort, but it's worth it for the benefits you can gain. Start where you feel comfortable, read up on tutorials or books, and don't be afraid to ask questions if you get stuck. Good luck!",1521,357,1.528,0.065,233.66,1.528,0.065,233.68,-0.116,4.5,18.97,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0]",2560.0,13915.3,13919.25,3.95,88.7

@@ -1,0 +1,77 @@
+timestamp,model,model_parameters,tester,question,response,response_length_chars,estimated_tokens,inference_time_s,time_to_first_token_s,tokens_per_second,inference_time_perf_s,time_to_first_token_perf_s,tokens_per_second_perf,timing_diff_ms,cpu_baseline_percent,cpu_average_percent,cpu_per_core,cpu_freq_mhz,memory_baseline_mb,memory_peak_mb,memory_increase_mb,memory_percent
+2025-11-19T15:28:48.775222,llama3.2:3b,3B,farnaz,Describe gravity in simple terms for someone that doesn’t know anything about it,"So you're not sure what gravity is? Well, let's start with this: gravity is a force that pulls everything towards each other. Yes, you read that right - everything!
+
+Imagine you have a ball on your desk. Now, if you throw the ball straight up into the air, it will come back down to the ground, right? That's because the Earth is pulling on the ball with an invisible force called gravity. The same thing happens when you drop something, like a pencil - it falls towards the ground.
+
+Gravity is what keeps us and everything else on our feet instead of floating off into space. It's also what makes things fall down when they're not being held up by anything. And get this: even you have gravity! Your weight is a result of your own gravity pulling you towards the ground.
+
+The Earth's gravity is pretty strong, so that's why we don't float away. But other objects in space can be affected by gravity too - like planets and stars. It's all about how much mass (or stuff) something has, and how close it is to something else with mass.",1033,227,8.078,5.489,28.1,8.077,5.489,28.1,-0.723,2.5,18.66,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0]",2560.0,12849.81,13690.9,841.09,87.3
+2025-11-19T15:28:58.461065,llama3.2:3b,3B,farnaz,Describe gravity for someone that knows about it and wants to know more about it,"You're already familiar with gravity, so let's dive deeper! Gravity is a fundamental force of nature that governs how objects interact with each other. It's not just something we feel on the ground; it's actually a curvature of spacetime caused by massive objects like planets and stars.
+
+Imagine spacetime as a fabric that stretches and warps when mass is present. The more massive the object, the greater its effect on this fabric. That means that anything with mass, from a pea to a planet, will create a gravitational field around it. This field tells other objects with mass how to move – they follow the curvature of spacetime.
+
+Now, here's where things get really interesting: gravity isn't just about attraction; it's also about geometry. The more massive an object, the stronger its gravitational pull. That means that larger planets and stars have a greater effect on spacetime, while smaller objects like asteroids are relatively insignificant compared to their surroundings.
+
+Gravity is what holds our solar system together – it's what keeps us on the ground, what makes things fall towards the center of the Earth. It's also what drives the motion of celestial bodies, from the orbits of planets around the Sun to the collision of galaxies across vast distances.
+
+One of the most mind-bending aspects of gravity is its connection to time dilation and relativity. The stronger the gravitational field, the slower time passes relative to a weaker field. This effect becomes significant at very high speeds or in extremely strong gravitational fields – like near black holes. So, while we're all subject to gravity on a daily basis, it's actually one of the most powerful forces in the universe.",1705,333,4.792,0.905,69.49,4.792,0.905,69.49,-0.152,7.2,19.85,"[14.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,13685.65,13731.81,46.16,87.6
+2025-11-19T15:29:04.862597,llama3.2:3b,3B,farnaz,Find a good analogy to describe gravity to someone.,"Think of gravity like a super-strong magnet that pulls everything towards each other. Imagine you have two strong magnets, one in your hand and another on a table across from you. When you bring them close together, they pull each other towards each other, right? Now imagine those same magnets are really, really far apart, and even if you throw the magnet in your hand all the way across the room, it will still be attracted to the magnet on the table - but only very weakly. That's kind of like what gravity does: it pulls everything towards each other, but gets weaker as things get farther away from each other.",616,128,1.712,0.215,74.77,1.711,0.215,74.8,-0.621,9.5,17.3,"[0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 16.7, 0.0, 0.0, 16.7, 14.3, 0.0, 0.0, 0.0, 0.0]",2560.0,13736.9,13738.63,1.73,87.6
+2025-11-19T15:29:08.182107,llama3.2:3b,3B,farnaz,give a small quiz (3 questions) about gravity,"Here are three questions to test your understanding of gravity:
+
+1. What is the force that pulls objects with mass towards each other, keeping planets in orbit around their stars?
+
+2. Which of the following objects has the weakest gravitational pull on Earth?
+
+A) Moon
+B) Car
+C) Human
+D) Tree
+
+3. What is the term for the effect where the curvature of space-time causes time to pass slower near massive objects like black holes?",428,93,1.208,0.185,76.98,1.207,0.184,77.02,-0.604,0.4,19.44,"[28.6, 28.6, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 20.0, 0.0, 0.0, 16.7, 0.0, 0.0]",2560.0,13738.96,13741.64,2.69,87.6
+2025-11-19T15:29:10.998832,llama3.2:3b,3B,farnaz,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,"For 10 degrees Celsius, it's likely to be quite mild. Unless you're doing some physical activity outside, like sports or hiking, a light layer would probably be enough. A big jacket might make you feel too hot. Consider wearing a sweater or light jacket instead, depending on your personal comfort level.",304,63,0.879,0.19,71.66,0.878,0.19,71.71,-0.659,3.1,21.73,"[25.0, 0.0, 0.0, 0.0, 0.0, 0.0, 33.3, 0.0, 0.0, 0.0, 28.6, 16.7, 0.0, 16.7, 0.0, 0.0]",2560.0,13750.35,13752.19,1.84,87.7
+2025-11-19T15:29:13.485235,llama3.2:3b,3B,farnaz,Give a common myth about gravity and explain why it is false,"The idea that gravity stops at the Earth's surface. Many people believe this because when you drop an object, it falls straight down towards the ground - but that's only true if air resistance isn't present. In reality, objects can continue falling in space or on other planets with weaker gravitational pull, showing that gravity doesn't just stop at our feet.",361,72,1.175,0.257,61.28,1.175,0.257,61.29,-0.174,11.0,29.71,"[0.0, 42.9, 0.0, 0.0, 28.6, 62.5, 42.9, 42.9, 14.3, 0.0, 42.9, 14.3, 42.9, 37.5, 0.0, 0.0]",3201.0,13757.9,13882.26,124.36,88.5
+2025-11-19T15:29:16.269008,llama3.2:3b,3B,farnaz,Explain why a plane can fly even with gravity in simple bullet points,"Here's how planes overcome gravity:
+
+• Lift is created when air flows over curved wings, reducing air pressure above the wing and increasing it below.
+• As the plane moves forward, this difference in pressure creates an upward force called lift that counteracts gravity.
+• The shape of the wing allows air to move faster over the top, creating a region of lower air pressure above the wing and higher air pressure below.
+• This pressure difference produces the upward force needed for takeoff, flight, and landing.",514,101,1.302,0.186,77.57,1.302,0.186,77.56,0.111,1.7,15.2,"[16.7, 40.0, 0.0, 20.0, 20.0, 20.0, 40.0, 20.0, 0.0, 0.0, 16.7, 20.0, 0.0, 16.7, 20.0, 0.0]",2560.0,13830.58,13828.56,-2.02,88.1
+2025-11-19T15:29:19.181473,llama3.2:3b,3B,farnaz,what are the steps to write a master thesis ?,"Writing a Master's thesis typically involves several key steps:
+
+First, you'll need to choose a topic and formulate a research question. This is usually done in collaboration with your supervisor or advisor.
+
+Next, conduct preliminary literature reviews to get a sense of what others have already explored on your topic. You may also create an outline to organize your ideas and structure your thesis.
+
+After that, develop a detailed proposal outlining the scope of your project, methodology, and expected outcomes. This is often presented as part of your application for approval from your university or department.
+
+Once you've been approved, you'll start collecting data and conducting research. This may involve designing experiments, surveys, or other methods to collect information relevant to your topic.
+
+As you gather data, you'll begin writing your introduction, which will include an overview of the literature review, a statement of your research question, and a thesis statement that outlines what you aim to prove or demonstrate.
+
+The next stage is to write the main body of your thesis. This may involve presenting and analyzing your research findings in several sections: methodology, results, discussion, and conclusion.
+
+Next comes the writing of specific chapters such as literature review, methodology, results analysis, and conclusion chapter.
+
+After completing these chapters, you'll need to edit and revise your draft multiple times until you're satisfied with its content and quality.
+
+Finally, write a defense of your thesis, which is usually in the form of an oral presentation.",1604,290,3.656,0.205,79.33,3.655,0.205,79.34,-0.449,5.8,18.47,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0, 100.0, 83.3, 0.0, 0.0]",2560.0,13813.77,13818.82,5.05,87.6
+2025-11-19T15:29:24.444587,llama3.2:3b,3B,farnaz,What are the pros and cons of nuclear energy ?,"Nuclear energy has both advantages and disadvantages. Let's break them down:
+
+Pros:
+Nuclear power plants can generate a lot of electricity with relatively little fuel, making it a reliable source of energy.
+The amount of greenhouse gas emissions produced by nuclear power is significantly lower compared to fossil fuels.
+It also provides a low-carbon energy source, which can help reduce climate change.
+
+Cons:
+First and foremost, nuclear power carries the risk of radioactive accidents, like Chernobyl or Fukushima. These disasters have devastating consequences for human health and the environment.
+Additionally, disposing of nuclear waste safely is an enormous challenge that has yet to be solved.
+Nuclear reactors also require a significant amount of money to build and maintain, making them quite expensive.
+Finally, the materials needed for building reactors can become radioactive themselves over time.",909,163,2.03,0.186,80.3,2.029,0.185,80.32,-0.662,2.3,19.02,"[44.4, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 14.3, 0.0, 0.0, 0.0, 33.3, 14.3]",2560.0,13558.12,13576.0,17.88,86.6
+2025-11-19T15:29:28.082775,llama3.2:3b,3B,farnaz,I am strugulling with C++ where should i start ?,"Don't worry, it's normal to feel overwhelmed when starting a new programming language! A good place to begin is understanding the basics of C++. Here are some key areas to focus on:
+
+1. Variables and Data Types: Learn about different data types like integers, floats, strings, and arrays. Understand how to declare variables, assign values, and perform basic operations.
+2. Control Structures: Familiarize yourself with if/else statements, for loops, while loops, and switch statements. These control the flow of your program's logic.
+3. Functions: Learn about function declarations, function calls, and arguments. Understanding how to write reusable code will make your life easier.
+4. Operators: Understand the different types of operators used in C++, including arithmetic, comparison, logical, and assignment operators.
+
+Start with online resources like Codecademy, Coursera, or edX, which offer interactive coding lessons and exercises. Practice writing simple programs to solidify your understanding of these concepts.",1024,200,2.518,0.184,79.44,2.517,0.184,79.45,-0.222,2.1,17.6,"[0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 28.6, 0.0, 0.0, 0.0, 28.6, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,13566.22,13561.91,-4.3,86.5

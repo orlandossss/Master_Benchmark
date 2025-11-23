@@ -1,0 +1,84 @@
+timestamp,model,model_parameters,tester,question,response,response_length_chars,estimated_tokens,inference_time_s,time_to_first_token_s,tokens_per_second,inference_time_perf_s,time_to_first_token_perf_s,tokens_per_second_perf,timing_diff_ms,cpu_baseline_percent,cpu_average_percent,cpu_per_core,cpu_freq_mhz,memory_baseline_mb,memory_peak_mb,memory_increase_mb,memory_percent
+2025-11-19T16:48:55.099961,mistral:7b,7B,dorian,Describe gravity in simple terms for someone that doesn’t know anything about it," Gravity is a force that pulls objects towards each other. Think of it like this: imagine you're holding an apple. The earth is also pulling on the apple, and because the earth is so much bigger than the apple, the pull is stronger. This pull keeps the apple on the ground instead of flying off into space.
+
+The same thing happens with everything around us - from planets orbiting the sun to people walking on Earth. Gravity makes sure that things stay where they are or move in predictable ways. It's a fundamental force that helps shape our universe!",552,120,9.7,7.187,12.37,9.7,7.187,12.37,-0.294,3.1,17.4,"[25.0, 0.0, 0.0, 0.0, 0.0, 14.3, 14.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0]",2560.0,12145.07,12712.29,567.22,79.8
+2025-11-19T16:49:06.411053,mistral:7b,7B,dorian,Describe gravity for someone that knows about it and wants to know more about it," Gravity is a fundamental force that attracts two objects towards each other. It's the force that keeps us on the ground and makes planets orbit around stars.
+
+But let's dive deeper! The force of gravity between any two objects depends on their masses and the distance between them, following an equation proposed by Sir Isaac Newton: F = G * (m1 * m2) / r^2, where F is the force, G is the gravitational constant, m1 and m2 are the masses of the objects, and r is the distance between them.
+
+However, Albert Einstein's theory of general relativity provides a more accurate description of gravity. According to this theory, gravity is not just a force but a curvature of space-time caused by mass and energy. This means that in the presence of a massive object like the Earth, space around it curves and objects move along these curved paths, which we perceive as being pulled towards the Earth due to gravity.
+
+There's still much to discover about gravity, such as dark matter and dark energy, but understanding these basics can help you explore further in your studies!",1071,240,5.311,0.067,45.19,5.311,0.067,45.19,0.018,8.6,20.99,"[25.0, 0.0, 14.3, 14.3, 14.3, 0.0, 14.3, 42.9, 0.0, 14.3, 0.0, 0.0, 0.0, 14.3, 14.3, 14.3]",2560.0,12544.61,12632.93,88.33,80.6
+2025-11-19T16:49:13.331759,mistral:7b,7B,dorian,Find a good analogy to describe gravity to someone.," Think of gravity as an invisible string pulling everything towards the center! Imagine you're holding a ball in your hand and releasing it. At first, it stays in your hand because your hand is applying an upward force that balances the gravitational pull downward. But once you let go, the gravity pulls the ball back towards the earth - just like how a string would pull a ball if you held one end and let the other end go! This ""invisible string"" gets stronger the closer you get to Earth, which is why objects fall faster as they approach the ground.",554,118,2.567,0.065,45.96,2.568,0.065,45.96,0.232,12.5,27.38,"[57.1, 28.6, 66.7, 66.7, 66.7, 50.0, 16.7, 66.7, 33.3, 50.0, 0.0, 66.7, 33.3, 50.0, 50.0, 50.0]",2560.0,12787.94,12838.13,50.2,81.6
+2025-11-19T16:49:17.510777,mistral:7b,7B,dorian,give a small quiz (3 questions) about gravity," 1. What is gravity?
+   Gravity is a force that attracts two objects towards each other. It's the reason why things fall to the ground and the planets orbit around the sun.
+
+2. Who was the scientist who formulated the Law of Universal Gravitation?
+   Sir Isaac Newton was the scientist who formulated the Law of Universal Gravitation in 1687. This law describes how any two objects with mass attract each other due to their gravity.
+
+3. How does the weight of an object change as you go higher into space?
+   The weight of an object doesn't actually change as you move away from Earth, but it feels like it because the force of gravity is weaker. This effect is known as weightlessness or zero-gravity. When astronauts seem to float inside their spacecraft, that's due to them experiencing less gravity in space compared to Earth.",830,197,4.287,0.087,45.96,4.287,0.087,45.96,-0.022,10.2,25.09,"[0.0, 33.3, 33.3, 33.3, 16.7, 0.0, 33.3, 16.7, 0.0, 0.0, 33.3, 16.7, 16.7, 50.0, 16.7, 16.7]",2560.0,12778.1,12824.45,46.35,81.8
+2025-11-19T16:49:23.406221,mistral:7b,7B,dorian,Do you think I need a big jacket if the weather is 10 degrees Celsius ?," While it can still be chilly at 10 degrees Celsius, especially in colder regions, it's important to consider other factors like wind speed and humidity. If you are sensitive to cold or the forecast suggests these additional conditions, then it might be a good idea to wear a jacket. However, if it's a sunny day with light winds, a lighter jacket or layer could also suffice. It's always best to dress in layers so you can adjust as needed throughout the day.",460,107,2.337,0.074,45.79,2.336,0.074,45.8,-0.398,9.7,25.29,"[0.0, 28.6, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 66.7, 16.7, 16.7, 0.0]",2560.0,12832.13,12816.55,-15.58,81.5
+2025-11-19T16:49:27.350742,mistral:7b,7B,dorian,Give a common myth about gravity and explain why it is false," A common misconception about gravity is that ""what goes up must come down."" While it's true that objects, such as balls or birds, often fall back to earth when thrown or released into the air, this idea doesn't fully capture the nature of gravity.
+
+The truth is, an object will continue moving in a straight line and at a constant speed if no external forces act upon it, whether it's moving upwards or sideways. This concept is known as inertia. So, if you launch a rocket fast enough, it can escape Earth's gravitational pull and travel through space without returning to Earth.
+
+In other words, objects don't necessarily have to come back down after going up; they will only do so if acted upon by the force of gravity.",723,168,3.699,0.057,45.42,3.699,0.056,45.42,-0.535,9.4,16.78,"[0.0, 14.3, 14.3, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 14.3, 0.0, 14.3, 28.6, 0.0, 0.0]",2560.0,12767.36,12777.64,10.27,81.4
+2025-11-19T16:49:32.659195,mistral:7b,7B,dorian,Explain why a plane can fly even with gravity in simple bullet points," 1. Airplanes have special wings designed to create lift, which is an upward force that counteracts the pull of gravity.
+2. The shape of an airplane wing is crucial for generating lift. The top of the wing (the upper surface) is curved and the bottom (the lower surface) is flatter. This difference in shape creates a pressure difference between the top and bottom surfaces, which generates lift.
+3. When the airplane moves through the air, air flows faster over the curved top surface than the flatter bottom surface due to something called Bernoulli's principle.
+4. The faster-moving air creates less pressure on the top of the wing, while the slower-moving air creates more pressure on the bottom. This difference in pressure lifts the airplane upwards.
+5. In addition to lift, airplanes also use thrust (from their engines), which pushes them forward, and drag (resistance from the air), which slows them down. By balancing these forces, airplanes can stay in the air.
+6. Finally, pilots control the airplane's direction by changing its pitch (the angle of the wings) and yaw (rotation around a vertical axis). These movements affect the lift and drag on different parts of the wing, which allows the airplane to turn or change speed.
+7. Gravity continues to pull the airplane down, but the lift generated by the wings is strong enough to keep the airplane in flight as long as the other forces (thrust, drag, and lift) are balanced properly.",1446,334,7.42,0.066,45.02,7.419,0.066,45.02,-0.212,3.9,19.75,"[0.0, 14.3, 0.0, 0.0, 14.3, 0.0, 28.6, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0]",2560.0,12754.07,12924.07,170.0,81.4
+2025-11-19T16:49:41.686714,mistral:7b,7B,dorian,what are the steps to write a master thesis ?," Writing a Master's thesis involves several key steps. Here's a simplified breakdown:
+
+1. **Choosing a Topic:** Find an interesting and relevant topic that aligns with your academic interests and research goals. It's best if the topic is original, but it can also be a new perspective on an existing problem.
+
+2. **Proposal Writing:** Write a detailed proposal outlining your research question, methodology, expected results, timeline, and significance of the study. This will need to be approved by your advisor or committee before you begin your thesis work.
+
+3. **Literature Review:** Conduct extensive research on existing literature related to your topic. This will help you understand the current state of knowledge in your field and identify gaps that your thesis can fill.
+
+4. **Research Design:** Develop a clear plan for how you will gather, analyze, and interpret data. This might involve surveys, experiments, or analysis of existing data.
+
+5. **Data Collection:** Gather the necessary data according to your research design. This could involve conducting interviews, observing phenomena, or analyzing text, images, or numerical data.
+
+6. **Data Analysis:** Analyze the data you've collected using appropriate statistical methods, qualitative analysis techniques, or other tools relevant to your field.
+
+7. **Writing:** Start writing your thesis. A typical structure includes an introduction (which includes the problem statement and research question), a literature review, methodology, results, discussion, and conclusion. Make sure to cite all sources properly using a recognized citation style such as APA, MLA, or Chicago.
+
+8. **Review and Revision:** After writing each section, review it for clarity, coherence, and adherence to academic standards. Consider getting feedback from your advisor, peers, or professional editors.
+
+9. **Defense:** Present your thesis to a committee of experts in your field. They will ask questions about your research, methodology, findings, and implications. You may need to revise your work based on their feedback before it is accepted.
+
+10. **Final Submission:** Once you've made any necessary revisions, submit your final thesis for evaluation. If it meets all requirements, you will be awarded your Master's degree.",2270,496,11.282,0.089,43.96,11.281,0.088,43.97,-0.641,5.0,17.0,"[25.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 33.3, 0.0, 0.0, 28.6, 0.0, 16.7, 33.3, 0.0, 0.0]",2560.0,12747.39,12765.54,18.14,81.2
+2025-11-19T16:49:54.578357,mistral:7b,7B,dorian,What are the pros and cons of nuclear energy ?," Let's dive into the advantages and disadvantages of nuclear energy:
+
+Pros:
+1. **Reliable Energy Source**: Nuclear power plants can operate continuously, providing a steady stream of electricity compared to intermittent sources like wind and solar.
+2. **Low Carbon Emissions**: Unlike fossil fuels, nuclear energy produces little to no carbon dioxide during operation, making it a valuable tool in the fight against climate change.
+3. **High Energy Density**: Nuclear fuel has a much higher energy content than coal or oil, allowing for smaller power plants that still produce a large amount of electricity.
+4. **Water Usage**: Nuclear power plants use significantly less water than traditional thermal power plants for cooling purposes.
+
+Cons:
+1. **Waste Management**: One of the main concerns with nuclear energy is the management and disposal of radioactive waste, which remains dangerous for thousands of years.
+2. **Cost and Time**: Building a nuclear power plant can be expensive and time-consuming due to stringent safety regulations and construction challenges.
+3. **Safety Risks**: While nuclear reactors are designed with multiple safety systems, accidents such as Chernobyl and Fukushima remind us of the potential for catastrophic failures.
+4. **Proliferation Concerns**: The enrichment of uranium for use in power reactors can potentially be used to produce materials for nuclear weapons, raising non-proliferation concerns.",1437,320,7.363,0.068,43.46,7.364,0.068,43.46,0.439,13.0,17.28,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0]",2560.0,12741.11,12751.15,10.04,81.1
+2025-11-19T16:50:03.550793,mistral:7b,7B,dorian,I am strugulling with C++ where should i start ?," To get started with C++ programming, here's a step-by-step guide to help you navigate through this exciting language:
+
+1. **Install a Compiler**: First, you need a compiler that can translate your C++ code into machine language. Some popular compilers include MinGW (for Windows) and gcc/g++ (for Linux and MacOS). Visual Studio is also a great choice if you're working on Windows.
+
+2. **Set Up Your Text Editor**: You'll want a text editor to write your code in. Some options for beginners include Visual Studio Code, Atom, or Sublime Text.
+
+3. **Understand the Basics**: Before diving into more complex topics, make sure you have a solid understanding of basic C++ concepts such as variables (e.g., int, char, float), data types, operators, functions, control structures (if-else, for, while, switch), and arrays.
+
+4. **Learn About Object-Oriented Programming**: Once you have a good grasp of the basics, learn about object-oriented programming (OOP) concepts in C++. This includes classes, objects, inheritance, polymorphism, encapsulation, and abstract classes.
+
+5. **Master Standard Template Library (STL)**: STL is a powerful collection of libraries that provide various prewritten data structures such as vectors, lists, deques, maps, and sets, as well as algorithms to manipulate them. Familiarize yourself with these components, as they will greatly simplify your programming tasks.
+
+6. **Practice**: As with any skill, practice is key. Write simple programs to solve various problems, work on coding challenges from websites like HackerRank, LeetCode, or Project Euler, and strive for code that's both effective and efficient.
+
+7. **Explore Advanced Topics**: Once you have a strong foundation in C++, delve into more advanced topics such as templates, exceptions, streams, and memory management. These concepts will help you write more robust and sophisticated programs.
+
+8. **Join Online Communities**: Join online communities like Stack Overflow or GitHub to connect with other developers, ask questions, and learn from others' experiences.",2054,488,11.359,0.067,42.96,11.36,0.068,42.96,0.235,12.4,17.66,"[25.0, 0.0, 0.0, 0.0, 0.0, 0.0, 14.3, 14.3, 0.0, 0.0, 14.3, 37.5, 14.3, 0.0, 0.0, 0.0]",2560.0,12714.34,12745.57,31.23,80.2

@@ -1,0 +1,134 @@
+timestamp,model,model_parameters,tester,question,response,response_length_chars,estimated_tokens,inference_time_s,time_to_first_token_s,tokens_per_second,inference_time_perf_s,time_to_first_token_perf_s,tokens_per_second_perf,timing_diff_ms,cpu_baseline_percent,cpu_average_percent,cpu_per_core,cpu_freq_mhz,memory_baseline_mb,memory_peak_mb,memory_increase_mb,memory_percent
+2025-11-19T17:01:27.215189,cogito:8b,8B,dorian,Describe gravity in simple terms for someone that doesn’t know anything about it,"Think of gravity like a giant invisible magnet pulling everything toward each other, especially things with mass (like people and objects). When you drop something, like a pen or ball, Earth's gravity is constantly pulling on it. That's why the pen falls down instead of floating up - gravity is stronger than any force pushing it up.
+
+For example, imagine throwing a ball straight up into the air. While it's flying upward, your hands are still holding onto it because they're exerting more force (pushing) than Earth's gravity can pull. But once you let go, gravity quickly takes over and pulls the ball back down to the ground.",630,131,12.16,9.111,10.77,12.16,9.111,10.77,-0.048,9.1,16.85,"[28.6, 16.7, 0.0, 0.0, 0.0, 0.0, 42.9, 0.0, 0.0, 16.7, 14.3, 50.0, 0.0, 0.0, 0.0, 0.0]",2560.0,11490.22,12269.28,779.06,78.2
+2025-11-19T17:01:40.985057,cogito:8b,8B,dorian,Describe gravity for someone that knows about it and wants to know more about it,"Gravity is a fundamental force of nature that makes objects attract each other. Here are some key points:
+
+1. Universal Attraction: Every object with mass in the universe attracts every other object with a gravitational pull.
+
+2. Distance Matters: The strength of gravity weakens as distance increases, following an inverse square law (meaning it drops off quickly over long distances).
+
+3. Warped Space-Time: According to Einstein's theory of general relativity, massive objects like planets and stars curve the fabric of space-time around them, causing other objects to follow curved paths.
+
+4. Not Just for Planets: Gravity affects everything from tiny particles to galaxies, though its effects can be very different at different scales.
+
+5. Different Than Other Forces: Unlike electromagnetic forces that can push or pull in various directions, gravity always pulls things together towards each other's centers of mass.
+
+6. Measured by Mass: The strength of gravitational force depends on the masses of both objects and the distance between them - though it's not quite as simple as just multiplying these factors together.
+
+Want to know more about any specific aspect of gravity?",1184,223,5.46,0.212,40.84,5.459,0.212,40.85,-0.431,10.0,14.46,"[0.0, 14.3, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,12244.62,12255.04,10.41,78.1
+2025-11-19T17:01:48.052593,cogito:8b,8B,dorian,Find a good analogy to describe gravity to someone.,"Think of gravity like a giant invisible magnet that pulls everything towards the center of Earth, but instead of attracting metals, it attracts all matter - from tiny rocks to massive mountains. Just as you're always pulled down when you jump up (that's why your feet touch the ground), gravity keeps us firmly planted on the surface and holds our atmosphere around us like a protective bubble.",394,76,2.013,0.264,37.75,2.012,0.263,37.76,-0.705,12.5,16.09,"[0.0, 0.0, 0.0, 0.0, 14.3, 14.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0]",3201.0,12270.3,12273.64,3.34,78.2
+2025-11-19T17:01:51.674466,cogito:8b,8B,dorian,give a small quiz (3 questions) about gravity,"Here's a 3-question quiz on gravity:
+
+1. What is gravity?
+A) The force that keeps us stuck to Earth
+B) The natural attraction between all objects with mass
+C) Only the pull of celestial bodies like planets and stars
+D) A mysterious invisible energy
+
+2. Why does an object fall straight down when dropped from a height?
+A) Because it's trying to reach its center of mass
+B) Because it's being pulled by Earth's gravity in a straight line
+C) Because air resistance is stronger than gravity
+D) Because it wants to get back to the ground
+
+3. What happens to gravity as you travel farther from Earth?
+A) It increases exponentially
+B) It decreases proportionally to distance squared
+C) It stays exactly the same
+D) It becomes weaker, eventually reaching zero at infinity
+
+Answers:
+1. B
+2. B
+3. B",789,187,4.691,0.24,39.86,4.69,0.24,39.87,-0.716,10.6,15.02,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,12260.72,12265.38,4.65,78.2
+2025-11-19T17:01:57.974768,cogito:8b,8B,dorian,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,"That's a fairly mild temperature! For 10°C, a medium to large-sized regular coat should keep you comfortable. Unless it's windy or rainy, most people can wear lighter layers without freezing. But if you tend to get cold easily, maybe bring an extra layer just in case. It really depends on your personal comfort level and what you're planning to do outside.",357,76,1.952,0.207,38.94,1.952,0.207,38.94,0.327,2.5,15.67,"[14.3, 16.7, 14.3, 0.0, 16.7, 0.0, 33.3, 14.3, 0.0, 0.0, 0.0, 33.3, 28.6, 28.6, 0.0, 14.3]",2560.0,12253.89,12257.53,3.64,78.2
+2025-11-19T17:02:01.536857,cogito:8b,8B,dorian,Give a common myth about gravity and explain why it is false,"One common myth about gravity is that astronauts floating in space are ""weightless"" because there's no air resistance to push them down. This isn't true - they're actually still under Earth's gravitational pull, but they're also accelerating forward at the same rate as their spacecraft (due to Newton's First Law of Motion). It looks like weightlessness because both the astronauts and their spacecraft are falling around the Earth together, creating a sensation of floating in space.
+
+Another myth is that gravity only works on planets. In reality, gravity exists everywhere - it's what keeps the moon orbiting Earth, what pulls tides in oceans, and even affects spacecraft traveling between planets. We just don't feel it as strongly when we're standing still because we have mass but are also pulled down by all the other masses around us (including the Earth itself).",872,170,4.126,0.209,41.21,4.126,0.209,41.2,0.358,6.8,15.78,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,12266.24,12269.6,3.36,78.1
+2025-11-19T17:02:07.270900,cogito:8b,8B,dorian,Explain why a plane can fly even with gravity in simple bullet points,"• The main reason planes fly is because of their special shape - they're designed to create less air resistance than other shapes.
+
+• When an airplane moves forward, it pushes air down and backward. This creates ""lift"" which makes the plane rise into the sky.
+
+• Lift happens because the air flows faster over the curved top of the wing compared to the bottom, creating a difference in pressure (like when you blow across the top of a piece of paper).
+
+• Even though gravity pulls planes down, their forward motion and special design keep them from falling. It's like the plane is ""falling"" through the air but never actually hitting the ground.
+
+• The wings are angled slightly upward to maximize this lift effect, making it even easier for the plane to stay airborne.",769,156,3.947,0.253,39.52,3.947,0.253,39.53,-0.492,5.8,16.72,"[16.7, 0.0, 0.0, 16.7, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 16.7, 0.0, 33.3, 0.0, 0.0, 0.0]",2560.0,12257.23,12262.63,5.4,78.2
+2025-11-19T17:02:12.826667,cogito:8b,8B,dorian,what are the steps to write a master thesis ?,"Here's a step-by-step guide to writing a master thesis:
+
+1. Choose a Topic
+- Select an area you're interested in and skilled at
+- Ensure it aligns with your program requirements
+- Check for available resources and potential supervisors
+
+2. Conduct Literature Review
+- Read existing research on your topic
+- Identify gaps in current knowledge
+- Organize findings into themes
+
+3. Develop Research Questions
+- Formulate specific, testable questions
+- Ensure they address the identified gap
+- Make them measurable and realistic
+
+4. Design Your Study
+- Choose appropriate methodology (qualitative/quantitative/mixed)
+- Plan your data collection methods
+- Create a timeline for research phases
+
+5. Collect Data
+- Gather primary or secondary data as planned
+- Maintain detailed records of procedures
+- Document any challenges encountered
+
+6. Analyze Results
+- Apply chosen analytical techniques
+- Interpret findings in context
+- Draw conclusions based on evidence
+
+7. Write Draft Chapters
+- Start with background and literature review
+- Move to methodology and results
+- Conclude with discussion and implications
+
+8. Receive Feedback
+- Share draft with supervisor/advisors
+- Incorporate suggestions for improvement
+- Make necessary revisions
+
+9. Finalize Thesis
+- Complete editing and proofreading
+- Prepare final version for defense
+- Follow university formatting guidelines",1368,275,6.877,0.248,39.99,6.877,0.248,39.99,0.342,6.1,15.25,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 33.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0]",2560.0,12257.35,12262.74,5.39,78.1
+2025-11-19T17:02:21.312702,cogito:8b,8B,dorian,What are the pros and cons of nuclear energy ?,"Nuclear power offers significant benefits while also raising concerns. Let's look at both sides:
+
+Pros:
+- Produces very little greenhouse gas emissions, making it an effective tool for reducing climate change
+- Has a high capacity factor (around 90%), meaning plants run almost continuously to meet demand
+- Can provide reliable baseload power, helping balance the grid with renewables
+- Uses fuel that's abundant in many countries, reducing import dependence
+
+Cons:
+- The nuclear waste from spent fuel is radioactive and remains hazardous for thousands of years
+- Nuclear accidents (like Chernobyl or Fukushima) can have severe long-term environmental impacts
+- Building new reactors is expensive and time-consuming
+- There are concerns about nuclear proliferation and safety risks like meltdowns
+- Public opinion often strongly opposes nuclear power due to these factors
+
+These trade-offs make nuclear energy a complex topic in the ongoing debate about clean energy solutions.",978,183,4.543,0.203,40.28,4.543,0.203,40.28,-0.433,8.9,15.44,"[0.0, 0.0, 16.7, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 16.7, 0.0, 0.0, 14.3]",2560.0,12259.35,12256.01,-3.34,78.1
+2025-11-19T17:02:27.465025,cogito:8b,8B,dorian,I am strugulling with C++ where should i start ?,"Start with the basics of C++. Here's a suggested learning path:
+
+1. First, learn about variables, data types, and basic operators.
+2. Then move on to control structures (if/else statements, loops).
+3. Learn how to work with functions - what they are, parameters, return values.
+4. Understand pointers and memory management in C++.
+
+Some good resources to get started:
+- ""C++ Primer"" by Stanley B. Lippman
+- ""The C++ Programming Language"" by Bjarne Stroustrup
+- Websites like Codecademy or W3Schools have excellent C++ tutorials
+
+Start small with simple programs, and gradually build up to more complex ones. Practice regularly, as C++ requires consistent practice to master.
+
+Remember: Don't get discouraged if it's challenging at first - that's normal for a new programming language!",784,178,4.445,0.249,40.04,4.445,0.249,40.05,-0.3,10.8,14.88,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 14.3, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,12247.11,12258.47,11.36,78.1

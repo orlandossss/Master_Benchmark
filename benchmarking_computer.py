@@ -15,7 +15,7 @@ import sys
 import subprocess
 
 class OllamaMonitor:
-    def __init__(self, output_dir="./results_pi4"):
+    def __init__(self, output_dir="./results_computer"):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(exist_ok=True)
         self.results = []
@@ -201,63 +201,7 @@ Rules:
             'memory_percent': mem.percent,
             'memory_available_mb': mem.available / (1024 * 1024),
         }
-
-    def _get_disk_io_metrics(self):
-        """Get disk I/O metrics"""
-        try:
-            io_counters = psutil.disk_io_counters()
-            if io_counters:
-                return {
-                    'read_count': io_counters.read_count,
-                    'write_count': io_counters.write_count,
-                    'read_bytes': io_counters.read_bytes,
-                    'write_bytes': io_counters.write_bytes,
-                    'read_time': io_counters.read_time,  # milliseconds
-                    'write_time': io_counters.write_time,  # milliseconds
-                }
-        except Exception as e:
-            print(f"⚠️  Error getting disk I/O metrics: {e}")
-        return None
-
-    def _calculate_io_stats(self, baseline_io, final_io, duration_s):
-        """Calculate I/O statistics from baseline and final measurements"""
-        if not baseline_io or not final_io or duration_s == 0:
-            return {}
-
-        # Calculate differences
-        read_count = final_io['read_count'] - baseline_io['read_count']
-        write_count = final_io['write_count'] - baseline_io['write_count']
-        read_bytes = final_io['read_bytes'] - baseline_io['read_bytes']
-        write_bytes = final_io['write_bytes'] - baseline_io['write_bytes']
-        read_time_ms = final_io['read_time'] - baseline_io['read_time']
-        write_time_ms = final_io['write_time'] - baseline_io['write_time']
-
-        # Calculate derived metrics
-        total_io_ops = read_count + write_count
-        total_bytes = read_bytes + write_bytes
-
-        iops = total_io_ops / duration_s if duration_s > 0 else 0
-        throughput_mb_s = (total_bytes / (1024 * 1024)) / duration_s if duration_s > 0 else 0
-
-        # Average latencies (crude approximation)
-        avg_read_latency_ms = read_time_ms / read_count if read_count > 0 else 0
-        avg_write_latency_ms = write_time_ms / write_count if write_count > 0 else 0
-
-        return {
-            'io_read_count': read_count,
-            'io_write_count': write_count,
-            'io_read_bytes': read_bytes,
-            'io_write_bytes': write_bytes,
-            'io_read_time_ms': read_time_ms,
-            'io_write_time_ms': write_time_ms,
-            'io_total_ops': total_io_ops,
-            'io_total_bytes': total_bytes,
-            'io_iops': round(iops, 2),
-            'io_throughput_mb_s': round(throughput_mb_s, 3),
-            'io_avg_read_latency_ms': round(avg_read_latency_ms, 2),
-            'io_avg_write_latency_ms': round(avg_write_latency_ms, 2),
-        }
-
+    
     def _calculate_energy_efficiency(self, voltage_samples, inference_time, tokens):
         """
         Calculate tokens per joule
@@ -303,10 +247,10 @@ Rules:
         # Get baseline metrics
         baseline_cpu = psutil.cpu_percent(interval=0.5)
         baseline_mem = psutil.virtual_memory().used / (1024 * 1024)
-        baseline_io = self._get_disk_io_metrics()
 
-        # Start timing
+        # Start timing (both methods for comparison)
         start_time = time.time()
+        start_perf_counter = time.perf_counter()
         start_timestamp = datetime.now()
 
         # Tracking metrics during inference
@@ -318,6 +262,7 @@ Rules:
         response_text = ""
         token_count = 0
         first_token_time = None
+        first_token_time_perf = None
 
         # Prepare messages based on model size
         # Small models (<= 1.4B) struggle with system prompts, so use raw questions
@@ -349,6 +294,7 @@ Rules:
                 for chunk in stream_response:
                     if first_token_time is None:
                         first_token_time = time.time() - start_time
+                        first_token_time_perf = time.perf_counter() - start_perf_counter
 
                     content = chunk['message']['content']
                     response_text += content
@@ -391,15 +337,16 @@ Rules:
             print(f"❌ Error during inference: {e}")
             return None
         
-        # End timing
+        # End timing (both methods for comparison)
         end_time = time.time()
+        end_perf_counter = time.perf_counter()
         inference_time = end_time - start_time
-
+        inference_time_perf = end_perf_counter - start_perf_counter
+        
         # Get final metrics
         final_cpu = self._get_cpu_metrics()
         final_mem = self._get_memory_metrics()
         final_power = self._get_power_metrics()
-        final_io = self._get_disk_io_metrics()
         
         # Calculate statistics
         avg_cpu = sum(cpu_samples) / len(cpu_samples) if cpu_samples else final_cpu['cpu_percent_avg']
@@ -407,12 +354,10 @@ Rules:
         mem_increase = peak_mem - baseline_mem
         
         tokens_per_second = token_count / inference_time if inference_time > 0 else 0
-
+        tokens_per_second_perf = token_count / inference_time_perf if inference_time_perf > 0 else 0
+        
         # Calculate energy efficiency
         energy_metrics = self._calculate_energy_efficiency(voltage_samples, inference_time, token_count)
-
-        # Calculate I/O statistics
-        io_stats = self._calculate_io_stats(baseline_io, final_io, inference_time)
         
         # Compile results
         result = {
@@ -425,10 +370,18 @@ Rules:
             'response_length_chars': len(response_text),
             'estimated_tokens': token_count,
 
-            # Timing metrics
+            # Timing metrics (time.time() method)
             'inference_time_s': round(inference_time, 3),
             'time_to_first_token_s': round(first_token_time, 3) if first_token_time else None,
             'tokens_per_second': round(tokens_per_second, 2),
+
+            # Timing metrics (time.perf_counter() method for comparison)
+            'inference_time_perf_s': round(inference_time_perf, 3),
+            'time_to_first_token_perf_s': round(first_token_time_perf, 3) if first_token_time_perf else None,
+            'tokens_per_second_perf': round(tokens_per_second_perf, 2),
+
+            # Timing difference (shows precision difference between methods)
+            'timing_diff_ms': round((inference_time_perf - inference_time) * 1000, 3),
 
             # CPU metrics
             'cpu_baseline_percent': round(baseline_cpu, 2),
@@ -452,10 +405,6 @@ Rules:
         if energy_metrics:
             result.update(energy_metrics)
 
-        # Add I/O statistics
-        if io_stats:
-            result.update(io_stats)
-
         # Save result
         self.results.append(result)
 
@@ -474,17 +423,15 @@ Rules:
             'tester': result['tester'],
             'question': result['question'],
             'tokens_per_second': result['tokens_per_second'],
+            'tokens_per_second_perf': result['tokens_per_second_perf'],
             'inference_time_s': result['inference_time_s'],
+            'inference_time_perf_s': result['inference_time_perf_s'],
+            'timing_diff_ms': result['timing_diff_ms'],
             'time_to_first_token_s': result.get('time_to_first_token_s', 'N/A'),
+            'time_to_first_token_perf_s': result.get('time_to_first_token_perf_s', 'N/A'),
             'tokens_per_joule': result.get('tokens_per_joule', 'N/A'),
             'response_length_chars': result['response_length_chars'],
             'estimated_tokens': result['estimated_tokens'],
-            'io_iops': result.get('io_iops', 'N/A'),
-            'io_throughput_mb_s': result.get('io_throughput_mb_s', 'N/A'),
-            'io_read_count': result.get('io_read_count', 'N/A'),
-            'io_write_count': result.get('io_write_count', 'N/A'),
-            'io_read_bytes': result.get('io_read_bytes', 'N/A'),
-            'io_write_bytes': result.get('io_write_bytes', 'N/A'),
         }
 
         # Check if file exists to determine if we need to write headers
@@ -504,36 +451,12 @@ Rules:
         except Exception as e:
             print(f"❌ Error saving to benchmark.csv: {e}")
 
-    def _wait_for_temperature_threshold(self, max_temp_c=60):
-        """Wait until system temperature is below the specified threshold"""
-        print(f"\n🌡️  Checking system temperature...")
-
-        while True:
-            power_metrics = self._get_power_metrics()
-
-            if not power_metrics or 'temperature_c' not in power_metrics:
-                print("⚠️  Temperature monitoring not available, proceeding with benchmark")
-                return
-
-            current_temp = power_metrics['temperature_c']
-            print(f"   Current temperature: {current_temp}°C", end='')
-
-            if current_temp < max_temp_c:
-                print(f" ✅ (below {max_temp_c}°C threshold)")
-                return
-            else:
-                print(f" ⏳ (waiting for temperature to drop below {max_temp_c}°C)")
-                time.sleep(5)  # Wait 5 seconds before checking again
-
     def run_benchmark(self, questions, stream=False):
         """Run a benchmark with multiple questions for all matching models"""
         print(f"\n🔬 Starting Benchmark")
         print(f"Models to test: {len(self.matching_models)}")
         print(f"Questions per model: {len(questions)}")
         print(f"Streaming: {stream}\n")
-
-        # Wait for temperature to drop below threshold before starting
-        self._wait_for_temperature_threshold(max_temp_c=60)
 
         total_tests = len(self.matching_models) * len(questions)
         test_count = 0
@@ -553,11 +476,6 @@ Rules:
                 time.sleep(1)
 
             print(f"\n✅ Completed benchmarking {model_name}")
-
-            # Wait for temperature to cool down before next model (if not the last model)
-            if model_idx < len(self.matching_models):
-                print(f"\n⏳ Waiting for system to cool down before next model...")
-                self._wait_for_temperature_threshold(max_temp_c=60)
 
         self._save_results()
     
@@ -658,7 +576,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     # Initialize monitor (auto-detects matching models)
-    monitor = OllamaMonitor(output_dir="./results_pi4")
+    monitor = OllamaMonitor(output_dir="./results_computer")
 
     # Run benchmark on all matching models
     monitor.run_benchmark(questions, stream=True)
@@ -667,8 +585,4 @@ if __name__ == "__main__":
     print(f"Models tested: {len(monitor.matching_models)}")
     for model in monitor.matching_models:
         print(f"   - {model['detected_name']}")
-<<<<<<< HEAD
     print(f"\nResults saved to: benchmark.csv")
-=======
-    print(f"\nResults saved to: benchmark.csv")
->>>>>>> 76988081bcf78ac34acd4ef474a3abbc83a67b0f

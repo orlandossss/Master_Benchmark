@@ -1,0 +1,91 @@
+timestamp,model,model_parameters,tester,question,response,response_length_chars,estimated_tokens,inference_time_s,time_to_first_token_s,tokens_per_second,inference_time_perf_s,time_to_first_token_perf_s,tokens_per_second_perf,timing_diff_ms,cpu_baseline_percent,cpu_average_percent,cpu_per_core,cpu_freq_mhz,memory_baseline_mb,memory_peak_mb,memory_increase_mb,memory_percent
+2025-11-19T16:35:24.403930,gemma3:4b,4B,gio,Describe gravity in simple terms for someone that doesn’t know anything about it,"Gravity is like an invisible force that pulls things towards each other. The bigger something is, the stronger its pull. That's why you stay on the ground – the Earth is huge and it's pulling you down! It’s also why the moon goes around the Earth and why planets orbit the sun.",277,64,12.109,9.118,5.29,12.109,9.118,5.29,-0.12,20.0,17.26,"[28.6, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0]",2502.0,13224.64,13722.12,497.48,87.3
+2025-11-19T16:35:38.133208,gemma3:4b,4B,gio,Describe gravity for someone that knows about it and wants to know more about it,"Okay, let's dig deeper into gravity.
+
+Essentially, you already know that gravity is the force that pulls objects with mass towards each other. Newton described it as a force, proportional to the product of the masses and inversely proportional to the square of the distance between them. That’s a great starting point – it’s a pretty accurate model for many situations.
+
+However, Einstein's theory of General Relativity offers a much more profound understanding. Instead of a force, he described gravity as a *curvature of spacetime* caused by mass and energy.
+
+Imagine a bowling ball placed on a stretched-out rubber sheet. It creates a dip, right? Now, if you roll a marble nearby, it will curve *towards* the bowling ball, not because the bowling ball is 'pulling' it, but because the marble is following the curve in the sheet. 
+
+That's essentially what's happening with gravity. Massive objects like planets and stars warp spacetime around them, and other objects follow these curves. 
+
+**Here's what’s new with General Relativity:**
+
+*   **Spacetime:** Space and time are interwoven into a single four-dimensional fabric.
+*   **Mass-Energy Affects Spacetime:** It's not just mass; energy contributes to this curvature.
+*   **Light is Affected:** Because light travels through spacetime, it also follows these curves – bending around massive objects.
+*   **Gravitational Time Dilation:** Time passes slower in stronger gravitational fields.
+
+**Current research focuses on:**
+
+*   **Dark Matter and Dark Energy:** These mysterious components make up most of the universe and significantly affect spacetime. 
+*   **Testing General Relativity:** Scientists are constantly trying to test its predictions with greater precision, particularly around black holes and in extremely strong gravitational fields.
+
+Do you want me to elaborate on any specific aspect, like gravitational waves, black holes, or how it differs from Newton's theory?",1938,405,14.849,0.485,27.27,14.849,0.485,27.27,-0.281,12.8,17.5,"[50.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 33.3, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0]",2502.0,13697.0,13751.53,54.53,87.7
+2025-11-19T16:35:54.594013,gemma3:4b,4B,gio,Find a good analogy to describe gravity to someone.,"Imagine a bowling ball on a stretched-out trampoline. The ball makes the trampoline dip down. If you roll a marble nearby, it’ll curve towards the bowling ball, right? 
+
+That’s kind of like gravity. Big objects, like planets and stars, create a ""dip"" in space, and other objects are pulled towards them.",303,72,2.27,0.62,31.72,2.269,0.62,31.73,-0.771,7.4,23.99,"[14.3, 25.0, 0.0, 20.0, 0.0, 0.0, 14.3, 14.3, 0.0, 20.0, 14.3, 28.6, 0.0, 0.0, 0.0, 0.0]",2502.0,13744.8,13769.83,25.03,87.8
+2025-11-19T16:35:58.472318,gemma3:4b,4B,gio,give a small quiz (3 questions) about gravity,"Okay, let's test your gravity knowledge!
+
+1.  What force is responsible for keeping you on the ground?
+    a) Magnetism
+    b) Gravity
+    c) Friction
+
+2.  The strength of gravity depends on what two things?
+    a) Mass and speed
+    b) Mass and distance
+    c) Speed and color
+
+3.  If you jump in the air, what happens to your speed as you go up and then down?
+    a) It increases constantly.
+    b) It decreases until it reaches zero, then increases.
+    c) It decreases until it reaches zero.
+",496,135,3.963,0.493,34.06,3.963,0.493,34.07,-0.51,11.0,24.45,"[16.7, 0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 16.7, 0.0, 0.0, 16.7, 33.3, 0.0, 0.0, 0.0, 0.0]",2502.0,13803.12,13819.91,16.78,88.1
+2025-11-19T16:36:04.045295,gemma3:4b,4B,gio,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,"Probably, yes. 10 degrees Celsius is chilly! You'll likely feel the cold, especially if you're sensitive to temperature or if the wind is blowing.",146,36,1.233,0.48,29.2,1.233,0.48,29.2,-0.029,8.9,29.06,"[16.7, 42.9, 0.0, 0.0, 16.7, 0.0, 16.7, 0.0, 16.7, 0.0, 33.3, 0.0, 0.0, 0.0, 0.0, 0.0]",2502.0,13803.47,13803.78,0.31,88.0
+2025-11-19T16:36:06.887527,gemma3:4b,4B,gio,Give a common myth about gravity and explain why it is false,"A common myth is that gravity pulls on *everything* equally, no matter what it’s made of.
+
+That’s false! Gravity's strength depends on mass.  The more massive something is, the stronger its gravitational pull. That's why the Earth pulls on us much harder than it pulls on a feather.  It also means that a huge planet like Jupiter has a much stronger gravitational field than Earth.",381,87,2.33,0.48,37.34,2.33,0.48,37.33,0.396,13.9,26.67,"[0.0, 16.7, 0.0, 0.0, 0.0, 42.9, 16.7, 16.7, 0.0, 0.0, 16.7, 16.7, 0.0, 0.0, 0.0, 0.0]",2502.0,13808.68,13803.0,-5.68,88.0
+2025-11-19T16:36:10.826692,gemma3:4b,4B,gio,Explain why a plane can fly even with gravity in simple bullet points,"*   **Wings Create Lift:** Air flows faster over the curved top of a wing than the bottom.
+*   **Faster Air = Lower Pressure:** Faster airflow creates lower pressure above the wing.
+*   **Pressure Difference = Lift:** This difference in pressure pushes the wing upwards.
+*   **Gravity Pulls Down:** Gravity pulls the plane downwards.
+*   **Lift Counters Gravity:** The upward force of lift is strong enough to overcome gravity and keep the plane in the air.",457,101,2.994,0.519,33.73,2.994,0.519,33.74,-0.575,6.9,25.32,"[0.0, 16.7, 0.0, 0.0, 16.7, 0.0, 16.7, 16.7, 0.0, 0.0, 33.3, 16.7, 0.0, 0.0, 0.0, 0.0]",2502.0,13795.06,13867.4,72.34,88.5
+2025-11-19T16:36:15.433115,gemma3:4b,4B,gio,what are the steps to write a master thesis ?,"Okay, let's break down the steps to writing a master's thesis.
+
+1.  **Choose a Topic & Develop a Research Question:** Start with something that genuinely interests you. Then, narrow it down into a specific, manageable question you can investigate.
+
+2.  **Literature Review:** Dive into existing research related to your topic. Understand what’s already known, identify gaps, and start formulating your argument.
+
+3.  **Develop a Thesis Statement:** This is your main argument – a clear and concise statement of what you’re trying to prove.
+
+4.  **Create an Outline:** Structure your thesis with chapters and sections. This helps keep you organized.
+
+5.  **Conduct Research:** Collect data – this could be through experiments, surveys, interviews, analysis of existing data, or archival research.
+
+6.  **Write the First Draft:** Get your ideas down! Don’t worry about perfection at this stage.
+
+7.  **Revise and Edit:** Review your draft for clarity, logic, and accuracy. Get feedback from your advisor.
+
+8.  **Write the Conclusion:** Summarize your findings and restate your thesis in light of your research.
+
+9.  **Proofread Carefully:** Catch any errors in grammar, spelling, and formatting.
+
+10. **Final Submission:** Ensure all requirements are met and submit your thesis.",1276,285,11.07,0.485,25.75,11.07,0.485,25.75,-0.393,12.2,21.43,"[14.3, 28.6, 0.0, 0.0, 20.0, 0.0, 0.0, 71.4, 0.0, 0.0, 28.6, 28.6, 0.0, 0.0, 0.0, 0.0]",3201.0,13866.57,13890.93,24.35,87.7
+2025-11-19T16:36:28.115702,gemma3:4b,4B,gio,What are the pros and cons of nuclear energy ?,"Okay, let’s look at the good and bad of nuclear energy.
+
+**Pros:**
+
+*   **Lots of Power:** Nuclear power plants produce a *huge* amount of electricity – far more than most other energy sources.
+*   **Reliable:** They can run almost constantly, unlike solar or wind, which depend on weather.
+*   **Low Greenhouse Gas Emissions:** During operation, nuclear power doesn’t release gases that contribute to climate change.
+*   **Small Land Footprint:** Nuclear plants need less land than many other energy sources.
+
+**Cons:**
+
+*   **Nuclear Waste:** The used fuel is radioactive and needs to be stored safely for thousands of years.
+*   **Risk of Accidents:** Though rare, accidents like Chernobyl and Fukushima demonstrate the potential for serious disasters.
+*   **High Initial Costs:** Building a nuclear plant is incredibly expensive.
+*   **Security Concerns:** Nuclear materials could be targeted by terrorists.",911,197,7.571,0.512,26.02,7.571,0.512,26.02,0.109,9.1,24.51,"[50.0, 16.7, 0.0, 0.0, 28.6, 42.9, 50.0, 50.0, 0.0, 0.0, 66.7, 33.3, 0.0, 0.0, 0.0, 0.0]",2502.0,13723.04,13825.11,102.06,88.0
+2025-11-19T16:36:37.298230,gemma3:4b,4B,gio,I am strugulling with C++ where should i start ?,"Start with the basics: variables, data types (like integers and floats), and operators (+, -, *, /). Then, learn about control flow – `if`, `else if`, and `else` statements to make decisions in your code, and `for` and `while` loops for repeating actions.  Practice writing small programs that do simple things like calculating sums or solving basic math problems.  Don't try to learn everything at once!",404,92,2.576,0.497,35.71,2.576,0.497,35.71,-0.13,8.0,23.74,"[16.7, 33.3, 33.3, 16.7, 33.3, 16.7, 33.3, 33.3, 33.3, 16.7, 33.3, 50.0, 0.0, 0.0, 0.0, 0.0]",2502.0,13789.44,13799.0,9.57,87.8
