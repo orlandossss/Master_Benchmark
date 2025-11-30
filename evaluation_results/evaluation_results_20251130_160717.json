@@ -1,0 +1,176 @@
+{
+  "gemma3:270m": {
+    "model": "gemma3:270m",
+    "avg_bleu": 0.4947032867829607,
+    "avg_perplexity": 9.086433445177729,
+    "total_time": 12.413019895553589,
+    "bleu_scores": [
+      1.0,
+      0.218134321293328,
+      0.488923022434901,
+      0.5423782837718303,
+      0.7071067811865475,
+      0.846481724890614,
+      0.4727526606311562,
+      0.189258729177316,
+      0.09057365499736145,
+      0.3914236894465537
+    ],
+    "perplexity_scores": [
+      7.598356856515925,
+      9.999999999999998,
+      9.999999999999998,
+      7.833810369372724,
+      9.999999999999998
+    ],
+    "responses": [
+      {
+        "prompt": "What is the capital of France?",
+        "reference": "The capital of France is Paris.",
+        "response": "The capital of France is Paris.",
+        "bleu": 1.0
+      },
+      {
+        "prompt": "Explain photosynthesis in one sentence.",
+        "reference": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce oxygen and energy in the form of sugar.",
+        "response": "Photosynthesis is the process by which plants and some other organisms convert light energy into chemical energy stored in glucose, using carbon dioxide and water to create their own food and oxygen.",
+        "bleu": 0.218134321293328
+      },
+      {
+        "prompt": "What is 15 multiplied by 8?",
+        "reference": "15 multiplied by 8 equals 120.",
+        "response": "15 multiplied by 8 is 120.",
+        "bleu": 0.488923022434901
+      },
+      {
+        "prompt": "Name the three primary colors.",
+        "reference": "The three primary colors are red, blue, and yellow.",
+        "response": "The three primary colors are **red, blue, and yellow**.",
+        "bleu": 0.5423782837718303
+      },
+      {
+        "prompt": "What is the chemical formula for water?",
+        "reference": "The chemical formula for water is H2O.",
+        "response": "The chemical formula for water is H\u2082O.",
+        "bleu": 0.7071067811865475
+      },
+      {
+        "prompt": "Who wrote Romeo and Juliet?",
+        "reference": "William Shakespeare wrote Romeo and Juliet.",
+        "response": "Shakespeare wrote Romeo and Juliet.",
+        "bleu": 0.846481724890614
+      },
+      {
+        "prompt": "What is the largest planet in our solar system?",
+        "reference": "Jupiter is the largest planet in our solar system.",
+        "response": "The largest planet in our solar system is **Jupiter**.",
+        "bleu": 0.4727526606311562
+      },
+      {
+        "prompt": "Define gravity in simple terms.",
+        "reference": "Gravity is a force that pulls objects toward each other, especially toward the center of the Earth.",
+        "response": "Gravity is a force that pulls things towards each other, like a magnet pulling on metal. It's the reason why objects fall down, or why things stay put.",
+        "bleu": 0.189258729177316
+      },
+      {
+        "prompt": "How many continents are there?",
+        "reference": "There are seven continents on Earth.",
+        "response": "There are 8 continents.",
+        "bleu": 0.09057365499736145
+      },
+      {
+        "prompt": "What is the boiling point of water in Celsius?",
+        "reference": "The boiling point of water is 100 degrees Celsius at sea level.",
+        "response": "The boiling point of water is approximately 100\u00b0C.",
+        "bleu": 0.3914236894465537
+      }
+    ]
+  },
+  "cogito:8b": {
+    "model": "cogito:8b",
+    "avg_bleu": 0.20834001192232723,
+    "avg_perplexity": 4.989225544655883,
+    "total_time": 22.96203088760376,
+    "bleu_scores": [
+      1.0,
+      0.2113621904747154,
+      0.04739878501170794,
+      0.1168260030557822,
+      0.14852672034924091,
+      0.023405814125788897,
+      0.166887086590326,
+      0.06359326463064778,
+      0.005948648753224193,
+      0.29945160623183903
+    ],
+    "perplexity_scores": [
+      1.9245008972987525,
+      5.33776295185899,
+      5.7735026918962555,
+      6.13685849032916,
+      5.773502691896256
+    ],
+    "responses": [
+      {
+        "prompt": "What is the capital of France?",
+        "reference": "The capital of France is Paris.",
+        "response": "The capital of France is Paris.",
+        "bleu": 1.0
+      },
+      {
+        "prompt": "Explain photosynthesis in one sentence.",
+        "reference": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce oxygen and energy in the form of sugar.",
+        "response": "Photosynthesis is the process by which plants, algae, and some bacteria convert sunlight into chemical energy (glucose) while releasing oxygen as a byproduct through chlorophyll-containing structures called chloroplasts.",
+        "bleu": 0.2113621904747154
+      },
+      {
+        "prompt": "What is 15 multiplied by 8?",
+        "reference": "15 multiplied by 8 equals 120.",
+        "response": "15 \u00d7 8 = 120",
+        "bleu": 0.04739878501170794
+      },
+      {
+        "prompt": "Name the three primary colors.",
+        "reference": "The three primary colors are red, blue, and yellow.",
+        "response": "The three primary colors are:\n\n1. Red\n2. Blue\n3. Yellow\n\nThese colors cannot be created by mixing other colors together, and they can be combined in different ways to create all other colors.",
+        "bleu": 0.1168260030557822
+      },
+      {
+        "prompt": "What is the chemical formula for water?",
+        "reference": "The chemical formula for water is H2O.",
+        "response": "The chemical formula for water is H\u2082O. This means that each molecule of water consists of two hydrogen atoms (H) bonded to one oxygen atom (O).",
+        "bleu": 0.14852672034924091
+      },
+      {
+        "prompt": "Who wrote Romeo and Juliet?",
+        "reference": "William Shakespeare wrote Romeo and Juliet.",
+        "response": "Romeo and Juliet was written by William Shakespeare. It's one of his most famous tragedies, first performed around 1595 and published in 1597. The play tells the story of two young lovers from feuding families who fall in love despite their families' hatred for each other.",
+        "bleu": 0.023405814125788897
+      },
+      {
+        "prompt": "What is the largest planet in our solar system?",
+        "reference": "Jupiter is the largest planet in our solar system.",
+        "response": "Jupiter is the largest planet in our solar system. It is a gas giant planet and is more than twice the mass of all other planets combined. Jupiter's diameter is approximately 88,846 miles (142,984 kilometers), which is about 11 times wider than Earth's diameter.",
+        "bleu": 0.166887086590326
+      },
+      {
+        "prompt": "Define gravity in simple terms.",
+        "reference": "Gravity is a force that pulls objects toward each other, especially toward the center of the Earth.",
+        "response": "Gravity is a natural force that pulls everything toward each other, especially when things have mass (like people and objects). It's what keeps us stuck to the ground instead of floating away into space. The bigger something is or the more matter it has, the stronger its gravitational pull becomes.\n\nFor example:\n- Earth's gravity keeps you from flying off into space\n- The Moon's gravity keeps it orbiting around Earth\n- Gravity between planets helps keep them in their respective orbits\n\nSimply put: Gravity",
+        "bleu": 0.06359326463064778
+      },
+      {
+        "prompt": "How many continents are there?",
+        "reference": "There are seven continents on Earth.",
+        "response": "There are 7 continents:\n\n1. Asia\n2. Africa\n3. North America\n4. South America\n5. Antarctica\n6. Europe\n7. Australia/Oceania\n\nSome people also consider the Arctic and Antarctic regions as separate areas, but they are not typically classified as continents. The number of continents can vary depending on cultural or geographical perspectives (for example, some consider Europe and Asia to be one continent called Eurasia), but 7 is the most widely accepted classification in",
+        "bleu": 0.005948648753224193
+      },
+      {
+        "prompt": "What is the boiling point of water in Celsius?",
+        "reference": "The boiling point of water is 100 degrees Celsius at sea level.",
+        "response": "The boiling point of water at standard atmospheric pressure (1 atm) is 100 degrees Celsius (\u00b0C).",
+        "bleu": 0.29945160623183903
+      }
+    ]
+  }
+}

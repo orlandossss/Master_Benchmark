@@ -1,0 +1,766 @@
+{
+  "gemma3:270m": {
+    "model": "gemma3:270m",
+    "avg_rouge": 0.017494949494949494,
+    "avg_perplexity": 9.349118577896093,
+    "total_time": 58.26130795478821,
+    "rouge_scores": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.5117845117845118,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.2888888888888889,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.07407407407407407,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "perplexity_scores": [
+      7.598356856515925,
+      9.999999999999998,
+      9.999999999999998,
+      7.833810369372724,
+      9.999999999999998,
+      9.999999999999998,
+      8.027415617602303,
+      10.000000000000002,
+      9.999999999999998,
+      7.3059995564323605,
+      9.999999999999998,
+      9.999999999999998,
+      9.999999999999998,
+      8.027415617602307,
+      9.999999999999998,
+      9.999999999999998,
+      9.999999999999998,
+      8.189373540396243,
+      10.000000000000002,
+      9.999999999999998
+    ],
+    "responses": [
+      {
+        "prompt": "Which NFL team represented the AFC at Super Bowl 50?",
+        "reference": "Denver Broncos",
+        "response": "The **Kansas City Chiefs** represented the AFC at Super Bowl 50.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Which NFL team represented the NFC at Super Bowl 50?",
+        "reference": "Carolina Panthers",
+        "response": "The NFL team that represented the NFC at Super Bowl 50 was the **New York Giants**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Where did Super Bowl 50 take place?",
+        "reference": "Santa Clara, California",
+        "response": "Super Bowl 50 took place in **Miami, Florida**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Which NFL team won Super Bowl 50?",
+        "reference": "Denver Broncos",
+        "response": "The **Kansas City Chiefs** won Super Bowl 50.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What color was used to emphasize the 50th anniversary of the Super Bowl?",
+        "reference": "gold",
+        "response": "The color used to emphasize the 50th anniversary of the Super Bowl was **red**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What was the theme of Super Bowl 50?",
+        "reference": "\"golden anniversary\"",
+        "response": "The theme of Super Bowl 50 was **a celebration of the American football season and the power of the game.**",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What day was the game played on?",
+        "reference": "February 7, 2016",
+        "response": "The game was played on **Sunday**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What is the AFC short for?",
+        "reference": "American Football Conference",
+        "response": "The AFC short is **AFC** (American Football Conference).",
+        "rouge": 0.5117845117845118
+      },
+      {
+        "prompt": "What was the theme of Super Bowl 50?",
+        "reference": "\"golden anniversary\"",
+        "response": "The theme of Super Bowl 50 was **football**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What does AFC stand for?",
+        "reference": "American Football Conference",
+        "response": "AFC stands for **African Continental Front**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What day was the Super Bowl played on?",
+        "reference": "February 7, 2016",
+        "response": "The Super Bowl was played on **Sunday, November 2nd, 2023**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Who won Super Bowl 50?",
+        "reference": "Denver Broncos",
+        "response": "The **Kansas City Chiefs** won Super Bowl 50.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What venue did Super Bowl 50 take place in?",
+        "reference": "Levi's Stadium",
+        "response": "Super Bowl 50 took place at the **Los Angeles Galaxy Arena**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What city did Super Bowl 50 take place in?",
+        "reference": "Santa Clara",
+        "response": "Super Bowl 50 took place in **Los Angeles, California**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "If Roman numerals were used, what would Super Bowl 50 have been called?",
+        "reference": "Super Bowl L",
+        "response": "Super Bowl 50 would be called **\"The Super Bowl\"**.",
+        "rouge": 0.2888888888888889
+      },
+      {
+        "prompt": "Super Bowl 50 decided the NFL champion for what season?",
+        "reference": "2015",
+        "response": "The Super Bowl 50 decided the NFL champion for **2024**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What year did the Denver Broncos secure a Super Bowl title for the third time?",
+        "reference": "2015",
+        "response": "The Denver Broncos secured a Super Bowl title for the third time in 2023.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What city did Super Bowl 50 take place in?",
+        "reference": "Santa Clara",
+        "response": "Super Bowl 50 took place in **Las Vegas, Nevada**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What stadium did Super Bowl 50 take place in?",
+        "reference": "Levi's Stadium",
+        "response": "Super Bowl 50 took place at the **Arizona Cardinals**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What was the final score of Super Bowl 50? ",
+        "reference": "24\u201310",
+        "response": "The final score of Super Bowl 50 was **107**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What month, day and year did Super Bowl 50 take place? ",
+        "reference": "February 7, 2016",
+        "response": "Super Bowl 50 took place in **October 2006**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What year was Super Bowl 50?",
+        "reference": "2015",
+        "response": "Super Bowl 50 was held on **January 27, 2024**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What team was the AFC champion?",
+        "reference": "Denver Broncos",
+        "response": "The AFC Championship was won by the **Kansas City Chiefs**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What team was the NFC champion?",
+        "reference": "Carolina Panthers",
+        "response": "The NFC Championship was won by the **Detroit Lions**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Who won Super Bowl 50?",
+        "reference": "Denver Broncos",
+        "response": "The **Kansas City Chiefs** won Super Bowl 50.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Super Bowl 50 determined the NFL champion for what season?",
+        "reference": "2015",
+        "response": "The Super Bowl 50 was decided by the **Kansas City Chiefs**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Which team won Super Bowl 50.",
+        "reference": "Denver Broncos",
+        "response": "The **Kansas City Chiefs** won Super Bowl 50.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Where was Super Bowl 50 held?",
+        "reference": "Santa Clara, California.",
+        "response": "Super Bowl 50 was held at the **Los Angeles Galaxy Stadium** in Glendale, Arizona.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "The name of the NFL championship game is?",
+        "reference": "Super Bowl",
+        "response": "The NFL Championship Game is the championship game of the National Football League (NFL).",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What 2015 NFL team one the AFC playoff?",
+        "reference": "Denver Broncos",
+        "response": "The 2015 NFL team that won the AFC playoff was the **Kansas City Chiefs**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Which Carolina Panthers player was named Most Valuable Player?",
+        "reference": "Cam Newton",
+        "response": "The Carolina Panthers player named Most Valuable Player was **Peyton Manning**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "How many appearances have the Denver Broncos made in the Super Bowl?",
+        "reference": "8",
+        "response": "The Denver Broncos have made 13 appearances in the Super Bowl.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What year was the Carolina Panthers franchise founded?",
+        "reference": "1995",
+        "response": "The Carolina Panthers were founded in **1901**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What team did the Panthers defeat?",
+        "reference": "Arizona Cardinals",
+        "response": "The Panthers defeated the **Toronto Raptors** in the NBA Finals.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Who did the Broncos prevent from going to the Super Bowl?",
+        "reference": "New England Patriots",
+        "response": "The Broncos were prevented from going to the Super Bowl by the **New York Giants**.",
+        "rouge": 0.07407407407407407
+      },
+      {
+        "prompt": "Who did the Panthers beat in the NFC Championship Game?",
+        "reference": "Arizona Cardinals",
+        "response": "The Panthers defeated the **Detroit Lions** in the NFC Championship Game.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Who lost to the Broncos in the AFC Championship?",
+        "reference": "New England Patriots",
+        "response": "The Denver Broncos lost to the Kansas City Chiefs in the AFC Championship.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Who were the defending Super Bowl champions?",
+        "reference": "New England Patriots",
+        "response": "The defending Super Bowl champions were the **Kansas City Chiefs**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "How many teams have been in the Super Bowl eight times?",
+        "reference": "four",
+        "response": "There have been eight Super Bowl appearances for the NFL.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Who was this season's NFL MVP?",
+        "reference": "Cam Newton",
+        "response": "The NFL MVP was **Patrick Mahomes**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What was the win/loss ratio in 2015 for the Carolina Panthers during their regular season?",
+        "reference": "15\u20131",
+        "response": "The Carolina Panthers won the regular season by a net score of 28-26.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Which Carolina Panthers team member was picked as the team's MVP in 2015? ",
+        "reference": "Cam Newton",
+        "response": "The Carolina Panthers team member who was picked as the team's MVP in 2015 was **Dalton Wilson**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What were the win/loss game stats for the Denver Bronco's regular season in 2015?",
+        "reference": "12\u20134",
+        "response": "The Denver Bronco's regular season in 2015 was a very successful year, with a mix of wins and losses. Here's a summary of the key stats:\n\n*   **Points:** The Bronco consistently had a high point total, with a total of 318 points.\n*   **Goals:** The Bronco had a high number of goals, with a total of 163 goals.\n*   **Receptions:** The Bronco had a high",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "How many teams have played in the Super Bowl eight times?",
+        "reference": "4",
+        "response": "There have been 8 Super Bowl games.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Which team did not get a chance to defend their Super Bowl XLIX win in Super Bowl 50?",
+        "reference": "New England Patriots",
+        "response": "The team that did not get a chance to defend their Super Bowl XLIX win in Super Bowl 50 is the **Kansas City Chiefs**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Who is the quarterback for the Panthers?",
+        "reference": "Cam Newton",
+        "response": "The quarterback for the Panthers is **Joe Burrow**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Who did Carolina beat in the NFC championship game?",
+        "reference": "Arizona Cardinals",
+        "response": "Carolina Panthers defeated the New York Giants in the NFC Championship Game.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "How many times have the Panthers been in the Super Bowl?",
+        "reference": "2",
+        "response": "The Panthers have been in the Super Bowl **17 times**.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Who did Denver beat in the AFC championship?",
+        "reference": "New England Patriots",
+        "response": "Denver beat the **Kansas City Chiefs** in the AFC Championship game.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Who was the Most Valuable Player for the 2015 NFL season?",
+        "reference": "Cam Newton",
+        "response": "The Most Valuable Player for the 2015 NFL season was **Patrick Mahomes**.",
+        "rouge": 0.0
+      }
+    ]
+  },
+  "cogito:8b": {
+    "model": "cogito:8b",
+    "avg_rouge": 0.05675184255698536,
+    "avg_perplexity": 4.892194572089356,
+    "total_time": 126.76910829544067,
+    "rouge_scores": [
+      0.10555555555555556,
+      0.08421052631578947,
+      0.11725955204216072,
+      0.07647907647907647,
+      0.02836879432624113,
+      0.0,
+      0.0,
+      0.10161548896288074,
+      0.0,
+      0.1462033462033462,
+      0.0303030303030303,
+      0.07312252964426878,
+      0.11473601260835302,
+      0.0911196911196911,
+      0.15202076381164253,
+      0.06666666666666667,
+      0.0,
+      0.09368191721132897,
+      0.1873137505321413,
+      0.07004830917874395,
+      0.1873137505321413,
+      0.0,
+      0.0,
+      0.0,
+      0.07312252964426878,
+      0.07017543859649122,
+      0.07155240346729708,
+      0.1593137254901961,
+      0.040853658536585374,
+      0.0,
+      0.07004830917874395,
+      0.02185792349726776,
+      0.045977011494252866,
+      0.0,
+      0.0,
+      0.0,
+      0.07787151200519145,
+      0.023391812865497075,
+      0.0,
+      0.0,
+      0.0,
+      0.05593869731800766,
+      0.08639408639408641,
+      0.0,
+      0.1462033462033462,
+      0.07827566647759501,
+      0.0,
+      0.0272108843537415,
+      0.0,
+      0.06338636083364163
+    ],
+    "perplexity_scores": [
+      1.9245008972987525,
+      5.33776295185899,
+      4.386913376508307,
+      6.13685849032916,
+      5.773502691896256,
+      3.766103213032509,
+      10.000000000000002,
+      6.443940149772542,
+      5.7735026918962555,
+      3.899769375862289,
+      2.5327856188386413,
+      4.80749856769136,
+      3.333333333333332,
+      5.172818579717865,
+      3.333333333333332,
+      5.33776295185899,
+      4.386913376508306,
+      6.706583898414206,
+      3.0165052517397677,
+      5.773502691896256
+    ],
+    "responses": [
+      {
+        "prompt": "Which NFL team represented the AFC at Super Bowl 50?",
+        "reference": "Denver Broncos",
+        "response": "The Denver Broncos (AFC) represented the American Football Conference (AFC) at Super Bowl 50. They faced off against the Carolina Panthers (NFC) in that game, which they won 24-10.",
+        "rouge": 0.10555555555555556
+      },
+      {
+        "prompt": "Which NFL team represented the NFC at Super Bowl 50?",
+        "reference": "Carolina Panthers",
+        "response": "The Carolina Panthers (NFC) played against the Denver Broncos (AFC) in Super Bowl 50. The game took place on February 7, 2016, at Levi's Stadium in Santa Clara, California, and was won by the Broncos 24-10.",
+        "rouge": 0.08421052631578947
+      },
+      {
+        "prompt": "Where did Super Bowl 50 take place?",
+        "reference": "Santa Clara, California",
+        "response": "Super Bowl 50 took place at Levi's Stadium in Santa Clara, California on February 7, 2016. The Carolina Panthers defeated the Denver Broncos 24-10 in what was considered a historic game, as it marked the 50th anniversary of the Super Bowl.",
+        "rouge": 0.11725955204216072
+      },
+      {
+        "prompt": "Which NFL team won Super Bowl 50?",
+        "reference": "Denver Broncos",
+        "response": "The Denver Broncos won Super Bowl 50, which was played on February 7, 2016. They defeated the Carolina Panthers with a score of 24-10. It was the Broncos' third Super Bowl victory and quarterback Peyton Manning's final game before retirement.",
+        "rouge": 0.07647907647907647
+      },
+      {
+        "prompt": "What color was used to emphasize the 50th anniversary of the Super Bowl?",
+        "reference": "gold",
+        "response": "Gold and silver were the primary colors used to celebrate the 50th anniversary (Super Bowl LI) in 2017. The NFL's official branding for this milestone celebration featured gold as a prominent color, along with silver accents, to commemorate the golden anniversary of the Super Bowl.",
+        "rouge": 0.02836879432624113
+      },
+      {
+        "prompt": "What was the theme of Super Bowl 50?",
+        "reference": "\"golden anniversary\"",
+        "response": "The theme of Super Bowl 50, which took place on February 7, 2016, at Levi's Stadium in Santa Clara, California, was \"Super Saturday Night\" and featured a concert by Coldplay with special guests Beyonc\u00e9 and Bruno Mars. The game itself was between the Denver Broncos and the Carolina Panthers, with the Broncos winning 24-10.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What day was the game played on?",
+        "reference": "February 7, 2016",
+        "response": "I don't have any information about a specific game. Could you please provide more details or context about which game you're asking about? That way, I can help determine what day it was played on.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What is the AFC short for?",
+        "reference": "American Football Conference",
+        "response": "AFC stands for American Football Conference. It's one of the two conferences in the National Football League (NFL) in the United States, alongside the NFC (National Football Conference). The AFC and NFC compete against each other annually to determine which conference will represent the NFL in the Super Bowl.",
+        "rouge": 0.10161548896288074
+      },
+      {
+        "prompt": "What was the theme of Super Bowl 50?",
+        "reference": "\"golden anniversary\"",
+        "response": "The theme of Super Bowl 50, which was played in 2016 at Levi's Stadium in Santa Clara, California, was \"Expect The Unexpected.\" This theme emphasized that anything could happen during a championship game where no team had ever been as heavily favored to win as the Denver Broncos were in this matchup.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What does AFC stand for?",
+        "reference": "American Football Conference",
+        "response": "AFC stands for American Football Conference. It is one of the two conferences that make up the National Football League (NFL) in the United States. The other conference is the National Football Conference (NFC).",
+        "rouge": 0.1462033462033462
+      },
+      {
+        "prompt": "What day was the Super Bowl played on?",
+        "reference": "February 7, 2016",
+        "response": "The most recent Super Bowl (Super Bowl LVII) was played on February 12, 2023. However, I'm not sure which specific Super Bowl you're asking about - could you please clarify which year's game you'd like to know about?",
+        "rouge": 0.0303030303030303
+      },
+      {
+        "prompt": "Who won Super Bowl 50?",
+        "reference": "Denver Broncos",
+        "response": "The Denver Broncos won Super Bowl 50, defeating the Carolina Panthers by a score of 24-10. The game was played on February 7, 2016, at Levi's Stadium in Santa Clara, California. Peyton Manning was the quarterback for the Broncos during their victory.",
+        "rouge": 0.07312252964426878
+      },
+      {
+        "prompt": "What venue did Super Bowl 50 take place in?",
+        "reference": "Levi's Stadium",
+        "response": "Super Bowl 50 took place at Levi's Stadium in Santa Clara, California. The stadium is the home of the San Francisco 49ers and hosted its first-ever Super Bowl on February 7, 2016, where the Denver Broncos defeated the Carolina Panthers 24-10.",
+        "rouge": 0.11473601260835302
+      },
+      {
+        "prompt": "What city did Super Bowl 50 take place in?",
+        "reference": "Santa Clara",
+        "response": "Super Bowl 50 took place at Levi's Stadium in Santa Clara, California. The game was played on February 7, 2016, between the Denver Broncos and the Carolina Panthers, with the Broncos winning 24-10.",
+        "rouge": 0.0911196911196911
+      },
+      {
+        "prompt": "If Roman numerals were used, what would Super Bowl 50 have been called?",
+        "reference": "Super Bowl L",
+        "response": "Super Bowl 50 in Roman numerals would be written as L (50), not XL (40). So the correct Roman numeral representation for Super Bowl 50 is simply \"L\".",
+        "rouge": 0.15202076381164253
+      },
+      {
+        "prompt": "Super Bowl 50 decided the NFL champion for what season?",
+        "reference": "2015",
+        "response": "Super Bowl 50 was played on February 7, 2016, and it determined the NFL champion for the 2015 season.",
+        "rouge": 0.06666666666666667
+      },
+      {
+        "prompt": "What year did the Denver Broncos secure a Super Bowl title for the third time?",
+        "reference": "2015",
+        "response": "The Denver Broncos have won two Super Bowls, not three. They won their first Super Bowl (Super Bowl XXXIII) in 1999 and their second Super Bowl (Super Bowl 50) in 2016. The team has never won a third Super Bowl title.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What city did Super Bowl 50 take place in?",
+        "reference": "Santa Clara",
+        "response": "Super Bowl 50 took place in Santa Clara, California at Levi's Stadium. It was played on February 7, 2016, between the Denver Broncos and the Carolina Panthers, with the Broncos winning 24-10.",
+        "rouge": 0.09368191721132897
+      },
+      {
+        "prompt": "What stadium did Super Bowl 50 take place in?",
+        "reference": "Levi's Stadium",
+        "response": "Super Bowl 50 took place at Levi's Stadium in Santa Clara, California on February 7, 2016. The Carolina Panthers defeated the Denver Broncos 24-10.",
+        "rouge": 0.1873137505321413
+      },
+      {
+        "prompt": "What was the final score of Super Bowl 50? ",
+        "reference": "24\u201310",
+        "response": "Super Bowl 50 was played between the Denver Broncos and the Carolina Panthers on February 7, 2016. The Denver Broncos won the game with a score of 24-10, securing their first Super Bowl victory since 1998 (when they were known as the \"Orange Crush\" team).",
+        "rouge": 0.07004830917874395
+      },
+      {
+        "prompt": "What month, day and year did Super Bowl 50 take place? ",
+        "reference": "February 7, 2016",
+        "response": "Super Bowl 50 took place on February 7, 2016, at Levi's Stadium in Santa Clara, California. The Denver Broncos defeated the Carolina Panthers 24-10.",
+        "rouge": 0.1873137505321413
+      },
+      {
+        "prompt": "What year was Super Bowl 50?",
+        "reference": "2015",
+        "response": "Super Bowl 50 was played in 2016. It took place on February 7, 2016, at Levi's Stadium in Santa Clara, California. The Denver Broncos defeated the Carolina Panthers 24-10 to win their third Super Bowl championship.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What team was the AFC champion?",
+        "reference": "Denver Broncos",
+        "response": "The Kansas City Chiefs were the AFC champions for the 2023 NFL season. They won Super Bowl LVII against the Philadelphia Eagles on February 12, 2023.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What team was the NFC champion?",
+        "reference": "Carolina Panthers",
+        "response": "I'm not able to determine which team was the NFC champion without knowing the specific year or season you're referring to. If you could provide that information, I'd be happy to help!",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Who won Super Bowl 50?",
+        "reference": "Denver Broncos",
+        "response": "The Denver Broncos won Super Bowl 50, defeating the Carolina Panthers by a score of 24-10. The game was played on February 7, 2016, at Levi's Stadium in Santa Clara, California. It was Peyton Manning's final NFL game before his retirement.",
+        "rouge": 0.07312252964426878
+      },
+      {
+        "prompt": "Super Bowl 50 determined the NFL champion for what season?",
+        "reference": "2015",
+        "response": "Super Bowl 50, which was played on February 7, 2016, determined the NFL champion for the 2015 season.",
+        "rouge": 0.07017543859649122
+      },
+      {
+        "prompt": "Which team won Super Bowl 50.",
+        "reference": "Denver Broncos",
+        "response": "The Denver Broncos won Super Bowl 50 (2016), defeating the Carolina Panthers with a score of 24-10. The game was played at Levi's Stadium in Santa Clara, California on February 7, 2016. This was Peyton Manning's final NFL game before his retirement.",
+        "rouge": 0.07155240346729708
+      },
+      {
+        "prompt": "Where was Super Bowl 50 held?",
+        "reference": "Santa Clara, California.",
+        "response": "Super Bowl 50 was held at Levi's Stadium in Santa Clara, California. The game took place on February 7, 2016, with the Denver Broncos defeating the Carolina Panthers 24-10.",
+        "rouge": 0.1593137254901961
+      },
+      {
+        "prompt": "The name of the NFL championship game is?",
+        "reference": "Super Bowl",
+        "response": "The NFL championship game that determines which team will go on to play in the Super Bowl is officially called \"The NFC Championship Game\" (for teams from the National Football Conference) and \"The AFC Championship Game\" (for teams from the American Football Conference). However, it's commonly referred to as:\n\n* The Conference Championship Games\n* The NFL Playoffs\n\nNote: Since 2007, each conference has only had one champion that advances to the Super Bowl, so there are no longer two teams",
+        "rouge": 0.040853658536585374
+      },
+      {
+        "prompt": "What 2015 NFL team one the AFC playoff?",
+        "reference": "Denver Broncos",
+        "response": "The New England Patriots won the AFC Championship in the 2015 playoffs, defeating the Indianapolis Colts 45-7. They went on to represent the AFC in Super Bowl XLIX, where they lost to the Seattle Seahawks.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Which Carolina Panthers player was named Most Valuable Player?",
+        "reference": "Cam Newton",
+        "response": "Cam Newton, the former Carolina Panthers quarterback, was named NFL MVP in 2015. He led the Panthers to a Super Bowl 50 appearance that season and had an outstanding regular season with 35 touchdowns and 10 interceptions, along with over 3,800 yards of total offense.",
+        "rouge": 0.07004830917874395
+      },
+      {
+        "prompt": "How many appearances have the Denver Broncos made in the Super Bowl?",
+        "reference": "8",
+        "response": "The Denver Broncos have appeared in 8 Super Bowls:\n\n1. Super Bowl XII (1977) - Lost to Dallas Cowboys\n2. Super Bowl XXI (1986) - Lost to New York Giants\n3. Super Bowl XXII (1987) - Lost to Washington Redskins\n4. Super Bowl XXXII (1997) - Won against Green Bay Packers\n5. Super Bowl XXXIII (1998) - Won against Atlanta Falcons\n6. Super Bowl XLVIII",
+        "rouge": 0.02185792349726776
+      },
+      {
+        "prompt": "What year was the Carolina Panthers franchise founded?",
+        "reference": "1995",
+        "response": "The Carolina Panthers were founded in 1993. The team joined the NFL as an expansion team along with the Jacksonville Jaguars, and began play in the 1995 season.",
+        "rouge": 0.045977011494252866
+      },
+      {
+        "prompt": "What team did the Panthers defeat?",
+        "reference": "Arizona Cardinals",
+        "response": "I don't have enough information to answer which team the Panthers defeated. Could you please provide more context about which Panthers team and which game you're referring to?",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Who did the Broncos prevent from going to the Super Bowl?",
+        "reference": "New England Patriots",
+        "response": "The Denver Broncos, led by quarterback John Elway, prevented the Buffalo Bills from reaching the Super Bowl for four consecutive years (1992-1995). The Bills had made it to four consecutive AFC Championship games but lost all of them to the Broncos, which is a record in the NFL. This became known as one of the greatest playoff collapses in sports history.\n\nThe final game of this streak was particularly memorable - Super Bowl XXXIV - where Elway finally won his first championship by defeating the Green",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Who did the Panthers beat in the NFC Championship Game?",
+        "reference": "Arizona Cardinals",
+        "response": "The Carolina Panthers won the 2023 NFC Championship Game against the San Francisco 49ers with a score of 37-7. The game was played on January 21, 2023, at Levi's Stadium in Santa Clara, California.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Who lost to the Broncos in the AFC Championship?",
+        "reference": "New England Patriots",
+        "response": "The Kansas City Chiefs (2018) and the New England Patriots (2015) both lost to the Denver Broncos in the AFC Championship game. However, it's worth noting that neither team actually won the Super Bowl after those losses - the Patriots went on to lose to the Eagles in Super Bowl LII (2018), and the Broncos themselves lost to the Carolina Panthers in Super Bowl 50 (2016).",
+        "rouge": 0.07787151200519145
+      },
+      {
+        "prompt": "Who were the defending Super Bowl champions?",
+        "reference": "New England Patriots",
+        "response": "The Kansas City Chiefs were the defending Super Bowl champions as they won Super Bowl LVII in 2023, defeating the Philadelphia Eagles. However, if you're asking about the current season (2023), I'm not aware of any new Super Bowl champion as my knowledge is limited to information available up until July 2023.",
+        "rouge": 0.023391812865497075
+      },
+      {
+        "prompt": "How many teams have been in the Super Bowl eight times?",
+        "reference": "four",
+        "response": "The Dallas Cowboys and the Denver Broncos are tied for most appearances in the Super Bowl, with each team appearing 8 times. The Cowboys won 5 of their Super Bowls (VI, XII, XXVII, XXVIII, XXX) while the Broncos have appeared in 8 Super Bowls but only won 3 (XXXII, XXXIII, and 50).",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Who was this season's NFL MVP?",
+        "reference": "Cam Newton",
+        "response": "Patrick Mahomes of the Kansas City Chiefs won the 2022 NFL MVP award (given for the 2021 season). He led the Chiefs to a 12-5 record and a playoff berth, throwing for over 4,800 yards and 37 touchdowns while leading them to a Super Bowl appearance.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "What was the win/loss ratio in 2015 for the Carolina Panthers during their regular season?",
+        "reference": "15\u20131",
+        "response": "In the 2015 NFL regular season, the Carolina Panthers finished with an 11-5 record. They won 55% of their games that year (11 wins out of 16 possible).",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Which Carolina Panthers team member was picked as the team's MVP in 2015? ",
+        "reference": "Cam Newton",
+        "response": "Cam Newton was selected as the Carolina Panthers' MVP for the 2015 season. That year, he had an outstanding performance, leading the Panthers to a Super Bowl 50 appearance where they ultimately lost to the Denver Broncos. Newton set numerous franchise records that season and was named the NFL's Most Valuable Player (MVP) by the Associated Press.",
+        "rouge": 0.05593869731800766
+      },
+      {
+        "prompt": "What were the win/loss game stats for the Denver Bronco's regular season in 2015?",
+        "reference": "12\u20134",
+        "response": "In the 2015 NFL regular season, the Denver Broncos finished with a record of 12 wins and 4 losses (12-4). They went on to have an outstanding playoff run that year, ultimately winning Super Bowl 50.",
+        "rouge": 0.08639408639408641
+      },
+      {
+        "prompt": "How many teams have played in the Super Bowl eight times?",
+        "reference": "4",
+        "response": "No team has ever played in 8 different Super Bowls. The record for most Super Bowl appearances is held by Tom Brady, who has appeared in 10 Super Bowls (9 with the New England Patriots and 1 with the Tampa Bay Buccaneers).",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Which team did not get a chance to defend their Super Bowl XLIX win in Super Bowl 50?",
+        "reference": "New England Patriots",
+        "response": "The New England Patriots, who won Super Bowl XLIX (2014 season), did not get to play in Super Bowl 50 (2015-16 season). The Carolina Panthers and Denver Broncos played in Super Bowl 50.",
+        "rouge": 0.1462033462033462
+      },
+      {
+        "prompt": "Who is the quarterback for the Panthers?",
+        "reference": "Cam Newton",
+        "response": "The Carolina Panthers' starting quarterback is Bryce Young, who was selected as the 1st overall pick in the 2022 NFL Draft. He became the first rookie quarterback to start a regular-season game for the Panthers since Cam Newton in 2011.",
+        "rouge": 0.07827566647759501
+      },
+      {
+        "prompt": "Who did Carolina beat in the NFC championship game?",
+        "reference": "Arizona Cardinals",
+        "response": "I'm not sure which specific Carolina team you're asking about. However, if you're referring to the Carolina Panthers' most recent NFC Championship Game appearance (2020), they lost to the Tampa Bay Buccaneers 31-26. In their previous NFC Championship Game appearance (2017), they beat the Los Angeles Rams 34-28.\n\nIf you're asking about a different season or team, please let me know and I'll be happy to help!",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "How many times have the Panthers been in the Super Bowl?",
+        "reference": "2",
+        "response": "The Carolina Panthers have appeared in two Super Bowls:\n\n1. Super Bowl XXXVIII (38) - Lost to the New England Patriots 32-29 (February 2004)\n2. Super Bowl 50 - Lost to the Denver Broncos 24-10 (February 2016)\n\nIn both games, they fell short of winning their first championship.",
+        "rouge": 0.0272108843537415
+      },
+      {
+        "prompt": "Who did Denver beat in the AFC championship?",
+        "reference": "New England Patriots",
+        "response": "Denver beat the Jacksonville Jaguars in the 2022 AFC Championship Game to advance to Super Bowl LVII.",
+        "rouge": 0.0
+      },
+      {
+        "prompt": "Who was the Most Valuable Player for the 2015 NFL season?",
+        "reference": "Cam Newton",
+        "response": "Cam Newton of the Carolina Panthers was named the MVP (Most Valuable Player) of the 2015 NFL season. He had a remarkable year, throwing for 3,837 yards and rushing for 10 touchdowns while leading the Panthers to a 15-1 regular season record and an appearance in Super Bowl 50.",
+        "rouge": 0.06338636083364163
+      }
+    ]
+  }
+}

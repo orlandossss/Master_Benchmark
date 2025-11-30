@@ -11,6 +11,14 @@ from datetime import datetime
 import statistics
 from collections import defaultdict
 
+# Load environment variables from .env file
+try:
+    from dotenv import load_dotenv
+    load_dotenv()  # Load .env file if it exists
+except ImportError:
+    print("Warning: python-dotenv not installed. Run: pip install python-dotenv")
+    print("         Environment variables must be set manually.")
+
 # Visualization imports
 try:
     import matplotlib.pyplot as plt
@@ -48,6 +56,29 @@ class BenchmarkAnalyzer:
 
         # Load all results
         self._load_all_results()
+
+    def _parse_model_size(self, param_str):
+        """Parse model size from parameter string (e.g., '1,7B' -> 1.7)"""
+        try:
+            # Remove 'B' and replace comma with dot
+            size_str = param_str.upper().replace('B', '').replace(',', '.').strip()
+            return float(size_str)
+        except (ValueError, AttributeError):
+            return 0.0
+
+    def _categorize_models(self, summary):
+        """Categorize models into small (<2B) and big (≥2B) based on parameters"""
+        small_models = {}
+        big_models = {}
+
+        for model, stats in summary.items():
+            model_size = self._parse_model_size(stats.get('model_parameters', '0B'))
+            if model_size < 2.0:
+                small_models[model] = stats
+            else:
+                big_models[model] = stats
+
+        return small_models, big_models
 
     def _load_all_results(self):
         """Load all JSON result files from the results directory"""
@@ -204,40 +235,63 @@ class BenchmarkAnalyzer:
         output_path.mkdir(exist_ok=True)
 
         summary = self.get_summary_statistics()
-        models = list(summary.keys())
 
-        if not models:
+        if not summary:
             print("No data to visualize")
             return
+
+        # Categorize models by size
+        small_models, big_models = self._categorize_models(summary)
 
         # Set style
         plt.style.use('seaborn-v0_8' if 'seaborn-v0_8' in plt.style.available else 'default')
 
-        # 1. Tokens per Second Comparison
-        self._plot_tokens_per_second(summary, models, output_path)
+        print("\n📊 Generating graphs for model categories:")
+        print(f"   Small models (<2B): {len(small_models)}")
+        print(f"   Big models (≥2B): {len(big_models)}")
 
-        # 2. Energy Efficiency Comparison
-        self._plot_energy_efficiency(summary, models, output_path)
+        # Generate graphs for SMALL MODELS
+        if small_models:
+            print("\n🔹 Creating graphs for SMALL models (<2B)...")
+            small_models_list = list(small_models.keys())
+            self._plot_tokens_per_second(small_models, small_models_list, output_path, suffix="_small")
+            self._plot_energy_efficiency(small_models, small_models_list, output_path, suffix="_small")
+            self._plot_inference_times_by_category(small_models, output_path, suffix="_small")
+            self._plot_response_analysis_by_category(small_models, output_path, suffix="_small")
+            self._plot_resource_usage(small_models, small_models_list, output_path, suffix="_small")
+            self._plot_radar_chart(small_models, small_models_list, output_path, suffix="_small")
+            self._plot_io_metrics(small_models, small_models_list, output_path, suffix="_small")
 
-        # 3. Inference Time Distribution
-        self._plot_inference_times(output_path)
+        # Generate graphs for BIG MODELS
+        if big_models:
+            print("\n🔸 Creating graphs for BIG models (≥2B)...")
+            big_models_list = list(big_models.keys())
+            self._plot_tokens_per_second(big_models, big_models_list, output_path, suffix="_big")
+            self._plot_energy_efficiency(big_models, big_models_list, output_path, suffix="_big")
+            self._plot_inference_times_by_category(big_models, output_path, suffix="_big")
+            self._plot_response_analysis_by_category(big_models, output_path, suffix="_big")
+            self._plot_resource_usage(big_models, big_models_list, output_path, suffix="_big")
+            self._plot_radar_chart(big_models, big_models_list, output_path, suffix="_big")
+            self._plot_io_metrics(big_models, big_models_list, output_path, suffix="_big")
 
-        # 4. Response Length vs Tokens/Second
-        self._plot_response_analysis(output_path)
+        # Generate combined graphs for ALL MODELS (optional)
+        print("\n🔷 Creating combined graphs for ALL models...")
+        all_models = list(summary.keys())
+        self._plot_tokens_per_second(summary, all_models, output_path, suffix="_all")
+        self._plot_energy_efficiency(summary, all_models, output_path, suffix="_all")
+        self._plot_inference_times_by_category(summary, output_path, suffix="_all")
+        self._plot_response_analysis_by_category(summary, output_path, suffix="_all")
+        self._plot_resource_usage(summary, all_models, output_path, suffix="_all")
+        self._plot_radar_chart(summary, all_models, output_path, suffix="_all")
+        self._plot_io_metrics(summary, all_models, output_path, suffix="_all")
 
-        # 5. Resource Usage Heatmap
-        self._plot_resource_usage(summary, models, output_path)
+        print(f"\n✅ Graphs saved to: {output_path}")
 
-        # 6. Performance Radar Chart
-        self._plot_radar_chart(summary, models, output_path)
-
-        # 7. I/O Performance Charts (NEW)
-        self._plot_io_metrics(summary, models, output_path)
-
-        print(f"\nGraphs saved to: {output_path}")
-
-    def _plot_tokens_per_second(self, summary, models, output_path):
+    def _plot_tokens_per_second(self, summary, models, output_path, suffix=""):
         """Plot tokens per second comparison"""
+        if not models:
+            return
+
         fig, ax = plt.subplots(figsize=(12, 6))
 
         x_pos = range(len(models))
@@ -248,7 +302,8 @@ class BenchmarkAnalyzer:
 
         ax.set_xlabel('Model', fontsize=12)
         ax.set_ylabel('Tokens per Second', fontsize=12)
-        ax.set_title('Model Performance: Tokens per Second', fontsize=14, fontweight='bold')
+        category_label = " - Small Models (<2B)" if suffix == "_small" else " - Big Models (≥2B)" if suffix == "_big" else ""
+        ax.set_title(f'Model Performance: Tokens per Second{category_label}', fontsize=14, fontweight='bold')
         ax.set_xticks(x_pos)
         ax.set_xticklabels([m.replace(':', '\n') for m in models], rotation=0)
 
@@ -258,12 +313,16 @@ class BenchmarkAnalyzer:
                    f'{avg:.2f}', ha='center', va='bottom', fontweight='bold')
 
         plt.tight_layout()
-        plt.savefig(output_path / 'tokens_per_second.png', dpi=150)
+        filename = f'tokens_per_second{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
         plt.close()
-        print("  Created: tokens_per_second.png")
+        print(f"  Created: {filename}")
 
-    def _plot_energy_efficiency(self, summary, models, output_path):
+    def _plot_energy_efficiency(self, summary, models, output_path, suffix=""):
         """Plot energy efficiency comparison"""
+        if not models:
+            return
+
         fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
 
         # Tokens per Joule
@@ -273,7 +332,8 @@ class BenchmarkAnalyzer:
         bars1 = ax1.bar(range(len(models)), tpj, color=colors, alpha=0.8)
         ax1.set_xlabel('Model', fontsize=11)
         ax1.set_ylabel('Tokens per Joule', fontsize=11)
-        ax1.set_title('Energy Efficiency: Tokens per Joule', fontsize=13, fontweight='bold')
+        category_label = " - Small Models (<2B)" if suffix == "_small" else " - Big Models (≥2B)" if suffix == "_big" else ""
+        ax1.set_title(f'Energy Efficiency: Tokens per Joule{category_label}', fontsize=13, fontweight='bold')
         ax1.set_xticks(range(len(models)))
         ax1.set_xticklabels([m.replace(':', '\n') for m in models])
 
@@ -286,7 +346,7 @@ class BenchmarkAnalyzer:
         bars2 = ax2.bar(range(len(models)), energy, color='coral', alpha=0.8)
         ax2.set_xlabel('Model', fontsize=11)
         ax2.set_ylabel('Total Energy (Joules)', fontsize=11)
-        ax2.set_title('Total Energy Consumption', fontsize=13, fontweight='bold')
+        ax2.set_title(f'Total Energy Consumption{category_label}', fontsize=13, fontweight='bold')
         ax2.set_xticks(range(len(models)))
         ax2.set_xticklabels([m.replace(':', '\n') for m in models])
 
@@ -295,20 +355,30 @@ class BenchmarkAnalyzer:
                     f'{val:.0f}J', ha='center', va='bottom', fontsize=10)
 
         plt.tight_layout()
-        plt.savefig(output_path / 'energy_efficiency.png', dpi=150)
+        filename = f'energy_efficiency{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
         plt.close()
-        print("  Created: energy_efficiency.png")
+        print(f"  Created: {filename}")
 
-    def _plot_inference_times(self, output_path):
-        """Plot inference time distribution per model"""
+    def _plot_inference_times_by_category(self, summary, output_path, suffix=""):
+        """Plot inference time distribution per model (using summary dict)"""
+        if not summary:
+            return
+
         fig, ax = plt.subplots(figsize=(12, 6))
 
         data = []
         labels = []
-        for model, results in self.models_data.items():
-            times = [r.get('inference_time_s', 0) for r in results]
-            data.append(times)
-            labels.append(model.replace(':', '\n'))
+        for model, stats in summary.items():
+            # Get results for this specific model from self.models_data
+            if model in self.models_data:
+                times = [r.get('inference_time_s', 0) for r in self.models_data[model]]
+                data.append(times)
+                labels.append(model.replace(':', '\n'))
+
+        if not data:
+            plt.close()
+            return
 
         bp = ax.boxplot(data, labels=labels, patch_artist=True)
 
@@ -318,40 +388,54 @@ class BenchmarkAnalyzer:
 
         ax.set_xlabel('Model', fontsize=12)
         ax.set_ylabel('Inference Time (seconds)', fontsize=12)
-        ax.set_title('Inference Time Distribution', fontsize=14, fontweight='bold')
+        category_label = " - Small Models (<2B)" if suffix == "_small" else " - Big Models (≥2B)" if suffix == "_big" else ""
+        ax.set_title(f'Inference Time Distribution{category_label}', fontsize=14, fontweight='bold')
         ax.grid(axis='y', alpha=0.3)
 
         plt.tight_layout()
-        plt.savefig(output_path / 'inference_time_distribution.png', dpi=150)
+        filename = f'inference_time_distribution{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
         plt.close()
-        print("  Created: inference_time_distribution.png")
+        print(f"  Created: {filename}")
 
-    def _plot_response_analysis(self, output_path):
+    def _plot_response_analysis_by_category(self, summary, output_path, suffix=""):
         """Plot response length vs performance"""
+        if not summary:
+            return
+
         fig, ax = plt.subplots(figsize=(10, 8))
 
-        colors = plt.cm.tab10(range(len(self.models_data)))
+        # Filter models in this category
+        models_in_category = list(summary.keys())
+        colors = plt.cm.tab10(range(len(models_in_category)))
 
-        for idx, (model, results) in enumerate(self.models_data.items()):
-            lengths = [r.get('response_length_chars', 0) for r in results]
-            tps = [r.get('tokens_per_second', 0) for r in results]
+        for idx, model in enumerate(models_in_category):
+            if model in self.models_data:
+                results = self.models_data[model]
+                lengths = [r.get('response_length_chars', 0) for r in results]
+                tps = [r.get('tokens_per_second', 0) for r in results]
 
-            ax.scatter(lengths, tps, label=model, color=colors[idx],
-                      alpha=0.7, s=100, edgecolors='black', linewidths=0.5)
+                ax.scatter(lengths, tps, label=model, color=colors[idx],
+                          alpha=0.7, s=100, edgecolors='black', linewidths=0.5)
 
         ax.set_xlabel('Response Length (characters)', fontsize=12)
         ax.set_ylabel('Tokens per Second', fontsize=12)
-        ax.set_title('Response Length vs Performance', fontsize=14, fontweight='bold')
+        category_label = " - Small Models (<2B)" if suffix == "_small" else " - Big Models (≥2B)" if suffix == "_big" else ""
+        ax.set_title(f'Response Length vs Performance{category_label}', fontsize=14, fontweight='bold')
         ax.legend(loc='best')
         ax.grid(alpha=0.3)
 
         plt.tight_layout()
-        plt.savefig(output_path / 'response_vs_performance.png', dpi=150)
+        filename = f'response_vs_performance{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
         plt.close()
-        print("  Created: response_vs_performance.png")
+        print(f"  Created: {filename}")
 
-    def _plot_resource_usage(self, summary, models, output_path):
+    def _plot_resource_usage(self, summary, models, output_path, suffix=""):
         """Plot resource usage comparison"""
+        if not models:
+            return
+
         fig, axes = plt.subplots(2, 2, figsize=(14, 10))
 
         # CPU Usage
@@ -382,14 +466,19 @@ class BenchmarkAnalyzer:
         axes[1, 1].set_xticks(range(len(models)))
         axes[1, 1].set_xticklabels([m.replace(':', '\n') for m in models])
 
-        plt.suptitle('Resource Usage Comparison', fontsize=16, fontweight='bold')
+        category_label = " - Small Models (<2B)" if suffix == "_small" else " - Big Models (≥2B)" if suffix == "_big" else ""
+        plt.suptitle(f'Resource Usage Comparison{category_label}', fontsize=16, fontweight='bold')
         plt.tight_layout()
-        plt.savefig(output_path / 'resource_usage.png', dpi=150)
+        filename = f'resource_usage{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
         plt.close()
-        print("  Created: resource_usage.png")
+        print(f"  Created: {filename}")
 
-    def _plot_io_metrics(self, summary, models, output_path):
+    def _plot_io_metrics(self, summary, models, output_path, suffix=""):
         """Plot I/O performance metrics (NEW)"""
+        if not models:
+            return
+
         fig, axes = plt.subplots(2, 2, figsize=(14, 10))
 
         # IOPS
@@ -436,13 +525,15 @@ class BenchmarkAnalyzer:
         axes[1, 1].legend()
         axes[1, 1].grid(axis='y', alpha=0.3)
 
-        plt.suptitle('Disk I/O Performance Metrics', fontsize=16, fontweight='bold')
+        category_label = " - Small Models (<2B)" if suffix == "_small" else " - Big Models (≥2B)" if suffix == "_big" else ""
+        plt.suptitle(f'Disk I/O Performance Metrics{category_label}', fontsize=16, fontweight='bold')
         plt.tight_layout()
-        plt.savefig(output_path / 'io_performance.png', dpi=150)
+        filename = f'io_performance{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
         plt.close()
-        print("  Created: io_performance.png")
+        print(f"  Created: {filename}")
 
-    def _plot_radar_chart(self, summary, models, output_path):
+    def _plot_radar_chart(self, summary, models, output_path, suffix=""):
         """Create a radar chart comparing models across multiple dimensions"""
         if len(models) < 1:
             return
@@ -486,14 +577,16 @@ class BenchmarkAnalyzer:
         ax.set_xticks(angles[:-1])
         ax.set_xticklabels(metrics, fontsize=11)
         ax.set_ylim(0, 1)
-        ax.set_title('Model Comparison Radar Chart (with I/O)', fontsize=14, fontweight='bold', pad=20)
+        category_label = " - Small Models (<2B)" if suffix == "_small" else " - Big Models (≥2B)" if suffix == "_big" else ""
+        ax.set_title(f'Model Comparison Radar Chart{category_label}', fontsize=14, fontweight='bold', pad=20)
         ax.legend(loc='upper right', bbox_to_anchor=(1.3, 1.0))
         ax.grid(True)
 
         plt.tight_layout()
-        plt.savefig(output_path / 'model_radar_chart.png', dpi=150, bbox_inches='tight')
+        filename = f'model_radar_chart{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150, bbox_inches='tight')
         plt.close()
-        print("  Created: model_radar_chart.png")
+        print(f"  Created: {filename}")
 
     def rate_teaching_effectiveness(self, api_key=None, model="gpt-4o-mini"):
         """Use OpenAI API to rate the teaching effectiveness of each response"""
@@ -532,7 +625,7 @@ class BenchmarkAnalyzer:
             try:
                 rating_prompt = f"""You are an expert educator evaluating the teaching effectiveness of AI responses.
 
-Rate the following response on a scale of 1-10 based on its ability to teach effectively.
+Rate the following response on a scale of 1-10 based on its ability to teach effectively, try to be sure that your rating is strict enough.
 
 Consider these criteria:
 1. Clarity: Is the explanation clear and easy to understand?
@@ -540,9 +633,7 @@ Consider these criteria:
 3. Engagement: Does it engage the learner?
 4. Structure: Is it well-organized?
 5. Completeness: Does it adequately address the question?
-6. Appropriate Level: Is the language suitable for the intended audience?
-7. Examples/Analogies: Are helpful examples provided?
-8. Actionable: Does it provide practical next steps or ways to apply the knowledge?
+6. Actionable: is it suitable for a talking conversation with a student ?
 
 QUESTION: {question}
 
@@ -682,10 +773,51 @@ Only output the JSON, nothing else."""
             if rating.get('score', 0) > 0:
                 model_scores[rating['model']].append(rating['score'])
 
-        models = list(model_scores.keys())
+        # Categorize models by size
+        summary = self.get_summary_statistics()
+        small_models_set = set()
+        big_models_set = set()
+
+        for model, stats in summary.items():
+            model_size = self._parse_model_size(stats.get('model_parameters', '0B'))
+            if model_size < 2.0:
+                small_models_set.add(model)
+            else:
+                big_models_set.add(model)
+
+        # Filter models that have ratings
+        small_models = [m for m in model_scores.keys() if m in small_models_set]
+        big_models = [m for m in model_scores.keys() if m in big_models_set]
+        all_models = list(model_scores.keys())
+
+        print("\n📊 Generating teaching effectiveness graphs:")
+        print(f"   Small models (<2B): {len(small_models)}")
+        print(f"   Big models (≥2B): {len(big_models)}")
+
+        # Generate graphs for SMALL MODELS
+        if small_models:
+            print("\n🔹 Creating teaching graphs for SMALL models (<2B)...")
+            self._plot_teaching_bar_chart(small_models, model_scores, output_path, suffix="_small")
+            self._plot_performance_vs_teaching(small_models, output_path, suffix="_small")
+
+        # Generate graphs for BIG MODELS
+        if big_models:
+            print("\n🔸 Creating teaching graphs for BIG models (≥2B)...")
+            self._plot_teaching_bar_chart(big_models, model_scores, output_path, suffix="_big")
+            self._plot_performance_vs_teaching(big_models, output_path, suffix="_big")
+
+        # Generate combined graphs for ALL MODELS
+        print("\n🔷 Creating teaching graphs for ALL models...")
+        self._plot_teaching_bar_chart(all_models, model_scores, output_path, suffix="_all")
+        self._plot_performance_vs_teaching(all_models, output_path, suffix="_all")
+
+    def _plot_teaching_bar_chart(self, models, model_scores, output_path, suffix=""):
+        """Generate bar chart of teaching effectiveness scores"""
+        if not models:
+            return
+
         avg_scores = [statistics.mean(model_scores[m]) for m in models]
 
-        # Bar chart of average teaching scores
         fig, ax = plt.subplots(figsize=(12, 6))
 
         colors = plt.cm.RdYlGn([s/10 for s in avg_scores])
@@ -693,7 +825,8 @@ Only output the JSON, nothing else."""
 
         ax.set_xlabel('Model', fontsize=12)
         ax.set_ylabel('Teaching Effectiveness Score', fontsize=12)
-        ax.set_title('Average Teaching Effectiveness by Model', fontsize=14, fontweight='bold')
+        category_label = " - Small Models (<2B)" if suffix == "_small" else " - Big Models (≥2B)" if suffix == "_big" else ""
+        ax.set_title(f'Average Teaching Effectiveness by Model{category_label}', fontsize=14, fontweight='bold')
         ax.set_xticks(range(len(models)))
         ax.set_xticklabels([m.replace(':', '\n') for m in models])
         ax.set_ylim(0, 10)
@@ -706,31 +839,40 @@ Only output the JSON, nothing else."""
 
         ax.legend()
         plt.tight_layout()
-        plt.savefig(output_path / 'teaching_effectiveness_scores.png', dpi=150)
+        filename = f'teaching_effectiveness_scores{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
         plt.close()
-        print("  Created: teaching_effectiveness_scores.png")
+        print(f"  Created: {filename}")
 
-        # Scatter plot: Performance vs Teaching Quality
+    def _plot_performance_vs_teaching(self, models, output_path, suffix=""):
+        """Generate scatter plot of performance vs teaching quality"""
+        if not models:
+            return
+
         fig, ax = plt.subplots(figsize=(10, 8))
 
-        for model in models:
+        colors = plt.cm.tab10(range(len(models)))
+
+        for idx, model in enumerate(models):
             model_data = [r for r in self.ratings if r.get('model') == model and r.get('score', 0) > 0]
             scores = [r['score'] for r in model_data]
             tps = [r.get('tokens_per_second', 0) for r in model_data]
 
-            ax.scatter(tps, scores, label=model, s=100, alpha=0.7, edgecolors='black')
+            ax.scatter(tps, scores, label=model, color=colors[idx], s=100, alpha=0.7, edgecolors='black')
 
         ax.set_xlabel('Tokens per Second (Performance)', fontsize=12)
         ax.set_ylabel('Teaching Effectiveness Score', fontsize=12)
-        ax.set_title('Performance vs Teaching Quality', fontsize=14, fontweight='bold')
+        category_label = " - Small Models (<2B)" if suffix == "_small" else " - Big Models (≥2B)" if suffix == "_big" else ""
+        ax.set_title(f'Performance vs Teaching Quality{category_label}', fontsize=14, fontweight='bold')
         ax.legend()
         ax.grid(alpha=0.3)
         ax.set_ylim(0, 10)
 
         plt.tight_layout()
-        plt.savefig(output_path / 'performance_vs_teaching.png', dpi=150)
+        filename = f'performance_vs_teaching{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
         plt.close()
-        print("  Created: performance_vs_teaching.png")
+        print(f"  Created: {filename}")
 
     def export_to_csv(self, output_file="analysis_summary_pi4.csv"):
         """Export summary statistics to CSV"""

@@ -264,3 +264,167 @@ Created `analyze_results_pi4.py` as an enhanced version of `analyze_results.py` 
 - Updated radar chart to include I/O Performance (7 dimensions total)
 - Changed default directories: `./results_pi4`, `./analysis_graphs_pi4`, output files with `_pi4` suffix
 - All visualizations and CSV exports now include I/O metrics for comprehensive Pi4 benchmark analysis
+
+---
+
+## Entry #10
+**Date:** 2025-11-28
+**Model Used:** Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
+
+**Prompt:**
+> i want to modify a bit the @analyse_results_computer.py , @analyze_results_pi4.py to split the grpah into 2 categories :
+> - small model (less than 2B)
+> - big model ( more than 2B)
+>
+> add this prompt and the summary of the answers to @PROJECT_APPENDIX.md
+
+**Response Summary:**
+Modified both `analyse_results_computer.py` and `analyze_results_pi4.py` to categorize models by size and generate separate graph sets for small models (<2B) and big models (≥2B). Key changes include:
+
+**New Methods:**
+- `_parse_model_size()`: Parses model parameter strings (e.g., '1,7B', '3.8B') into float values
+- `_categorize_models()`: Splits models into two dictionaries based on 2B threshold
+
+**Enhanced Graph Generation:**
+- Modified `generate_graphs()` to create three sets of visualizations:
+  1. Small models only (`*_small.png`)
+  2. Big models only (`*_big.png`)
+  3. All models combined (`*_all.png`)
+- All plotting methods now accept a `suffix` parameter to distinguish graph categories
+- Graph titles include category labels: "- Small Models (<2B)", "- Big Models (≥2B)", or no label for combined
+
+**Updated Methods:**
+- `_plot_tokens_per_second()`: Added suffix parameter and category-specific titles
+- `_plot_energy_efficiency()`: Added suffix parameter and category labels
+- `_plot_inference_times_by_category()`: Renamed and adapted to work with categorized summaries
+- `_plot_response_analysis_by_category()`: Renamed and adapted for category filtering
+- `_plot_resource_usage()`: Added suffix parameter and category labels
+- `_plot_io_metrics()`: Added suffix parameter and category labels
+- `_plot_radar_chart()`: Added suffix parameter and category labels
+
+**Benefits:**
+- Better comparison between models of similar sizes
+- Prevents small models from being dwarfed by large model metrics in combined graphs
+- Maintains backward compatibility with combined "_all" graphs for overall comparison
+- Console output shows breakdown: "Small models (<2B): X" and "Big models (≥2B): Y"
+
+---
+
+## Entry #11
+**Date:** 2025-11-28
+**Model Used:** Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
+
+**Prompt:**
+> [User requested to configure OpenAI API key - Option 3: Update the API key configuration]
+
+**Response Summary:**
+Added automatic `.env` file loading to both analysis scripts to securely manage the OpenAI API key configuration.
+
+**Changes Made:**
+1. **Modified Scripts:**
+   - `analyse_results_computer.py`: Added `python-dotenv` import and `load_dotenv()` call
+   - `analyze_results_pi4.py`: Added `python-dotenv` import and `load_dotenv()` call
+
+2. **Configuration Files Created:**
+   - `.env.example`: Template file with API key placeholder (safe to commit to git)
+   - `.env`: Actual configuration file with API key (gitignored for security)
+   - `.gitignore`: Ensures `.env` file is never committed to version control
+
+**How It Works:**
+- Scripts now automatically load environment variables from `.env` file on startup
+- If `python-dotenv` is not installed, shows a warning but continues (falls back to system env vars)
+- API key is read from `OPENAI_API_KEY` environment variable
+- `.env` file is protected by `.gitignore` to prevent accidental API key exposure
+
+**Setup Instructions:**
+1. Ensure `python-dotenv` is installed: `pip install python-dotenv`
+2. Create `.env` file from template: `copy .env.example .env` (Windows) or `cp .env.example .env` (Linux/Mac)
+3. Edit `.env` and replace placeholder with actual OpenAI API key from https://platform.openai.com/api-keys
+4. Run analysis scripts normally - they will automatically load the API key
+
+**Security Notes:**
+- `.env` file is gitignored and will never be committed to repository
+- `.env.example` serves as a template without sensitive data
+- API keys should never be hardcoded in scripts
+- The key is loaded once at script startup and stored in environment variables
+
+---
+
+## Entry #12
+**Date:** 2025-11-30
+**Model Used:** Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
+
+**Prompt:**
+> can you add the splitting into 2 categories for the performance_vs_teaching_effectiveness and teaching_effectiveness_score into:
+> small models (less than 2B)
+> big models (more than 2B)
+>
+> Do this modification for @analyse_results_computer.py and @analyze_results_pi4.py
+
+**Response Summary:**
+Modified both `analyse_results_computer.py` and `analyze_results_pi4.py` to split teaching effectiveness visualizations into three graph sets based on model size:
+
+**Refactored `plot_teaching_scores()` method:**
+- Categorizes models into small (<2B) and big (≥2B) using existing `_parse_model_size()` method
+- Generates 3 graph sets: small models only, big models only, and all models combined
+- Added console output showing model count per category
+
+**Created two new helper methods:**
+1. `_plot_teaching_bar_chart(models, model_scores, output_path, suffix)`: Generates bar charts of average teaching effectiveness scores with category-specific titles and filenames
+2. `_plot_performance_vs_teaching(models, output_path, suffix)`: Generates scatter plots correlating tokens-per-second performance with teaching quality scores
+
+**Generated files (6 graphs per analysis):**
+- Small models: `teaching_effectiveness_scores_small.png`, `performance_vs_teaching_small.png`
+- Big models: `teaching_effectiveness_scores_big.png`, `performance_vs_teaching_big.png`
+- All models: `teaching_effectiveness_scores_all.png`, `performance_vs_teaching_all.png`
+
+Each graph includes appropriate category labels in titles for easy identification.
+
+---
+
+## Entry #13
+**Date:** 2025-11-30
+**Model Used:** Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
+
+**Prompt:**
+> now i have the teaching effectiveness in @teaching_effectiveness_ratings_pi4.json, can you create a new code that will rank every models in differents categories :
+> teaching effectiveness, token per second, token per joule, eneryg consumption, time to first token, average IOPS. Then create a graph that shows those scores and the total ranking of the models, add some potential wieght to each categorie that i can change to make some categories more important than other in the final ranking.
+>
+> add this to @PROJECT_APPENDIX.md and add the summary of the question
+
+**Response Summary:**
+Created `model_ranking_system.py` - a comprehensive multi-criteria model ranking system with configurable weights and advanced visualizations.
+
+**Core Features:**
+- **Data Integration**: Loads teaching effectiveness from JSON and performance metrics from CSV
+- **Configurable Weights**: Default weights sum to 100% (teaching: 25%, TPS: 20%, TPJ: 15%, energy: 15%, TTFT: 15%, IOPS: 10%)
+- **Score Normalization**: Converts all metrics to 0-100 scale, handling "higher is better" (TPS, TPJ, teaching, IOPS) vs "lower is better" (energy, TTFT)
+- **Weighted Ranking**: Calculates total scores using configurable category weights
+
+**Key Methods:**
+1. `set_weights(**kwargs)`: Update category weights with auto-normalization to sum to 1.0
+2. `calculate_rankings()`: Compute normalized scores and weighted totals for all models
+3. `print_detailed_rankings()`: Console output of top 10 models per category
+4. `export_rankings_csv()`: Export complete rankings with both normalized scores and raw values
+
+**Visualizations (6 graphs):**
+1. **overall_rankings.png**: Horizontal bar chart of top 15 models with color-coded scores
+2. **category_scores_heatmap.png**: 2D heatmap showing all categories for top 20 models with numerical annotations
+3. **top_models_radar_chart.png**: Polar radar chart comparing top 6 models across all 6 dimensions
+4. **category_rankings.png**: 2×3 grid showing top 10 models for each individual category
+5. **weight_sensitivity.png**: Comparison of how rankings change under 4 different weight scenarios:
+   - Current weights
+   - Teaching Focus (50% teaching effectiveness)
+   - Performance Focus (40% TPS, 25% TTFT)
+   - Efficiency Focus (30% TPJ, 30% energy)
+
+**Usage:**
+```python
+ranker = ModelRankingSystem()
+ranker.set_weights(teaching_effectiveness=0.4, tokens_per_second=0.3, ...)
+ranker.calculate_rankings()
+ranker.export_rankings_csv()
+ranker.generate_visualizations()
+```
+
+The system provides complete flexibility to adjust priorities based on specific use cases (teaching assistant, high performance, energy efficiency, etc.) while maintaining scientific rigor through normalized scoring.
