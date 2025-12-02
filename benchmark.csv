@@ -495,3 +495,190 @@ timestamp,model,model_parameters,tester,question,tokens_per_second,inference_tim
 2025-11-19T17:02:21.312702,cogito:8b,8B,dorian,What are the pros and cons of nuclear energy ?,40.28,40.28,4.543,4.543,-0.433,0.203,0.203,N/A,978,183
 2025-11-19T17:02:27.465025,cogito:8b,8B,dorian,I am strugulling with C++ where should i start ?,40.04,40.05,4.445,4.445,-0.3,0.249,0.249,N/A,784,178
 >>>>>>> 76988081bcf78ac34acd4ef474a3abbc83a67b0f
+2025-12-01T14:13:54.144794,nemotron-mini:4b,4B,dorian,Describe gravity in simple terms for someone that doesn’t know anything about it,0.61,45.97,40.216,0.2591,128,28,54.25,55.987,2471,23,2698608640,114688
+2025-12-01T14:14:41.722081,nemotron-mini:4b,4B,dorian,Describe gravity for someone that knows about it and wants to know more about it,3.77,9.024,2.04,1.4211,166,34,0.44,0.002,0,4,0,20480
+2025-12-01T14:14:52.352671,nemotron-mini:4b,4B,dorian,Find a good analogy to describe gravity to someone.,4.35,17.943,1.74,1.6339,378,78,0.39,0.002,0,7,0,37376
+2025-12-01T14:15:11.902541,nemotron-mini:4b,4B,dorian,give a small quiz (3 questions) about gravity,4.06,8.132,1.727,1.5202,132,33,0.37,0.002,0,3,0,16384
+2025-12-01T14:15:21.640959,nemotron-mini:4b,4B,dorian,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,4.33,18.466,2.561,1.6141,410,80,0.16,0.001,0,3,0,16384
+2025-12-01T14:15:41.814030,nemotron-mini:4b,4B,dorian,Give a common myth about gravity and explain why it is false,4.47,23.046,1.914,1.6716,535,103,0.17,0.001,0,4,0,20480
+2025-12-01T14:16:06.466790,nemotron-mini:4b,4B,dorian,Explain why a plane can fly even with gravity in simple bullet points,4.39,21.653,2.155,1.6417,468,95,0.23,0.001,0,5,0,28672
+2025-12-01T14:16:29.725923,nemotron-mini:4b,4B,dorian,what are the steps to write a master thesis ?,4.41,129.644,1.729,1.6504,2989,572,0.09,0.0,2,10,8192,53248
+2025-12-01T14:18:40.976685,nemotron-mini:4b,4B,dorian,What are the pros and cons of nuclear energy ?,4.47,82.475,1.741,1.6711,1922,369,0.68,0.006,34,22,139264,409600
+2025-12-01T14:20:05.058819,nemotron-mini:4b,4B,dorian,I am strugulling with C++ where should i start ?,3.37,6.535,2.069,1.2676,81,22,0.46,0.002,0,3,0,16384
+2025-12-01T14:21:13.275735,qwen3:4b,4B,raiko,Describe gravity in simple terms for someone that doesn’t know anything about it,2.83,209.045,42.715,1.0657,304,591,54.23,11.393,11327,9,2497372160,49152
+2025-12-01T14:24:43.934896,qwen3:4b,4B,raiko,Describe gravity for someone that knows about it and wants to know more about it,3.19,290.166,3.083,1.1984,1105,925,0.07,0.0,2,17,8192,90112
+2025-12-01T14:29:35.717262,qwen3:4b,4B,raiko,Find a good analogy to describe gravity to someone.,3.42,127.037,2.775,1.3049,251,434,0.08,0.0,0,10,0,53248
+2025-12-01T14:31:44.371012,qwen3:4b,4B,raiko,give a small quiz (3 questions) about gravity,3.33,137.815,2.803,1.2778,307,459,6.65,0.433,901,15,62431232,86016
+2025-12-01T14:34:03.800315,qwen3:4b,4B,raiko,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,3.12,283.758,4.066,1.1887,355,885,0.49,0.006,61,79,1093632,802816
+2025-12-01T14:38:49.170829,qwen3:4b,4B,raiko,Give a common myth about gravity and explain why it is false,3.39,135.975,3.172,1.2912,682,461,0.07,0.0,0,10,0,53248
+2025-12-01T14:41:06.757576,qwen3:4b,4B,raiko,Explain why a plane can fly even with gravity in simple bullet points,3.35,149.348,3.433,1.2722,436,501,0.07,0.0,0,10,0,53248
+2025-12-01T14:43:37.721744,qwen3:4b,4B,raiko,what are the steps to write a master thesis ?,3.28,206.94,2.798,1.2486,1264,678,0.06,0.0,0,13,0,69632
+2025-12-01T14:47:06.277826,qwen3:4b,4B,raiko,What are the pros and cons of nuclear energy ?,3.33,181.889,2.845,1.2643,607,605,0.07,0.0,0,13,0,69632
+2025-12-01T14:50:09.780854,qwen3:4b,4B,raiko,I am strugulling with C++ where should i start ?,3.2,242.752,3.293,1.23,167,778,0.05,0.0,0,13,0,69632
+2025-12-01T14:56:04.277955,gemma3:4b,4B,gio,Describe gravity in simple terms for someone that doesn’t know anything about it,1.05,71.588,51.684,0.4074,336,75,192.6,44.48,13785,3,3338870784,16384
+2025-12-01T14:57:17.486461,gemma3:4b,4B,gio,Describe gravity for someone that knows about it and wants to know more about it,3.6,87.227,2.912,1.3445,1430,314,3.03,0.063,257,7,5754880,36864
+2025-12-01T14:58:46.331212,gemma3:4b,4B,gio,Find a good analogy to describe gravity to someone.,3.3,18.491,2.397,1.2403,287,61,0.87,0.004,7,9,32768,53248
+2025-12-01T14:59:06.439866,gemma3:4b,4B,gio,give a small quiz (3 questions) about gravity,3.42,29.237,2.387,1.2879,353,100,0.24,0.001,0,7,0,36864
+2025-12-01T14:59:37.302885,gemma3:4b,4B,gio,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,2.7,11.096,3.415,1.0161,114,30,0.36,0.002,0,4,0,20480
+2025-12-01T14:59:50.019023,gemma3:4b,4B,gio,Give a common myth about gravity and explain why it is false,3.28,28.04,2.699,1.2406,389,92,0.14,0.001,0,4,0,20480
+2025-12-01T15:00:19.675217,gemma3:4b,4B,gio,Explain why a plane can fly even with gravity in simple bullet points,3.38,39.976,2.818,1.2716,622,135,0.13,0.001,0,5,0,28672
+2025-12-01T15:01:01.274500,gemma3:4b,4B,gio,what are the steps to write a master thesis ?,3.51,73.98,2.44,1.312,1154,260,0.09,0.0,0,7,0,36864
+2025-12-01T15:02:16.863747,gemma3:4b,4B,gio,What are the pros and cons of nuclear energy ?,3.48,60.949,2.483,1.3241,988,212,0.11,0.001,0,7,0,36864
+2025-12-01T15:03:19.431183,gemma3:4b,4B,gio,I am strugulling with C++ where should i start ?,3.2,19.69,2.899,1.1929,297,63,0.2,0.001,0,4,0,20480
+2025-12-01T15:05:05.915141,phi4-mini-reasoning:3.8b,"3,8B",raiko,Describe gravity in simple terms for someone that doesn’t know anything about it,2.51,234.762,45.039,0.94,2878,590,12.47,12.821,2732,195,3153129472,3031040
+2025-12-01T15:09:02.284441,phi4-mini-reasoning:3.8b,"3,8B",raiko,Describe gravity for someone that knows about it and wants to know more about it,2.62,1098.609,2.166,0.9972,14542,2882,0.24,0.003,210,52,3280896,282624
+2025-12-01T15:27:22.500631,phi4-mini-reasoning:3.8b,"3,8B",raiko,Find a good analogy to describe gravity to someone.,2.85,379.109,1.802,1.0932,5328,1079,0.06,0.0,0,22,0,118784
+2025-12-01T15:33:43.216222,phi4-mini-reasoning:3.8b,"3,8B",raiko,give a small quiz (3 questions) about gravity,2.89,289.147,1.802,1.1038,3881,836,0.06,0.0,0,16,0,86016
+2025-12-01T15:38:33.970057,phi4-mini-reasoning:3.8b,"3,8B",raiko,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,2.9,235.115,2.745,1.1222,3110,681,0.06,0.0,0,14,0,73728
+2025-12-01T15:42:30.691971,phi4-mini-reasoning:3.8b,"3,8B",raiko,Give a common myth about gravity and explain why it is false,2.88,276.429,2.08,1.1038,3995,796,0.07,0.0,0,19,0,102400
+2025-12-01T15:47:08.727524,phi4-mini-reasoning:3.8b,"3,8B",raiko,Explain why a plane can fly even with gravity in simple bullet points,2.92,250.608,2.215,1.1146,3648,733,0.06,0.0,0,15,0,81920
+2025-12-01T15:51:20.942748,phi4-mini-reasoning:3.8b,"3,8B",raiko,what are the steps to write a master thesis ?,2.84,451.93,1.789,1.089,6426,1282,0.05,0.0,0,24,0,126976
+2025-12-01T15:58:54.479657,phi4-mini-reasoning:3.8b,"3,8B",raiko,What are the pros and cons of nuclear energy ?,2.87,357.988,1.794,1.0949,5410,1027,0.35,0.005,94,33,1662976,212992
+2025-12-01T16:04:54.074465,phi4-mini-reasoning:3.8b,"3,8B",raiko,I am strugulling with C++ where should i start ?,2.79,510.394,2.203,1.0724,6685,1423,0.05,0.0,0,28,0,151552
+2025-12-01T16:15:54.310318,falcon3:3b,3B,ali,Describe gravity for someone that knows about it and wants to know more about it,4.17,66.727,20.729,1.5589,1288,278,143.34,11.243,9562,3,786624512,16384
+2025-12-01T16:17:02.647205,falcon3:3b,3B,ali,Find a good analogy to describe gravity to someone.,5.56,13.842,1.467,2.0691,351,77,0.14,0.001,0,2,0,12288
+2025-12-01T16:17:18.095590,falcon3:3b,3B,ali,give a small quiz (3 questions) about gravity,5.72,29.193,1.647,2.1263,711,167,0.17,0.001,0,5,0,24576
+2025-12-01T16:17:48.894813,falcon3:3b,3B,ali,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,5.1,23.745,2.287,1.9178,588,121,0.13,0.001,1,2,16384,16384
+2025-12-01T16:18:14.247058,falcon3:3b,3B,ali,Give a common myth about gravity and explain why it is false,5.35,61.908,1.737,2.0128,1638,331,0.11,0.001,0,7,0,36864
+2025-12-01T16:19:17.762295,falcon3:3b,3B,ali,Explain why a plane can fly even with gravity in simple bullet points,5.17,23.772,1.889,2.0361,551,123,0.08,0.0,0,2,0,12288
+2025-12-01T16:19:43.140534,falcon3:3b,3B,ali,what are the steps to write a master thesis ?,5.35,20.944,1.578,2.0012,669,112,0.33,0.002,1,6,8192,40960
+2025-12-01T16:20:05.691713,falcon3:3b,3B,ali,What are the pros and cons of nuclear energy ?,5.45,59.633,1.581,2.0598,1631,325,0.18,0.001,0,11,0,57344
+2025-12-01T16:21:06.931113,falcon3:3b,3B,ali,I am strugulling with C++ where should i start ?,5.01,96.614,1.995,1.9205,2187,484,0.08,0.0,0,8,0,40960
+2025-12-01T16:24:20.367419,cogito:3b,3B,dorian,Describe gravity in simple terms for someone that doesn’t know anything about it,1.72,60.418,35.561,0.6735,504,104,144.21,37.1,2045,6668,2241163264,109215744
+2025-12-01T16:25:22.392083,cogito:3b,3B,dorian,Describe gravity for someone that knows about it and wants to know more about it,4.58,82.255,2.223,1.702,1969,377,0.16,0.001,5,8,45056,40960
+2025-12-01T16:26:46.254359,cogito:3b,3B,dorian,Find a good analogy to describe gravity to someone.,4.41,48.706,1.908,1.6472,1049,215,0.12,0.001,0,6,0,28672
+2025-12-01T16:27:36.567336,cogito:3b,3B,dorian,give a small quiz (3 questions) about gravity,3.93,45.78,1.907,1.4924,738,180,0.15,0.001,1,6,16384,32768
+2025-12-01T16:28:23.953480,cogito:3b,3B,dorian,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,3.22,9.938,2.692,1.2243,131,32,0.2,0.001,0,2,0,12288
+2025-12-01T16:28:35.498498,cogito:3b,3B,dorian,Give a common myth about gravity and explain why it is false,4.04,26.206,2.157,1.5235,548,106,0.34,0.002,1,8,16384,40960
+2025-12-01T16:29:03.310971,cogito:3b,3B,dorian,Explain why a plane can fly even with gravity in simple bullet points,4.06,15.27,2.379,1.5076,290,62,0.13,0.001,0,2,0,12288
+2025-12-01T16:29:20.188105,cogito:3b,3B,dorian,what are the steps to write a master thesis ?,4.01,32.401,1.924,1.5184,567,130,0.15,0.001,0,5,0,24576
+2025-12-01T16:29:54.295838,cogito:3b,3B,dorian,What are the pros and cons of nuclear energy ?,4.24,31.578,1.925,1.6087,667,134,2.88,0.05,89,2,1626112,16384
+2025-12-01T16:30:27.480926,cogito:3b,3B,dorian,I am strugulling with C++ where should i start ?,3.81,16.001,2.327,1.4585,318,61,0.31,0.001,0,5,0,24576
+2025-12-01T16:32:35.223082,granite4:3b,3B,matevz,Describe gravity in simple terms for someone that doesn’t know anything about it,1.93,62.038,34.504,0.7384,572,120,48.36,32.562,1944,1056,2100965376,17268736
+2025-12-01T16:33:38.868259,granite4:3b,3B,matevz,Describe gravity for someone that knows about it and wants to know more about it,4.05,21.256,2.34,1.5051,448,86,0.33,0.003,5,2,45056,12288
+2025-12-01T16:34:01.731005,granite4:3b,3B,matevz,Find a good analogy to describe gravity to someone.,4.09,13.95,1.977,1.5117,264,57,0.5,0.003,1,6,16384,28672
+2025-12-01T16:34:17.288289,granite4:3b,3B,matevz,give a small quiz (3 questions) about gravity,3.95,25.797,1.967,1.4881,451,102,0.27,0.001,0,7,0,36864
+2025-12-01T16:34:44.691851,granite4:3b,3B,matevz,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,3.78,14.811,2.825,1.3998,263,56,0.27,0.001,0,4,0,20480
+2025-12-01T16:35:01.109680,granite4:3b,3B,matevz,Give a common myth about gravity and explain why it is false,4.06,33.97,2.225,1.5199,667,138,0.12,0.001,0,4,0,20480
+2025-12-01T16:35:36.686691,granite4:3b,3B,matevz,Explain why a plane can fly even with gravity in simple bullet points,3.65,22.491,2.464,1.38,410,82,0.18,0.001,0,4,0,24576
+2025-12-01T16:36:00.784584,granite4:3b,3B,matevz,what are the steps to write a master thesis ?,3.8,61.3,2.375,1.4397,1085,233,0.13,0.001,0,8,0,40960
+2025-12-01T16:37:03.691585,granite4:3b,3B,matevz,What are the pros and cons of nuclear energy ?,4.22,44.048,2.003,1.5717,931,186,0.25,0.005,5,6,212992,28672
+2025-12-01T16:37:49.346969,granite4:3b,3B,matevz,I am strugulling with C++ where should i start ?,4.13,48.659,2.443,1.5938,951,201,0.16,0.001,0,8,0,40960
+2025-12-01T16:40:34.754898,llama3.2:3b,3B,farnaz,Describe gravity in simple terms for someone that doesn’t know anything about it,2.35,62.854,34.507,0.8859,696,148,33.08,30.702,1848,231,2019753984,3751936
+2025-12-01T16:41:39.216275,llama3.2:3b,3B,farnaz,Describe gravity for someone that knows about it and wants to know more about it,4.79,48.215,2.258,1.7837,1168,231,0.31,0.003,7,8,86016,49152
+2025-12-01T16:42:29.038455,llama3.2:3b,3B,farnaz,Find a good analogy to describe gravity to someone.,4.63,38.214,1.903,1.7351,854,177,0.24,0.001,0,9,0,45056
+2025-12-01T16:43:08.859107,llama3.2:3b,3B,farnaz,give a small quiz (3 questions) about gravity,4.25,19.985,1.905,1.6064,413,85,0.1,0.001,0,2,0,12288
+2025-12-01T16:43:30.450294,llama3.2:3b,3B,farnaz,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,4.3,16.052,2.686,1.5938,308,69,0.25,0.001,0,4,0,20480
+2025-12-01T16:43:48.109021,llama3.2:3b,3B,farnaz,Give a common myth about gravity and explain why it is false,4.28,35.98,2.166,1.6021,787,154,0.17,0.001,1,5,16384,28672
+2025-12-01T16:44:25.695610,llama3.2:3b,3B,farnaz,Explain why a plane can fly even with gravity in simple bullet points,4.64,39.912,2.39,1.7451,894,185,0.1,0.0,0,4,0,20480
+2025-12-01T16:45:07.213554,llama3.2:3b,3B,farnaz,what are the steps to write a master thesis ?,4.53,74.858,1.953,1.7338,1924,339,0.09,0.001,0,7,0,40960
+2025-12-01T16:46:23.679013,llama3.2:3b,3B,farnaz,What are the pros and cons of nuclear energy ?,4.27,61.527,1.955,1.6318,1499,263,0.08,0.0,0,5,0,24576
+2025-12-01T16:47:26.812679,llama3.2:3b,3B,farnaz,I am strugulling with C++ where should i start ?,4.53,45.03,2.334,1.7521,1041,204,0.11,0.001,0,5,0,28672
+2025-12-01T16:50:35.187578,phi3:3.8b,"3,8B",gio,Describe gravity for someone that knows about it and wants to know more about it,1.44,61.149,42.577,0.5518,405,88,559.63,18.138,34198,23,1162792960,225280
+2025-12-01T16:51:37.946853,phi3:3.8b,"3,8B",gio,Find a good analogy to describe gravity to someone.,3.73,29.749,2.445,1.4273,520,111,0.2,0.001,1,5,16384,28672
+2025-12-01T16:52:09.302962,phi3:3.8b,"3,8B",gio,give a small quiz (3 questions) about gravity,3.95,41.316,2.607,1.4958,718,163,0.12,0.001,0,5,0,24576
+2025-12-01T16:52:52.225919,phi3:3.8b,"3,8B",gio,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,3.45,18.273,3.847,1.3034,270,63,0.16,0.001,1,2,16384,12288
+2025-12-01T16:53:12.106195,phi3:3.8b,"3,8B",gio,Give a common myth about gravity and explain why it is false,4.03,25.063,2.763,1.5013,443,101,0.28,0.002,2,5,32768,28672
+2025-12-01T16:53:38.775985,phi3:3.8b,"3,8B",gio,Explain why a plane can fly even with gravity in simple bullet points,3.61,22.419,2.934,1.3703,336,81,0.09,0.001,0,2,0,12288
+2025-12-01T16:54:02.801752,phi3:3.8b,"3,8B",gio,what are the steps to write a master thesis ?,3.53,255.329,2.52,1.3852,4578,901,2.58,0.051,512,147,9871360,3903488
+2025-12-01T16:58:19.738042,phi3:3.8b,"3,8B",gio,What are the pros and cons of nuclear energy ?,3.88,29.894,2.458,1.5107,535,116,0.07,0.0,0,2,0,12288
+2025-12-01T16:58:51.238576,phi3:3.8b,"3,8B",gio,I am strugulling with C++ where should i start ?,3.27,18.37,3.13,1.2617,283,60,0.22,0.001,0,4,0,20480
+2025-12-01T17:01:06.353981,exaone-deep:2.4b,"2,7B",ali,Describe gravity in simple terms for someone that doesn’t know anything about it,4.79,163.865,26.855,1.7777,3573,785,21.66,9.763,1655,1895,1646489600,30969856
+2025-12-01T17:03:51.825399,exaone-deep:2.4b,"2,7B",ali,Describe gravity for someone that knows about it and wants to know more about it,4.66,521.909,1.849,1.7564,11667,2432,0.45,0.011,197,40,5541888,262144
+2025-12-01T17:12:35.341823,exaone-deep:2.4b,"2,7B",ali,Find a good analogy to describe gravity to someone.,4.25,621.074,1.606,1.6339,11937,2639,0.15,0.003,62,31,1732608,167936
+2025-12-01T17:22:58.023070,exaone-deep:2.4b,"2,7B",ali,give a small quiz (3 questions) about gravity,4.97,271.094,1.619,1.9044,6144,1348,0.06,0.0,0,16,0,86016
+2025-12-01T17:27:30.723715,exaone-deep:2.4b,"2,7B",ali,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,5.36,69.169,2.324,2.0218,1476,371,0.1,0.001,0,7,0,36864
+2025-12-01T17:28:41.499582,exaone-deep:2.4b,"2,7B",ali,Give a common myth about gravity and explain why it is false,5.2,143.915,1.842,2.0164,3247,748,0.07,0.0,0,10,0,53248
+2025-12-01T17:31:07.021261,exaone-deep:2.4b,"2,7B",ali,Explain why a plane can fly even with gravity in simple bullet points,4.73,118.638,1.977,1.8324,2647,561,0.14,0.001,0,17,0,102400
+2025-12-01T17:33:07.265756,exaone-deep:2.4b,"2,7B",ali,what are the steps to write a master thesis ?,5.03,177.276,1.624,1.9463,4231,891,0.07,0.0,0,12,0,65536
+2025-12-01T17:36:06.148323,exaone-deep:2.4b,"2,7B",ali,What are the pros and cons of nuclear energy ?,5.32,210.26,1.637,2.0176,5266,1118,0.1,0.001,6,14,98304,73728
+2025-12-01T17:39:38.014867,exaone-deep:2.4b,"2,7B",ali,I am strugulling with C++ where should i start ?,5.41,81.529,1.848,2.1147,1820,441,0.1,0.0,0,8,0,40960
+2025-12-01T17:42:36.264747,qwen3:1.7b,"1,7B",gio,Describe gravity in simple terms for someone that doesn’t know anything about it,5.73,121.116,22.883,2.1916,317,694,47.53,10.73,5752,5,1362624512,28672
+2025-12-01T17:44:38.991516,qwen3:1.7b,"1,7B",gio,Describe gravity for someone that knows about it and wants to know more about it,6.91,66.317,1.519,2.6432,654,458,0.14,0.001,1,8,16384,40960
+2025-12-01T17:45:46.924124,qwen3:1.7b,"1,7B",gio,Find a good analogy to describe gravity to someone.,6.68,95.831,1.424,2.559,422,640,0.1,0.001,2,8,32768,40960
+2025-12-01T17:47:24.371022,qwen3:1.7b,"1,7B",gio,give a small quiz (3 questions) about gravity,6.9,41.753,1.402,2.6508,528,288,0.24,0.002,2,8,32768,40960
+2025-12-01T17:48:07.745071,qwen3:1.7b,"1,7B",gio,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,6.63,28.361,1.85,2.5948,202,188,0.07,0.0,0,2,0,12288
+2025-12-01T17:48:37.723059,qwen3:1.7b,"1,7B",gio,Give a common myth about gravity and explain why it is false,6.74,57.861,1.508,2.6398,736,390,0.1,0.001,0,6,0,32768
+2025-12-01T17:49:37.208731,qwen3:1.7b,"1,7B",gio,Explain why a plane can fly even with gravity in simple bullet points,6.69,59.353,1.689,2.6358,401,397,0.13,0.001,0,8,0,40960
+2025-12-01T17:50:38.179032,qwen3:1.7b,"1,7B",gio,what are the steps to write a master thesis ?,6.87,62.982,1.479,2.725,815,433,0.13,0.001,1,7,16384,36864
+2025-12-01T17:51:42.776274,qwen3:1.7b,"1,7B",gio,What are the pros and cons of nuclear energy ?,6.65,100.641,1.411,2.6148,1160,669,0.07,0.0,0,7,0,36864
+2025-12-01T17:53:25.028604,qwen3:1.7b,"1,7B",gio,I am strugulling with C++ where should i start ?,6.49,113.085,1.632,2.5297,1511,734,0.08,0.0,0,9,0,49152
+2025-12-01T17:57:14.870025,deepseek-r1:1.5b,"1,5B",ali,Describe gravity in simple terms for someone that doesn’t know anything about it,8.39,117.023,17.089,3.1433,393,982,14.36,9.178,1677,4,1126223872,20480
+2025-12-01T17:59:13.499786,deepseek-r1:1.5b,"1,5B",ali,Describe gravity for someone that knows about it and wants to know more about it,9.82,22.612,1.115,3.6709,223,222,0.09,0.001,0,2,0,16384
+2025-12-01T17:59:37.718771,deepseek-r1:1.5b,"1,5B",ali,Find a good analogy to describe gravity to someone.,9.64,39.523,0.961,3.6144,416,381,0.23,0.002,3,6,49152,28672
+2025-12-01T18:00:18.848688,deepseek-r1:1.5b,"1,5B",ali,give a small quiz (3 questions) about gravity,9.45,19.477,0.97,3.5401,330,184,0.1,0.001,0,2,0,16384
+2025-12-01T18:00:39.932498,deepseek-r1:1.5b,"1,5B",ali,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,9.24,48.267,1.38,3.5112,382,446,0.12,0.001,0,6,0,28672
+2025-12-01T18:01:29.806055,deepseek-r1:1.5b,"1,5B",ali,Give a common myth about gravity and explain why it is false,9.11,52.467,1.118,3.5217,393,478,0.11,0.001,0,6,0,32768
+2025-12-01T18:02:23.880575,deepseek-r1:1.5b,"1,5B",ali,Explain why a plane can fly even with gravity in simple bullet points,9.3,41.058,1.175,3.5334,504,382,0.19,0.001,0,8,0,40960
+2025-12-01T18:03:06.545597,deepseek-r1:1.5b,"1,5B",ali,what are the steps to write a master thesis ?,8.79,158.779,0.968,3.3828,1720,1395,0.14,0.001,1,21,16384,167936
+2025-12-01T18:05:46.930633,deepseek-r1:1.5b,"1,5B",ali,What are the pros and cons of nuclear energy ?,8.93,104.569,0.968,3.4421,1154,934,0.09,0.0,0,9,0,45056
+2025-12-01T18:07:33.106549,deepseek-r1:1.5b,"1,5B",ali,I am strugulling with C++ where should i start ?,8.95,77.319,1.128,3.473,1129,692,0.1,0.001,0,8,0,40960
+2025-12-01T18:10:52.275596,falcon3:1b,1B,dorian,Describe gravity in simple terms for someone that doesn’t know anything about it,1.92,30.241,20.908,0.7618,283,58,102.54,56.86,1647,1454,1779240960,23801856
+2025-12-01T18:11:24.124286,falcon3:1b,1B,dorian,Describe gravity for someone that knows about it and wants to know more about it,5.33,97.387,0.889,2.0136,2567,519,0.48,0.006,39,8,614400,40960
+2025-12-01T18:13:03.117783,falcon3:1b,1B,dorian,Find a good analogy to describe gravity to someone.,5.58,24.355,0.717,2.0991,696,136,0.08,0.0,0,2,0,12288
+2025-12-01T18:13:29.079204,falcon3:1b,1B,dorian,give a small quiz (3 questions) about gravity,5.8,11.554,0.783,2.1608,332,67,0.43,0.002,0,5,0,28672
+2025-12-01T18:13:42.241049,falcon3:1b,1B,dorian,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,5.22,38.513,1.061,1.9735,1010,201,0.13,0.001,0,5,0,24576
+2025-12-01T18:14:22.360497,falcon3:1b,1B,dorian,Give a common myth about gravity and explain why it is false,5.35,68.939,1.019,2.0241,1606,369,0.12,0.001,0,8,0,40960
+2025-12-01T18:15:32.906598,falcon3:1b,1B,dorian,Explain why a plane can fly even with gravity in simple bullet points,5.73,34.579,0.872,2.1408,984,198,0.2,0.001,0,7,0,36864
+2025-12-01T18:16:09.092553,falcon3:1b,1B,dorian,what are the steps to write a master thesis ?,5.57,166.215,0.756,2.0832,4858,925,0.2,0.002,22,11,311296,57344
+2025-12-01T18:18:56.914466,falcon3:1b,1B,dorian,What are the pros and cons of nuclear energy ?,5.59,111.167,0.757,2.0935,3524,621,0.08,0.0,0,9,0,49152
+2025-12-01T18:20:49.688531,falcon3:1b,1B,dorian,I am strugulling with C++ where should i start ?,5.72,145.679,0.918,2.1321,3860,834,0.08,0.0,0,11,0,57344
+2025-12-01T18:25:14.951756,granite4:1b,1B,matevz,Describe gravity for someone that knows about it and wants to know more about it,2.07,240.238,37.729,0.7705,2588,498,107.24,6.006,25751,11,1512955904,61440
+2025-12-01T18:29:16.797140,granite4:1b,1B,matevz,Find a good analogy to describe gravity to someone.,2.1,38.962,4.671,0.7818,443,82,0.18,0.001,0,7,0,36864
+2025-12-01T18:29:57.366053,granite4:1b,1B,matevz,give a small quiz (3 questions) about gravity,2.21,70.707,4.688,0.8152,622,156,0.11,0.001,0,8,0,40960
+2025-12-01T18:31:09.680211,granite4:1b,1B,matevz,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,1.93,48.219,6.91,0.7362,435,93,0.12,0.001,0,6,0,28672
+2025-12-01T18:31:59.506668,granite4:1b,1B,matevz,Give a common myth about gravity and explain why it is false,2.16,92.764,5.423,0.8207,1059,200,0.11,0.001,0,10,0,53248
+2025-12-01T18:33:33.877236,granite4:1b,1B,matevz,Explain why a plane can fly even with gravity in simple bullet points,2.13,99.681,6.105,0.7957,1051,212,0.13,0.002,4,9,212992,45056
+2025-12-01T18:35:15.164772,granite4:1b,1B,matevz,what are the steps to write a master thesis ?,2.14,193.335,4.847,0.8272,2262,414,0.08,0.001,2,14,32768,77824
+2025-12-01T18:38:30.106581,granite4:1b,1B,matevz,What are the pros and cons of nuclear energy ?,2.1,138.354,4.853,0.8064,1634,290,0.08,0.0,0,11,0,57344
+2025-12-01T18:40:50.066960,granite4:1b,1B,matevz,I am strugulling with C++ where should i start ?,2.0,91.649,5.872,0.7947,881,183,0.09,0.0,0,8,0,40960
+2025-12-01T18:45:13.525206,llama3.2:1b,1B,farnaz,Describe gravity in simple terms for someone that doesn’t know anything about it,4.53,79.23,16.711,1.7346,1702,359,40.45,16.287,1256,1949,1321246720,31899648
+2025-12-01T18:46:34.361939,llama3.2:1b,1B,farnaz,Describe gravity for someone that knows about it and wants to know more about it,5.92,94.439,0.899,2.223,2874,559,0.76,0.011,64,8,1060864,45056
+2025-12-01T18:48:10.407868,llama3.2:1b,1B,farnaz,Find a good analogy to describe gravity to someone.,6.0,34.176,0.744,2.2592,992,205,0.18,0.001,1,5,16384,24576
+2025-12-01T18:48:46.291438,llama3.2:1b,1B,farnaz,give a small quiz (3 questions) about gravity,6.24,27.884,0.735,2.3312,676,174,0.14,0.001,0,4,0,24576
+2025-12-01T18:49:15.782660,llama3.2:1b,1B,farnaz,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,6.21,34.944,0.977,2.3176,1081,217,0.11,0.001,0,4,0,20480
+2025-12-01T18:49:52.333483,llama3.2:1b,1B,farnaz,Give a common myth about gravity and explain why it is false,6.29,71.415,0.821,2.3419,2362,449,0.18,0.001,0,13,0,77824
+2025-12-01T18:51:05.355211,llama3.2:1b,1B,farnaz,Explain why a plane can fly even with gravity in simple bullet points,6.14,62.194,0.887,2.2967,1899,382,0.13,0.001,0,8,0,40960
+2025-12-01T18:52:09.156153,llama3.2:1b,1B,farnaz,what are the steps to write a master thesis ?,6.06,125.521,0.739,2.2674,3575,761,0.09,0.0,0,11,0,57344
+2025-12-01T18:54:16.283588,llama3.2:1b,1B,farnaz,What are the pros and cons of nuclear energy ?,6.25,77.474,0.742,2.3299,2586,484,0.09,0.0,0,7,0,36864
+2025-12-01T18:55:35.364126,llama3.2:1b,1B,farnaz,I am strugulling with C++ where should i start ?,6.45,68.223,0.843,2.391,1892,440,0.12,0.001,0,8,0,40960
+2025-12-01T18:58:55.346833,gemma3:1b,1B,raiko,Describe gravity in simple terms for someone that doesn’t know anything about it,7.94,52.279,12.004,3.0944,1682,415,80.24,14.907,4193,2,817143808,12288
+2025-12-01T18:59:49.232651,gemma3:1b,1B,raiko,Describe gravity for someone that knows about it and wants to know more about it,10.15,86.345,1.15,3.9217,3885,876,0.1,0.0,0,9,0,45056
+2025-12-01T19:01:17.184231,gemma3:1b,1B,raiko,Find a good analogy to describe gravity to someone.,9.86,45.429,1.179,3.8246,1911,448,0.22,0.002,3,7,49152,36864
+2025-12-01T19:02:04.220434,gemma3:1b,1B,raiko,give a small quiz (3 questions) about gravity,9.58,32.478,1.02,3.7254,1086,311,0.12,0.001,2,2,32768,12288
+2025-12-01T19:02:38.305376,gemma3:1b,1B,raiko,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,9.67,43.205,1.281,3.7413,1716,418,0.23,0.002,4,6,65536,32768
+2025-12-01T19:03:23.117272,gemma3:1b,1B,raiko,Give a common myth about gravity and explain why it is false,9.62,54.575,1.138,3.7354,2262,525,5.37,0.134,281,12,7536640,118784
+2025-12-01T19:04:19.298947,gemma3:1b,1B,raiko,Explain why a plane can fly even with gravity in simple bullet points,9.41,28.789,1.276,3.714,1188,271,0.66,0.011,8,11,278528,53248
+2025-12-01T19:04:49.696694,gemma3:1b,1B,raiko,what are the steps to write a master thesis ?,9.38,132.304,1.056,3.693,5370,1241,0.07,0.0,0,9,0,49152
+2025-12-01T19:07:03.617120,gemma3:1b,1B,raiko,What are the pros and cons of nuclear energy ?,9.42,81.821,1.22,3.7471,3852,771,0.09,0.0,0,7,0,36864
+2025-12-01T19:08:27.045088,gemma3:1b,1B,raiko,I am strugulling with C++ where should i start ?,9.27,163.054,1.356,3.6377,5703,1512,0.09,0.001,2,13,32768,69632
+2025-12-01T19:13:41.982160,tinyllama:latest,"1,1B",dorian,Describe gravity in simple terms for someone that doesn’t know anything about it,11.1,29.833,9.206,4.1789,1481,331,28.93,20.482,863,0,640737280,0
+2025-12-01T19:14:13.422083,tinyllama:latest,"1,1B",dorian,Describe gravity for someone that knows about it and wants to know more about it,15.99,21.199,0.924,5.9264,1533,339,0.09,0.001,0,2,0,12288
+2025-12-01T19:14:36.227737,tinyllama:latest,"1,1B",dorian,Find a good analogy to describe gravity to someone.,15.85,10.346,0.846,5.8796,644,164,0.29,0.002,0,3,0,16384
+2025-12-01T19:14:48.182633,tinyllama:latest,"1,1B",dorian,give a small quiz (3 questions) about gravity,14.52,6.407,0.887,5.4271,323,93,0.47,0.002,0,3,0,16384
+2025-12-01T19:14:56.196049,tinyllama:latest,"1,1B",dorian,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,13.85,8.159,1.207,5.1845,518,113,0.25,0.001,0,2,0,12288
+2025-12-01T19:15:05.961501,tinyllama:latest,"1,1B",dorian,Give a common myth about gravity and explain why it is false,15.1,30.141,0.925,5.6551,2189,455,0.17,0.001,0,5,0,24576
+2025-12-01T19:15:37.708653,tinyllama:latest,"1,1B",dorian,Explain why a plane can fly even with gravity in simple bullet points,14.2,22.538,0.974,5.4957,1462,320,0.18,0.001,0,4,0,24576
+2025-12-01T19:16:01.852741,tinyllama:latest,"1,1B",dorian,what are the steps to write a master thesis ?,13.72,17.127,0.901,5.2345,1059,235,0.35,0.002,0,6,0,28672
+2025-12-01T19:16:20.586488,tinyllama:latest,"1,1B",dorian,What are the pros and cons of nuclear energy ?,14.28,25.765,0.826,5.415,1652,368,0.08,0.0,0,2,0,12288
+2025-12-01T19:16:47.958951,tinyllama:latest,"1,1B",dorian,I am strugulling with C++ where should i start ?,14.15,23.6,0.994,5.4266,1497,334,2.97,0.046,63,7,1077248,57344
+2025-12-01T19:19:23.319664,gemma3:270m,1B,raiko,Describe gravity in simple terms for someone that doesn’t know anything about it,12.05,9.213,4.499,5.0443,471,111,203.95,30.185,1877,2,291594240,12288
+2025-12-01T19:19:34.139480,gemma3:270m,1B,raiko,Describe gravity for someone that knows about it and wants to know more about it,16.41,2.621,0.323,7.0889,189,43,0.0,0.0,0,0,0,0
+2025-12-01T19:19:38.367120,gemma3:270m,1B,raiko,Find a good analogy to describe gravity to someone.,21.01,6.378,0.327,8.6586,521,134,0.31,0.002,0,2,0,12288
+2025-12-01T19:19:46.351446,gemma3:270m,1B,raiko,give a small quiz (3 questions) about gravity,21.12,8.475,0.338,8.6679,694,179,0.24,0.001,0,2,0,12288
+2025-12-01T19:19:56.432828,gemma3:270m,1B,raiko,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,15.19,1.317,0.351,6.5655,76,20,0.0,0.0,0,0,0,0
+2025-12-01T19:19:59.356925,gemma3:270m,1B,raiko,Give a common myth about gravity and explain why it is false,18.36,1.525,0.376,7.8612,116,28,1.31,0.008,0,2,0,12288
+2025-12-01T19:20:02.488646,gemma3:270m,1B,raiko,Explain why a plane can fly even with gravity in simple bullet points,21.73,5.751,0.333,8.8971,546,125,0.7,0.003,0,4,0,20480
+2025-12-01T19:20:09.846591,gemma3:270m,1B,raiko,what are the steps to write a master thesis ?,21.02,71.447,0.333,8.5363,7197,1502,0.11,0.001,1,7,16384,36864
+2025-12-01T19:21:22.900686,gemma3:270m,1B,raiko,What are the pros and cons of nuclear energy ?,18.1,1.216,0.33,7.8008,103,22,0.0,0.0,0,0,0,0
+2025-12-01T19:21:25.722929,gemma3:270m,1B,raiko,I am strugulling with C++ where should i start ?,21.09,43.903,0.334,8.5617,4015,926,0.16,0.001,0,7,0,36864
+2025-12-01T19:23:51.352777,qwen3:0.6b,"0,6B",matevz,Describe gravity in simple terms for someone that doesn’t know anything about it,11.84,26.778,7.272,4.6766,421,317,90.52,18.616,2422,2,522686464,12288
+2025-12-01T19:24:19.737323,qwen3:0.6b,"0,6B",matevz,Describe gravity for someone that knows about it and wants to know more about it,15.35,21.305,0.669,6.0334,655,327,0.09,0.001,0,2,0,12288
+2025-12-01T19:24:42.649124,qwen3:0.6b,"0,6B",matevz,Find a good analogy to describe gravity to someone.,13.54,52.885,0.621,5.3258,412,716,0.13,0.001,0,7,0,36864
+2025-12-01T19:25:37.140687,qwen3:0.6b,"0,6B",matevz,give a small quiz (3 questions) about gravity,14.48,22.654,0.61,5.763,492,328,0.09,0.001,0,2,0,12288
+2025-12-01T19:26:01.401289,qwen3:0.6b,"0,6B",matevz,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,14.48,26.729,0.717,5.7167,388,387,0.22,0.001,0,6,0,32768
+2025-12-01T19:26:29.737122,qwen3:0.6b,"0,6B",matevz,Give a common myth about gravity and explain why it is false,13.82,42.468,0.657,5.4562,1257,587,0.12,0.001,0,5,0,24576
+2025-12-01T19:27:13.812542,qwen3:0.6b,"0,6B",matevz,Explain why a plane can fly even with gravity in simple bullet points,15.6,15.195,0.757,6.1351,359,237,0.2,0.002,1,2,16384,12288
+2025-12-01T19:27:30.715102,qwen3:0.6b,"0,6B",matevz,what are the steps to write a master thesis ?,14.32,34.57,0.561,5.6604,1549,495,0.14,0.001,0,5,0,28672
+2025-12-01T19:28:06.891746,qwen3:0.6b,"0,6B",matevz,What are the pros and cons of nuclear energy ?,13.97,39.074,0.568,5.5213,1339,546,0.1,0.0,0,4,0,20480
+2025-12-01T19:28:47.572191,qwen3:0.6b,"0,6B",matevz,I am strugulling with C++ where should i start ?,14.48,37.014,0.702,5.6782,1292,536,0.14,0.001,0,5,0,28672
