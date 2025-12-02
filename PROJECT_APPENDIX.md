@@ -428,3 +428,160 @@ ranker.generate_visualizations()
 ```
 
 The system provides complete flexibility to adjust priorities based on specific use cases (teaching assistant, high performance, energy efficiency, etc.) while maintaining scientific rigor through normalized scoring.
+
+---
+
+## Entry #14
+**Date:** 2025-12-01
+**Model Used:** Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
+
+**Prompt:**
+> i got this code that benchmark a model on MMLU, now i want it to test all the model available on my computer through ollama and then give me a graph of their performance on the test
+>
+> add this question to the @PROJECT_APPENDIX.md with a summary of the answer
+
+**Response Summary:**
+Completely refactored `eval_MMLU.py` to create a comprehensive multi-model MMLU benchmarking system with automatic model detection and visualization capabilities.
+
+**Key Features Added:**
+
+1. **MMLUBenchmarkRunner Class**: New class-based architecture for scalable benchmarking
+   - `get_available_models()`: Auto-detects all Ollama models (excludes embedding models)
+   - `run_benchmark_for_model()`: Tests individual models with error handling
+   - `run_all_models()`: Iterates through all available models sequentially
+   - `save_results()`: Incremental saving to CSV and JSON files
+
+2. **Data Export**:
+   - CSV export: `mmlu_benchmark_results.csv` with model names, overall scores, task-specific scores, and timestamps
+   - JSON export: `mmlu_benchmark_results.json` with detailed results including error messages for failed tests
+   - Incremental saving after each model test to prevent data loss
+
+3. **Visualizations** (3 graphs generated):
+   - **Overall Performance Bar Chart** (`mmlu_overall_performance.png`): Horizontal bar chart with color-coded scores showing all models ranked by MMLU performance
+   - **Task-Specific Performance** (`mmlu_task_performance.png`): Grouped bar chart comparing performance across different MMLU tasks (Computer Science, Astronomy)
+   - **Distribution & Top 10** (`mmlu_distribution_and_top10.png`): Combined visualization with histogram showing score distribution (mean/median lines) and top 10 models ranking
+
+4. **Enhanced Output**:
+   - `print_summary()`: Console summary with statistics (mean, median, best/worst scores, top 5 models)
+   - Progress tracking showing [X/Total] during execution
+   - Error handling with graceful failure for problematic models
+
+**Testing Scope:**
+- Found 21 available models (excluding nomic-embed-text embedding model)
+- Tests: HIGH_SCHOOL_COMPUTER_SCIENCE and ASTRONOMY tasks
+- 3-shot learning configuration
+- Results saved to `./mmlu_results/` directory
+
+**Technical Improvements:**
+- Configurable tasks and n_shots parameters in constructor
+- Automatic output directory creation
+- Sorted model list for consistent testing order
+- Color-coded visualizations using viridis and RdYlGn colormaps
+- Dynamic figure sizing based on number of models tested
+
+---
+
+## Entry #15
+**Date:** 2025-12-01
+**Model Used:** Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
+
+**Prompt:**
+> this code is working and iq providing the accuracy correclty, i want to keep this architecture and just add a loop that goes throught all the ollama model downloaded on my computer. All the scores will be reported in a json and csv file that will be saved at the end
+
+**Response Summary:**
+Refactored `eval_MMLU.py` to automatically test all Ollama models while preserving the original OllamaModel architecture. The enhanced version includes:
+
+**New Functions:**
+1. `get_available_models()`: Auto-detects all Ollama models (filters out embedding models)
+2. `run_mmlu_benchmark()`: Main orchestration function that loops through all models
+3. `save_results()`: Exports results to both JSON and CSV formats in `./mmlu_results/` directory
+4. `print_summary()`: Displays comprehensive summary with rankings and statistics
+
+**Key Features:**
+- Loops through all available Ollama models automatically (sorted alphabetically)
+- Tests each model with MMLU tasks (HIGH_SCHOOL_COMPUTER_SCIENCE, ASTRONOMY) using 3-shot learning
+- Error handling: If a model fails, it's recorded with status 'failed' and error message, then continues to next model
+- Progress tracking: Shows [X/Total] during execution
+- Results stored with timestamp, overall_score, tasks, n_shots, and status for each model
+
+**Data Export:**
+- JSON file: `mmlu_results/mmlu_benchmark_results.json` with detailed results including error messages
+- CSV file: `mmlu_results/mmlu_benchmark_results.csv` for easy analysis in spreadsheet tools
+- Both files saved after all models complete testing
+
+**Console Output:**
+- Initial summary showing total models found
+- Per-model progress with scores or error messages
+- Final summary table with:
+  - Top 10 models ranked by MMLU score
+  - Statistics: mean, median, best/worst scores
+  - Success/failure counts
+
+**Architecture Preserved:**
+- OllamaModel class remains unchanged
+- Same generate() method using ollama.generate()
+- Compatible with deepeval.benchmarks.MMLU framework
+
+---
+
+## Entry #16
+**Date:** 2025-12-02
+**Model Used:** Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
+
+**Prompt:**
+> this method is perfectly working, i want you to go through every ollama model available and perform the exact same MMLU test on them; then save all of it in a CSV and json file
+>
+> add this question to @PROJECT_APPENDIX.md as well as a summary of the answer
+
+**Response Summary:**
+Transformed `test_single_model_mmlu.py` from a single-model testing script into a comprehensive multi-model MMLU benchmarking system that automatically tests all available Ollama models.
+
+**Key Changes:**
+
+1. **New Functions Added:**
+   - `get_available_models()`: Auto-detects all Ollama models (filters out embedding models), returns sorted list
+   - `run_mmlu_for_all_models()`: Main orchestration function that loops through all models and manages the benchmark process
+   - `save_results(results, output_dir)`: Exports results to both JSON and CSV formats
+   - `print_summary(results)`: Displays comprehensive console summary with rankings and statistics
+
+2. **Architecture Preserved:**
+   - `OllamaModel` class remains completely unchanged
+   - Same `generate()` method with enhanced prompt formatting
+   - Same regex-based answer extraction logic (A-D letter extraction)
+   - Compatible with deepeval MMLU framework
+
+3. **Benchmark Configuration:**
+   - Task: HIGH_SCHOOL_COMPUTER_SCIENCE
+   - 3-shot learning (consistent with previous tests)
+   - Sequential testing (one model at a time)
+
+4. **Error Handling:**
+   - Try-catch blocks around each model test
+   - Failed models recorded with status='failed' and error message
+   - Continues testing remaining models if one fails
+   - Both successful and failed results saved to output files
+
+5. **Data Export:**
+   - **JSON file** (`mmlu_all_models_results.json`): Contains detailed results including all predictions for each model
+   - **CSV file** (`mmlu_all_models_results.csv`): Summary results without detailed predictions (model_name, overall_score, task, n_shots, timestamp, status, error)
+   - Both files saved in `./mmlu_results/` directory
+   - Automatic directory creation if it doesn't exist
+
+6. **Console Output Features:**
+   - Initial summary showing total models found
+   - Progress tracking: [X/Total] for each model
+   - Per-model score display or error message
+   - Final summary section with:
+     - Top 10 models ranked by MMLU score
+     - Statistics: total tested, successful/failed counts, mean/median/best/worst scores
+
+7. **Technical Improvements:**
+   - Timestamps added to all results for tracking
+   - Status field ('success'/'failed') for easy filtering
+   - Sorted model list for consistent testing order
+   - Results stored incrementally in memory, saved once at the end
+
+**Usage:**
+Simply run `python test_single_model_mmlu.py` and it will automatically detect all models and begin testing them sequentially.
+
+---

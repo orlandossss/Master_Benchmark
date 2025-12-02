@@ -1,0 +1,233 @@
+[
+  {
+    "model_name": "cogito:3b",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "cogito:8b",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "deepseek-r1:1.5b",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "deepseek-r1:7b",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "exaone-deep:2.4b",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "falcon3:1b",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "falcon3:3b",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "gemma3:1b",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "gemma3:270m",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "gemma3:4b",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "granite4:1b",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "granite4:3b",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "llama3.2:1b",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "mistral:7b",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "nemotron-mini:4b",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "phi3:3.8b",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "phi4-mini-reasoning:3.8b",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "qwen3:0.6b",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "qwen3:1.7b",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "qwen3:4b",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  },
+  {
+    "model_name": "tinyllama:latest",
+    "overall_score": 0.0,
+    "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+    "n_shots": 3,
+    "n_problems": 3,
+    "timestamp": "2025-12-02 16:54:29",
+    "status": "failed",
+    "error": "DeepEvalBaseBenchmark.__init__() got an unexpected keyword argument 'n_problems'",
+    "predictions": []
+  }
+]

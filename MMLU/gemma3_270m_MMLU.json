@@ -1,0 +1,10 @@
+{
+  "model_name": "gemma3:270m",
+  "overall_score": 0.0,
+  "task": "HIGH_SCHOOL_COMPUTER_SCIENCE",
+  "n_shots": 3,
+  "timestamp": "2025-12-02 19:03:09",
+  "status": "failed",
+  "error": "Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download",
+  "predictions": []
+}
