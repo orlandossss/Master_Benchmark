@@ -50,25 +50,18 @@ def run_mmlu_single_model(model_name):
 
         # Run benchmark
         benchmark = MMLU(
-            tasks=[MMLUTask.HIGH_SCHOOL_COMPUTER_SCIENCE, MMLUTask.FORMAL_LOGIC, MMLUTask.GLOBAL_FACTS, MMLUTask.COLLEGE_COMPUTER_SCIENCE, MMLUTask.COLLEGE_MATHEMATICS, MMLUTask.HIGH_SCHOOL_MACROECONOMICS, MMLUTask.MARKETING],
+            tasks=[MMLUTask.FORMAL_LOGIC],
             n_shots=3
         )
 
         benchmark.evaluate(model=model)
 
-        # Print first three predictions
-        if benchmark.predictions:
-            print("\n📝 First 3 predictions:")
-            for i, pred in enumerate(benchmark.predictions[:3], 1):
-                print(f"   {i}. Predicted: {pred.get('prediction', 'N/A'):5s} | Actual: {pred.get('actual_output', 'N/A'):5s} | Correct: {pred.get('success', False)}")
-
-        print(f"\n✅ Score: {benchmark.overall_score:.4f}")
 
         # Store results
         result = {
             'model_name': model_name,
             'overall_score': benchmark.overall_score,
-            'task': 'HIGH_SCHOOL_COMPUTER_SCIENCE',
+            'task': 'FORMAL_LOGIC',
             'n_shots': 3,
             'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             'status': 'success',
@@ -85,7 +78,7 @@ def run_mmlu_single_model(model_name):
         result = {
             'model_name': model_name,
             'overall_score': 0.0,
-            'task': 'HIGH_SCHOOL_COMPUTER_SCIENCE',
+            'task': 'FORMAL_LOGIC',
             'n_shots': 3,
             'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             'status': 'failed',
@@ -102,10 +95,15 @@ def save_results(result, output_dir, model_name):
     # Clean model name for filename (replace special characters)
     clean_model_name = model_name.replace(':', '_').replace('/', '_')
 
+    # Convert predictions DataFrame to list of dicts for JSON serialization
+    result_copy = result.copy()
+    if 'predictions' in result_copy and isinstance(result_copy['predictions'], pd.DataFrame):
+        result_copy['predictions'] = result_copy['predictions'].to_dict('records')
+
     # Save to JSON (with detailed predictions)
     json_path = os.path.join(output_dir, f'{clean_model_name}_MMLU.json')
     with open(json_path, 'w', encoding='utf-8') as f:
-        json.dump(result, f, indent=2, ensure_ascii=False)
+        json.dump(result_copy, f, indent=2, ensure_ascii=False)
     print(f"\n💾 Results saved to: {json_path}")
 
     # Prepare data for CSV (without detailed predictions)
@@ -129,5 +127,5 @@ def save_results(result, output_dir, model_name):
 
 if __name__ == "__main__":
     # Configure the model to test here
-    model_name = "gemma3:270m"  # Change this to test different models
+    model_name = "cogito:8b"  # Change this to test different models
     run_mmlu_single_model(model_name)

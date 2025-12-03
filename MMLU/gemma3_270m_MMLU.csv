@@ -1,2 +1,2 @@
-model_name,overall_score,task,n_shots,timestamp,status,error
-gemma3:270m,0.0,HIGH_SCHOOL_COMPUTER_SCIENCE,3,2025-12-02 19:03:09,failed,"Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download"
+model_name,overall_score,task,n_shots,timestamp,status
+gemma3:270m,0.23015873015873015,FORMAL_LOGIC,3,2025-12-03 13:35:40,success
