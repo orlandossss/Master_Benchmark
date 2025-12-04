@@ -585,3 +585,66 @@ Transformed `test_single_model_mmlu.py` from a single-model testing script into 
 Simply run `python test_single_model_mmlu.py` and it will automatically detect all models and begin testing them sequentially.
 
 ---
+
+## Entry #17
+**Date:** 2025-12-03
+**Model Used:** Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
+
+**Prompt:**
+> okay this code works perfeclty now i want it to run accros all the model that i have on ollama and each time a model has been finished saved in the same way as in the code
+>
+> store the question in @PROJECT_APPENDIX.md as well as a summary of the answer
+
+**Response Summary:**
+Enhanced `test_single_model_mmlu.py` to run MMLU benchmarks across all available Ollama models with immediate individual file saving after each model completion. This differs from Entry #16 by saving results immediately after each model finishes (not waiting until all models complete).
+
+**Key Features:**
+
+1. **New Functions Added:**
+   - `get_available_models()`: Auto-detects all Ollama models (filters out embedding models like nomic-embed-text), returns sorted list
+   - `run_mmlu_for_all_models()`: Main orchestration that loops through all models sequentially
+   - `print_summary(results)`: Displays comprehensive summary with rankings, statistics, and failed models list
+
+2. **Incremental Saving Strategy:**
+   - Each model saves immediately upon completion via existing `save_results()` function
+   - Individual JSON file: `{model_name}_MMLU.json` (with detailed predictions)
+   - Individual CSV file: `{model_name}_MMLU.csv` (summary only)
+   - All saved to `./MMLU/` directory
+   - No data loss if script crashes mid-execution - completed models are already saved
+
+3. **Architecture Preserved:**
+   - `run_mmlu_single_model()`: Unchanged, handles single model testing
+   - `save_results()`: Unchanged, converts DataFrame predictions to JSON-serializable format
+   - `OllamaModel` class: Unchanged, with regex extraction for A-D answers
+   - File naming: Model names sanitized (`:` → `_`, `/` → `_`)
+
+4. **Enhanced Console Output:**
+   - Lists all detected models before starting
+   - Progress tracking: `[X/Total] Testing: {model_name}`
+   - Immediate feedback after each model: `✅ Score = X.XXXX` or `❌ Failed - error`
+   - Final summary section with:
+     - Total/successful/failed counts
+     - Rankings: All models sorted by score with percentages
+     - Statistics: mean, median, best, worst scores
+     - Failed models list with error messages
+
+5. **Error Handling:**
+   - Try-catch in `run_mmlu_single_model()` ensures one failure doesn't stop the entire run
+   - Failed models saved with status='failed' and error message
+   - All results (successful and failed) included in final summary
+
+6. **Benchmark Configuration:**
+   - Task: FORMAL_LOGIC (as currently configured)
+   - 3-shot learning
+   - Sequential testing with immediate saving
+
+**Benefits Over Entry #16:**
+- Incremental saving prevents data loss if script crashes
+- Can resume testing by checking which model files already exist
+- Individual files easier to inspect per-model results
+- Same file format as single-model testing for consistency
+
+**Usage:**
+Run `python test_single_model_mmlu.py` and it will automatically detect all models, test them sequentially, and save each model's results immediately to individual JSON and CSV files in the `./MMLU/` directory.
+
+---

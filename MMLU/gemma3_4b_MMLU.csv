@@ -1,2 +1,0 @@
-model_name,overall_score,task,n_shots,timestamp,status
-gemma3:4b,0.4126984126984127,FORMAL_LOGIC,3,2025-12-03 13:41:26,success
