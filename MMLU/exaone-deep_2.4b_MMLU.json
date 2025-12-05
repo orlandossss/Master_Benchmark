@@ -1,0 +1,24 @@
+{
+  "model_name": "exaone-deep:2.4b",
+  "overall_score": 0.0,
+  "tasks": [
+    "formal_logic",
+    "global_facts",
+    "college_computer_science",
+    "college_mathematics",
+    "marketing",
+    "high_school_macroeconomics"
+  ],
+  "task_scores": {
+    "formal_logic": 0.0,
+    "global_facts": 0.0,
+    "college_computer_science": 0.0,
+    "college_mathematics": 0.0,
+    "marketing": 0.0,
+    "high_school_macroeconomics": 0.0
+  },
+  "num_tasks": 6,
+  "n_shots": 3,
+  "timestamp": "2025-12-04 15:21:32",
+  "status": "success"
+}

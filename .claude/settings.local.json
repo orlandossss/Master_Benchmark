@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python visualize_mmlu.py:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

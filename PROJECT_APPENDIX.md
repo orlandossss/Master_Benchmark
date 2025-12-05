@@ -648,3 +648,378 @@ Enhanced `test_single_model_mmlu.py` to run MMLU benchmarks across all available
 Run `python test_single_model_mmlu.py` and it will automatically detect all models, test them sequentially, and save each model's results immediately to individual JSON and CSV files in the `./MMLU/` directory.
 
 ---
+
+## Entry #18
+**Date:** 2025-12-05
+**Model Used:** Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
+
+**Prompt:**
+> can you modify @visualize_mmlu.py such as it make the comparism for the overall score but also for each individual task. Also make 3 graph each time :
+> 1 with every model
+> 1 with only model less than 2b parameters
+> 1 with only models more than 2b parameters
+>
+> can i have also a graph for each model with their strengh and weaknesses (categories)
+>
+> add this question to @PROJECT_APPENDIX.md and the summary of the answer
+
+**Response Summary:**
+Completely refactored `visualize_mmlu.py` to provide comprehensive MMLU visualization with model categorization and task-specific analysis. The enhanced version now generates multiple graph types with intelligent model segmentation.
+
+**Key Features Added:**
+
+1. **Model Categorization System:**
+   - `_parse_model_size()`: Extracts parameter size from model names using regex (e.g., "1.7b", "3B")
+   - `categorize_models()`: Automatically splits models into small (<2B) and big (≥2B) categories
+   - Console output shows model count per category
+
+2. **New Visualization Functions:**
+   - `plot_overall_scores()`: Bar charts showing average MMLU scores across all tasks
+   - `plot_task_specific_scores()`: Grouped bar charts comparing performance across different tasks
+   - `plot_individual_model_radar()`: Polar radar charts for each model showing strengths/weaknesses across task categories
+   - `get_tasks_from_results()`: Helper function to extract unique tasks from results
+
+3. **Graph Generation Strategy (6+ graphs total):**
+
+   **Overall Score Comparisons (3 graphs):**
+   - `mmlu_overall_scores_all.png`: All models combined
+   - `mmlu_overall_scores_small.png`: Small models only (<2B)
+   - `mmlu_overall_scores_big.png`: Big models only (≥2B)
+
+   **Task-Specific Performance (3 graphs):**
+   - `mmlu_task_specific_all.png`: All models across all tasks
+   - `mmlu_task_specific_small.png`: Small models task comparison
+   - `mmlu_task_specific_big.png`: Big models task comparison
+
+   **Individual Model Radar Charts (N graphs, one per model):**
+   - `radar_{model_name}.png`: Shows each model's performance across all task categories
+   - Includes average score and random guessing baseline (25%)
+   - Reveals strengths and weaknesses visually
+
+4. **Enhanced Summary Display:**
+   - Updated `print_summary()` to show average scores across multiple tasks
+   - Displays number of tasks tested per model
+   - Shows task names tested
+   - Statistics now based on averaged scores across tasks
+
+5. **Technical Improvements:**
+   - All graphs use consistent color schemes and styling
+   - Random guessing baseline (25%) shown on all charts
+   - Category labels in titles for easy identification
+   - Automatic file naming with suffixes (_all, _small, _big)
+   - Safe filename generation for radar charts (replaces `:` and `/`)
+   - Dynamic figure sizing based on number of models/tasks
+   - Grouped bar charts with color-coded tasks using Set3 colormap
+
+6. **Radar Chart Features:**
+   - Polar projection showing performance across all task dimensions
+   - Closed polygons with filled areas for visual impact
+   - Reference circle at 25% for random guessing baseline
+   - Individual average score displayed in title
+   - Requires minimum 3 tasks to generate (with validation)
+
+**Benefits:**
+- **Better Comparisons**: Small and big models shown separately prevents dwarfing effect
+- **Task Analysis**: Identify which tasks are harder/easier and which models excel at specific tasks
+- **Individual Insights**: Radar charts reveal each model's specialization and weaknesses
+- **Comprehensive Overview**: "_all" graphs maintain global perspective across all models
+- **Scalability**: Automatically handles any number of tasks and models
+
+**Usage:**
+Run `python visualize_mmlu.py` after completing MMLU benchmarks. The script will automatically load all results from `./MMLU/` directory, categorize models by size, and generate comprehensive visualizations showing overall performance, task-specific comparisons, and individual model strengths/weaknesses.
+
+---
+
+## Entry #19
+**Date:** 2025-12-05
+**Model Used:** Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
+
+**Prompt:**
+> can i disable thinking of my models in @test_single_model_mmlu.py code ?
+
+**Response Summary:**
+Added comprehensive thinking suppression features to `test_single_model_mmlu.py` to reduce verbose reasoning output from models like DeepSeek-R1, QwQ, and other reasoning models.
+
+**Key Changes:**
+
+1. **New Method - `_strip_thinking_tags()`:**
+   - Strips common thinking/reasoning tags from model output
+   - Removes: `<think>...</think>`, `<thinking>...</thinking>`, `<reason>...</reason>`, `<reasoning>...</reasoning>`
+   - Uses regex with DOTALL and IGNORECASE flags for comprehensive tag removal
+   - Applied automatically to all model responses before processing
+
+2. **Enhanced Prompt Engineering:**
+   - Added instruction at end of every prompt: "Output only the single letter answer (A, B, C, or D) without any explanation or reasoning."
+   - This encourages models to provide concise answers instead of verbose thinking
+   - Particularly effective for models that follow instructions well
+
+3. **Optimized Generation Options:**
+   - Set `num_ctx: 2048` to limit context window (speeds up processing)
+   - Kept `num_predict: 50` (sufficient for single letter answers)
+   - Maintained `temperature: 0.1` for consistent, deterministic answers
+
+**How It Works:**
+1. Prompt is enhanced with instruction to output only the answer letter
+2. Model generates response (may still include thinking internally)
+3. Response is processed through `_strip_thinking_tags()` to remove any thinking markup
+4. Clean answer is then parsed with existing regex extraction logic
+5. Result: Clean, concise answers without verbose reasoning chains
+
+**Benefits:**
+- **Faster Processing**: Less output to generate and process
+- **Cleaner Logs**: Debug output shows only relevant answers, not long reasoning chains
+- **Better Extraction**: Removing thinking tags improves letter answer extraction reliability
+- **Universal**: Works with all models (no effect on non-reasoning models)
+
+**Technical Notes:**
+- Thinking suppression happens after generation (can't completely disable internal reasoning for models trained with it)
+- The approach is two-pronged: prompt engineering + post-processing
+- Compatible with all Ollama models (no model-specific parameters required)
+- Does not affect answer quality, only reduces verbosity
+
+**Usage:**
+No changes needed - the thinking suppression is now automatic for all models when running `python test_single_model_mmlu.py` or testing with `run_mmlu_for_all_models()`.
+
+---
+
+## Entry #20
+**Date:** 2025-12-05
+**Model Used:** Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
+
+**Prompt:**
+> model like qwen3 has a way to enable or disable thinking can you add that ?
+
+**Response Summary:**
+Enhanced the thinking suppression system in `test_single_model_mmlu.py` to add model-specific parameter support for reasoning models (Qwen, DeepSeek-R1, QwQ, Marco-o1) that have native thinking control capabilities.
+
+**Key Enhancements:**
+
+1. **New Methods and Features:**
+   - `_is_reasoning_model()`: Detects if a model is a reasoning model (deepseek-r1, r1, qwq, qwen-qwq, qwen3, qwen2.5, marco-o1)
+   - `_get_generation_options()`: Returns model-specific generation options with thinking control
+   - `disable_thinking` parameter: Optional parameter (default: True) to control thinking behavior
+
+2. **Model-Specific Parameters:**
+   - **Qwen models**: Uses `enable_thinking: False` option to natively disable thinking
+   - **DeepSeek-R1**: Uses `stop: ['<think>', '<thinking>']` to halt generation at thinking tags
+   - **All models**: Still applies post-processing tag stripping as fallback
+
+3. **Enhanced Tag Removal:**
+   - Added support for `<|reasoning_start|>` and `<|reasoning_end|>` tokens
+   - Comprehensive removal of all common thinking tag formats
+   - Conditional application (only when `disable_thinking=True`)
+
+4. **Updated Function Signatures:**
+   - `OllamaModel.__init__(model_name, disable_thinking=True)`
+   - `run_mmlu_single_model(model_name, disable_thinking=True)`
+   - `run_mmlu_for_all_models(disable_thinking=True)`
+
+5. **Visual Feedback:**
+   - Console shows "Thinking disabled: True/False" at benchmark start
+   - Debug output displays "[REASONING MODEL DETECTED - THINKING DISABLED]" for recognized reasoning models
+   - Helps verify thinking control is working correctly
+
+**How It Works:**
+1. Model is initialized with `disable_thinking` flag
+2. `_is_reasoning_model()` checks if model name matches known reasoning models
+3. `_get_generation_options()` adds model-specific parameters:
+   - Qwen: `enable_thinking=False` natively disables reasoning output
+   - DeepSeek-R1: `stop=['<think>', '<thinking>']` halts at thinking markers
+4. Post-processing still applies `_strip_thinking_tags()` as safety net
+5. Result: Clean answers without reasoning chains
+
+**Benefits:**
+- **Native Control**: Uses model's built-in thinking toggle when available
+- **More Effective**: Stops thinking at generation time (not just post-processing)
+- **Flexible**: Can be disabled by setting `disable_thinking=False`
+- **Universal**: Works with all models, enhanced for reasoning models
+- **Better Performance**: Less wasted tokens generating thinking that gets stripped
+
+**Usage Examples:**
+
+```python
+# Default: Thinking disabled
+run_mmlu_single_model('qwen3:1.7b')
+
+# Explicitly disable thinking
+run_mmlu_single_model('deepseek-r1:1.5b', disable_thinking=True)
+
+# Enable thinking (see full reasoning process)
+run_mmlu_single_model('qwq:32b', disable_thinking=False)
+
+# Test all models with thinking disabled (default)
+run_mmlu_for_all_models()
+
+# Test all models with thinking enabled
+run_mmlu_for_all_models(disable_thinking=False)
+```
+
+**Supported Reasoning Models:**
+- DeepSeek-R1 (all sizes)
+- Qwen3 / Qwen2.5 (with reasoning capabilities)
+- QwQ / Qwen-QwQ
+- Marco-o1
+- Any model with "r1" in name
+
+---
+
+## Entry #21
+**Date:** 2025-12-05
+**Model Used:** Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
+
+**Prompt:**
+> can you modify the graph such as it is always in ascendant order from the smallest model to the biggest
+>
+> Add this question to @PROJECT_APPENDIX.md  and summary of the answer
+
+**Response Summary:**
+Modified `analyze_results_pi4.py` to sort all graphs and tables by model size (ascending order) instead of by performance score. This provides better visual progression from smallest to biggest models across all Pi4 benchmark visualizations. Also applied same changes to `visualize_mmlu.py` for consistency.
+
+**Key Changes to analyze_results_pi4.py:**
+
+1. **Updated `generate_graphs()` method (lines 256-292):**
+   - Added sorting for small_models_list: `sorted(small_models.keys(), key=lambda x: self._parse_model_size(...))`
+   - Added sorting for big_models_list: `sorted(big_models.keys(), key=lambda x: self._parse_model_size(...))`
+   - Added sorting for all_models: `sorted(summary.keys(), key=lambda x: self._parse_model_size(...))`
+   - All models now ordered by parameter count (ascending) before being passed to plotting functions
+
+2. **Updated `plot_teaching_scores()` method (lines 795-800):**
+   - Modified small_models filtering to include sorting by size
+   - Modified big_models filtering to include sorting by size
+   - Modified all_models list to be sorted by size
+   - Teaching effectiveness graphs now show models in size order
+
+3. **Consistent Sorting Across All Graphs:**
+   - Tokens per second comparisons
+   - Energy efficiency charts
+   - Inference time analysis
+   - Response analysis
+   - Resource usage graphs
+   - I/O metrics visualizations
+   - Radar charts
+   - Teaching effectiveness scores
+   - Performance vs teaching scatter plots
+
+**Benefits:**
+- **Better Comparisons**: Easy to see how performance scales with model size
+- **Visual Progression**: Natural left-to-right or top-to-bottom ordering from small to big
+- **Size Context**: Immediately see which models are in the same size category
+- **Consistent Ordering**: All graphs now use the same ordering principle
+- **Educational Value**: Clearly shows relationship between model size and performance
+
+**Example Output:**
+```
+Model Rankings (Sorted by Size - Smallest to Biggest):
+--------------------------------------------------------------------------------
+ 1. gemma3:270m                     ( 0.3B) - 0.1969 (19.69%) - 6 task(s)
+ 2. qwen3:0.6b                      ( 0.6B) - 0.4106 (41.06%) - 6 task(s)
+ 3. llama3.2:1b                     ( 1.0B) - 0.1861 (18.61%) - 6 task(s)
+ 4. falcon3:1b                      ( 1.0B) - 0.2181 (21.81%) - 6 task(s)
+ 5. granite4:1b                     ( 1.0B) - 0.4414 (44.14%) - 6 task(s)
+...
+```
+
+**Technical Implementation:**
+- Leverages existing `_parse_model_size()` function that extracts parameter count from model names
+- Sorts using lambda function: `key=lambda x: _parse_model_size(x[0])`
+- Ascending order (default) shows smallest models first
+- Works seamlessly with model categorization (<2B and ≥2B groups)
+
+**Graph Ordering for Pi4 Analysis:**
+All Pi4 benchmark visualizations now show models in consistent size-based order:
+- `tokens_per_second_*.png` - TPS performance by size
+- `energy_efficiency_*.png` - TPJ and energy consumption by size
+- `inference_times_*.png` - Timing metrics by size
+- `response_analysis_*.png` - Response characteristics by size
+- `resource_usage_*.png` - CPU/memory usage by size
+- `io_metrics_*.png` - Disk I/O performance by size
+- `radar_chart_*.png` - Multi-dimensional comparison by size
+- `teaching_effectiveness_scores_*.png` - Teaching quality by size
+- `performance_vs_teaching_*.png` - Performance-quality correlation by size
+
+**Graph Ordering for MMLU Analysis:**
+All MMLU visualizations now show models in consistent size-based order:
+- `mmlu_overall_scores_*.png` - Overall MMLU scores by size
+- `mmlu_task_specific_*.png` - Task-specific performance by size
+- `radar_{model_name}.png` - Individual model task analysis (unchanged)
+
+**Files Modified:**
+- `analyze_results_pi4.py` - Main Pi4 benchmark analysis tool (Raspberry Pi 4)
+- `analyse_results_computer.py` - Main computer benchmark analysis tool (Desktop/Laptop)
+- `visualize_mmlu.py` - MMLU benchmark visualization tool
+
+All three analysis tools now consistently sort models by parameter size in ascending order across all generated visualizations, providing better visual comparison and clearer insights into how model performance scales with size.
+
+---
+
+## Entry #22
+**Date:** 2025-12-05
+**Model Used:** Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
+
+**Prompt:**
+> in @visualize_mmlu.py , instead of having one big grpah with all the tasks specifics, make one graph compraing the models (3 : all, small and big) for each tasks
+>
+> add this question to @PROJECT_APPENDIX.md and a summary of the answer
+
+**Response Summary:**
+Refactored `visualize_mmlu.py` to generate separate comparison graphs for each individual MMLU task instead of one large grouped bar chart with all tasks combined. This provides clearer, more focused visualization of model performance on specific task categories.
+
+**Key Changes:**
+
+1. **Refactored `plot_task_specific_scores()` function:**
+   - Changed from single grouped bar chart (all tasks combined) to individual bar charts (one per task)
+   - Each task now gets its own dedicated comparison graph
+   - Maintains the same 3-category system: all models, small models (<2B), big models (≥2B)
+
+2. **New Graph Generation Strategy:**
+   - **Per-Task Graphs**: For each MMLU task (e.g., FORMAL_LOGIC, GLOBAL_FACTS, COLLEGE_COMPUTER_SCIENCE, etc.), generates 3 graphs:
+     - `mmlu_task_{task_name}_all.png` - All models compared on this task
+     - `mmlu_task_{task_name}_small.png` - Small models compared on this task
+     - `mmlu_task_{task_name}_big.png` - Big models compared on this task
+   - If testing 6 tasks with both small and big models, generates **18 task-specific graphs** (6 tasks × 3 categories)
+
+3. **Visual Improvements:**
+   - Clean bar charts with models sorted by size (ascending)
+   - Task name prominently displayed in title (e.g., "MMLU Benchmark - FORMAL_LOGIC - Small Models (<2B)")
+   - Value labels on each bar showing exact scores
+   - Random guessing baseline (25%) reference line
+   - Safe filename generation (replaces `:`, `/`, spaces with `_`)
+
+4. **Benefits Over Previous Grouped Chart:**
+   - **Better Readability**: Each task gets full width of graph instead of narrow grouped bars
+   - **Clearer Comparisons**: Easy to see which models excel at specific tasks without visual clutter
+   - **Focused Analysis**: Can examine one task category at a time (e.g., logic vs math vs science)
+   - **Easier Interpretation**: No need to match colors across many grouped bars
+   - **Print-Friendly**: Each graph is self-contained and clear when printed individually
+
+5. **Total Graph Output:**
+   With this update, running `visualize_mmlu.py` generates:
+   - **Overall Score Graphs**: 3 graphs (all, small, big) showing average across all tasks
+   - **Task-Specific Graphs**: N × 3 graphs (where N = number of tasks tested)
+   - **Individual Radar Charts**: One per model showing strengths/weaknesses
+   - Example with 6 tasks: 3 + 18 + 15 models = 36 graphs total
+
+**Example Output Files:**
+```
+mmlu_overall_scores_all.png
+mmlu_overall_scores_small.png
+mmlu_overall_scores_big.png
+mmlu_task_FORMAL_LOGIC_all.png
+mmlu_task_FORMAL_LOGIC_small.png
+mmlu_task_FORMAL_LOGIC_big.png
+mmlu_task_GLOBAL_FACTS_all.png
+mmlu_task_GLOBAL_FACTS_small.png
+mmlu_task_GLOBAL_FACTS_big.png
+mmlu_task_COLLEGE_COMPUTER_SCIENCE_all.png
+mmlu_task_COLLEGE_COMPUTER_SCIENCE_small.png
+mmlu_task_COLLEGE_COMPUTER_SCIENCE_big.png
+... (and so on for each task)
+radar_qwen3_1.7b.png
+radar_llama3.2_3b.png
+... (and so on for each model)
+```
+
+**Usage:**
+Run `python visualize_mmlu.py` after MMLU benchmarking completes. The script will automatically generate separate comparison graphs for each task category, making it easy to analyze model performance on specific knowledge domains (logic, math, science, etc.) without the visual complexity of grouped charts.
+
+---

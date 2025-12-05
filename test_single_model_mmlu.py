@@ -6,29 +6,136 @@ import re
 import json
 import os
 from datetime import datetime
+import time
+import signal
+from contextlib import contextmanager
 
 class OllamaModel:
     def __init__(self, model_name: str):
         self.model_name = model_name
-
-    def generate(self, prompt: str) -> str:
+        self.timeout_seconds = 60
+        self.max_retries = 3
+        self.call_count = 0
         
+        # Détecter le type de modèle et ajuster les paramètres
+        if 'deepseek' in model_name.lower():
+            self.num_predict = 500
+            self.is_reasoning_model = True
+        elif 'qwen' in model_name.lower():
+            self.num_predict = 200
+            self.is_reasoning_model = False
+        else:
+            self.num_predict = 50
+            self.is_reasoning_model = False
 
-        response = ollama.generate(model=self.model_name, prompt=prompt)
-        answer = response["response"].strip()
-
-        # Extract only the letter choice (A, B, C, or D)
-        # Look for first occurrence of A, B, C, or D
-        match = re.search(r'\b[A-D]\b', answer, re.IGNORECASE)
+    def extract_answer_from_deepseek(self, text: str) -> str:
+        """Extrait la réponse d'un modèle DeepSeek-R1 qui utilise des balises <think>"""
+        if '</think>' in text:
+            answer_part = text.split('</think>')[-1].strip()
+        else:
+            answer_part = text.strip()
+        
+        # Chercher une lettre A/B/C/D
+        match = re.search(r'\b[A-D]\b', answer_part, re.IGNORECASE)
         if match:
             return match.group(0).upper()
+        
+        # Fallback : chercher dans tout le texte
+        match = re.search(r'\b[A-D]\b', text, re.IGNORECASE)
+        if match:
+            return match.group(0).upper()
+        
+        return None
 
-        # Fallback: check if answer starts with a letter
-        if answer and answer[0].upper() in ['A', 'B', 'C', 'D']:
-            return answer[0].upper()
+    def generate(self, prompt: str) -> str:
+        """Génère une réponse avec timeout et retry automatique"""
+        
+        self.call_count += 1
+        
+        # Afficher les 3 premiers prompts
+        if self.call_count <= 3:
+            print(f"\n{'='*60}")
+            print(f"📝 PROMPT #{self.call_count}")
+            print(f"{'='*60}")
+            print(prompt[:500])
+            if len(prompt) > 500:
+                print("... (tronqué)")
+            print(f"{'='*60}")
+        
+        for attempt in range(self.max_retries):
+            try:
+                response = ollama.generate(
+                    model=self.model_name, 
+                    prompt=prompt,
+                    options={
+                        'num_predict': self.num_predict,
+                        'temperature': 0.1
+                    }
+                )
+                answer = response["response"].strip()
+                
+                # Afficher la réponse brute pour les 3 premiers
+                if self.call_count <= 3:
+                    print(f"\n🤖 RÉPONSE BRUTE DU MODÈLE:")
+                    print(answer if answer else "(vide)")
+                    print(f"Longueur: {len(answer)} caractères")
 
-        # Last resort: return the full answer (will likely be wrong)
-        return answer
+                # EXTRACTION D'ABORD - avant de vérifier la longueur
+                extracted = None
+                if self.is_reasoning_model:
+                    extracted = self.extract_answer_from_deepseek(answer)
+                else:
+                    match = re.search(r'\b[A-D]\b', answer, re.IGNORECASE)
+                    if match:
+                        extracted = match.group(0).upper()
+                    elif answer and len(answer) > 0 and answer[0].upper() in ['A', 'B', 'C', 'D']:
+                        extracted = answer[0].upper()
+                
+                # Si on a trouvé une lettre valide, on retourne immédiatement
+                if extracted:
+                    if self.call_count <= 3:
+                        print(f"\n✅ RÉPONSE EXTRAITE: {extracted}")
+                        print(f"{'='*60}\n")
+                    return extracted
+                
+                # Sinon, vérifier si la réponse est vraiment vide/invalide
+                if not answer or len(answer) == 0:
+                    if self.call_count <= 3:
+                        print(f"\n⚠️ RÉPONSE VIDE")
+                    # Réessayer avec plus de tokens
+                    if attempt < self.max_retries - 1:
+                        if self.call_count <= 3:
+                            print(f"Réessai avec plus de tokens...")
+                        self.num_predict = min(self.num_predict * 2, 1000)
+                        time.sleep(1)
+                        continue
+                
+                # Aucune lettre trouvée, réessayer
+                if attempt < self.max_retries - 1:
+                    if self.call_count <= 3:
+                        print(f"\n⚠️ AUCUNE LETTRE A/B/C/D TROUVÉE, réessai...")
+                    self.num_predict = min(self.num_predict * 2, 1000)
+                    time.sleep(1)
+                    continue
+                else:
+                    if self.call_count <= 3:
+                        print(f"\n⚠️ AUCUNE LETTRE TROUVÉE après {self.max_retries} tentatives, retour 'A' par défaut")
+                        print(f"{'='*60}\n")
+                    return 'A'
+                
+
+            except Exception as e:
+                print(f"⚠️ Erreur (tentative {attempt + 1}/{self.max_retries}): {e}")
+                if attempt < self.max_retries - 1:
+                    time.sleep(2)
+                    continue
+                else:
+                    print(f"❌ Échec après {self.max_retries} tentatives, retour 'A'")
+                    if self.call_count <= 3:
+                        print(f"{'='*60}\n")
+                    return 'A'
+        
+        return 'A'
 
 
 def run_mmlu_single_model(model_name):
@@ -61,6 +168,7 @@ def run_mmlu_single_model(model_name):
 
     try:
         # Initialize model
+        print(f"\n🔄 Chargement du modèle {model_name}...")
         model = OllamaModel(model_name)
 
         benchmark = MMLU(
@@ -68,6 +176,9 @@ def run_mmlu_single_model(model_name):
             n_shots=3
         )
 
+        # Évaluation avec sauvegarde progressive
+        print("\n🚀 Début de l'évaluation (affichage des 3 premières questions)...")
+        
         benchmark.evaluate(model=model)
 
         # Store results
@@ -78,10 +189,34 @@ def run_mmlu_single_model(model_name):
         if hasattr(benchmark, 'predictions') and benchmark.predictions is not None:
             predictions_df = benchmark.predictions if isinstance(benchmark.predictions, pd.DataFrame) else pd.DataFrame(benchmark.predictions)
 
+            # Afficher les 3 premières prédictions avec comparaison
+            print(f"\n{'='*60}")
+            print("📋 COMPARAISON DES 3 PREMIÈRES QUESTIONS")
+            print(f"{'='*60}")
+            for idx in range(min(3, len(predictions_df))):
+                row = predictions_df.iloc[idx]
+                print(f"\nQuestion #{idx + 1}:")
+                print(f"  Tâche: {row.get('Task', 'N/A')}")
+                print(f"  Réponse attendue: {row.get('Expected Output', 'N/A')}")
+                print(f"  Réponse du modèle: {row.get('Actual Output', 'N/A')}")
+                print(f"  Correct: {'✅ OUI' if row.get('Correct', False) else '❌ NON'}")
+                print("-" * 60)
+
             for task_name in task_names:
                 task_preds = predictions_df[predictions_df['Task'] == task_name]
                 if len(task_preds) > 0:
-                    task_scores[task_name] = task_preds['Correct'].mean()
+                    score = task_preds['Correct'].mean()
+                    task_scores[task_name] = score
+                    
+                    # Sauvegarde progressive par tâche
+                    checkpoint_data = {
+                        'model_name': model_name,
+                        'task_name': task_name,
+                        'score': score,
+                        'num_questions': len(task_preds),
+                        'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                    }
+                    save_checkpoint(model_name, task_name, checkpoint_data, output_dir)
 
         result = {
             'model_name': model_name,
@@ -110,6 +245,9 @@ def run_mmlu_single_model(model_name):
 
     except Exception as e:
         print(f"❌ Error testing {model_name}: {e}")
+        import traceback
+        traceback.print_exc()
+        
         tasks = [
             MMLUTask.FORMAL_LOGIC,
             MMLUTask.GLOBAL_FACTS,
@@ -133,6 +271,44 @@ def run_mmlu_single_model(model_name):
         }
         save_results(result, output_dir, model_name)
         return result
+    
+    finally:
+        # Décharger le modèle
+        unload_model(model_name)
+
+
+def save_checkpoint(model_name, task_name, results, output_dir):
+    """Sauvegarde progressive après chaque tâche"""
+    checkpoint_dir = os.path.join(output_dir, "checkpoints")
+    os.makedirs(checkpoint_dir, exist_ok=True)
+    
+    clean_model_name = model_name.replace(':', '_').replace('/', '_')
+    clean_task_name = task_name.replace(' ', '_')
+    
+    checkpoint_file = os.path.join(
+        checkpoint_dir, 
+        f"{clean_model_name}_{clean_task_name}_checkpoint.json"
+    )
+    
+    with open(checkpoint_file, 'w') as f:
+        json.dump(results, f, indent=2)
+    
+    print(f"💾 Checkpoint sauvegardé: {clean_task_name}")
+
+
+
+
+
+def unload_model(model_name):
+    """Décharge un modèle de la mémoire"""
+    try:
+        print(f"\n🧹 Déchargement du modèle {model_name}...")
+        ollama.generate(model=model_name, prompt="", keep_alive=0)
+        print(f"✅ Modèle {model_name} déchargé de la mémoire")
+        return True
+    except Exception as e:
+        print(f"⚠️ Erreur lors du déchargement de {model_name}: {e}")
+        return False
 
 
 def save_results(result, output_dir, model_name):
@@ -253,6 +429,10 @@ def run_mmlu_for_all_models():
             print(f"✅ {model_name}: Score = {result['overall_score']:.4f}")
         else:
             print(f"❌ {model_name}: Failed - {result.get('error', 'Unknown error')}")
+        
+        print(f"\n{'='*60}")
+        print(f"Modèle {model_name} terminé. Mémoire libérée.")
+        print('='*60)
 
     # Print final summary
     print_summary(all_results)
@@ -306,4 +486,4 @@ def print_summary(results):
 if __name__ == "__main__":
     # Run benchmark for all models
     print('starting')
-    run_mmlu_for_all_models()
+    run_mmlu_single_model('gemma3:4b')

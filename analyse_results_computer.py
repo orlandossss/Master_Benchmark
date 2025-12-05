@@ -253,7 +253,9 @@ class BenchmarkAnalyzer:
         # Generate graphs for SMALL MODELS
         if small_models:
             print("\n🔹 Creating graphs for SMALL models (<2B)...")
-            small_models_list = list(small_models.keys())
+            # Sort by model size (ascending - smallest to biggest)
+            small_models_list = sorted(small_models.keys(),
+                                      key=lambda x: self._parse_model_size(small_models[x].get('model_parameters', '0B')))
             self._plot_tokens_per_second(small_models, small_models_list, output_path, suffix="_small")
             self._plot_energy_efficiency(small_models, small_models_list, output_path, suffix="_small")
             self._plot_inference_times_by_category(small_models, output_path, suffix="_small")
@@ -265,7 +267,9 @@ class BenchmarkAnalyzer:
         # Generate graphs for BIG MODELS
         if big_models:
             print("\n🔸 Creating graphs for BIG models (≥2B)...")
-            big_models_list = list(big_models.keys())
+            # Sort by model size (ascending - smallest to biggest)
+            big_models_list = sorted(big_models.keys(),
+                                    key=lambda x: self._parse_model_size(big_models[x].get('model_parameters', '0B')))
             self._plot_tokens_per_second(big_models, big_models_list, output_path, suffix="_big")
             self._plot_energy_efficiency(big_models, big_models_list, output_path, suffix="_big")
             self._plot_inference_times_by_category(big_models, output_path, suffix="_big")
@@ -276,7 +280,9 @@ class BenchmarkAnalyzer:
 
         # Generate combined graphs for ALL MODELS (optional)
         print("\n🔷 Creating combined graphs for ALL models...")
-        all_models = list(summary.keys())
+        # Sort by model size (ascending - smallest to biggest)
+        all_models = sorted(summary.keys(),
+                           key=lambda x: self._parse_model_size(summary[x].get('model_parameters', '0B')))
         self._plot_tokens_per_second(summary, all_models, output_path, suffix="_all")
         self._plot_energy_efficiency(summary, all_models, output_path, suffix="_all")
         self._plot_inference_times_by_category(summary, output_path, suffix="_all")
@@ -786,10 +792,13 @@ Only output the JSON, nothing else."""
             else:
                 big_models_set.add(model)
 
-        # Filter models that have ratings
-        small_models = [m for m in model_scores.keys() if m in small_models_set]
-        big_models = [m for m in model_scores.keys() if m in big_models_set]
-        all_models = list(model_scores.keys())
+        # Filter models that have ratings and sort by size (ascending - smallest to biggest)
+        small_models = sorted([m for m in model_scores.keys() if m in small_models_set],
+                             key=lambda x: self._parse_model_size(summary.get(x, {}).get('model_parameters', '0B')))
+        big_models = sorted([m for m in model_scores.keys() if m in big_models_set],
+                           key=lambda x: self._parse_model_size(summary.get(x, {}).get('model_parameters', '0B')))
+        all_models = sorted(model_scores.keys(),
+                           key=lambda x: self._parse_model_size(summary.get(x, {}).get('model_parameters', '0B')))
 
         print("\n📊 Generating teaching effectiveness graphs:")
         print(f"   Small models (<2B): {len(small_models)}")
