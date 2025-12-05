@@ -759,3 +759,13 @@ timestamp,model,model_parameters,tester,question,tokens_per_second,inference_tim
 2025-12-05T14:25:26.275883,deepseek-r1:7b,7B,dorian,what are the steps to write a master thesis ?,0.67,1551.275,12.378,0.255,2088,1041,0.06,0.0,2,87,8192,536576
 2025-12-05T14:51:19.162047,deepseek-r1:7b,7B,dorian,What are the pros and cons of nuclear energy ?,0.68,1601.345,12.437,0.2564,1785,1081,0.05,0.0,1,74,131072,405504
 2025-12-05T15:18:02.118741,deepseek-r1:7b,7B,dorian,I am strugulling with C++ where should i start ?,0.68,1600.861,14.884,0.2567,1532,1083,0.05,0.0,0,87,0,516096
+2025-12-05T15:54:40.254358,deepseek-r1:1.5b,"1,5B",ali,Describe gravity in simple terms for someone that doesn’t know anything about it,3.1,122.24,13.359,1.1298,345,379,0.29,0.002,11,24,45056,176128
+2025-12-05T15:56:44.106545,deepseek-r1:1.5b,"1,5B",ali,Describe gravity for someone that knows about it and wants to know more about it,3.17,191.732,2.594,1.1691,714,608,0.07,0.0,0,13,0,69632
+2025-12-05T15:59:57.449808,deepseek-r1:1.5b,"1,5B",ali,Find a good analogy to describe gravity to someone.,3.11,84.154,2.375,1.1728,93,262,0.08,0.0,0,7,0,36864
+2025-12-05T16:01:23.214728,deepseek-r1:1.5b,"1,5B",ali,give a small quiz (3 questions) about gravity,3.1,203.804,2.354,1.1706,761,631,0.06,0.0,0,13,0,69632
+2025-12-05T16:04:48.629621,deepseek-r1:1.5b,"1,5B",ali,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,3.02,112.597,3.61,1.1513,466,340,0.07,0.0,0,8,0,40960
+2025-12-05T16:06:42.838141,deepseek-r1:1.5b,"1,5B",ali,Give a common myth about gravity and explain why it is false,3.02,113.834,2.701,1.1485,241,344,0.1,0.001,0,11,0,61440
+2025-12-05T16:08:38.283109,deepseek-r1:1.5b,"1,5B",ali,Explain why a plane can fly even with gravity in simple bullet points,3.0,145.679,3.046,1.1441,610,437,0.07,0.0,0,10,0,53248
+2025-12-05T16:11:05.574237,deepseek-r1:1.5b,"1,5B",ali,what are the steps to write a master thesis ?,2.92,309.414,2.427,1.1187,1449,904,0.05,0.0,0,17,0,90112
+2025-12-05T16:16:16.599480,deepseek-r1:1.5b,"1,5B",ali,What are the pros and cons of nuclear energy ?,2.92,295.721,2.488,1.117,991,863,0.05,0.0,0,16,0,86016
+2025-12-05T16:21:13.932251,deepseek-r1:1.5b,"1,5B",ali,I am strugulling with C++ where should i start ?,2.88,390.279,2.826,1.1033,1550,1124,0.09,0.001,0,34,0,237568
