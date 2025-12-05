@@ -1,0 +1,24 @@
+{
+  "model_name": "tinyllama:latest",
+  "overall_score": 0.21428571428571427,
+  "tasks": [
+    "formal_logic",
+    "global_facts",
+    "college_computer_science",
+    "college_mathematics",
+    "marketing",
+    "high_school_macroeconomics"
+  ],
+  "task_scores": {
+    "formal_logic": 0.16666666666666666,
+    "global_facts": 0.21,
+    "college_computer_science": 0.21,
+    "college_mathematics": 0.2,
+    "marketing": 0.24786324786324787,
+    "high_school_macroeconomics": 0.2153846153846154
+  },
+  "num_tasks": 6,
+  "n_shots": 3,
+  "timestamp": "2025-12-04 14:47:32",
+  "status": "success"
+}

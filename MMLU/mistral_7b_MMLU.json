@@ -1,0 +1,24 @@
+{
+  "model_name": "mistral:7b",
+  "overall_score": 0.4942857142857143,
+  "tasks": [
+    "formal_logic",
+    "global_facts",
+    "college_computer_science",
+    "college_mathematics",
+    "marketing",
+    "high_school_macroeconomics"
+  ],
+  "task_scores": {
+    "formal_logic": 0.3888888888888889,
+    "global_facts": 0.19,
+    "college_computer_science": 0.48,
+    "college_mathematics": 0.24,
+    "marketing": 0.811965811965812,
+    "high_school_macroeconomics": 0.4846153846153846
+  },
+  "num_tasks": 6,
+  "n_shots": 3,
+  "timestamp": "2025-12-04 17:30:22",
+  "status": "success"
+}
