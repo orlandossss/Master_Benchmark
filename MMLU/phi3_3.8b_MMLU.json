@@ -1,0 +1,24 @@
+{
+  "model_name": "phi3:3.8b",
+  "overall_score": 0.5285714285714286,
+  "tasks": [
+    "formal_logic",
+    "global_facts",
+    "college_computer_science",
+    "college_mathematics",
+    "marketing",
+    "high_school_macroeconomics"
+  ],
+  "task_scores": {
+    "formal_logic": 0.48412698412698413,
+    "global_facts": 0.32,
+    "college_computer_science": 0.38,
+    "college_mathematics": 0.35,
+    "marketing": 0.6153846153846154,
+    "high_school_macroeconomics": 0.6282051282051282
+  },
+  "num_tasks": 6,
+  "n_shots": 3,
+  "timestamp": "2025-12-04 17:32:57",
+  "status": "success"
+}

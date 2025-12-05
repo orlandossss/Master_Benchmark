@@ -1,0 +1,2 @@
+model_name,overall_score,tasks,num_tasks,n_shots,timestamp,status,score_formal_logic,score_global_facts,score_college_computer_science,score_college_mathematics,score_marketing,score_high_school_macroeconomics
+granite4:3b,0.5428571428571428,"formal_logic, global_facts, college_computer_science, college_mathematics, marketing, high_school_macroeconomics",6,3,2025-12-04 17:17:58,success,0.4444444444444444,0.26,0.37,0.41,0.8076923076923077,0.5666666666666667

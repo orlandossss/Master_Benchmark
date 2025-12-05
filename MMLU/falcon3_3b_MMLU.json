@@ -1,0 +1,24 @@
+{
+  "model_name": "falcon3:3b",
+  "overall_score": 0.30095238095238097,
+  "tasks": [
+    "formal_logic",
+    "global_facts",
+    "college_computer_science",
+    "college_mathematics",
+    "marketing",
+    "high_school_macroeconomics"
+  ],
+  "task_scores": {
+    "formal_logic": 0.2857142857142857,
+    "global_facts": 0.19,
+    "college_computer_science": 0.33,
+    "college_mathematics": 0.18,
+    "marketing": 0.452991452991453,
+    "high_school_macroeconomics": 0.26666666666666666
+  },
+  "num_tasks": 6,
+  "n_shots": 3,
+  "timestamp": "2025-12-04 17:12:23",
+  "status": "success"
+}

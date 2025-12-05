@@ -1,0 +1,24 @@
+{
+  "model_name": "deepseek-r1:7b",
+  "overall_score": 0.44857142857142857,
+  "tasks": [
+    "formal_logic",
+    "global_facts",
+    "college_computer_science",
+    "college_mathematics",
+    "marketing",
+    "high_school_macroeconomics"
+  ],
+  "task_scores": {
+    "formal_logic": 0.3333333333333333,
+    "global_facts": 0.34,
+    "college_computer_science": 0.41,
+    "college_mathematics": 0.32,
+    "marketing": 0.49572649572649574,
+    "high_school_macroeconomics": 0.5282051282051282
+  },
+  "num_tasks": 6,
+  "n_shots": 3,
+  "timestamp": "2025-12-05 05:48:18",
+  "status": "success"
+}

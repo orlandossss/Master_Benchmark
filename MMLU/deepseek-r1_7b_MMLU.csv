@@ -1,0 +1,2 @@
+model_name,overall_score,tasks,num_tasks,n_shots,timestamp,status,score_formal_logic,score_global_facts,score_college_computer_science,score_college_mathematics,score_marketing,score_high_school_macroeconomics
+deepseek-r1:7b,0.44857142857142857,"formal_logic, global_facts, college_computer_science, college_mathematics, marketing, high_school_macroeconomics",6,3,2025-12-05 05:48:18,success,0.3333333333333333,0.34,0.41,0.32,0.49572649572649574,0.5282051282051282

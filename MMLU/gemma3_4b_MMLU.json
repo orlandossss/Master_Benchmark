@@ -1,0 +1,24 @@
+{
+  "model_name": "gemma3:4b",
+  "overall_score": 0.5095238095238095,
+  "tasks": [
+    "formal_logic",
+    "global_facts",
+    "college_computer_science",
+    "college_mathematics",
+    "marketing",
+    "high_school_macroeconomics"
+  ],
+  "task_scores": {
+    "formal_logic": 0.42063492063492064,
+    "global_facts": 0.26,
+    "college_computer_science": 0.4,
+    "college_mathematics": 0.34,
+    "marketing": 0.7777777777777778,
+    "high_school_macroeconomics": 0.5128205128205128
+  },
+  "num_tasks": 6,
+  "n_shots": 3,
+  "timestamp": "2025-12-04 14:27:18",
+  "status": "success"
+}
