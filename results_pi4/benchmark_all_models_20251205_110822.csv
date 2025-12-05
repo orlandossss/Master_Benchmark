@@ -1,0 +1,109 @@
+timestamp,model,model_parameters,tester,question,response,response_length_chars,estimated_tokens,inference_time_s,time_to_first_token_s,tokens_per_second,cpu_baseline_percent,cpu_average_percent,cpu_per_core,cpu_freq_mhz,memory_baseline_mb,memory_peak_mb,memory_increase_mb,memory_percent,temperature_c,throttled,avg_voltage_v,estimated_current_a,avg_power_watts,total_energy_joules,tokens_per_joule,io_read_count,io_write_count,io_read_bytes,io_write_bytes,io_read_time_ms,io_write_time_ms,io_total_ops,io_total_bytes,io_iops,io_throughput_mb_s,io_avg_read_latency_ms,io_avg_write_latency_ms
+2025-12-05T10:31:18.877583,cogito:8b,8B,dorian,Describe gravity in simple terms for someone that doesn’t know anything about it,"Imagine you're holding a ball. The Earth is also pulling on that ball with an invisible force called gravity - just like how the ball pulls down on you, but much stronger because of all the Earth's mass. This same force keeps you on the ground instead of floating away into space. Think of it like an invisible magnet that everything has inside them, pulling them toward each other and keeping things grounded to our planet.",424,85,273.343,166.93,0.31,0.0,96.0,"[9.1, 0.0, 0.0, 0.0]",1800.0,445.08,5805.4,5360.32,74.2,67.6,throttled=0x0,0.926,2.904,2.689,735.048,0.1156,11020,12,4921929728,65536,255322,158,11032,4921995264,40.36,17.172,23.17,13.17
+2025-12-05T10:35:53.838039,cogito:8b,8B,dorian,Describe gravity for someone that knows about it and wants to know more about it,"Gravity is a fundamental force of nature that causes objects with mass to attract each other. The stronger the mass, the stronger the gravitational pull - which explains why Earth pulls on you much more than the Moon does.
+
+One fascinating aspect is Einstein's theory of general relativity, which shows that gravity isn't actually a ""force"" in the traditional sense, but rather the curvature of spacetime caused by massive objects. Imagine placing a heavy bowling ball on a trampoline - it creates a dip that smaller balls naturally roll toward. That's similar to how planets create curves in spacetime.
+
+The speed of gravity is interesting too - while light moves at 299,792 km/s, gravitational waves (ripples in spacetime) can travel even faster, though they're still incredibly slow by everyday standards.
+
+At the quantum level, scientists are still working to reconcile gravity with quantum mechanics. This area of research could lead to major breakthroughs in our understanding of the universe!",999,193,258.475,12.068,0.75,0.5,99.59,"[0.0, 0.0, 0.0, 0.0]",1800.0,5804.0,5818.25,14.25,74.2,78.8,throttled=0x80000,0.926,2.99,2.769,715.671,0.2697,958,14,3964928,73728,989,76,972,4038656,3.76,0.015,1.03,5.43
+2025-12-05T10:40:13.923532,cogito:8b,8B,dorian,Find a good analogy to describe gravity to someone.,"Think of gravity like an invisible magnet that pulls everything toward each other. Just as a magnet attracts metal objects, Earth's mass creates a force that draws all objects, including people and things, toward its center. The stronger the magnet, the harder it pulls - similarly, Earth being much larger than objects on its surface makes the gravitational pull very strong.",376,71,104.443,9.955,0.68,0.0,99.61,"[0.0, 0.0, 0.0, 0.0]",1800.0,5799.39,5823.3,23.9,74.4,81.3,throttled=0x80000,0.919,2.991,2.747,286.955,0.2474,95,7,606208,40960,128,26,102,647168,0.98,0.006,1.35,3.71
+2025-12-05T10:41:59.977634,cogito:8b,8B,dorian,give a small quiz (3 questions) about gravity,"Here's a 3-question quiz about gravity:
+
+1. What force keeps planets in orbit around the sun?
+2. Why do astronauts need to maintain their speed to stay in space?
+3. How does Earth's gravity affect objects on its surface?",220,51,81.151,10.489,0.63,0.0,99.46,"[0.0, 0.0, 0.0, 0.0]",1800.0,5822.29,5833.93,11.64,74.5,81.3,throttled=0xe0000,0.912,2.987,2.724,221.049,0.2307,157,56,1859584,1249280,4311,464,213,3108864,2.62,0.037,27.46,8.29
+2025-12-05T10:43:22.739333,cogito:8b,8B,dorian,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,"In 10°C weather, you won't need a thick winter coat. A light to medium weight jacket should be plenty warm for outdoor activities like walking or shopping. However, you might want to layer with a thin sweater underneath and consider a scarf or hat since it can still feel chilly without proper head protection.",310,63,103.343,15.77,0.61,0.5,99.6,"[0.0, 0.0, 0.0, 0.0]",1800.0,5827.13,5829.77,2.63,74.5,82.3,throttled=0xe0008,0.906,2.99,2.708,279.889,0.2251,0,76,0,532480,0,2570,76,532480,0.74,0.005,0,33.82
+2025-12-05T10:45:07.692830,cogito:8b,8B,dorian,Give a common myth about gravity and explain why it is false,"A common myth about gravity is that ""objects weigh less on the Moon because its surface is made of soft, sandy ground."" This is actually a misconception - the weight difference between Earth and the Moon has nothing to do with the surface composition. The reason objects weigh less on the Moon (about 1/6th their Earth weight) is due solely to the Moon's weaker gravitational pull compared to Earth's. If you placed an object on the Moon, it would still fall towards the center at the same rate as if it were on a solid surface - the difference in weight comes from being farther from Earth's mass and thus experiencing less gravitational force.",645,131,199.184,12.839,0.66,1.0,99.63,"[0.0, 0.0, 0.0, 10.0]",1800.0,5828.87,5830.56,1.7,74.4,82.3,throttled=0xe0008,0.89,2.991,2.662,530.211,0.2471,0,11,0,61440,0,29,11,61440,0.06,0.0,0,2.64
+2025-12-05T10:48:28.487814,cogito:8b,8B,dorian,Explain why a plane can fly even with gravity in simple bullet points,"Here's why planes can fly despite gravity:
+
+• Airplanes are designed to move really fast through the air (like over 500 mph)
+
+• When they go that fast, the air moving past their wings creates an invisible upward force called ""lift""
+
+• The shape of the wing is specially curved - it's thicker on top and thinner underneath
+
+• This shape makes the air going over the top of the wing move faster than the air going under
+
+• Because air moves faster on top, it creates a lower pressure area above the wing compared to below
+
+• The difference in air pressure between the top and bottom of the wing pushes the plane up into the sky
+
+• At the same time, the wings are angled slightly upward so they're pushing down against gravity - but not enough to overcome lift's upward force
+
+So basically, a plane stays up by using its speed to create an upward push from the air around it!",872,186,287.774,15.504,0.65,0.0,99.65,"[0.0, 0.0, 0.0, 0.0]",1800.0,5817.91,5834.2,16.28,74.4,82.3,throttled=0xe0008,0.879,2.992,2.63,756.763,0.2458,0,16,0,86016,0,47,16,86016,0.06,0.0,0,2.94
+2025-12-05T10:53:17.872781,cogito:8b,8B,dorian,what are the steps to write a master thesis ?,"Here's a step-by-step guide to writing a master's thesis:
+
+1. Choose a topic that interests you and aligns with your program requirements.
+
+2. Conduct preliminary research:
+- Review existing literature
+- Identify gaps in current knowledge
+- Decide on methodology (qualitative, quantitative, or mixed methods)
+
+3. Develop a detailed research proposal including:
+- Research question/objective
+- Methodology
+- Timeline
+- Expected outcomes
+
+4. Get approval from your advisor and committee.
+
+5. Start writing:
+- Introduction (background, problem statement, research questions)
+- Literature review
+- Methodology section
+- Results/Findings
+- Discussion
+- Conclusion
+- References
+
+6. Regularly meet with your supervisor for feedback and guidance.
+
+7. Revise and edit multiple times based on feedback.
+
+8. Format according to university guidelines.
+
+9. Defend your thesis before a committee of experts.
+
+10. Make final revisions after defense if required.
+
+Remember that the process can take 6-12 months depending on your program requirements and research scope.",1053,214,332.939,12.747,0.64,0.0,99.65,"[0.0, 0.0, 0.0, 0.0]",1800.0,5814.83,5830.6,15.77,74.3,82.7,throttled=0xe0008,0.879,2.992,2.628,875.064,0.2446,0,17,0,94208,0,44,17,94208,0.05,0.0,0,2.59
+2025-12-05T10:58:52.422822,cogito:8b,8B,dorian,What are the pros and cons of nuclear energy ?,"Let me break down the main advantages and disadvantages of nuclear energy:
+
+Pros:
+- Reliable base load power generation with minimal carbon emissions, making it a potential solution to climate change
+- High energy output from a relatively small amount of fuel (uranium)
+- Low operating costs once plants are built
+- Nuclear power provides approximately 10% of global electricity
+
+Cons:
+- High initial construction costs and long build times
+- Risk of nuclear accidents (like Chernobyl and Fukushima), though modern safety systems have greatly reduced this risk
+- Challenges with radioactive waste disposal and storage
+- Public perception issues due to fear of radiation and past accidents
+- Uranium mining can have environmental impacts
+
+These factors make nuclear energy a complex issue that countries must carefully weigh in their energy planning.",849,156,254.714,13.386,0.61,0.0,99.63,"[0.0, 0.0, 0.0, 0.0]",1800.0,5813.29,5879.87,66.58,74.8,82.7,throttled=0xe0008,0.877,2.991,2.622,667.884,0.2336,1278,101,153792512,82403328,7080,91211,1379,236195840,5.41,0.884,5.54,903.08
+2025-12-05T11:03:08.748654,cogito:8b,8B,dorian,I am strugulling with C++ where should i start ?,"Let me help you get started with C++! Here's a simple path to follow:
+
+1. First, understand that C++ is a versatile language used in game development, system programming, and more.
+
+2. Start by learning:
+   - Basic syntax: variables, data types (int, float, char)
+   - Control structures: if-else statements, loops
+   - Functions
+   - Arrays
+
+3. Choose a good starting resource:
+   - ""C++ Primer"" by Stanley Lippman
+   - Online platforms like Codecademy or Coursera
+   - Practice with simple programs first
+
+4. Once you're comfortable with basics, learn about:
+   - Object-Oriented Programming (OOP) concepts
+   - Classes and objects
+   - Pointers and references
+   - Memory management
+
+Remember: Start small, practice regularly, and don't be afraid to make mistakes! What would you like to know first?",802,194,312.89,16.294,0.62,1.0,99.64,"[10.0, 0.0, 0.0, 18.2]",1800.0,5848.75,5833.8,-14.95,74.4,82.7,throttled=0xe0008,0.875,2.991,2.616,818.657,0.237,0,128,0,54673408,0,16858,128,54673408,0.41,0.167,0,131.7
