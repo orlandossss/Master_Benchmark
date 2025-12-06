@@ -1,6 +1,6 @@
 {
   "model_name": "exaone-deep:2.4b",
-  "overall_score": 0.0,
+  "overall_score": 0.2742857142857143,
   "tasks": [
     "formal_logic",
     "global_facts",
@@ -10,15 +10,15 @@
     "high_school_macroeconomics"
   ],
   "task_scores": {
-    "formal_logic": 0.0,
-    "global_facts": 0.0,
-    "college_computer_science": 0.0,
-    "college_mathematics": 0.0,
-    "marketing": 0.0,
-    "high_school_macroeconomics": 0.0
+    "formal_logic": 0.2619047619047619,
+    "global_facts": 0.26,
+    "college_computer_science": 0.3,
+    "college_mathematics": 0.23,
+    "marketing": 0.2564102564102564,
+    "high_school_macroeconomics": 0.29743589743589743
   },
   "num_tasks": 6,
   "n_shots": 3,
-  "timestamp": "2025-12-04 15:21:32",
+  "timestamp": "2025-12-05 23:55:49",
   "status": "success"
 }
