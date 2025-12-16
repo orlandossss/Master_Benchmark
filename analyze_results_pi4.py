@@ -225,7 +225,7 @@ class BenchmarkAnalyzer:
             print(f"  Avg Read Latency: {stats['avg_io_read_latency_ms']} ms")
             print(f"  Avg Write Latency: {stats['avg_io_write_latency_ms']} ms")
 
-    def generate_graphs(self, output_dir="./analysis_graphs_pi4"):
+    def generate_graphs(self, output_dir="./final_result"):
         """Generate visualization graphs for the benchmark results"""
         if not MATPLOTLIB_AVAILABLE:
             print("Cannot generate graphs: matplotlib not installed")
@@ -260,6 +260,7 @@ class BenchmarkAnalyzer:
             self._plot_energy_efficiency(small_models, small_models_list, output_path, suffix="_small")
             self._plot_inference_times_by_category(small_models, output_path, suffix="_small")
             self._plot_response_analysis_by_category(small_models, output_path, suffix="_small")
+            self._plot_response_length(small_models, small_models_list, output_path, suffix="_small")
             self._plot_resource_usage(small_models, small_models_list, output_path, suffix="_small")
             self._plot_radar_chart(small_models, small_models_list, output_path, suffix="_small")
             self._plot_io_metrics(small_models, small_models_list, output_path, suffix="_small")
@@ -274,6 +275,7 @@ class BenchmarkAnalyzer:
             self._plot_energy_efficiency(big_models, big_models_list, output_path, suffix="_big")
             self._plot_inference_times_by_category(big_models, output_path, suffix="_big")
             self._plot_response_analysis_by_category(big_models, output_path, suffix="_big")
+            self._plot_response_length(big_models, big_models_list, output_path, suffix="_big")
             self._plot_resource_usage(big_models, big_models_list, output_path, suffix="_big")
             self._plot_radar_chart(big_models, big_models_list, output_path, suffix="_big")
             self._plot_io_metrics(big_models, big_models_list, output_path, suffix="_big")
@@ -287,6 +289,7 @@ class BenchmarkAnalyzer:
         self._plot_energy_efficiency(summary, all_models, output_path, suffix="_all")
         self._plot_inference_times_by_category(summary, output_path, suffix="_all")
         self._plot_response_analysis_by_category(summary, output_path, suffix="_all")
+        self._plot_response_length(summary, all_models, output_path, suffix="_all")
         self._plot_resource_usage(summary, all_models, output_path, suffix="_all")
         self._plot_radar_chart(summary, all_models, output_path, suffix="_all")
         self._plot_io_metrics(summary, all_models, output_path, suffix="_all")
@@ -433,6 +436,39 @@ class BenchmarkAnalyzer:
 
         plt.tight_layout()
         filename = f'response_vs_performance{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
+        plt.close()
+        print(f"  Created: {filename}")
+
+    def _plot_response_length(self, summary, models, output_path, suffix=""):
+        """Plot average response length comparison"""
+        if not models:
+            return
+
+        fig, ax = plt.subplots(figsize=(12, 6))
+
+        x_pos = range(len(models))
+        lengths = [summary[m]['avg_response_length'] for m in models]
+
+        # Color code by length (higher = more green)
+        colors = plt.cm.Blues([l/max(lengths) if max(lengths) > 0 else 0 for l in lengths])
+        bars = ax.bar(x_pos, lengths, color=colors, alpha=0.8, edgecolor='navy', linewidth=1.2)
+
+        ax.set_xlabel('Model', fontsize=12)
+        ax.set_ylabel('Average Response Length (characters)', fontsize=12)
+        category_label = " - Small Models (<2B)" if suffix == "_small" else " - Big Models (≥2B)" if suffix == "_big" else ""
+        ax.set_title(f'Average Response Length{category_label}', fontsize=14, fontweight='bold')
+        ax.set_xticks(x_pos)
+        ax.set_xticklabels([m.replace(':', '\n') for m in models], rotation=0)
+        ax.grid(axis='y', alpha=0.3)
+
+        # Add value labels on bars
+        for bar, length in zip(bars, lengths):
+            ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + max(lengths)*0.01,
+                   f'{int(length)}', ha='center', va='bottom', fontweight='bold', fontsize=10)
+
+        plt.tight_layout()
+        filename = f'response_length{suffix}.png'
         plt.savefig(output_path / filename, dpi=150)
         plt.close()
         print(f"  Created: {filename}")
@@ -760,7 +796,7 @@ Only output the JSON, nothing else."""
             print(f"  Score Range: {stats['min_score']} - {stats['max_score']}")
             print(f"  Responses Rated: {stats['num_rated']}")
 
-    def plot_teaching_scores(self, output_dir="./analysis_graphs_pi4"):
+    def plot_teaching_scores(self, output_dir="./final_result"):
         """Generate visualizations for teaching effectiveness scores"""
         if not MATPLOTLIB_AVAILABLE:
             print("Cannot generate graphs: matplotlib not installed")

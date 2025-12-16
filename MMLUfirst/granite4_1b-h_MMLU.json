@@ -1,0 +1,24 @@
+{
+  "model_name": "granite4:1b-h",
+  "overall_score": 0.26761904761904765,
+  "tasks": [
+    "formal_logic",
+    "global_facts",
+    "college_computer_science",
+    "college_mathematics",
+    "marketing",
+    "high_school_macroeconomics"
+  ],
+  "task_scores": {
+    "formal_logic": 0.40476190476190477,
+    "global_facts": 0.23,
+    "college_computer_science": 0.32,
+    "college_mathematics": 0.24,
+    "marketing": 0.2692307692307692,
+    "high_school_macroeconomics": 0.22564102564102564
+  },
+  "num_tasks": 6,
+  "n_shots": 3,
+  "timestamp": "2025-12-06 19:19:53",
+  "status": "success"
+}

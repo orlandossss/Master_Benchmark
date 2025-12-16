@@ -1,0 +1,2 @@
+model_name,overall_score,tasks,num_tasks,n_shots,timestamp,status,score_formal_logic,score_global_facts,score_college_computer_science,score_college_mathematics,score_marketing,score_high_school_macroeconomics
+phi4-mini-reasoning:3.8b,0.3514285714285714,"formal_logic, global_facts, college_computer_science, college_mathematics, marketing, high_school_macroeconomics",6,3,2025-12-06 03:45:01,success,0.3253968253968254,0.38,0.37,0.38,0.358974358974359,0.33589743589743587

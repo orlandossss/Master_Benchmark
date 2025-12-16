@@ -1,0 +1,2 @@
+model_name,overall_score,tasks,num_tasks,n_shots,timestamp,status,score_formal_logic,score_global_facts,score_college_computer_science,score_college_mathematics,score_marketing,score_high_school_macroeconomics
+qwen3:1.7b,0.5723809523809524,"formal_logic, global_facts, college_computer_science, college_mathematics, marketing, high_school_macroeconomics",6,3,2025-12-05 02:18:45,success,0.4365079365079365,0.34,0.54,0.4,0.7735042735042735,0.6076923076923076

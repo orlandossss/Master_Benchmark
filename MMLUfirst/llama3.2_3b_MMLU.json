@@ -1,0 +1,24 @@
+{
+  "model_name": "llama3.2:3b",
+  "overall_score": 0.23904761904761904,
+  "tasks": [
+    "formal_logic",
+    "global_facts",
+    "college_computer_science",
+    "college_mathematics",
+    "marketing",
+    "high_school_macroeconomics"
+  ],
+  "task_scores": {
+    "formal_logic": 0.1984126984126984,
+    "global_facts": 0.29,
+    "college_computer_science": 0.28,
+    "college_mathematics": 0.26,
+    "marketing": 0.25213675213675213,
+    "high_school_macroeconomics": 0.2153846153846154
+  },
+  "num_tasks": 6,
+  "n_shots": 3,
+  "timestamp": "2025-12-04 17:26:34",
+  "status": "success"
+}

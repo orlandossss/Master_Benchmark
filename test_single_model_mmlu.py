@@ -486,4 +486,4 @@ def print_summary(results):
 if __name__ == "__main__":
     # Run benchmark for all models
     print('starting')
-    run_mmlu_single_model('gemma3:4b')
+    run_mmlu_single_model('granite4:1b-h')

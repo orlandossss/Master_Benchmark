@@ -1,0 +1,2 @@
+model_name,overall_score,tasks,num_tasks,n_shots,timestamp,status,score_formal_logic,score_global_facts,score_college_computer_science,score_college_mathematics,score_marketing,score_high_school_macroeconomics
+exaone-deep:2.4b,0.2742857142857143,"formal_logic, global_facts, college_computer_science, college_mathematics, marketing, high_school_macroeconomics",6,3,2025-12-05 23:55:49,success,0.2619047619047619,0.26,0.3,0.23,0.2564102564102564,0.29743589743589743

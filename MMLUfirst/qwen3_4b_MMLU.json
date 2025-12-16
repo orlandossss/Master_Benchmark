@@ -1,0 +1,24 @@
+{
+  "model_name": "qwen3:4b",
+  "overall_score": 0.4685714285714286,
+  "tasks": [
+    "formal_logic",
+    "global_facts",
+    "college_computer_science",
+    "college_mathematics",
+    "marketing",
+    "high_school_macroeconomics"
+  ],
+  "task_scores": {
+    "formal_logic": 0.3412698412698413,
+    "global_facts": 0.27,
+    "college_computer_science": 0.45,
+    "college_mathematics": 0.46,
+    "marketing": 0.6367521367521367,
+    "high_school_macroeconomics": 0.4666666666666667
+  },
+  "num_tasks": 6,
+  "n_shots": 3,
+  "timestamp": "2025-12-05 16:09:28",
+  "status": "success"
+}
