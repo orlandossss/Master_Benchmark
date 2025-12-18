@@ -821,3 +821,13 @@ timestamp,model,model_parameters,tester,question,tokens_per_second,inference_tim
 2025-12-10T17:19:29.536840,granite4:3b-h,1B,matevz,I am strugulling with C++ where should i start ?,3.51,165.252,6.327,1.3792,2823,580,0.08,0.0,0,13,0,69632
 2025-12-10T18:18:28.529681,granite4:1b-h,1B,matevz,Describe gravity in simple terms for someone that doesn’t know anything about it,4.91,19.143,3.286,1.8346,458,94,1.15,0.017,4,18,57344,286720
 2025-12-10T18:18:49.280152,granite4:1b-h,1B,matevz,Describe gravity for someone that knows about it and wants to know more about it,5.61,91.22,2.26,2.0769,2602,512,0.07,0.0,0,6,0,32768
+2025-12-17T11:28:30.135412,granite4:tiny-h,7,Dorian,Describe gravity in simple terms for someone that doesn’t know anything about it,40.28,40.29,2.433,2.432,-0.483,0.382,0.381,N/A,479,98
+2025-12-17T11:28:34.179527,granite4:tiny-h,7,Dorian,Describe gravity for someone that knows about it and wants to know more about it,44.92,44.93,3.117,3.116,-0.257,0.301,0.301,N/A,708,140
+2025-12-17T11:28:38.905165,granite4:tiny-h,7,Dorian,Find a good analogy to describe gravity to someone.,39.87,39.87,1.881,1.881,0.186,0.442,0.442,N/A,385,75
+2025-12-17T11:28:42.397050,granite4:tiny-h,7,Dorian,give a small quiz (3 questions) about gravity,22.56,22.56,3.946,3.945,-0.504,2.265,2.265,N/A,427,89
+2025-12-17T11:28:47.952097,granite4:tiny-h,7,Dorian,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,18.47,18.47,2.599,2.598,-0.323,1.611,1.611,N/A,224,48
+2025-12-17T11:28:52.159130,granite4:tiny-h,7,Dorian,Give a common myth about gravity and explain why it is false,44.25,44.26,2.373,2.372,-0.661,0.289,0.288,N/A,545,105
+2025-12-17T11:28:56.144242,granite4:tiny-h,7,Dorian,Explain why a plane can fly even with gravity in simple bullet points,48.7,48.71,2.834,2.833,-0.283,0.31,0.31,N/A,708,138
+2025-12-17T11:29:00.587877,granite4:tiny-h,7,Dorian,what are the steps to write a master thesis ?,50.48,50.48,7.667,7.667,-0.245,0.268,0.268,N/A,2058,387
+2025-12-17T11:29:09.864162,granite4:tiny-h,7,Dorian,What are the pros and cons of nuclear energy ?,49.83,49.83,3.672,3.672,-0.143,0.163,0.163,N/A,975,183
+2025-12-17T11:29:15.145067,granite4:tiny-h,7,Dorian,I am strugulling with C++ where should i start ?,47.66,47.66,8.141,8.14,-0.606,0.298,0.297,N/A,1969,388

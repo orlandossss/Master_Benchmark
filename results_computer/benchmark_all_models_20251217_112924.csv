@@ -1,0 +1,82 @@
+timestamp,model,model_parameters,tester,question,response,response_length_chars,estimated_tokens,inference_time_s,time_to_first_token_s,tokens_per_second,inference_time_perf_s,time_to_first_token_perf_s,tokens_per_second_perf,timing_diff_ms,cpu_baseline_percent,cpu_average_percent,cpu_per_core,cpu_freq_mhz,memory_baseline_mb,memory_peak_mb,memory_increase_mb,memory_percent
+2025-12-17T11:28:30.135412,granite4:tiny-h,7,Dorian,Describe gravity in simple terms for someone that doesn’t know anything about it,"Gravity is a force that pulls things towards each other. It's why when you drop something, it falls to the ground instead of floating away. The more massive an object is, like the Earth, the stronger its gravitational pull. That's also why we stay firmly on the ground and don't float off into space. Gravity keeps planets orbiting around stars and moons orbiting around planets too. It's a fundamental force that governs how everything in the universe interacts with each other.",479,98,2.433,0.382,40.28,2.432,0.381,40.29,-0.483,7.6,28.48,"[0.0, 16.7, 28.6, 0.0, 14.3, 0.0, 0.0, 16.7, 0.0, 16.7, 16.7, 16.7, 14.3, 14.3, 0.0, 0.0]",2560.0,13857.48,13886.83,29.35,88.3
+2025-12-17T11:28:34.179527,granite4:tiny-h,7,Dorian,Describe gravity for someone that knows about it and wants to know more about it,"Gravity is a fundamental force of nature that causes objects with mass to attract each other. It's what keeps planets in orbit around stars, and why we don't float off into space here on Earth. The strength of the gravitational pull depends on the masses of the objects involved and how far apart they are. Einstein's theory of general relativity describes gravity not as a force, but as a curvature or warping of spacetime caused by mass. This is why massive objects like stars can bend light - their enormous mass curves the fabric of spacetime itself around them. Gravity plays a crucial role in shaping the universe on cosmic scales, from the orbits of planets to the formation and evolution of galaxies.",708,140,3.117,0.301,44.92,3.116,0.301,44.93,-0.257,25.1,42.5,"[16.7, 28.6, 16.7, 0.0, 0.0, 16.7, 14.3, 16.7, 0.0, 14.3, 33.3, 33.3, 16.7, 16.7, 0.0, 14.3]",2560.0,13948.32,14037.73,89.42,87.0
+2025-12-17T11:28:38.905165,granite4:tiny-h,7,Dorian,Find a good analogy to describe gravity to someone.,"Gravity is like an invisible force that pulls objects toward each other, kind of like how a magnet sticks to metal. The bigger something is, the stronger its pull - just like how Earth's gravity keeps us from floating off into space! Things farther apart are pulled less strongly than things closer together. It's this invisible tug that makes apples fall down and planets orbit stars.",385,75,1.881,0.442,39.87,1.881,0.442,39.87,0.186,4.3,30.55,"[62.5, 0.0, 33.3, 16.7, 16.7, 0.0, 28.6, 14.3, 28.6, 14.3, 16.7, 28.6, 14.3, 0.0, 16.7, 16.7]",2560.0,13635.77,13686.13,50.36,87.2
+2025-12-17T11:28:42.397050,granite4:tiny-h,7,Dorian,give a small quiz (3 questions) about gravity,"Sure thing! Here are three questions to test your knowledge of gravity:
+
+1. What causes objects to fall towards the ground when you drop them?
+2. How does the mass of an object affect its gravitational pull on other objects? 
+3. What did Sir Isaac Newton famously discover about gravity?
+
+Take a guess at each question before moving onto the next one! Let me know if any of these questions confuse you and I'll clarify further.",427,89,3.946,2.265,22.56,3.945,2.265,22.56,-0.504,12.8,29.28,"[16.7, 16.7, 16.7, 20.0, 50.0, 0.0, 0.0, 50.0, 16.7, 16.7, 40.0, 33.3, 33.3, 0.0, 16.7, 0.0]",3201.0,13672.28,13585.77,-86.51,86.6
+2025-12-17T11:28:47.952097,granite4:tiny-h,7,Dorian,Do you think I need a big jacket if the weather is 10 degrees Celsius ?,"Yes, at around 10 degrees Celsius (50°F), it would be quite chilly! You'd likely want something warm like a thick coat or sweater. A light jacket might not provide enough warmth to stay comfortable in that temperature range.",224,48,2.599,1.611,18.47,2.598,1.611,18.47,-0.323,16.4,36.93,"[0.0, 0.0, 0.0, 0.0, 0.0, 16.7, 0.0, 16.7, 0.0, 0.0, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,13465.91,13516.1,50.19,85.9
+2025-12-17T11:28:52.159130,granite4:tiny-h,7,Dorian,Give a common myth about gravity and explain why it is false,"Myth: Objects fall to Earth at the same speed regardless of their mass. 
+Reality: While all objects accelerate equally under gravity, they don't hit the ground simultaneously when dropped from the same height because other forces like air resistance also play a role. In a vacuum where there's no air resistance (like in space), two identical objects would fall and hit the ground at exactly the same time, regardless of their mass or shape. This is contrary to the common misconception that heavier objects always fall faster than lighter ones.",545,105,2.373,0.289,44.25,2.372,0.288,44.26,-0.661,7.3,37.73,"[33.3, 33.3, 16.7, 33.3, 16.7, 33.3, 50.0, 66.7, 16.7, 50.0, 33.3, 50.0, 16.7, 50.0, 16.7, 28.6]",2560.0,13446.9,13556.49,109.59,86.5
+2025-12-17T11:28:56.144242,granite4:tiny-h,7,Dorian,Explain why a plane can fly even with gravity in simple bullet points,"- Gravity pulls everything down towards Earth's center.
+- However, planes are designed to work against this pull of gravity. 
+- They have wings shaped like an airfoil which allows air to flow faster over the top than underneath.
+- This difference in speed creates a pressure difference - lower pressure above and higher pressure below the wing.
+- The higher pressure beneath pushes the plane upwards, counteracting the downward force of gravity. This upward push is called lift.
+- As long as the lift generated by the wings exceeds the downward pull of gravity, the plane will stay airborne.
+- So even though gravity exists, planes are built to overcome it using their aerodynamic design and engines' thrust.",708,138,2.834,0.31,48.7,2.833,0.31,48.71,-0.283,13.6,30.59,"[25.0, 42.9, 14.3, 14.3, 0.0, 14.3, 42.9, 50.0, 0.0, 0.0, 75.0, 42.9, 14.3, 14.3, 14.3, 25.0]",3201.0,13576.75,13582.63,5.88,86.5
+2025-12-17T11:29:00.587877,granite4:tiny-h,7,Dorian,what are the steps to write a master thesis ?,"Alright, writing a master's thesis involves several key steps:
+
+1. Choose a topic: Pick a subject you're interested in and that fits within your program requirements.
+
+2. Conduct background research: Gather existing information about your topic to identify gaps or areas for further exploration.
+
+3. Develop a hypothesis or research question: Based on your findings, formulate a clear statement of what you want to investigate or prove in your thesis.
+
+4. Create an outline: Organize your thoughts and plan the structure of your thesis, including chapters, sections, and main points.
+
+5. Collect data: Gather information through surveys, experiments, interviews, or by analyzing existing data sources relevant to your topic.
+
+6. Analyze data: Use appropriate methods (e.g., statistical analysis) to interpret your findings and draw conclusions related to your hypothesis or research question.
+
+7. Write the introduction: Provide background information on your topic, state your research question, and explain the significance of your study.
+
+8. Present your methodology: Describe how you conducted your research, including data collection methods, tools used, and any challenges faced during the process.
+
+9. Discuss results: Present your findings in a clear, organized manner, using tables, graphs, or other visual aids to support your conclusions.
+
+10. Analyze results: Interpret your findings, discuss their implications, and compare them with existing research on your topic.
+
+11. Write the conclusion: Summarize your main points, restate the significance of your study, and suggest future directions for further research.
+
+12. Create a reference list: Compile all sources cited in your thesis using the appropriate citation style (e.g., APA, MLA).
+
+13. Proofread and edit: Review your thesis for clarity, coherence, grammar, and formatting errors before submission.
+
+Remember, each step is crucial in ensuring that your master's thesis makes an original contribution to your field of study while demonstrating a deep understanding of the subject matter.",2058,387,7.667,0.268,50.48,7.667,0.268,50.48,-0.245,19.6,35.94,"[28.6, 16.7, 0.0, 0.0, 16.7, 16.7, 16.7, 16.7, 0.0, 0.0, 0.0, 16.7, 16.7, 0.0, 0.0, 0.0]",2560.0,13623.11,13640.95,17.84,85.3
+2025-12-17T11:29:09.864162,granite4:tiny-h,7,Dorian,What are the pros and cons of nuclear energy ?,"Alright, let's break down the pros and cons of nuclear energy:
+
+Pros:
+1. Nuclear power plants have a high capacity factor, meaning they can generate electricity consistently and reliably.
+2. They produce minimal greenhouse gas emissions compared to fossil fuel-based power generation.
+3. Nuclear reactors require less space than other types of power plants to generate large amounts of electricity.
+
+Cons: 
+1. The spent nuclear fuel is highly radioactive and remains hazardous for thousands of years, posing storage and disposal challenges.
+2. There's a risk of catastrophic accidents at nuclear power plants, which can lead to widespread contamination (e.g., Chernobyl, Fukushima).
+3. The cost of building and decommissioning nuclear reactors can be very high compared to other energy sources.
+
+Overall, while nuclear energy offers some benefits in terms of reliability and low emissions, it also raises concerns about waste management, safety risks, and high upfront costs.",975,183,3.672,0.163,49.83,3.672,0.163,49.83,-0.143,9.7,30.88,"[0.0, 16.7, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",2560.0,13481.76,13486.68,4.93,85.3
+2025-12-17T11:29:15.145067,granite4:tiny-h,7,Dorian,I am strugulling with C++ where should i start ?,"Hey there! Getting started with C++ can feel overwhelming, but don't worry - let's break it down step-by-step:
+
+First off, make sure you have a good text editor or IDE (Integrated Development Environment) installed. Some popular options are Visual Studio Code, Eclipse, or even the command line using GCC/G++. This is where you'll write and run your C++ code.
+
+Next, focus on learning the basics of the language syntax. Start with simple programs like ""Hello, World!"" to get comfortable with writing and compiling code. Then move on to variables, data types (like int, float, string), and basic input/output using cin/cout.
+
+Once you grasp the fundamentals, dive into control structures - if statements, for loops, while loops. These let your program make decisions and repeat actions based on conditions. 
+
+From there, explore functions! Functions help break down code into reusable blocks that perform specific tasks. Learn about function parameters, return types, and how to call them.
+
+Next up are arrays and strings. Arrays allow you to store multiple values of the same type in a single variable. Strings are essentially arrays of characters used for text manipulation.
+
+As you progress, tackle more complex topics like pointers (which deal with memory addresses) and object-oriented programming concepts such as classes, objects, inheritance, and polymorphism. These might seem challenging at first but they're incredibly powerful tools once mastered.
+
+Don't forget to practice consistently! Write small programs, solve coding challenges on platforms like LeetCode or HackerRank, and gradually work your way up to larger projects.
+
+Lastly, join online communities (like Stack Overflow, Reddit's r/cpp) or study groups. Interacting with other learners can help clarify doubts and motivate you through the learning process.
+
+Remember, Rome wasn't built in a day - take it one step at a time, and soon enough, you'll be writing efficient C++ programs! Happy coding!",1969,388,8.141,0.298,47.66,8.14,0.297,47.66,-0.606,13.7,39.01,"[0.0, 16.7, 0.0, 16.7, 16.7, 0.0, 33.3, 16.7, 0.0, 0.0, 33.3, 33.3, 16.7, 16.7, 0.0, 16.7]",2560.0,13417.93,13607.42,189.49,86.7

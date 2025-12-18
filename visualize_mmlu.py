@@ -67,17 +67,45 @@ def _parse_model_size(model_name):
     return 0.0
 
 
+def _get_model_category_override(model_name):
+    """Manual override for specific models that need special categorization"""
+    # Models that should be in big category regardless of parameter count
+    big_model_overrides = [
+        'granite4:tiny-h',
+        'granite4:3b-h',
+        'granite-tiny',
+        'granite3-dense:2b',
+        'granite-3b',
+    ]
+
+    model_lower = model_name.lower()
+    for override in big_model_overrides:
+        if override.lower() in model_lower:
+            return 'big'
+
+    return None  # No override, use normal categorization
+
+
 def categorize_models(results):
     """Categorize models into small (<2B) and big (≥2B)"""
     small_models = []
     big_models = []
 
     for result in results:
-        model_size = _parse_model_size(result['model_name'])
-        if model_size < 2.0:
-            small_models.append(result)
-        else:
+        model_name = result['model_name']
+
+        # Check for manual override first
+        override = _get_model_category_override(model_name)
+
+        if override == 'big':
             big_models.append(result)
+        else:
+            # Use automatic categorization based on parameter size
+            model_size = _parse_model_size(model_name)
+            if model_size < 2.0:
+                small_models.append(result)
+            else:
+                big_models.append(result)
 
     return small_models, big_models
 

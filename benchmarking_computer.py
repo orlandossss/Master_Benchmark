@@ -4,6 +4,7 @@ Ollama Performance Monitoring Tool - Enhanced Version
 Measures inference time, CPU usage, power consumption, and energy efficiency
 """
 
+from huggingface_hub import model_info
 import ollama
 import time
 import psutil
@@ -268,7 +269,7 @@ Rules:
         # Small models (<= 1.4B) struggle with system prompts, so use raw questions
         # Larger models can handle system prompts properly
         model_size_b = self._parse_model_size(model_info.get('parameters', '0B'))
-
+    
         if model_size_b > 1.4:
             # Use system prompt for larger models
             messages = [

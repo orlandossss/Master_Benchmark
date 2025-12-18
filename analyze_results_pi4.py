@@ -58,13 +58,47 @@ class BenchmarkAnalyzer:
         self._load_all_results()
 
     def _parse_model_size(self, param_str):
-        """Parse model size from parameter string (e.g., '1,7B' -> 1.7)"""
+        """Parse model size from parameter string (e.g., '1,7B' -> 1.7, '500M' -> 0.5)"""
         try:
-            # Remove 'B' and replace comma with dot
-            size_str = param_str.upper().replace('B', '').replace(',', '.').strip()
+            if not param_str or param_str == 'unknown':
+                return 0.0
+
+            # Convert to uppercase for consistent parsing
+            param_upper = str(param_str).upper().strip()
+
+            # Handle millions (M) - convert to billions
+            if 'M' in param_upper:
+                size_str = param_upper.replace('M', '').replace(',', '.').strip()
+                return float(size_str) / 1000.0  # Convert millions to billions
+
+            # Handle billions (B)
+            if 'B' in param_upper:
+                size_str = param_upper.replace('B', '').replace(',', '.').strip()
+                return float(size_str)
+
+            # If no unit, assume it's already a number in billions
+            size_str = param_upper.replace(',', '.').strip()
             return float(size_str)
-        except (ValueError, AttributeError):
+
+        except (ValueError, AttributeError, TypeError):
+            # Return 0 for unparseable values
             return 0.0
+
+    def _get_model_category_override(self, model_name):
+        """Manual override for specific models that need special categorization"""
+        # Models that should be in big category regardless of parameter count
+        big_model_overrides = [
+            'granite4:tiny-h',
+            'granite3-dense:2b',
+            'granite4:3b-h',
+        ]
+
+        model_lower = model_name.lower()
+        for override in big_model_overrides:
+            if override.lower() in model_lower:
+                return 'big'
+
+        return None  # No override, use normal categorization
 
     def _categorize_models(self, summary):
         """Categorize models into small (<2B) and big (≥2B) based on parameters"""
@@ -72,11 +106,18 @@ class BenchmarkAnalyzer:
         big_models = {}
 
         for model, stats in summary.items():
-            model_size = self._parse_model_size(stats.get('model_parameters', '0B'))
-            if model_size < 2.0:
-                small_models[model] = stats
-            else:
+            # Check for manual override first
+            override = self._get_model_category_override(model)
+
+            if override == 'big':
                 big_models[model] = stats
+            else:
+                # Use automatic categorization based on parameter size
+                model_size = self._parse_model_size(stats.get('model_parameters', '0B'))
+                if model_size < 2.0:
+                    small_models[model] = stats
+                else:
+                    big_models[model] = stats
 
         return small_models, big_models
 
@@ -131,6 +172,10 @@ class BenchmarkAnalyzer:
 
             # Extract I/O metrics
             io_iops = [r.get('io_iops', 0) for r in results if r.get('io_iops')]
+            # Separate cold start (Q1) from warm operation (Q2-10)
+            io_iops_cold = [results[0].get('io_iops', 0)] if results and results[0].get('io_iops') else []
+            io_iops_warm = [r.get('io_iops', 0) for r in results[1:] if r.get('io_iops')]
+
             io_throughput = [r.get('io_throughput_mb_s', 0) for r in results if r.get('io_throughput_mb_s')]
             io_read_count = [r.get('io_read_count', 0) for r in results if r.get('io_read_count')]
             io_write_count = [r.get('io_write_count', 0) for r in results if r.get('io_write_count')]
@@ -170,6 +215,8 @@ class BenchmarkAnalyzer:
 
                 # I/O metrics
                 'avg_io_iops': round(statistics.mean(io_iops), 2) if io_iops else 0,
+                'avg_io_iops_cold_start': round(statistics.mean(io_iops_cold), 2) if io_iops_cold else 0,
+                'avg_io_iops_warm': round(statistics.mean(io_iops_warm), 2) if io_iops_warm else 0,
                 'avg_io_throughput_mb_s': round(statistics.mean(io_throughput), 3) if io_throughput else 0,
                 'total_io_read_count': sum(io_read_count) if io_read_count else 0,
                 'total_io_write_count': sum(io_write_count) if io_write_count else 0,
@@ -216,7 +263,9 @@ class BenchmarkAnalyzer:
             print(f"  Avg Temperature: {stats['avg_temperature_c']}C")
 
             print("\nDISK I/O METRICS:")
-            print(f"  Avg IOPS: {stats['avg_io_iops']}")
+            print(f"  Avg IOPS (All Questions): {stats['avg_io_iops']}")
+            print(f"  Cold Start IOPS (Q1): {stats['avg_io_iops_cold_start']}")
+            print(f"  Warm IOPS (Q2-10): {stats['avg_io_iops_warm']}")
             print(f"  Avg Throughput: {stats['avg_io_throughput_mb_s']} MB/s")
             print(f"  Total Read Operations: {stats['total_io_read_count']}")
             print(f"  Total Write Operations: {stats['total_io_write_count']}")
@@ -253,30 +302,56 @@ class BenchmarkAnalyzer:
         # Generate graphs for SMALL MODELS
         if small_models:
             print("\n🔹 Creating graphs for SMALL models (<2B)...")
+
+            # Debug: print model sizes before sorting
+            print("\n  Model sizes (for sorting):")
+            for model, stats in small_models.items():
+                param_str = stats.get('model_parameters', '0B')
+                parsed_size = self._parse_model_size(param_str)
+                print(f"    {model}: '{param_str}' -> {parsed_size}B")
+
             # Sort by model size (ascending - smallest to biggest)
             small_models_list = sorted(small_models.keys(),
                                       key=lambda x: self._parse_model_size(small_models[x].get('model_parameters', '0B')))
+
+            print(f"\n  Sorted order: {small_models_list}\n")
             self._plot_tokens_per_second(small_models, small_models_list, output_path, suffix="_small")
             self._plot_energy_efficiency(small_models, small_models_list, output_path, suffix="_small")
             self._plot_inference_times_by_category(small_models, output_path, suffix="_small")
             self._plot_response_analysis_by_category(small_models, output_path, suffix="_small")
             self._plot_response_length(small_models, small_models_list, output_path, suffix="_small")
             self._plot_resource_usage(small_models, small_models_list, output_path, suffix="_small")
+            self._plot_ttft_first_vs_average(small_models, small_models_list, output_path, suffix="_small")
+            self._plot_inference_time_first_vs_average(small_models, small_models_list, output_path, suffix="_small")
+            self._plot_iops_first_vs_average(small_models, small_models_list, output_path, suffix="_small")
             self._plot_radar_chart(small_models, small_models_list, output_path, suffix="_small")
             self._plot_io_metrics(small_models, small_models_list, output_path, suffix="_small")
 
         # Generate graphs for BIG MODELS
         if big_models:
             print("\n🔸 Creating graphs for BIG models (≥2B)...")
+
+            # Debug: print model sizes before sorting
+            print("\n  Model sizes (for sorting):")
+            for model, stats in big_models.items():
+                param_str = stats.get('model_parameters', '0B')
+                parsed_size = self._parse_model_size(param_str)
+                print(f"    {model}: '{param_str}' -> {parsed_size}B")
+
             # Sort by model size (ascending - smallest to biggest)
             big_models_list = sorted(big_models.keys(),
                                     key=lambda x: self._parse_model_size(big_models[x].get('model_parameters', '0B')))
+
+            print(f"\n  Sorted order: {big_models_list}\n")
             self._plot_tokens_per_second(big_models, big_models_list, output_path, suffix="_big")
             self._plot_energy_efficiency(big_models, big_models_list, output_path, suffix="_big")
             self._plot_inference_times_by_category(big_models, output_path, suffix="_big")
             self._plot_response_analysis_by_category(big_models, output_path, suffix="_big")
             self._plot_response_length(big_models, big_models_list, output_path, suffix="_big")
             self._plot_resource_usage(big_models, big_models_list, output_path, suffix="_big")
+            self._plot_ttft_first_vs_average(big_models, big_models_list, output_path, suffix="_big")
+            self._plot_inference_time_first_vs_average(big_models, big_models_list, output_path, suffix="_big")
+            self._plot_iops_first_vs_average(big_models, big_models_list, output_path, suffix="_big")
             self._plot_radar_chart(big_models, big_models_list, output_path, suffix="_big")
             self._plot_io_metrics(big_models, big_models_list, output_path, suffix="_big")
 
@@ -291,6 +366,9 @@ class BenchmarkAnalyzer:
         self._plot_response_analysis_by_category(summary, output_path, suffix="_all")
         self._plot_response_length(summary, all_models, output_path, suffix="_all")
         self._plot_resource_usage(summary, all_models, output_path, suffix="_all")
+        self._plot_ttft_first_vs_average(summary, all_models, output_path, suffix="_all")
+        self._plot_inference_time_first_vs_average(summary, all_models, output_path, suffix="_all")
+        self._plot_iops_first_vs_average(summary, all_models, output_path, suffix="_all")
         self._plot_radar_chart(summary, all_models, output_path, suffix="_all")
         self._plot_io_metrics(summary, all_models, output_path, suffix="_all")
 
@@ -328,43 +406,52 @@ class BenchmarkAnalyzer:
         print(f"  Created: {filename}")
 
     def _plot_energy_efficiency(self, summary, models, output_path, suffix=""):
-        """Plot energy efficiency comparison"""
+        """Plot energy efficiency comparison - split into separate graphs"""
         if not models:
             return
 
-        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
+        category_label = " - Small Models (<2B)" if suffix == "_small" else " - Big Models (≥2B)" if suffix == "_big" else ""
 
-        # Tokens per Joule
+        # Graph 1: Tokens per Joule
+        fig, ax = plt.subplots(figsize=(12, 6))
         tpj = [summary[m]['avg_tokens_per_joule'] for m in models]
         colors = plt.cm.RdYlGn([v/max(tpj) if max(tpj) > 0 else 0 for v in tpj])
 
-        bars1 = ax1.bar(range(len(models)), tpj, color=colors, alpha=0.8)
-        ax1.set_xlabel('Model', fontsize=11)
-        ax1.set_ylabel('Tokens per Joule', fontsize=11)
-        category_label = " - Small Models (<2B)" if suffix == "_small" else " - Big Models (≥2B)" if suffix == "_big" else ""
-        ax1.set_title(f'Energy Efficiency: Tokens per Joule{category_label}', fontsize=13, fontweight='bold')
-        ax1.set_xticks(range(len(models)))
-        ax1.set_xticklabels([m.replace(':', '\n') for m in models])
+        bars = ax.bar(range(len(models)), tpj, color=colors, alpha=0.8, edgecolor='black', linewidth=1.2)
+        ax.set_xlabel('Model', fontsize=12)
+        ax.set_ylabel('Tokens per Joule', fontsize=12)
+        ax.set_title(f'Energy Efficiency: Tokens per Joule{category_label}', fontsize=14, fontweight='bold')
+        ax.set_xticks(range(len(models)))
+        ax.set_xticklabels([m.replace(':', '\n') for m in models])
+        ax.grid(axis='y', alpha=0.3)
 
-        for bar, val in zip(bars1, tpj):
-            ax1.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.01,
-                    f'{val:.3f}', ha='center', va='bottom', fontsize=10)
-
-        # Total Energy Consumption
-        energy = [summary[m]['total_energy_joules'] for m in models]
-        bars2 = ax2.bar(range(len(models)), energy, color='coral', alpha=0.8)
-        ax2.set_xlabel('Model', fontsize=11)
-        ax2.set_ylabel('Total Energy (Joules)', fontsize=11)
-        ax2.set_title(f'Total Energy Consumption{category_label}', fontsize=13, fontweight='bold')
-        ax2.set_xticks(range(len(models)))
-        ax2.set_xticklabels([m.replace(':', '\n') for m in models])
-
-        for bar, val in zip(bars2, energy):
-            ax2.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 10,
-                    f'{val:.0f}J', ha='center', va='bottom', fontsize=10)
+        for bar, val in zip(bars, tpj):
+            ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + max(tpj)*0.02 if max(tpj) > 0 else 0.01,
+                    f'{val:.3f}', ha='center', va='bottom', fontsize=10, fontweight='bold')
 
         plt.tight_layout()
-        filename = f'energy_efficiency{suffix}.png'
+        filename = f'tokens_per_joule{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
+        plt.close()
+        print(f"  Created: {filename}")
+
+        # Graph 2: Total Energy Consumption
+        fig, ax = plt.subplots(figsize=(12, 6))
+        energy = [summary[m]['total_energy_joules'] for m in models]
+        bars = ax.bar(range(len(models)), energy, color='coral', alpha=0.8, edgecolor='darkred', linewidth=1.2)
+        ax.set_xlabel('Model', fontsize=12)
+        ax.set_ylabel('Total Energy (Joules)', fontsize=12)
+        ax.set_title(f'Total Energy Consumption{category_label}', fontsize=14, fontweight='bold')
+        ax.set_xticks(range(len(models)))
+        ax.set_xticklabels([m.replace(':', '\n') for m in models])
+        ax.grid(axis='y', alpha=0.3)
+
+        for bar, val in zip(bars, energy):
+            ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + max(energy)*0.02 if max(energy) > 0 else 10,
+                    f'{val:.0f}J', ha='center', va='bottom', fontsize=10, fontweight='bold')
+
+        plt.tight_layout()
+        filename = f'total_energy_consumption{suffix}.png'
         plt.savefig(output_path / filename, dpi=150)
         plt.close()
         print(f"  Created: {filename}")
@@ -474,103 +561,402 @@ class BenchmarkAnalyzer:
         print(f"  Created: {filename}")
 
     def _plot_resource_usage(self, summary, models, output_path, suffix=""):
-        """Plot resource usage comparison"""
+        """Plot resource usage comparison - split into separate graphs"""
         if not models:
             return
 
-        fig, axes = plt.subplots(2, 2, figsize=(14, 10))
-
-        # CPU Usage
-        cpu = [summary[m]['avg_cpu_percent'] for m in models]
-        axes[0, 0].bar(range(len(models)), cpu, color='indianred', alpha=0.8)
-        axes[0, 0].set_title('Average CPU Usage (%)', fontweight='bold')
-        axes[0, 0].set_xticks(range(len(models)))
-        axes[0, 0].set_xticklabels([m.replace(':', '\n') for m in models])
-
-        # Memory Usage
-        mem = [summary[m]['avg_memory_increase_mb'] for m in models]
-        axes[0, 1].bar(range(len(models)), mem, color='mediumseagreen', alpha=0.8)
-        axes[0, 1].set_title('Average Memory Increase (MB)', fontweight='bold')
-        axes[0, 1].set_xticks(range(len(models)))
-        axes[0, 1].set_xticklabels([m.replace(':', '\n') for m in models])
-
-        # Temperature
-        temp = [summary[m]['avg_temperature_c'] for m in models]
-        axes[1, 0].bar(range(len(models)), temp, color='orange', alpha=0.8)
-        axes[1, 0].set_title('Average Temperature (C)', fontweight='bold')
-        axes[1, 0].set_xticks(range(len(models)))
-        axes[1, 0].set_xticklabels([m.replace(':', '\n') for m in models])
-
-        # Time to First Token
-        ttft = [summary[m]['avg_ttft_s'] for m in models]
-        axes[1, 1].bar(range(len(models)), ttft, color='mediumpurple', alpha=0.8)
-        axes[1, 1].set_title('Average Time to First Token (s)', fontweight='bold')
-        axes[1, 1].set_xticks(range(len(models)))
-        axes[1, 1].set_xticklabels([m.replace(':', '\n') for m in models])
-
         category_label = " - Small Models (<2B)" if suffix == "_small" else " - Big Models (≥2B)" if suffix == "_big" else ""
-        plt.suptitle(f'Resource Usage Comparison{category_label}', fontsize=16, fontweight='bold')
+
+        # Graph 1: CPU Usage
+        fig, ax = plt.subplots(figsize=(12, 6))
+        cpu = [summary[m]['avg_cpu_percent'] for m in models]
+        bars = ax.bar(range(len(models)), cpu, color='indianred', alpha=0.8, edgecolor='darkred', linewidth=1.2)
+        ax.set_xlabel('Model', fontsize=12)
+        ax.set_ylabel('CPU Usage (%)', fontsize=12)
+        ax.set_title(f'Average CPU Usage{category_label}', fontsize=14, fontweight='bold')
+        ax.set_xticks(range(len(models)))
+        ax.set_xticklabels([m.replace(':', '\n') for m in models])
+        ax.grid(axis='y', alpha=0.3)
+
+        for bar, val in zip(bars, cpu):
+            ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + max(cpu)*0.02 if max(cpu) > 0 else 1,
+                    f'{val:.1f}%', ha='center', va='bottom', fontsize=10, fontweight='bold')
+
         plt.tight_layout()
-        filename = f'resource_usage{suffix}.png'
+        filename = f'cpu_usage{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
+        plt.close()
+        print(f"  Created: {filename}")
+
+        # Graph 2: Memory Usage
+        fig, ax = plt.subplots(figsize=(12, 6))
+        mem = [summary[m]['avg_memory_increase_mb'] for m in models]
+        bars = ax.bar(range(len(models)), mem, color='mediumseagreen', alpha=0.8, edgecolor='darkgreen', linewidth=1.2)
+        ax.set_xlabel('Model', fontsize=12)
+        ax.set_ylabel('Memory Increase (MB)', fontsize=12)
+        ax.set_title(f'Average Memory Increase{category_label}', fontsize=14, fontweight='bold')
+        ax.set_xticks(range(len(models)))
+        ax.set_xticklabels([m.replace(':', '\n') for m in models])
+        ax.grid(axis='y', alpha=0.3)
+
+        for bar, val in zip(bars, mem):
+            ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + max(mem)*0.02 if max(mem) > 0 else 10,
+                    f'{val:.1f}', ha='center', va='bottom', fontsize=10, fontweight='bold')
+
+        plt.tight_layout()
+        filename = f'memory_usage{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
+        plt.close()
+        print(f"  Created: {filename}")
+
+        # Graph 3: Temperature
+        fig, ax = plt.subplots(figsize=(12, 6))
+        temp = [summary[m]['avg_temperature_c'] for m in models]
+        bars = ax.bar(range(len(models)), temp, color='orange', alpha=0.8, edgecolor='darkorange', linewidth=1.2)
+        ax.set_xlabel('Model', fontsize=12)
+        ax.set_ylabel('Temperature (°C)', fontsize=12)
+        ax.set_title(f'Average Temperature{category_label}', fontsize=14, fontweight='bold')
+        ax.set_xticks(range(len(models)))
+        ax.set_xticklabels([m.replace(':', '\n') for m in models])
+        ax.grid(axis='y', alpha=0.3)
+
+        for bar, val in zip(bars, temp):
+            ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + max(temp)*0.02 if max(temp) > 0 else 1,
+                    f'{val:.1f}°C', ha='center', va='bottom', fontsize=10, fontweight='bold')
+
+        plt.tight_layout()
+        filename = f'temperature{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
+        plt.close()
+        print(f"  Created: {filename}")
+
+        # Graph 4: Time to First Token
+        fig, ax = plt.subplots(figsize=(12, 6))
+        ttft = [summary[m]['avg_ttft_s'] for m in models]
+        bars = ax.bar(range(len(models)), ttft, color='mediumpurple', alpha=0.8, edgecolor='purple', linewidth=1.2)
+        ax.set_xlabel('Model', fontsize=12)
+        ax.set_ylabel('Time to First Token (seconds)', fontsize=12)
+        ax.set_title(f'Average Time to First Token{category_label}', fontsize=14, fontweight='bold')
+        ax.set_xticks(range(len(models)))
+        ax.set_xticklabels([m.replace(':', '\n') for m in models])
+        ax.grid(axis='y', alpha=0.3)
+
+        for bar, val in zip(bars, ttft):
+            ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + max(ttft)*0.02 if max(ttft) > 0 else 0.1,
+                    f'{val:.2f}s', ha='center', va='bottom', fontsize=10, fontweight='bold')
+
+        plt.tight_layout()
+        filename = f'time_to_first_token{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
+        plt.close()
+        print(f"  Created: {filename}")
+
+    def _plot_ttft_first_vs_average(self, summary, models, output_path, suffix=""):
+        """Plot TTFT comparison: first question vs average of questions 2-10"""
+        if not models:
+            return
+
+        # Note: summary parameter kept for consistency with other plotting methods
+        category_label = " - Small Models (<2B)" if suffix == "_small" else " - Big Models (≥2B)" if suffix == "_big" else ""
+
+        # Extract TTFT for first question and average of questions 2-10
+        first_question_ttft = []
+        avg_other_questions_ttft = []
+
+        for model in models:
+            if model in self.models_data:
+                results = self.models_data[model]
+                ttft_values = [r.get('time_to_first_token_s', 0) for r in results if r.get('time_to_first_token_s')]
+
+                if ttft_values:
+                    first_question_ttft.append(ttft_values[0] if len(ttft_values) > 0 else 0)
+                    avg_other_questions_ttft.append(
+                        sum(ttft_values[1:]) / len(ttft_values[1:]) if len(ttft_values) > 1 else 0
+                    )
+                else:
+                    first_question_ttft.append(0)
+                    avg_other_questions_ttft.append(0)
+            else:
+                first_question_ttft.append(0)
+                avg_other_questions_ttft.append(0)
+
+        # Graph 1: First Question TTFT
+        fig, ax = plt.subplots(figsize=(12, 6))
+        bars = ax.bar(range(len(models)), first_question_ttft, color='mediumpurple', alpha=0.8, edgecolor='purple', linewidth=1.2)
+        ax.set_xlabel('Model', fontsize=12)
+        ax.set_ylabel('Time to First Token (seconds)', fontsize=12)
+        ax.set_title(f'TTFT - First Question{category_label}', fontsize=14, fontweight='bold')
+        ax.set_xticks(range(len(models)))
+        ax.set_xticklabels([m.replace(':', '\n') for m in models])
+        ax.grid(axis='y', alpha=0.3)
+
+        max_val = max(first_question_ttft) if first_question_ttft else 1
+        for bar, val in zip(bars, first_question_ttft):
+            if val > 0:
+                ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + max_val*0.02,
+                        f'{val:.2f}s', ha='center', va='bottom', fontsize=10, fontweight='bold')
+
+        plt.tight_layout()
+        filename = f'ttft_first_question{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
+        plt.close()
+        print(f"  Created: {filename}")
+
+        # Graph 2: Average of Questions 2-10 TTFT
+        fig, ax = plt.subplots(figsize=(12, 6))
+        bars = ax.bar(range(len(models)), avg_other_questions_ttft, color='mediumorchid', alpha=0.8, edgecolor='purple', linewidth=1.2)
+        ax.set_xlabel('Model', fontsize=12)
+        ax.set_ylabel('Time to First Token (seconds)', fontsize=12)
+        ax.set_title(f'TTFT - Average of Questions 2-10{category_label}', fontsize=14, fontweight='bold')
+        ax.set_xticks(range(len(models)))
+        ax.set_xticklabels([m.replace(':', '\n') for m in models])
+        ax.grid(axis='y', alpha=0.3)
+
+        max_val = max(avg_other_questions_ttft) if avg_other_questions_ttft else 1
+        for bar, val in zip(bars, avg_other_questions_ttft):
+            if val > 0:
+                ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + max_val*0.02,
+                        f'{val:.2f}s', ha='center', va='bottom', fontsize=10, fontweight='bold')
+
+        plt.tight_layout()
+        filename = f'ttft_avg_questions_2_10{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
+        plt.close()
+        print(f"  Created: {filename}")
+
+    def _plot_inference_time_first_vs_average(self, summary, models, output_path, suffix=""):
+        """Plot inference time comparison: first question vs average of questions 2-10"""
+        if not models:
+            return
+
+        # Note: summary parameter kept for consistency with other plotting methods
+        category_label = " - Small Models (<2B)" if suffix == "_small" else " - Big Models (≥2B)" if suffix == "_big" else ""
+
+        # Extract inference time for first question and average of questions 2-10
+        first_question_time = []
+        avg_other_questions_time = []
+
+        for model in models:
+            if model in self.models_data:
+                results = self.models_data[model]
+                inference_times = [r.get('inference_time_s', 0) for r in results if r.get('inference_time_s')]
+
+                if inference_times:
+                    first_question_time.append(inference_times[0] if len(inference_times) > 0 else 0)
+                    avg_other_questions_time.append(
+                        sum(inference_times[1:]) / len(inference_times[1:]) if len(inference_times) > 1 else 0
+                    )
+                else:
+                    first_question_time.append(0)
+                    avg_other_questions_time.append(0)
+            else:
+                first_question_time.append(0)
+                avg_other_questions_time.append(0)
+
+        # Graph 1: First Question Inference Time
+        fig, ax = plt.subplots(figsize=(12, 6))
+        bars = ax.bar(range(len(models)), first_question_time, color='steelblue', alpha=0.8, edgecolor='navy', linewidth=1.2)
+        ax.set_xlabel('Model', fontsize=12)
+        ax.set_ylabel('Inference Time (seconds)', fontsize=12)
+        ax.set_title(f'Inference Time - First Question{category_label}', fontsize=14, fontweight='bold')
+        ax.set_xticks(range(len(models)))
+        ax.set_xticklabels([m.replace(':', '\n') for m in models])
+        ax.grid(axis='y', alpha=0.3)
+
+        max_val = max(first_question_time) if first_question_time else 1
+        for bar, val in zip(bars, first_question_time):
+            if val > 0:
+                ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + max_val*0.02,
+                        f'{val:.1f}s', ha='center', va='bottom', fontsize=10, fontweight='bold')
+
+        plt.tight_layout()
+        filename = f'inference_time_first_question{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
+        plt.close()
+        print(f"  Created: {filename}")
+
+        # Graph 2: Average of Questions 2-10 Inference Time
+        fig, ax = plt.subplots(figsize=(12, 6))
+        bars = ax.bar(range(len(models)), avg_other_questions_time, color='cornflowerblue', alpha=0.8, edgecolor='navy', linewidth=1.2)
+        ax.set_xlabel('Model', fontsize=12)
+        ax.set_ylabel('Inference Time (seconds)', fontsize=12)
+        ax.set_title(f'Inference Time - Average of Questions 2-10{category_label}', fontsize=14, fontweight='bold')
+        ax.set_xticks(range(len(models)))
+        ax.set_xticklabels([m.replace(':', '\n') for m in models])
+        ax.grid(axis='y', alpha=0.3)
+
+        max_val = max(avg_other_questions_time) if avg_other_questions_time else 1
+        for bar, val in zip(bars, avg_other_questions_time):
+            if val > 0:
+                ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + max_val*0.02,
+                        f'{val:.1f}s', ha='center', va='bottom', fontsize=10, fontweight='bold')
+
+        plt.tight_layout()
+        filename = f'inference_time_avg_questions_2_10{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
+        plt.close()
+        print(f"  Created: {filename}")
+
+    def _plot_iops_first_vs_average(self, summary, models, output_path, suffix=""):
+        """Plot IOPS comparison: first question (cold start) vs average of questions 2-10 (warm)"""
+        if not models:
+            return
+
+        # Note: summary parameter kept for consistency with other plotting methods
+        category_label = " - Small Models (<2B)" if suffix == "_small" else " - Big Models (≥2B)" if suffix == "_big" else ""
+
+        # Extract IOPS for first question and average of questions 2-10
+        first_question_iops = []
+        avg_other_questions_iops = []
+
+        for model in models:
+            if model in self.models_data:
+                results = self.models_data[model]
+                iops_values = [r.get('io_iops', 0) for r in results if r.get('io_iops')]
+
+                if iops_values:
+                    first_question_iops.append(iops_values[0] if len(iops_values) > 0 else 0)
+                    avg_other_questions_iops.append(
+                        sum(iops_values[1:]) / len(iops_values[1:]) if len(iops_values) > 1 else 0
+                    )
+                else:
+                    first_question_iops.append(0)
+                    avg_other_questions_iops.append(0)
+            else:
+                first_question_iops.append(0)
+                avg_other_questions_iops.append(0)
+
+        # Graph 1: First Question IOPS (Cold Start)
+        fig, ax = plt.subplots(figsize=(12, 6))
+        bars = ax.bar(range(len(models)), first_question_iops, color='darkorange', alpha=0.8, edgecolor='darkred', linewidth=1.2)
+        ax.set_xlabel('Model', fontsize=12)
+        ax.set_ylabel('IOPS (Operations/Second)', fontsize=12)
+        ax.set_title(f'Cold Start IOPS - First Question{category_label}', fontsize=14, fontweight='bold')
+        ax.set_xticks(range(len(models)))
+        ax.set_xticklabels([m.replace(':', '\n') for m in models])
+        ax.grid(axis='y', alpha=0.3)
+
+        max_val = max(first_question_iops) if first_question_iops else 1
+        for bar, val in zip(bars, first_question_iops):
+            if val > 0:
+                ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + max_val*0.02,
+                        f'{val:.1f}', ha='center', va='bottom', fontsize=10, fontweight='bold')
+
+        plt.tight_layout()
+        filename = f'iops_cold_start_first_question{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
+        plt.close()
+        print(f"  Created: {filename}")
+
+        # Graph 2: Average of Questions 2-10 IOPS (Warm Operation)
+        fig, ax = plt.subplots(figsize=(12, 6))
+        bars = ax.bar(range(len(models)), avg_other_questions_iops, color='limegreen', alpha=0.8, edgecolor='darkgreen', linewidth=1.2)
+        ax.set_xlabel('Model', fontsize=12)
+        ax.set_ylabel('IOPS (Operations/Second)', fontsize=12)
+        ax.set_title(f'Warm IOPS - Average of Questions 2-10{category_label}', fontsize=14, fontweight='bold')
+        ax.set_xticks(range(len(models)))
+        ax.set_xticklabels([m.replace(':', '\n') for m in models])
+        ax.grid(axis='y', alpha=0.3)
+
+        max_val = max(avg_other_questions_iops) if avg_other_questions_iops else 1
+        for bar, val in zip(bars, avg_other_questions_iops):
+            if val > 0:
+                ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + max_val*0.02,
+                        f'{val:.2f}', ha='center', va='bottom', fontsize=10, fontweight='bold')
+
+        plt.tight_layout()
+        filename = f'iops_warm_avg_questions_2_10{suffix}.png'
         plt.savefig(output_path / filename, dpi=150)
         plt.close()
         print(f"  Created: {filename}")
 
     def _plot_io_metrics(self, summary, models, output_path, suffix=""):
-        """Plot I/O performance metrics (NEW)"""
+        """Plot I/O performance metrics - split into separate graphs"""
         if not models:
             return
 
-        fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+        category_label = " - Small Models (<2B)" if suffix == "_small" else " - Big Models (≥2B)" if suffix == "_big" else ""
 
-        # IOPS
+        # Graph 1: IOPS
+        fig, ax = plt.subplots(figsize=(12, 6))
         iops = [summary[m]['avg_io_iops'] for m in models]
-        axes[0, 0].bar(range(len(models)), iops, color='dodgerblue', alpha=0.8)
-        axes[0, 0].set_title('Average IOPS', fontweight='bold')
-        axes[0, 0].set_ylabel('Operations/Second')
-        axes[0, 0].set_xticks(range(len(models)))
-        axes[0, 0].set_xticklabels([m.replace(':', '\n') for m in models])
-        axes[0, 0].grid(axis='y', alpha=0.3)
+        bars = ax.bar(range(len(models)), iops, color='dodgerblue', alpha=0.8, edgecolor='darkblue', linewidth=1.2)
+        ax.set_xlabel('Model', fontsize=12)
+        ax.set_ylabel('Operations/Second', fontsize=12)
+        ax.set_title(f'Average IOPS{category_label}', fontsize=14, fontweight='bold')
+        ax.set_xticks(range(len(models)))
+        ax.set_xticklabels([m.replace(':', '\n') for m in models])
+        ax.grid(axis='y', alpha=0.3)
 
-        # Throughput
+        for bar, val in zip(bars, iops):
+            ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + max(iops)*0.02 if max(iops) > 0 else 1,
+                    f'{val:.1f}', ha='center', va='bottom', fontsize=10, fontweight='bold')
+
+        plt.tight_layout()
+        filename = f'iops{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
+        plt.close()
+        print(f"  Created: {filename}")
+
+        # Graph 2: Throughput
+        fig, ax = plt.subplots(figsize=(12, 6))
         throughput = [summary[m]['avg_io_throughput_mb_s'] for m in models]
-        axes[0, 1].bar(range(len(models)), throughput, color='limegreen', alpha=0.8)
-        axes[0, 1].set_title('Average I/O Throughput', fontweight='bold')
-        axes[0, 1].set_ylabel('MB/s')
-        axes[0, 1].set_xticks(range(len(models)))
-        axes[0, 1].set_xticklabels([m.replace(':', '\n') for m in models])
-        axes[0, 1].grid(axis='y', alpha=0.3)
+        bars = ax.bar(range(len(models)), throughput, color='limegreen', alpha=0.8, edgecolor='darkgreen', linewidth=1.2)
+        ax.set_xlabel('Model', fontsize=12)
+        ax.set_ylabel('Throughput (MB/s)', fontsize=12)
+        ax.set_title(f'Average I/O Throughput{category_label}', fontsize=14, fontweight='bold')
+        ax.set_xticks(range(len(models)))
+        ax.set_xticklabels([m.replace(':', '\n') for m in models])
+        ax.grid(axis='y', alpha=0.3)
 
-        # Read vs Write Operations
+        for bar, val in zip(bars, throughput):
+            ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + max(throughput)*0.02 if max(throughput) > 0 else 0.1,
+                    f'{val:.2f}', ha='center', va='bottom', fontsize=10, fontweight='bold')
+
+        plt.tight_layout()
+        filename = f'io_throughput{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
+        plt.close()
+        print(f"  Created: {filename}")
+
+        # Graph 3: Read vs Write Operations
+        fig, ax = plt.subplots(figsize=(12, 6))
         read_ops = [summary[m]['total_io_read_count'] for m in models]
         write_ops = [summary[m]['total_io_write_count'] for m in models]
         x_pos = range(len(models))
         width = 0.35
-        axes[1, 0].bar([x - width/2 for x in x_pos], read_ops, width, label='Read', color='skyblue', alpha=0.8)
-        axes[1, 0].bar([x + width/2 for x in x_pos], write_ops, width, label='Write', color='salmon', alpha=0.8)
-        axes[1, 0].set_title('Total I/O Operations', fontweight='bold')
-        axes[1, 0].set_ylabel('Operations Count')
-        axes[1, 0].set_xticks(x_pos)
-        axes[1, 0].set_xticklabels([m.replace(':', '\n') for m in models])
-        axes[1, 0].legend()
-        axes[1, 0].grid(axis='y', alpha=0.3)
+        bars1 = ax.bar([x - width/2 for x in x_pos], read_ops, width, label='Read', color='skyblue', alpha=0.8, edgecolor='darkblue', linewidth=1.2)
+        bars2 = ax.bar([x + width/2 for x in x_pos], write_ops, width, label='Write', color='salmon', alpha=0.8, edgecolor='darkred', linewidth=1.2)
+        ax.set_xlabel('Model', fontsize=12)
+        ax.set_ylabel('Operations Count', fontsize=12)
+        ax.set_title(f'Total I/O Operations (Read vs Write){category_label}', fontsize=14, fontweight='bold')
+        ax.set_xticks(x_pos)
+        ax.set_xticklabels([m.replace(':', '\n') for m in models])
+        ax.legend()
+        ax.grid(axis='y', alpha=0.3)
 
-        # Latency
+        plt.tight_layout()
+        filename = f'io_operations{suffix}.png'
+        plt.savefig(output_path / filename, dpi=150)
+        plt.close()
+        print(f"  Created: {filename}")
+
+        # Graph 4: Latency
+        fig, ax = plt.subplots(figsize=(12, 6))
         read_latency = [summary[m]['avg_io_read_latency_ms'] for m in models]
         write_latency = [summary[m]['avg_io_write_latency_ms'] for m in models]
-        axes[1, 1].bar([x - width/2 for x in x_pos], read_latency, width, label='Read', color='skyblue', alpha=0.8)
-        axes[1, 1].bar([x + width/2 for x in x_pos], write_latency, width, label='Write', color='salmon', alpha=0.8)
-        axes[1, 1].set_title('Average I/O Latency', fontweight='bold')
-        axes[1, 1].set_ylabel('Latency (ms)')
-        axes[1, 1].set_xticks(x_pos)
-        axes[1, 1].set_xticklabels([m.replace(':', '\n') for m in models])
-        axes[1, 1].legend()
-        axes[1, 1].grid(axis='y', alpha=0.3)
+        bars1 = ax.bar([x - width/2 for x in x_pos], read_latency, width, label='Read', color='skyblue', alpha=0.8, edgecolor='darkblue', linewidth=1.2)
+        bars2 = ax.bar([x + width/2 for x in x_pos], write_latency, width, label='Write', color='salmon', alpha=0.8, edgecolor='darkred', linewidth=1.2)
+        ax.set_xlabel('Model', fontsize=12)
+        ax.set_ylabel('Latency (ms)', fontsize=12)
+        ax.set_title(f'Average I/O Latency (Read vs Write){category_label}', fontsize=14, fontweight='bold')
+        ax.set_xticks(x_pos)
+        ax.set_xticklabels([m.replace(':', '\n') for m in models])
+        ax.legend()
+        ax.grid(axis='y', alpha=0.3)
 
-        category_label = " - Small Models (<2B)" if suffix == "_small" else " - Big Models (≥2B)" if suffix == "_big" else ""
-        plt.suptitle(f'Disk I/O Performance Metrics{category_label}', fontsize=16, fontweight='bold')
         plt.tight_layout()
-        filename = f'io_performance{suffix}.png'
+        filename = f'io_latency{suffix}.png'
         plt.savefig(output_path / filename, dpi=150)
         plt.close()
         print(f"  Created: {filename}")
